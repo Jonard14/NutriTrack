@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/outerContainer"
+    android:background="@android:color/holo_blue_dark" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:text="Return Home"
+            android:layout_width="350px"
+            android:layout_height="75px"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:id="@+id/btn_Home"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            android:background="@android:color/holo_green_light" />
+
+        <TextView
+            android:text="Register"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:id="@+id/txtV_Register"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:text="Email:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtV_Email"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+        <EditText
+            android:inputType="textEmailAddress"
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/edtTxt_Email"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+
+        <TextView
+            android:text="First Name:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtV_FirstName"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:id="@+id/edtTxt_FirstName"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px"/>
+
+        <TextView
+            android:text="Last Name:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtV_LastName"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:id="@+id/edtTxt_LastName"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+
+            <TextView
+                android:text="Age:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_Age"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="50px" />
+            <EditText
+                android:inputType="number"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:hint="Age"
+                android:id="@+id/edtTxt_Age"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+
+            <TextView
+                android:text="Height (in meters):"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="180px"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_Height"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px"
+                android:gravity="right"
+                android:textSize="30px" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/edtTxt_Height"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px" />
+
+            <TextView
+                android:text="Weight (in kilograms):"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="180px"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_Weight"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px"
+                android:gravity="right"
+                android:textSize="30px" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/edtTxt_Weight"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px" />
+
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+
+            <TextView
+                android:text="BMI:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_BMI"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="50px"
+                android:gravity="right" />
+            <EditText
+                android:inputType="none"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/edtTxt_BMI"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false" />
+
+            <Button
+                android:text="Get BMI"
+                android:layout_width="200px"
+                android:layout_height="75px"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/btn_GetBMI"
+                android:textStyle="bold"
+                android:layout_marginLeft="30px"
+                android:textColor="@android:color/background_light"
+                android:background="@android:color/holo_green_light" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="Register"
+            android:layout_width="650px"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/btn_Register"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            android:background="@android:color/holo_green_light" />
+
+    </LinearLayout>
+</ScrollView>
