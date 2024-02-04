@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638425015804550576
+_nugetassetstimestamp=638426572645143410
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\acer\desktop\xamarin (cs134-1p)\app1\app1\app1.csproj
+projectfullpath=c:\users\acer\documents\github\cs134-1p-thesis\app1\app1\app1.csproj

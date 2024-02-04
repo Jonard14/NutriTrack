@@ -7,6 +7,7 @@
     android:id="@+id/outerContainer"
     android:background="@android:color/holo_blue_dark" >
 
+
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -204,7 +205,8 @@
                 android:paddingLeft="10px"
                 android:focusable="false"
                 android:clickable="false"
-                android:cursorVisible="false" />
+                android:cursorVisible="false"
+                android:layout_marginLeft="50px" />
 
             <Button
                 android:text="Get BMI"
@@ -220,6 +222,45 @@
 
         </LinearLayout>
 
+        <TextView
+            android:text="Password:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtV_Password"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/edtTxt_Password"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px"/>
+
+        <TextView
+            android:text="Re-type Password:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtV_RePassword"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="1000px"
+            android:layout_height="wrap_content"
+            android:hint="Re-type Password"
+            android:id="@+id/edtTxt_RePassword"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:paddingLeft="50px"/>
+
+
         <Button
             android:text="Register"
             android:layout_width="650px"
@@ -230,6 +271,6 @@
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
             android:background="@android:color/holo_green_light" />
-
+        
     </LinearLayout>
 </ScrollView>

@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.Json;
 
 namespace GROUP7_IT123P_MP
 {
@@ -36,19 +37,24 @@ namespace GROUP7_IT123P_MP
             return res;
         }
 
-        public HttpWebResponse RetrieveData(string WebReq)
+        public JsonElement RetrieveData(string WebReq)
         {
             request = (HttpWebRequest)WebRequest.Create(IP_DB + WebReq);
             response = (HttpWebResponse)request.GetResponse();
             res = response.ProtocolVersion.ToString();
-            return response;
-
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            var result = reader.ReadToEnd();
+            using JsonDocument doc = JsonDocument.Parse(result);
+            JsonElement root = doc.RootElement;
+            return root;
         }
     }
 }
 
-/* 
-Table of 'login'
+/* DATABASE
+CREATE DATABASE USER_DB;
+USE USER_DB;
+
 CREATE TABLE `LOGIN` (
   `email` VARCHAR(20),
   `password` VARCHAR(20),
@@ -67,7 +73,35 @@ CREATE TABLE `USER_DATA` (
 );
 
 CREATE TABLE `ILLNESSES` (
+  `first_name` VARCHAR(30),
   `types` VARCHAR(30)
+);
+
+CREATE DATABASE FOOD_DB;
+USE FOOD_DB;
+
+CREATE TABLE `FOOD_DATA` (
+  `food-id` VARCHAR(6),
+  `food_name` VARCHAR(20),
+  `food_desc` TEXT,
+  PRIMARY KEY (`food-id`)
+);
+
+CREATE TABLE `BRANDS` (
+  `food_id` VARCHAR(6),
+  `brand_id` VARCHAR(6),
+  `food_brand` VARCHAR(20),
+  PRIMARY KEY (`brand_id`)
+);
+
+CREATE TABLE `MACRONUTRIENTS` (
+  `brand_id` VARCHAR(6),
+  `macronutrients` VARCHAR(20)
+);
+
+CREATE TABLE `MICRONUTRIENTS` (
+  `brand_id` VARCHAR(6),
+  `mIcronutrients` VARCHAR(20)
 );
 */
 

@@ -13,7 +13,7 @@ using System.Text;
 
 /* Summary I've done in login.xml -Jonard
         email                           - Set to email type
-        password                        - Set to password
+        password                        - Set to password type
  */
 
 namespace App1

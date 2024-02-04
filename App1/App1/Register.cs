@@ -16,6 +16,7 @@ using System.Text;
         height, weight                  - Set to decimal
         bmi                             - Set to decimal, and edit text cannot be edited unless clicked the "Get BMI" 
                                           button to get the values from height and weight
+        password, re-type password      - Set to password type
  */
 
 namespace App1
@@ -23,7 +24,7 @@ namespace App1
     [Activity(Label = "Register")]
     public class Register : Activity
     {
-        EditText email, firstname, lastname, age, height, weight, bmi;
+        EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
         Button register, home, getbmi;
         Decimal bmivalue;
 
@@ -45,8 +46,13 @@ namespace App1
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
+
             getbmi = FindViewById<Button>(Resource.Id.btn_GetBMI);
             getbmi.Click += GetBMIClick;
+
+            password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
+            repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
+
 
             register = FindViewById<Button>(Resource.Id.btn_Register);
             register.Click += registerClick;
@@ -77,7 +83,7 @@ namespace App1
 
         public void registerClick(object sender, EventArgs e)
         {
-            if (Validation())
+            if (Validation() && (password.Text == repassword.Text))
             {
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(MainActivity));
@@ -89,7 +95,8 @@ namespace App1
         //Validation - need to revise cause this is not the best conditions to use but still works tho -Jonard
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "")
+            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
+                password.Text == "" || repassword.Text == "")
             { return false; }
             try
             {

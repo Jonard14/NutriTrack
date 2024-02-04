@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\Xamarin (CS134-1P)\\App1\\App1\\App1.csproj": {}
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\Xamarin (CS134-1P)\\App1\\App1\\App1.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Xamarin (CS134-1P)\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\Xamarin (CS134-1P)\\App1\\App1\\App1.csproj",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\Xamarin (CS134-1P)\\App1\\App1\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -38,6 +38,10 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Xamarin.AndroidX.AppCompat": {
               "target": "Package",
               "version": "[1.2.0.5, )"
