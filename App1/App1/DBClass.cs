@@ -12,7 +12,7 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 
-namespace GROUP7_IT123P_MP
+namespace App1
 {
     internal class DBClass
     {
@@ -21,7 +21,7 @@ namespace GROUP7_IT123P_MP
             Sa request, call this variable IP_DB then lagyan nalang ng plus 
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
-        string IP_DB = "http://192.168.100.17/DatabaseName/";
+        string IP_DB = "http://192.168.100.5/user_db/";
 
         //Http Response
         HttpWebResponse response;
@@ -29,6 +29,23 @@ namespace GROUP7_IT123P_MP
         string res;
 
         public string UpdateStatus(string WebReq)
+        {
+            request = (HttpWebRequest)WebRequest.Create(IP_DB + WebReq);
+            response = (HttpWebResponse)request.GetResponse();
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            res = reader.ReadToEnd();
+            return res;
+        }
+
+        public string InsertData(string WebReq)
+        {
+            request = (HttpWebRequest)WebRequest.Create(IP_DB + WebReq);
+            response = (HttpWebResponse)request.GetResponse();
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            res = reader.ReadToEnd();
+            return res;
+        }
+        public string InsertLoginData(string WebReq)
         {
             request = (HttpWebRequest)WebRequest.Create(IP_DB + WebReq);
             response = (HttpWebResponse)request.GetResponse();

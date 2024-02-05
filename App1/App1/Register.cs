@@ -86,10 +86,33 @@ namespace App1
             if (Validation() && (password.Text == repassword.Text))
             {
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
+                insertUserData();
+                insertLoginData();
                 Intent i = new Intent(this, typeof(MainActivity));
                 StartActivity(i);
+
             }
             else { Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show(); }
+        }
+
+        public void insertUserData() 
+        {
+            string res = "";
+            DBClass db = new DBClass();
+
+            res = db.InsertData("insert_record.php?email=" + email.Text + "&first_name" + firstname.Text + "&last_name" + lastname.Text + "&age" + Convert.ToInt32(age.Text) + "&height" + Convert.ToDecimal(height.Text) + "&weight" + Convert.ToDecimal(weight.Text) + "&bmi" + Convert.ToDecimal(bmi.Text));
+            Toast.MakeText(Application.Context, String.Format(res), ToastLength.Short).Show();
+
+        }
+
+        public void insertLoginData()
+        {
+            string res = "";
+            DBClass db = new DBClass();
+
+            res = db.InsertLoginData("insert_login_record.php?email=" + email.Text + "&password" + password.Text);
+            Toast.MakeText(Application.Context, String.Format(res), ToastLength.Short).Show();
+
         }
 
         //Validation - need to revise cause this is not the best conditions to use but still works tho -Jonard
