@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -18,7 +19,8 @@ namespace App1
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        Button btn_Login, btn_Register;
+        Button btn_Login;
+        TextView register;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,10 +43,12 @@ namespace App1
             navigationView.SetNavigationItemSelectedListener(this);
 
             // Code starts here
-            btn_Login = FindViewById<Button>(Resource.Id.btn_Login);
-            btn_Login.Click += this.Login;
-            btn_Register = FindViewById<Button>(Resource.Id.btn_Register);
-            btn_Register.Click += this.Register;
+            btn_Login = FindViewById<Button>(Resource.Id.btn_signup);
+            btn_Login.Click += Login;
+
+            register = FindViewById<TextView>(Resource.Id.txtV_RegLink);
+            register.PaintFlags = PaintFlags.UnderlineText;
+            register.Click += RegLink;
         }
 
         public void Login(object sender, EventArgs e)
@@ -54,12 +58,12 @@ namespace App1
                 StartActivity(i);
         }
 
-        public void Register(object sender, EventArgs e)
+        public void RegLink(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(Register));
-            //i.PutExtra("Text", variable);
             StartActivity(i);
         }
+
 
 
 

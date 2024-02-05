@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:background="@android:color/holo_blue_dark">
+
+    <SearchView
+        android:layout_width="385.5dp"
+        android:layout_height="37.5dp"
+        android:layout_gravity="top"
+        android:id="@+id/searchfood"/>
+    <TextView
+        android:text="Food"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="370dp"
+        android:layout_height="30dp"
+        android:gravity="center"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview1"/>
+
+</LinearLayout>

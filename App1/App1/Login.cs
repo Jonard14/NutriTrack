@@ -59,7 +59,7 @@ namespace App1
             if (email.Text == "admin@admin.com" &&  password.Text == "12345") 
             {
                 Toast.MakeText(this, "Login successfully done!", ToastLength.Long).Show();
-                Intent i = new Intent(this, typeof(MainActivity));
+                Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
                 StartActivity(i);
             }
