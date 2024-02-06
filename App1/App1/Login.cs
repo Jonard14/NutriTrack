@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using static Android.Provider.DocumentsContract;
 
 /* Summary I've done in login.xml -Jonard
         email                           - Set to email type
@@ -24,6 +26,9 @@ namespace App1
         EditText email, password;
         Button login, home;
         TextView register;
+        DBClass db = new DBClass();
+        JsonElement root;
+        string searchemail, searchpass;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -54,18 +59,19 @@ namespace App1
             StartActivity(i);
         }
 
+        //Login of acct
         public void loginClick(object sender, EventArgs e)
         {
-            if (email.Text == "admin@admin.com" &&  password.Text == "12345") 
+            if (VerifyLogin()) 
             {
-                Toast.MakeText(this, "Login successfully done!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
                 StartActivity(i);
             }
             else
             {
-                Toast.MakeText(this, "Wrong credentials found!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Email or Password are incorrect!", ToastLength.Long).Show();
             }
         }
 
@@ -73,6 +79,22 @@ namespace App1
         {
             Intent i = new Intent(this, typeof(Register));
             StartActivity(i);
+        }
+
+        // Verify Login if account is registered to db
+        public bool VerifyLogin()
+        {
+            root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
+
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+                searchemail = u1.GetProperty("email").ToString();
+
+                if (searchemail == email.Text)
+                { return true; }
+            }
+            return false;
         }
     }
 }

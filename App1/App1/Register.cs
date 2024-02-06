@@ -2,12 +2,15 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.SE.Omapi;
 using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 
 /* Summary I've done in register.xml -Jonard
         email                           - Set to email type
@@ -27,6 +30,9 @@ namespace App1
         EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
         Button register, home, getbmi;
         Decimal bmivalue;
+        DBClass db = new DBClass();
+        JsonElement root;
+        string searchemail;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -83,36 +89,18 @@ namespace App1
 
         public void registerClick(object sender, EventArgs e)
         {
-            if (Validation() && (password.Text == repassword.Text))
+            if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
             {
+                db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text +
+                                                "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
+
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
-                insertUserData();
-                insertLoginData();
                 Intent i = new Intent(this, typeof(MainActivity));
                 StartActivity(i);
 
             }
+            else if (!NoDuplicate()) { Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show(); }
             else { Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show(); }
-        }
-
-        public void insertUserData() 
-        {
-            string res = "";
-            DBClass db = new DBClass();
-
-            res = db.InsertData("insert_record.php?email=" + email.Text + "&first_name" + firstname.Text + "&last_name" + lastname.Text + "&age" + Convert.ToInt32(age.Text) + "&height" + Convert.ToDecimal(height.Text) + "&weight" + Convert.ToDecimal(weight.Text) + "&bmi" + Convert.ToDecimal(bmi.Text));
-            Toast.MakeText(Application.Context, String.Format(res), ToastLength.Short).Show();
-
-        }
-
-        public void insertLoginData()
-        {
-            string res = "";
-            DBClass db = new DBClass();
-
-            res = db.InsertLoginData("insert_login_record.php?email=" + email.Text + "&password" + password.Text);
-            Toast.MakeText(Application.Context, String.Format(res), ToastLength.Short).Show();
-
         }
 
         //Validation - need to revise cause this is not the best conditions to use but still works tho -Jonard
@@ -128,6 +116,20 @@ namespace App1
                 { return false; }
             }
             catch { return false; }
+            return true;
+        }
+        //Validation - checks if the email already exists or not
+        public bool NoDuplicate()
+        {
+            root = db.RetrieveData("search_noduplicate_acct.php?");
+            for (int i = 0; i < root.GetArrayLength(); i ++)
+            {
+                var u1 = root[i];
+                searchemail = u1.GetProperty("email").ToString();
+
+                if (searchemail == email.Text)
+                { return false; }
+            }
             return true;
         }
     }

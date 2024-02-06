@@ -57,7 +57,7 @@ namespace App1
                 //i.PutExtra("Text", variable);
                 StartActivity(i);
         }
-
+        
         public void RegLink(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(Register));

@@ -21,7 +21,7 @@ namespace App1
             Sa request, call this variable IP_DB then lagyan nalang ng plus 
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
-        string IP_DB = "http://192.168.137.1/user_db/";
+        string IP_DB = "http://192.168.100.17/CS134P-1P-Thesis/";
 
         //Http Response
         HttpWebResponse response;
@@ -45,14 +45,6 @@ namespace App1
             res = reader.ReadToEnd();
             return res;
         }
-        public string InsertLoginData(string WebReq)
-        {
-            request = (HttpWebRequest)WebRequest.Create(IP_DB + WebReq);
-            response = (HttpWebResponse)request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-            res = reader.ReadToEnd();
-            return res;
-        }
 
         public JsonElement RetrieveData(string WebReq)
         {
@@ -62,7 +54,7 @@ namespace App1
             StreamReader reader = new StreamReader(response.GetResponseStream());
             var result = reader.ReadToEnd();
             using JsonDocument doc = JsonDocument.Parse(result);
-            JsonElement root = doc.RootElement;
+            JsonElement root = doc.RootElement.Clone();
             return root;
         }
     }
@@ -73,13 +65,13 @@ CREATE DATABASE USER_DB;
 USE USER_DB;
 
 CREATE TABLE `LOGIN` (
-  `email` VARCHAR(20),
-  `password` VARCHAR(20),
+  `email` VARCHAR(40),
+  `password` VARCHAR(40),
   PRIMARY KEY (`email`)
 );
 
 CREATE TABLE `USER_DATA` (
-  `email` VARCHAR(20),
+  `email` VARCHAR(40),
   `first_name` VARCHAR(30),
   `last_name` VARCHAR(20),
   `age` INTEGER,

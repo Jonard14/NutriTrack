@@ -1408,3 +1408,5 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\res\layout\homepage.xml
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\HomePage.java
