@@ -121,6 +121,39 @@
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:paddingLeft="10px"/>
+            
+            <TextView
+                android:text="Gender:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_gender" 
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:paddingLeft="10px" />
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdGrp_gender">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/rdBtn_male"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:paddingLeft="10px" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/rdBtn_female"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:paddingLeft="10px" />
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout

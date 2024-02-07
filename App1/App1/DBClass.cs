@@ -78,7 +78,8 @@ CREATE TABLE `USER_DATA` (
   `height` DECIMAL,
   `weight` DECIMAL,
   `bmi` VARCHAR(15),
-  `daily_calorie_intake` DECIMAL
+  `daily_calorie_intake` DECIMAL,
+  `gender` VARCHAR(1)
 );
 
 CREATE TABLE `ILLNESSES` (

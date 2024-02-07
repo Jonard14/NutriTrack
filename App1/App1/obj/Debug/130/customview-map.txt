@@ -47,6 +47,8 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 paths;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+RadioButton;obj\Debug\130\res\layout\register.xml
+RadioGroup;obj\Debug\130\res\layout\register.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
 resources;obj\Debug\130\res\values\drawables.xml

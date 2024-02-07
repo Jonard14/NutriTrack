@@ -19,3 +19,4 @@ For "login" table, the passwords are set to hash. So, here's the passwords:
 hutao@wangsheng.genshin.hoyo	funeralparlor
 jcsfrancisco@live.mcl.edu.ph	jonard
 weltyang@starrail.hoyo		blackhole
+muratahimeko@hi3.hoyo		finallesson

@@ -28,7 +28,7 @@ namespace App1
         TextView register;
         DBClass db = new DBClass();
         JsonElement root;
-        string searchemail, searchpass;
+        string searchemail;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

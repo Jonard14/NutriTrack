@@ -16,6 +16,7 @@ using System.Text.Json;
         email                           - Set to email type
         first name, last name           - Set to string
         age                             - Set to integer
+        gender                          - Radio buttons
         height, weight                  - Set to decimal
         bmi                             - Set to decimal, and edit text cannot be edited unless clicked the "Get BMI" 
                                           button to get the values from height and weight
@@ -27,7 +28,10 @@ namespace App1
     [Activity(Label = "Register")]
     public class Register : Activity
     {
+        TextView txtemail;
         EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
+        RadioGroup rd_gender;
+        string selectedGender, valueGender;
         Button register, home, getbmi;
         Decimal bmivalue;
         DBClass db = new DBClass();
@@ -45,10 +49,18 @@ namespace App1
             home = FindViewById<Button>(Resource.Id.btn_Home);
             home.Click += homeClick;
 
+            txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
+            
+
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
             firstname = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
             age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
+            
+            rd_gender = FindViewById<RadioGroup>(Resource.Id.rdGrp_gender);
+            //rd_gender.Check(2131230885);
+            rd_gender.CheckedChange += myRadioGroup_CheckedChange;
+            
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
@@ -62,12 +74,23 @@ namespace App1
 
             register = FindViewById<Button>(Resource.Id.btn_Register);
             register.Click += registerClick;
+
+            txtemail.Text = selectedGender;
+
         }
 
         public void homeClick(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(MainActivity));
             StartActivity(i);
+        }
+
+        public void myRadioGroup_CheckedChange(object sender, RadioGroup.CheckedChangeEventArgs e)
+        {
+            int checkedItemId = rd_gender.CheckedRadioButtonId;
+            RadioButton checkRadioButton = FindViewById<RadioButton>(checkedItemId);
+            selectedGender = checkedItemId.ToString();
+            rd_gender.Check(checkedItemId);
         }
 
         // Calculate BMI from the user inputs height and weight
@@ -91,7 +114,8 @@ namespace App1
         {
             if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
             {
-                db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text +
+                valueGender = getGender();
+                db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender+
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
 
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
@@ -107,7 +131,7 @@ namespace App1
         public bool Validation()
         {
             if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
-                password.Text == "" || repassword.Text == "")
+                password.Text == "" || repassword.Text == "" || selectedGender == null)
             { return false; }
             try
             {
@@ -131,6 +155,18 @@ namespace App1
                 { return false; }
             }
             return true;
+        }
+        // Get Gender
+        /* Radio button value
+         * Male     - 2131230907
+         * Female   - 2131230906
+         */
+        public string getGender()
+        {
+            if (selectedGender == "2131230907") { valueGender = "M"; }
+            else if (selectedGender == "2131230906") { valueGender = "F"; }
+            else { valueGender = null; }
+            return valueGender;
         }
     }
 }
