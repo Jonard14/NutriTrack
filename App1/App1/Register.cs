@@ -29,10 +29,12 @@ namespace App1
     public class Register : Activity
     {
         TextView txtemail;
-        EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
+        EditText email, firstname, lastname, age, height, weight, bmi, ill, password, repassword;
         RadioGroup rd_gender;
+        CheckBox ill_HD, ill_D, ill_C;
         string selectedGender, valueGender;
-        Button register, home, getbmi;
+        string[] illnesses;
+        Button register, home, getbmi, add_ill;
         Decimal bmivalue;
         DBClass db = new DBClass();
         JsonElement root;
@@ -67,6 +69,14 @@ namespace App1
 
             getbmi = FindViewById<Button>(Resource.Id.btn_GetBMI);
             getbmi.Click += GetBMIClick;
+
+            ill_HD = FindViewById<CheckBox>(Resource.Id.checkBox1);
+            ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
+            ill_C = FindViewById<CheckBox>(Resource.Id.checkBox3);
+            ill = FindViewById<EditText>(Resource.Id.edtTxt_ill);
+
+            add_ill = FindViewById<Button>(Resource.Id.btn_AddIll);
+            add_ill.Click += AddIllness;
 
             password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
             repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
@@ -110,13 +120,21 @@ namespace App1
             catch { Toast.MakeText(this, "Invalid Height and Weight!", ToastLength.Long).Show(); }
         }
 
+        public void AddIllness(object sender, EventArgs e) 
+        {
+            if (ill_HD.Checked) { illnesses.Append(ill_HD.Text); }
+            if (ill_D.Checked) { illnesses.Append(ill_D.Text); }
+            if (ill_C.Checked) { illnesses.Append(ill_C.Text); }
+            if (ill.Text != "") { illnesses.Append(ill.Text); }
+        }
+
         public void registerClick(object sender, EventArgs e)
         {
             if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
             {
                 valueGender = getGender();
                 db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender+
-                                                "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
+                                                "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text + "&types=" + illnesses);
 
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(MainActivity));
@@ -133,6 +151,9 @@ namespace App1
             if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
                 password.Text == "" || repassword.Text == "" || selectedGender == null)
             { return false; }
+
+            if (illnesses.Length == 0) { return false; }
+
             try
             {
                 if (Convert.ToDecimal(height.Text) <= 0 || Convert.ToDecimal(weight.Text) <= 0 || Convert.ToDecimal(bmi.Text) <= 0 ||

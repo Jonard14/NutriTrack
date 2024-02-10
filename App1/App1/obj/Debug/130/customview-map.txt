@@ -10,6 +10,7 @@ Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\register.xml
 cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\app_bar_main.xml
