@@ -1,4 +1,6 @@
-Database name: user_db
+Database name:
+-user_db
+-food_db
 
 To create table, I have provided the SQL files in this folder.
 After creating database, select your database (user_db), then go to SQL tab.
@@ -20,3 +22,4 @@ hutao@wangsheng.genshin.hoyo	funeralparlor
 jcsfrancisco@live.mcl.edu.ph	jonard
 weltyang@starrail.hoyo		blackhole
 muratahimeko@hi3.hoyo		finallesson
+testname1@mcl.com		Testing1

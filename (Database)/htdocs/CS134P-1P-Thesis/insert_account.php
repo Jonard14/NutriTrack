@@ -1,6 +1,6 @@
 <?php 
 
-include_once('connects.php');
+include_once('connect_user_db.php');
 
 
 $email = $_GET['email'];
@@ -12,12 +12,11 @@ $height =  $_GET['height'];
 $weight =  $_GET['weight'];
 $bmi =  $_GET['bmi'];
 $password =  $_GET['password'];
-$types = $_GET['illnesses']
+$types = $_GET['illnesses'];
 
 $result = mysqli_query($con,"INSERT INTO user_data (email, first_name, last_name, age, gender, height, weight, bmi) VALUES ('$email', '$first_name', '$last_name', '$age', '$gender', '$height', '$weight', '$bmi')");
 $result = mysqli_query($con,"INSERT INTO login VALUES ('$email', MD5('$password'))");
-$result = mysqli_query($con,"INSERT INTO illnesses VALUES ('$email', '$types')");
-
+$result = mysqli_query($con,"INSERT INTO `illnesses` VALUES ('$email', '$types');");
 
 echo "Data Inserted";
 ?>

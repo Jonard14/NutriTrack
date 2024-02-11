@@ -75,26 +75,35 @@ CREATE TABLE `USER_DATA` (
   `first_name` VARCHAR(30),
   `last_name` VARCHAR(20),
   `age` INTEGER,
-  `height` DECIMAL,
-  `weight` DECIMAL,
+  `height` decimal(10,2),
+  `weight` decimal(10,2),
   `bmi` VARCHAR(15),
-  `daily_calorie_intake` DECIMAL,
-  `gender` VARCHAR(1)
+  `daily_calorie_intake` decimal(10,2),
+  `gender` VARCHAR(1),
+  PRIMARY KEY (`email`)
 );
 
 CREATE TABLE `ILLNESSES` (
-  `first_name` VARCHAR(30),
-  `types` VARCHAR(30)
+  `email` VARCHAR(40),
+  `types` TEXT
+);
+
+CREATE TABLE `USER_FOOD` (
+  `email` VARCHAR(40),
+  `date` DATE,
+  `food_name` VARCHAR(20),
+  `macronutrients` decimal(10,2),
+  `micronutrients` decimal(10,2)
 );
 
 CREATE DATABASE FOOD_DB;
 USE FOOD_DB;
 
 CREATE TABLE `FOOD_DATA` (
-  `food-id` VARCHAR(6),
+  `food_id` VARCHAR(6),
   `food_name` VARCHAR(20),
   `food_desc` TEXT,
-  PRIMARY KEY (`food-id`)
+  PRIMARY KEY (`food_id`)
 );
 
 CREATE TABLE `BRANDS` (
@@ -106,55 +115,11 @@ CREATE TABLE `BRANDS` (
 
 CREATE TABLE `MACRONUTRIENTS` (
   `brand_id` VARCHAR(6),
-  `macronutrients` VARCHAR(20)
+  `macronutrients` decimal(10,2)
 );
 
 CREATE TABLE `MICRONUTRIENTS` (
   `brand_id` VARCHAR(6),
-  `mIcronutrients` VARCHAR(20)
+  `micronutrients` decimal(10,2)
 );
-*/
-
-/* retreive data via json
-            DBClass response = new DBClass();
-            HttpWebResponse res = response.RetrieveData("search_record.php");
-            StreamReader reader = new StreamReader(res.GetResponseStream());
-            var result = reader.ReadToEnd();
-            using JsonDocument doc = JsonDocument.Parse(result);
-            JsonElement root = doc.RootElement;
-
-            List<string> title = new List<string>();
-            List<string> imageFiles = new List<string>(); //empty lists for desc and imgfile
-            List<string> desc = new List<string>();
-            List<string> ingredients = new List<string>();
-            List<string> steps = new List<string>();
-
-            for (int i = 0; i < root.GetArrayLength(); i++) //loops through the database and assign it in a variable
-            {
-                var u1 = root[i];
-
-                string searchedname = u1.GetProperty("name").ToString();
-                string searchedimgfile = u1.GetProperty("imgfile").ToString();
-                string searcheddesc = u1.GetProperty("description").ToString();
-                string searchedingredients = u1.GetProperty("ingredients").ToString();
-                string searchedsteps = u1.GetProperty("steps").ToString();
-
-                title.Add(searchedname);
-                imageFiles.Add(searchedimgfile); //added imgfile and desc in the lists
-                desc.Add(searcheddesc);
-                ingredients.Add(searchedingredients);
-                steps.Add(searchedsteps);
-            }
-            string[] titleArray = title.ToArray();
-            string[] imgArray = imageFiles.ToArray(); //converted the lists to an array and then assign it in the parameters for randclass
-            string[] descArray = desc.ToArray();
-            string[] ingredientsArray = ingredients.ToArray();
-            string[] stepsArray = steps.ToArray();
-
-            //Calls Randomizer class
-            randclass = new Randomizer(iv, dish_title_tv, dish_desc_tv, titleArray, descArray, imgArray, ingredientsArray, stepsArray);
-            //Randomize content when the user opens the app
-            randclass.startup();
-            //Runs the content randomly every 10 seconds
-            randclass.Play();
 */

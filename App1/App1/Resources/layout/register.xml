@@ -302,7 +302,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout4">
+            android:id="@+id/linearLayout5">
 
             
 
@@ -319,7 +319,7 @@
 
             <EditText
                 android:inputType="none"
-                android:layout_width="200px"
+                android:layout_width="500px"
                 android:layout_height="wrap_content"
                 android:hint="health related diseasea, alergies, etc. "
                 android:id="@+id/edtTxt_ill"

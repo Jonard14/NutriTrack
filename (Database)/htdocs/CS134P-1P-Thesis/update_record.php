@@ -1,6 +1,6 @@
 <?php 
 
-include_once('connects.php');
+include_once('connect_user_db.php');
 
 $name = $_GET['name'];
 $status =  $_GET['status'];
