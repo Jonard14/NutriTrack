@@ -29,7 +29,7 @@ namespace App1
     public class Register : Activity
     {
         EditText email, firstname, lastname, age, height, weight, bmi, ill, password, repassword;
-        RadioGroup rd_gender;
+        RadioButton rd_male, rd_female, rdEvent; 
         CheckBox ill_HD, ill_D, ill_C;
         string selectedGender, valueGender, success;
         string[] illnesses = new string[4];
@@ -55,10 +55,11 @@ namespace App1
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
             age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
             
-            rd_gender = FindViewById<RadioGroup>(Resource.Id.rdGrp_gender);
-            //rd_gender.Check(2131230885);
-            rd_gender.CheckedChange += myRadioGroup_CheckedChange;
-            
+            rd_male = FindViewById<RadioButton>(Resource.Id.rdBtn_male);
+            rd_male.Click += rdEvent_male; 
+            rd_female = FindViewById<RadioButton>(Resource.Id.rdBtn_female);
+            rd_female.Click += rdEvent_female;
+
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
@@ -88,12 +89,16 @@ namespace App1
             StartActivity(i);
         }
 
-        public void myRadioGroup_CheckedChange(object sender, RadioGroup.CheckedChangeEventArgs e)
+        // Get values of gender
+        public void rdEvent_male(object sender, EventArgs e)
         {
-            int checkedItemId = rd_gender.CheckedRadioButtonId;
-            RadioButton checkRadioButton = FindViewById<RadioButton>(checkedItemId);
-            selectedGender = checkedItemId.ToString();
-            rd_gender.Check(checkedItemId);
+            rdEvent = sender as RadioButton;
+            selectedGender = rdEvent.Text;
+        }
+        public void rdEvent_female(object sender, EventArgs e)
+        {
+            rdEvent = sender as RadioButton;
+            selectedGender = rdEvent.Text;
         }
 
         // Calculate BMI from the user inputs height and weight
@@ -173,15 +178,11 @@ namespace App1
             }
             return true;
         }
-        // Get Gender
-        /* Radio button value
-         * Male     - 2131230907
-         * Female   - 2131230906
-         */
+        // Get gender value (Validation)
         public string getGender()
         {
-            if (selectedGender == "2131230907") { valueGender = "M"; }
-            else if (selectedGender == "2131230906") { valueGender = "F"; }
+            if (selectedGender == "Male") { valueGender = "M"; }
+            else if (selectedGender == "Female") { valueGender = "F"; }
             else { valueGender = null; }
             return valueGender;
         }
