@@ -7,6 +7,7 @@ background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\130\res\layout\activity_main.xml
 Button;obj\Debug\130\res\layout\content_main.xml
+Button;obj\Debug\130\res\layout\homepage.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
