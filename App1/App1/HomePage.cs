@@ -24,7 +24,7 @@ namespace App1
         ArrayList foods;
         ArrayAdapter _adapter;
         TextView nutriContentTV;
-        Button addbtn;
+        Button addbtn, Tracker_btn;
         LinearLayout ll;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,6 +47,9 @@ namespace App1
 
             sv.QueryTextChange += sv_QueryTextChange;
             lv.ItemClick += lv_ItemClick;
+
+            Tracker_btn = FindViewById<Button>(Resource.Id.btn_Tracker);
+            Tracker_btn.Click += TrackerEvent;
 
         }
 
@@ -93,5 +96,10 @@ namespace App1
             foods.Add("Crab");
         }
 
+        public void TrackerEvent(object sender, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(Tracker));
+            StartActivity(i);
+        }
     }
 }

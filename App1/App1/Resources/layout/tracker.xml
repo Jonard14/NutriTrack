@@ -170,17 +170,10 @@
             android:paddingTop="10px"
             android:paddingBottom="10px"
             android:layout_gravity="center"
-            android:background="#ff76ff03" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10px"
-        android:paddingBottom="10px"
-        android:id="@+id/linearLayout4">
+            android:background="#ff76ff03"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px" />
+
         <Button
             android:text="Reset Sugar Consumed"
             android:layout_width="750px"
@@ -191,11 +184,23 @@
             android:paddingBottom="10px"
             android:layout_gravity="center"
             android:background="#ff76ff03"
-            android:backgroundTint="#ff76ff03" />
+            android:backgroundTint="#ff76ff03"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px" />
+
+        <Button
+            android:text="Return Home"
+            android:layout_width="750px"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Home"
+            android:textSize="55px"
+            android:paddingTop="10px"
+            android:paddingBottom="10px"
+            android:layout_gravity="center"
+            android:background="#ff76ff03"
+            android:backgroundTint="#ff76ff03"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px" />
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>

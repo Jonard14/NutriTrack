@@ -23,8 +23,8 @@ namespace App1
         JsonElement root;
         string searchemail;
         string email = Login.MyGlobals.Globalemail;
-        string CalorieNum, TotalCalorie, CalorieDays, total_sugar;
-        Button SaveCalorie, ResetSugar;
+        string CalorieNum, TotalCalorie, CalorieDays, total_sugar = "0";
+        Button SaveCalorie, ResetSugar, home;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -37,6 +37,11 @@ namespace App1
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
 
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
+
+            home = FindViewById<Button>(Resource.Id.btn_Home);
+            home.Click += homeClick;
+
+            Update();
 
         }
 
@@ -68,6 +73,12 @@ namespace App1
                 { return true; }
             }
             return false;
+        }
+
+        public void homeClick(object sender, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(HomePage));
+            StartActivity(i);
         }
     }
 }
