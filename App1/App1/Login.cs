@@ -67,6 +67,7 @@ namespace App1
                 Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
+                MyGlobals.Globalemail = email.Text;
                 StartActivity(i);
             }
             else
@@ -95,6 +96,10 @@ namespace App1
                 { return true; }
             }
             return false;
+        }
+        public static class MyGlobals
+        {
+            public static string Globalemail { get; set; }
         }
     }
 }

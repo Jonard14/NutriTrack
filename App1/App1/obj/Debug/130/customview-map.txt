@@ -9,6 +9,7 @@ Button;obj\Debug\130\res\layout\activity_main.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\register.xml
+Button;obj\Debug\130\res\layout\tracker.xml
 cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
@@ -38,6 +39,7 @@ LinearLayout;obj\Debug\130\res\layout\homepage.xml
 LinearLayout;obj\Debug\130\res\layout\login.xml
 LinearLayout;obj\Debug\130\res\layout\nav_header_main.xml
 LinearLayout;obj\Debug\130\res\layout\register.xml
+LinearLayout;obj\Debug\130\res\layout\tracker.xml
 ListView;obj\Debug\130\res\layout\homepage.xml
 menu;obj\Debug\130\res\menu\activity_main_drawer.xml
 menu;obj\Debug\130\res\menu\menu_main.xml
@@ -67,6 +69,7 @@ TextView;obj\Debug\130\res\layout\homepage.xml
 TextView;obj\Debug\130\res\layout\login.xml
 TextView;obj\Debug\130\res\layout\nav_header_main.xml
 TextView;obj\Debug\130\res\layout\register.xml
+TextView;obj\Debug\130\res\layout\tracker.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_gallery.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml

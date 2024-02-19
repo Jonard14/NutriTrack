@@ -69,6 +69,8 @@ CREATE TABLE `user_data` (
   `weight` decimal(10,2) DEFAULT NULL,
   `bmi` varchar(15) DEFAULT NULL,
   `daily_calorie_intake` decimal(10,0) DEFAULT NULL,
+  `total_calorie_intake` decimal(10,0) DEFAULT NULL,
+  `calorie_intake_days` decimal(10,0) DEFAULT NULL,
   `gender` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -76,12 +78,12 @@ CREATE TABLE `user_data` (
 -- Dumping data for table `user_data`
 --
 
-INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `age`, `height`, `weight`, `bmi`, `daily_calorie_intake`, `gender`) VALUES
-('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', 23, '1.66', '70', '25.40', NULL, 'M'),
-('weltyang@starrail.hoyo', 'Welt', 'Yang', 50, '1.74', '60', '26.67', NULL, 'M'),
-('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', 20, '1.56', '60', '24.97', NULL, 'F'),
-('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', 27, '1.67', '55', '19.72', NULL, 'F'),
-('testname1@mcl.com', 'test', 'name', 23, '1.7', '90', '31.14', NULL, 'M');
+INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `age`, `height`, `weight`, `bmi`, `daily_calorie_intake`,`total_calorie_intake`,`calorie_intake_days`, `gender`) VALUES
+('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', 23, '1.66', '70', '25.40', 2654, 1000, 1, 'M'),
+('weltyang@starrail.hoyo', 'Welt', 'Yang', 50, '1.74', '60', '26.67', 2587, 1000, 1, 'M'),
+('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', 20, '1.56', '60', '24.97', 2202, 1000, 1, 'F'),
+('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', 27, '1.67', '55', '19.72', 2123, 1000, 1, 'F'),
+('testname1@mcl.com', 'test', 'name', 23, '1.7', '90', '31.14', 2654, 1000, 1, 'M');
 
 --
 -- Indexes for dumped tables
