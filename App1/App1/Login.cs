@@ -62,7 +62,9 @@ namespace App1
         //Login of acct
         public void loginClick(object sender, EventArgs e)
         {
-            if (VerifyLogin()) 
+            Intent i = new Intent(this, typeof(HomePage));
+            StartActivity(i);
+            /*if (VerifyLogin()) 
             {
                 Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
@@ -73,7 +75,7 @@ namespace App1
             else
             {
                 Toast.MakeText(this, "Email or Password are incorrect!", ToastLength.Long).Show();
-            }
+            }*/
         }
 
         public void RegisterLink(object sender, EventArgs e) 
@@ -83,7 +85,7 @@ namespace App1
         }
 
         // Verify Login if account is registered to db
-        public bool VerifyLogin()
+        /*public bool VerifyLogin()
         {
             root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
 
@@ -96,7 +98,7 @@ namespace App1
                 { return true; }
             }
             return false;
-        }
+        }*/
         public static class MyGlobals
         {
             public static string Globalemail { get; set; }

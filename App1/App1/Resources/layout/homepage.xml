@@ -8,36 +8,21 @@
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
     android:background="@android:color/holo_blue_dark">
-    <TextView
-        android:id="@+id/nutritionContentTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:gravity="center"/>
 
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="238.5dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nutritionContentTV"
-        android:text="Add Food"
-        android:gravity="center"
-        android:background="@android:color/holo_green_light"/>
     <Button
         android:id="@+id/btn_Tracker"
         android:layout_width="238.5dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nutritionContentTV"
         android:text="Tracker"
         android:gravity="center"
         android:background="@android:color/holo_green_light"/>
+
 
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
         android:background="@android:color/holo_blue_bright">
 
         <SearchView

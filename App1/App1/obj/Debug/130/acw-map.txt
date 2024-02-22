@@ -1,3 +1,6 @@
+App1.DisplayPage, App1;crc64a7a6b04b89628087.DisplayPage
+App1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
+app1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
 App1.HomePage, App1;crc64a7a6b04b89628087.HomePage
 App1.HomePage;crc64a7a6b04b89628087.HomePage
 app1.HomePage;crc64a7a6b04b89628087.HomePage
