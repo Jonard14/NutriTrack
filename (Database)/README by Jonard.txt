@@ -23,3 +23,4 @@ jcsfrancisco@live.mcl.edu.ph	jonard
 weltyang@starrail.hoyo		blackhole
 muratahimeko@hi3.hoyo		finallesson
 testname1@mcl.com		Testing1
+testname2@mcl.com		Testing2

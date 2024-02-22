@@ -328,18 +328,6 @@
                 android:paddingLeft="10px"
                 android:layout_marginLeft="50px" />
 
-            <Button
-                android:text="Confirm"
-                android:layout_width="200px"
-                android:layout_height="75px"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:id="@+id/btn_AddIll"
-                android:textStyle="bold"
-                android:layout_marginLeft="30px"
-                android:textColor="@android:color/background_light"
-                android:background="@android:color/holo_green_light" />
-
         </LinearLayout>
 
         <TextView

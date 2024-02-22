@@ -13,11 +13,6 @@ using System.Text;
 using System.Text.Json;
 using static Android.Provider.DocumentsContract;
 
-/* Summary I've done in login.xml -Jonard
-        email                           - Set to email type
-        password                        - Set to password type
- */
-
 namespace App1
 {
     [Activity(Label = "Login")]
@@ -85,7 +80,7 @@ namespace App1
         }
 
         // Verify Login if account is registered to db
-        /*public bool VerifyLogin()
+        public bool VerifyLogin()
         {
             root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
 
@@ -98,7 +93,7 @@ namespace App1
                 { return true; }
             }
             return false;
-        }*/
+        }
         public static class MyGlobals
         {
             public static string Globalemail { get; set; }

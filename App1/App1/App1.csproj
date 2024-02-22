@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="DBClass.cs" />
     <Compile Include="DisplayPage.cs" />
+    <Compile Include="DrawerNavigation.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
@@ -154,6 +155,15 @@
     <AndroidResource Include="Resources\layout\displaypage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\homepage_drawer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\tracker_drawer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\displaypage_drawer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -4284,24 +4284,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Geico\\.nuget\\packages\\": {},
+    "C:\\Users\\Acer\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\Geico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Geico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4316,11 +4316,6 @@
         "monoandroid13.0": {
           "projectReferences": {}
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

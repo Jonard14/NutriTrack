@@ -17,7 +17,7 @@ using Google.Android.Material.Snackbar;
 namespace App1
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    public class MainActivity : AppCompatActivity//, NavigationView.IOnNavigationItemSelectedListener
     {
         Button btn_Login;
         TextView register;
@@ -26,8 +26,10 @@ namespace App1
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.content_main);
 
+            /*
+            // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -41,6 +43,7 @@ namespace App1
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+            */
 
             // Code starts here
             btn_Login = FindViewById<Button>(Resource.Id.btn_signup);
@@ -65,10 +68,8 @@ namespace App1
         }
 
 
-
-
-
-        // built-in template functions (ignore those)
+        // ============ built-in template functions for drawer (code starts here) =======================
+        /*
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -98,39 +99,23 @@ namespace App1
 
             return base.OnOptionsItemSelected(item);
         }
-
+        
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
             View view = (View) sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
-
+        */
+        /*
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
-
-            if (id == Resource.Id.nav_camera)
-            {
-                // Handle the camera action
-            }
-            else if (id == Resource.Id.nav_gallery)
+            if (id == Resource.Id.home_btn)
             {
 
             }
-            else if (id == Resource.Id.nav_slideshow)
-            {
-
-            }
-            else if (id == Resource.Id.nav_manage)
-            {
-
-            }
-            else if (id == Resource.Id.nav_share)
-            {
-
-            }
-            else if (id == Resource.Id.nav_send)
+            else if (id == Resource.Id.tracker_btn)
             {
 
             }
@@ -139,6 +124,9 @@ namespace App1
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
         }
+        */
+        // ============ built-in template functions for drawer (code ends here) =======================
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

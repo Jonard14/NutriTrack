@@ -12,17 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 
-/* Summary I've done in register.xml -Jonard
-        email                           - Set to email type
-        first name, last name           - Set to string
-        age                             - Set to integer
-        gender                          - Radio buttons
-        height, weight                  - Set to decimal
-        bmi                             - Set to decimal, and edit text cannot be edited unless clicked the "Get BMI" 
-                                          button to get the values from height and weight
-        password, re-type password      - Set to password type
- */
-
 namespace App1
 {
     [Activity(Label = "Register")]
@@ -32,8 +21,7 @@ namespace App1
         RadioButton rd_male, rd_female, rdEvent; 
         CheckBox ill_HD, ill_D, ill_C;
         string selectedGender, valueGender, success;
-        string[] illnesses = new string[4];
-        Button register, home, getbmi, add_ill;
+        Button register, home, getbmi;
         Decimal bmivalue;
         DBClass db = new DBClass();
         JsonElement root;
@@ -71,9 +59,6 @@ namespace App1
             ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
             ill_C = FindViewById<CheckBox>(Resource.Id.checkBox3);
             ill = FindViewById<EditText>(Resource.Id.edtTxt_ill);
-
-            add_ill = FindViewById<Button>(Resource.Id.btn_AddIll);
-            add_ill.Click += AddIllness;
 
             password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
             repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
@@ -118,32 +103,26 @@ namespace App1
             catch { Toast.MakeText(this, "Invalid Height and Weight!", ToastLength.Long).Show(); }
         }
 
-        public void AddIllness(object sender, EventArgs e) 
-        {
-            if (ill_HD.Checked) { illnesses.Append(ill_HD.Text); }
-            if (ill_D.Checked) { illnesses.Append(ill_D.Text); }
-            if (ill_C.Checked) { illnesses.Append(ill_C.Text); }
-            if (ill.Text != "") { illnesses.Append(ill.Text); }
-            //Console.WriteLine(illnesses.ToString());
-        }
-
+        // Register Account
         public void registerClick(object sender, EventArgs e)
         {
             if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
             {
                 valueGender = getGender();
                 success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender+
-                                                "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text + "&types=" + illnesses);
+                                                "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
+                SaveIllness();
                 Console.WriteLine(success);
-                Toast.MakeText(this, success, ToastLength.Long).Show();
+                //Toast.MakeText(this, success, ToastLength.Long).Show(); // Test/Debug
 
-                //Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(MainActivity));
                 StartActivity(i);
 
             }
             else if (!NoDuplicate()) { Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show(); }
             else { Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show(); }
+            
         }
 
         //Validation - need to revise cause this is not the best conditions to use but still works tho -Jonard
@@ -152,8 +131,6 @@ namespace App1
             if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
                 password.Text == "" || repassword.Text == "" || selectedGender == null)
             { return false; }
-
-            //if (illnesses.Length == 0) { return false; }
 
             try
             {
@@ -185,6 +162,23 @@ namespace App1
             else if (selectedGender == "Female") { valueGender = "F"; }
             else { valueGender = null; }
             return valueGender;
+        }
+        // Insert Illness
+        public void SaveIllness()
+        {
+            if (ill_HD.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_HD.Text); }
+            if (ill_D.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_D.Text); }
+            if (ill_C.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_C.Text); }
+            if (ill.Text != "") { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill.Text); }
+            if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked && ill.Text == "") { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + "Healthy"); }
+            /* Test/Debug
+            Toast.MakeText(this, success, ToastLength.Long).Show();
+            Console.WriteLine(success);
+            Console.WriteLine(ill_HD.Text);
+            Console.WriteLine(ill_D.Text);
+            Console.WriteLine(ill_C.Text);
+            Console.WriteLine(ill.Text);
+            */
         }
     }
 }

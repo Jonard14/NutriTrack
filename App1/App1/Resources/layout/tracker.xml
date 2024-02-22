@@ -188,19 +188,6 @@
             android:layout_marginBottom="10px"
             android:layout_marginTop="10px" />
 
-        <Button
-            android:text="Return Home"
-            android:layout_width="750px"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_Home"
-            android:textSize="55px"
-            android:paddingTop="10px"
-            android:paddingBottom="10px"
-            android:layout_gravity="center"
-            android:background="#ff76ff03"
-            android:backgroundTint="#ff76ff03"
-            android:layout_marginBottom="10px"
-            android:layout_marginTop="10px" />
     </LinearLayout>
 
 </LinearLayout>
