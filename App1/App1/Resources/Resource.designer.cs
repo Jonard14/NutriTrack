@@ -11037,11 +11037,8 @@ namespace App1
 			// aapt resource value: 0x7F0801F5
 			public const int textTop = 2131231221;
 			
-			// aapt resource value: 0x7F0801FF
-			public const int textView = 2131231231;
-			
 			// aapt resource value: 0x7F080200
-			public const int textView1 = 2131231232;
+			public const int textView = 2131231232;
 			
 			// aapt resource value: 0x7F0801F6
 			public const int textV_Calorie_Track = 2131231222;
@@ -11069,6 +11066,9 @@ namespace App1
 			
 			// aapt resource value: 0x7F0801FE
 			public const int textV_TotalCalorie = 2131231230;
+			
+			// aapt resource value: 0x7F0801FF
+			public const int textV_TotalCalorieNum = 2131231231;
 			
 			// aapt resource value: 0x7F080201
 			public const int text_input_end_icon = 2131231233;

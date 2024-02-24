@@ -3578,8 +3578,8 @@ int id textV_PrevCalorie 0x7f0801fb
 int id textV_Sugar 0x7f0801fc
 int id textV_SugarTracker 0x7f0801fd
 int id textV_TotalCalorie 0x7f0801fe
-int id textView 0x7f0801ff
-int id textView1 0x7f080200
+int id textV_TotalCalorieNum 0x7f0801ff
+int id textView 0x7f080200
 int id text_input_end_icon 0x7f080201
 int id text_input_error_icon 0x7f080202
 int id text_input_start_icon 0x7f080203

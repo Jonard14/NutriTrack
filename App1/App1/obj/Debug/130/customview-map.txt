@@ -8,14 +8,12 @@ androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_draw
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawer.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
-Button;obj\Debug\130\res\layout\activity_main.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\displaypage.xml
-Button;obj\Debug\130\res\layout\homepage.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
-cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\GABBY\Downloads\2ND TERM 2023-2024\CS154-1P\PROTOTYPE\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
@@ -28,8 +26,8 @@ com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\t
 dimen;obj\Debug\130\res\values\dimens.xml
 EditText;obj\Debug\130\res\layout\login.xml
 EditText;obj\Debug\130\res\layout\register.xml
-external-cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\GABBY\Downloads\2ND TERM 2023-2024\CS154-1P\PROTOTYPE\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\GABBY\Downloads\2ND TERM 2023-2024\CS154-1P\PROTOTYPE\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
@@ -44,7 +42,6 @@ item;obj\Debug\130\res\menu\activity_main_drawer.xml
 item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\styles.xml
-LinearLayout;obj\Debug\130\res\layout\activity_main.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
 LinearLayout;obj\Debug\130\res\layout\displaypage.xml
 LinearLayout;obj\Debug\130\res\layout\homepage.xml
@@ -61,7 +58,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
-paths;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\GABBY\Downloads\2ND TERM 2023-2024\CS154-1P\PROTOTYPE\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RadioButton;obj\Debug\130\res\layout\register.xml
 RadioGroup;obj\Debug\130\res\layout\register.xml
 resources;obj\Debug\130\res\values\colors.xml
@@ -70,13 +67,11 @@ resources;obj\Debug\130\res\values\drawables.xml
 resources;obj\Debug\130\res\values\ic_launcher_background.xml
 resources;obj\Debug\130\res\values\strings.xml
 resources;obj\Debug\130\res\values\styles.xml
-ScrollView;obj\Debug\130\res\layout\content_main.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
 shape;obj\Debug\130\res\drawable\side_nav_bar.xml
 string;obj\Debug\130\res\values\strings.xml
 style;obj\Debug\130\res\values\styles.xml
-TextView;obj\Debug\130\res\layout\activity_main.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
 TextView;obj\Debug\130\res\layout\displaypage.xml
 TextView;obj\Debug\130\res\layout\login.xml

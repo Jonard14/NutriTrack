@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textV_Calorie_Track"
         android:textStyle="bold"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:textColor="@android:color/background_light"
         android:paddingLeft="20px"
         android:paddingTop="10px"
@@ -49,7 +49,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="25dp"
+                android:textSize="15dp"
                 android:id="@+id/textV_PrevCalorie" />
             <TextView
                 android:text="Current Calorie Count"
@@ -59,7 +59,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="25dp"
+                android:textSize="15dp"
                 android:id="@+id/textV_CurrentCalorie" />
 
         </LinearLayout>
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="60dp"
+                android:textSize="15dp"
                 android:id="@+id/textV_NumPrev" />
             <TextView
                 android:text="0"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="60dp"
+                android:textSize="15dp"
                 android:id="@+id/textV_NumCurrent" />
 
         </LinearLayout>
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textStyle="bold"
-            android:textSize="25dp"
+            android:textSize="15dp"
             android:id="@+id/textV_TotalCalorie" />
         <TextView
             android:text="0"
@@ -106,8 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="60dp"
-            android:id="@+id/textView1" />
+            android:textSize="15dp"
+            android:id="@+id/textV_TotalCalorieNum" />
 
     </LinearLayout>
 
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textV_SugarTracker"
         android:textStyle="bold"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:textColor="@android:color/background_light"
         android:paddingLeft="20px"
         android:paddingTop="10px"
@@ -141,7 +141,7 @@
             android:id="@+id/textV_Sugar"
             android:gravity="center"
             android:textStyle="bold"
-            android:textSize="25dp"/>
+            android:textSize="15dp"/>
         <TextView
             android:text="0"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textV_NumSugar"
             android:gravity="center"
-            android:textSize="60dp"/>
+            android:textSize="15dp"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -163,10 +163,10 @@
 
         <Button
             android:text="Save Calorie Intake"
-            android:layout_width="750px"
+            android:layout_width="550px"
             android:layout_height="wrap_content"
             android:id="@+id/btn_saveCalorie"
-            android:textSize="60px"
+            android:textSize="30px"
             android:paddingTop="10px"
             android:paddingBottom="10px"
             android:layout_gravity="center"
@@ -176,10 +176,10 @@
 
         <Button
             android:text="Reset Sugar Consumed"
-            android:layout_width="750px"
+            android:layout_width="550px"
             android:layout_height="wrap_content"
             android:id="@+id/btnn_resetSugar"
-            android:textSize="55px"
+            android:textSize="30px"
             android:paddingTop="10px"
             android:paddingBottom="10px"
             android:layout_gravity="center"

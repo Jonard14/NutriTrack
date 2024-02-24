@@ -4284,24 +4284,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {},
+    "C:\\Users\\GABBY\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\GABBY\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GABBY\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4316,6 +4316,11 @@
         "monoandroid13.0": {
           "projectReferences": {}
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4325,6 +4330,14 @@
             "target": "Package",
             "version": "[9.0.0-preview.1.24080.9, )"
           },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[9.0.0-preview.1.24080.9, )"
+          },
+          "Xamarin.AndroidX.AppCompat": {
+            "target": "Package",
+            "version": "[1.6.1.6, )"
+          },
           "Xamarin.AndroidX.AppCompat": {
             "target": "Package",
             "version": "[1.6.1.6, )"
@@ -4332,6 +4345,14 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.8.1, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.8.1, )"
+          },
+          "Xamarin.Google.Android.Material": {
+            "target": "Package",
+            "version": "[1.10.0.2, )"
           },
           "Xamarin.Google.Android.Material": {
             "target": "Package",

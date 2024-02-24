@@ -1,42 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\",
+  "WorkspaceRootPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-1p-thesisdevelopment\\app1\\app1\\displaypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\gabby\\downloads\\2nd term 2023-2024\\cs154-1p\\prototype\\cs134-1p-thesis\\app1\\app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\displaypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\displaypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-1p-thesisdevelopment\\app1\\app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\resources\\layout\\homepage.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\homepage.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\resources\\layout\\displaypage.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\displaypage.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\resources\\layout\\register.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\resources\\layout\\register.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\register.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\app1\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,115 +38,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "displaypage.xml",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\displaypage.xml",
-              "RelativeDocumentMoniker": "App1\\Resources\\layout\\displaypage.xml",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\displaypage.xml",
-              "RelativeToolTip": "App1\\Resources\\layout\\displaypage.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-02-22T02:35:31.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DisplayPage.cs",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\DisplayPage.cs",
-              "RelativeDocumentMoniker": "App1\\DisplayPage.cs",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\DisplayPage.cs",
-              "RelativeToolTip": "App1\\DisplayPage.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwFUAAACRAAAA",
+              "Title": "Tracker.cs",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Tracker.cs",
+              "RelativeDocumentMoniker": "App1\\Tracker.cs",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Tracker.cs",
+              "RelativeToolTip": "App1\\Tracker.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAowFgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T02:34:33.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "tracker.xml",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\tracker.xml",
-              "RelativeDocumentMoniker": "App1\\Resources\\layout\\tracker.xml",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\tracker.xml",
-              "RelativeToolTip": "App1\\Resources\\layout\\tracker.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-02-22T09:01:55.871Z",
+              "WhenOpened": "2024-02-24T08:29:00.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomePage.cs",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\HomePage.cs",
-              "RelativeDocumentMoniker": "App1\\HomePage.cs",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\HomePage.cs",
-              "RelativeToolTip": "App1\\HomePage.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAYwEgAAAAXAAAA",
+              "Title": "tracker.xml",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\tracker.xml",
+              "RelativeDocumentMoniker": "App1\\Resources\\layout\\tracker.xml",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\tracker.xml",
+              "RelativeToolTip": "App1\\Resources\\layout\\tracker.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-02-24T09:27:12.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DisplayPage.cs",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\DisplayPage.cs",
+              "RelativeDocumentMoniker": "App1\\DisplayPage.cs",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\DisplayPage.cs",
+              "RelativeToolTip": "App1\\DisplayPage.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAkwFUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T10:15:22.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-22T02:34:33.819Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "homepage.xml",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\homepage.xml",
-              "RelativeDocumentMoniker": "App1\\Resources\\layout\\homepage.xml",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\homepage.xml",
-              "RelativeToolTip": "App1\\Resources\\layout\\homepage.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-02-19T10:16:45.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "register.xml",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\register.xml",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\register.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\register.xml",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Resources\\layout\\register.xml",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\register.xml",
               "RelativeToolTip": "App1\\Resources\\layout\\register.xml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
               "WhenOpened": "2024-02-19T06:35:39.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Register.cs",
               "RelativeDocumentMoniker": "App1\\Register.cs",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Register.cs",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Register.cs",
               "RelativeToolTip": "App1\\Register.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAALQAAAAoAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAcwHUAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T06:35:39.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DBClass.cs",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\DBClass.cs",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\DBClass.cs",
               "RelativeDocumentMoniker": "App1\\DBClass.cs",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\DBClass.cs",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\DBClass.cs",
               "RelativeToolTip": "App1\\DBClass.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAF0AAAAaAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAIAwwDMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T06:35:39.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T06:35:39.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Login.cs",
               "RelativeDocumentMoniker": "App1\\Login.cs",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-1P-ThesisDevelopment\\App1\\App1\\Login.cs",
+              "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Login.cs",
               "RelativeToolTip": "App1\\Login.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAgwEEAAAAdAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAiwEEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T06:35:39.108Z"
             }

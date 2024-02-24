@@ -11906,8 +11906,8 @@ public final class R {
     public static final int textV_Sugar=0x7f0801fc;
     public static final int textV_SugarTracker=0x7f0801fd;
     public static final int textV_TotalCalorie=0x7f0801fe;
-    public static final int textView=0x7f0801ff;
-    public static final int textView1=0x7f080200;
+    public static final int textV_TotalCalorieNum=0x7f0801ff;
+    public static final int textView=0x7f080200;
     public static final int text_input_end_icon=0x7f080201;
     public static final int text_input_error_icon=0x7f080202;
     public static final int text_input_start_icon=0x7f080203;
