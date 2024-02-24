@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using static Android.Provider.Contacts.Intents;
 
 namespace App1
 {
@@ -20,6 +22,11 @@ namespace App1
     public class DisplayPage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
+        DBClass db = new DBClass();
+        JsonElement root;
+        string food_id, food_name;
+        float calorie_energy, protein, total_fat, carbohydrate, sugar, sodium, cholesterol;
+        float portions = 100;
 
         private TextView tv;
         private TextView tv1;
@@ -70,6 +77,35 @@ namespace App1
         }
         private string getNutriContent(string food)
         {
+            // Get food data from DB
+            root = db.RetrieveData("search_fooddata.php?");
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+
+                food_id = u1.GetProperty("food_id").ToString();
+                food_name = u1.GetProperty("food_name").ToString();
+                calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString()) * portions;
+                protein = float.Parse(u1.GetProperty("protein").ToString()) * portions;
+                total_fat = float.Parse(u1.GetProperty("total_fat").ToString()) * portions;
+                carbohydrate = float.Parse(u1.GetProperty("carbohydrate").ToString()) * portions;
+                sugar = float.Parse(u1.GetProperty("sugar").ToString()) * portions;
+                sodium = float.Parse(u1.GetProperty("sodium").ToString()) * portions;
+                cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * portions;
+
+                if (food.Equals(food_name))
+                {
+                    return "\n Size: " + portions + " g" +
+                           "\n Calories: " + calorie_energy + " kcal" +
+                           "\n Protein: " + protein + " g" +
+                           "\n Fat: " + total_fat + " g" +
+                           "\n Carbohydrates: " + carbohydrate + " g" +
+                           "\n Sugar: " + sugar + " g" +
+                           "\n Sodium: " + sodium + " mg" +
+                           "\n Cholesterol: " + cholesterol + " mg";
+                }
+            }
+            /*
             if (food.Equals("Chicken Breast Fillet"))
             {
                 return "\n Size: 100g \n Calories: 112kcal \n Protein: 22.5g \n Fat: 1.93g \n Carbohydrates: 0g \n Sodium: 66mg \n Cholesterol: 73mg \n Sugar: 0g";
@@ -110,7 +146,7 @@ namespace App1
             {
                 return "\n Size: 100g \n Calories: 83kcal \n Protein 17.9g \n Fat: 0.74g \n Carbohydrates: 0g \n Cholesterol: 97mg \n Sodium: 395mg \n Sugar: 0g";
             }
-
+            */
             return "Nutritional content not available";
         }
 

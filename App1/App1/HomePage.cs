@@ -18,6 +18,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 
 namespace App1
 {
@@ -26,6 +27,8 @@ namespace App1
     public class HomePage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
+        DBClass db = new DBClass();
+        JsonElement root;
 
         private SearchView sv;
         private ListView lv;
@@ -83,6 +86,15 @@ namespace App1
         private void addData()
         {
             foods = new ArrayList();
+
+            // Get food data from DB
+            root = db.RetrieveData("search_fooddata.php?");
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+                foods.Add(u1.GetProperty("food_name").ToString());
+            }
+            /*
             foods.Add("Chicken Breast Fillet");
             foods.Add("Chicken Thigh");
             foods.Add("Fried Tofu");
@@ -93,6 +105,7 @@ namespace App1
             foods.Add("Pork Belly");
             foods.Add("Greek Yogurt(Non-Fat)");
             foods.Add("Crab");
+            */
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================

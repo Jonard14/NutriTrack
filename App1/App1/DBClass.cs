@@ -34,6 +34,7 @@ namespace App1
             response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
             res = reader.ReadToEnd();
+            request.Abort();
             return res;
         }
 
@@ -43,6 +44,7 @@ namespace App1
             response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
             res = reader.ReadToEnd();
+            request.Abort();
             return res;
         }
 
@@ -55,6 +57,7 @@ namespace App1
             var result = reader.ReadToEnd();
             using JsonDocument doc = JsonDocument.Parse(result);
             JsonElement root = doc.RootElement.Clone();
+            request.Abort();
             return root;
         }
     }
@@ -101,25 +104,18 @@ USE FOOD_DB;
 
 CREATE TABLE `FOOD_DATA` (
   `food_id` VARCHAR(6),
-  `food_name` VARCHAR(20),
-  `food_desc` TEXT,
+  `food_name` VARCHAR(50),
   PRIMARY KEY (`food_id`)
 );
 
-CREATE TABLE `BRANDS` (
+CREATE TABLE `NUTRIENTS` (
   `food_id` VARCHAR(6),
-  `brand_id` VARCHAR(6),
-  `food_brand` VARCHAR(20),
-  PRIMARY KEY (`brand_id`)
-);
-
-CREATE TABLE `MACRONUTRIENTS` (
-  `brand_id` VARCHAR(6),
-  `macronutrients` decimal(10,2)
-);
-
-CREATE TABLE `MICRONUTRIENTS` (
-  `brand_id` VARCHAR(6),
-  `micronutrients` decimal(10,2)
+  `calorie_energy` FLOAT,
+  `protein` FLOAT,
+  `total_fat` FLOAT,
+  `carbohydrate` FLOAT,
+  `sugar` FLOAT,
+  `sodium` FLOAT,
+  `cholesterol` FLOAT
 );
 */

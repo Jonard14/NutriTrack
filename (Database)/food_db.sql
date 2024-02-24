@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2024 at 10:33 AM
+-- Generation Time: Feb 24, 2024 at 03:24 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -24,58 +24,66 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brands`
---
-
-CREATE TABLE `brands` (
-  `food_id` varchar(6) DEFAULT NULL,
-  `brand_id` varchar(6) NOT NULL,
-  `food_brand` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `food_data`
 --
 
 CREATE TABLE `food_data` (
   `food_id` varchar(6) NOT NULL,
-  `food_name` varchar(20) DEFAULT NULL,
-  `food_desc` text DEFAULT NULL
+  `food_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `food_data`
+--
+
+INSERT INTO `food_data` (`food_id`, `food_name`) VALUES
+('000001', 'Chicken Breast Fillet'),
+('000002', 'Chicken Thigh'),
+('000003', 'Fried Tofu'),
+('000004', 'Bangus (Milkfish)'),
+('000005', 'Tilapia'),
+('000006', 'Shrimp'),
+('000007', 'Lean Beef'),
+('000008', 'Pork Belly'),
+('000009', 'Greek Yogurt (Non-Fat)'),
+('000010', 'Crab');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `macronutrients`
+-- Table structure for table `nutrients`
 --
 
-CREATE TABLE `macronutrients` (
-  `brand_id` varchar(6) DEFAULT NULL,
-  `macronutrients` decimal(10,0) DEFAULT NULL
+CREATE TABLE `nutrients` (
+  `food_id` varchar(6) DEFAULT NULL,
+  `calorie_energy` float DEFAULT NULL,
+  `protein` float DEFAULT NULL,
+  `total_fat` float DEFAULT NULL,
+  `carbohydrate` float DEFAULT NULL,
+  `sugar` float DEFAULT NULL,
+  `sodium` float DEFAULT NULL,
+  `cholesterol` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `micronutrients`
+-- Dumping data for table `nutrients`
 --
 
-CREATE TABLE `micronutrients` (
-  `brand_id` varchar(6) DEFAULT NULL,
-  `micronutrients` decimal(10,0) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `nutrients` (`food_id`, `calorie_energy`, `protein`, `total_fat`, `carbohydrate`, `sugar`, `sodium`, `cholesterol`) VALUES
+('000001', 1.51, 0.223, 0.0581, 0.0236, 0, 4.5, 0.68),
+('000002', 2.26, 0.225, 0.151, 0.0012, 0.0012, 3.35, 1.27),
+('000003', 1.17, 0.0401, 0.16, 0.0449, 0.0163, 0.23, 0.57),
+('000004', 2.45, 0.201, 0.143, 0.0779, 0.0014, 3.57, 0.71),
+('000005', 1.42, 0.225, 0.0442, 0, 0, 2.74, 0.65),
+('000006', 1.92, 0.154, 0.12, 0.0227, 0.001, 1.68, 1.54),
+('000007', 2.89, 0.235, 0.216, 0, 0, 3.61, 0.79),
+('000008', 4.04, 0.266, 0.322, 0, 0, 4.48, 1.04),
+('000009', 1.6, 0.0888, 0.046, 0.211, 0.121, 0.64, 0.04),
+('000010', 0.83, 0.179, 0.0074, 0, 0, 3.95, 0.97);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `brands`
---
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`brand_id`);
 
 --
 -- Indexes for table `food_data`

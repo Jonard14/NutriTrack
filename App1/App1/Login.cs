@@ -57,9 +57,11 @@ namespace App1
         //Login of acct
         public void loginClick(object sender, EventArgs e)
         {
+            /*
             Intent i = new Intent(this, typeof(HomePage));
             StartActivity(i);
-            /*if (VerifyLogin()) 
+            */
+            if (VerifyLogin()) 
             {
                 Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
@@ -70,7 +72,7 @@ namespace App1
             else
             {
                 Toast.MakeText(this, "Email or Password are incorrect!", ToastLength.Long).Show();
-            }*/
+            }
         }
 
         public void RegisterLink(object sender, EventArgs e) 

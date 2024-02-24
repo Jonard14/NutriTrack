@@ -69,7 +69,7 @@ namespace App1
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
             ResetSugar.Click += resetSugar;
 
-            //Update();
+            Update();
 
         }
 
