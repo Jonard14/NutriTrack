@@ -64,16 +64,16 @@ namespace App1
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
 
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
-            SaveCalorie.Click += saveCalorieClick;
+            //SaveCalorie.Click += saveCalorieClick;
 
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
-            ResetSugar.Click += resetSugar;
+            //ResetSugar.Click += resetSugar;
 
-            Update();
+            //Update();
 
         }
 
-        public void Update()
+        /*public void Update()
         {
             if (VerifyEmail())
             {
@@ -87,6 +87,7 @@ namespace App1
             {
                 Toast.MakeText(this, "Unable to Retrieve Data", ToastLength.Long).Show();
             }
+<<<<<<< Updated upstream
         }
 
         public void saveCalorieClick(object sender, EventArgs e)
@@ -112,6 +113,9 @@ namespace App1
             SugarCount.Text = "0";
             total_sugar = "0";
         }
+
+=======
+        }*/
 
         public bool VerifyEmail()
         {

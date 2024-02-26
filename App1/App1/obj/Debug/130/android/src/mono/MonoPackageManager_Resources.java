@@ -62,11 +62,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Google.ErrorProne.Annotations.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
 		"Xamarin.Jetbrains.Annotations.dll",
-		"Xamarin.Kotlin.StdLib.Common.dll",
 		"Xamarin.Kotlin.StdLib.dll",
-		"Xamarin.Kotlin.StdLib.Jdk7.dll",
-		"Xamarin.Kotlin.StdLib.Jdk8.dll",
 		"Xamarin.KotlinX.Coroutines.Android.dll",
+		"Xamarin.KotlinX.Coroutines.Core.dll",
 		"Xamarin.KotlinX.Coroutines.Core.Jvm.dll",
 	};
 	public static String[] Dependencies = new String[]{

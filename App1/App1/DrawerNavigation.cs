@@ -39,6 +39,10 @@ namespace App1
             {
                 return typeof(MainActivity);
             }
+            else if (id == Resource.Id.suggest_btn)
+            {
+                return typeof(SuggestFood);
+            }
             return null;
         }
     }

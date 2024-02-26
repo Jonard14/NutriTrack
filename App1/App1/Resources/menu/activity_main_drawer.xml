@@ -16,6 +16,10 @@
             android:id="@+id/logout_btn"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Logout" />
+		<item
+            android:id="@+id/suggest_btn"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Suggest" />
     </group>
 	<!--
     <item android:title="Communicate">
