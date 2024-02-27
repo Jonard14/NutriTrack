@@ -5,6 +5,7 @@ androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\displaypage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
+androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\suggest_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawer.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
@@ -13,7 +14,7 @@ Button;obj\Debug\130\res\layout\displaypage.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
-cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
@@ -22,12 +23,13 @@ com.google.android.material.floatingactionbutton.FloatingActionButton;obj\Debug\
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\activity_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\displaypage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
+com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\suggest_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\tracker_drawer.xml
 dimen;obj\Debug\130\res\values\dimens.xml
 EditText;obj\Debug\130\res\layout\login.xml
 EditText;obj\Debug\130\res\layout\register.xml
-external-cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
@@ -37,6 +39,7 @@ include;obj\Debug\130\res\layout\activity_main.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
 include;obj\Debug\130\res\layout\displaypage_drawer.xml
 include;obj\Debug\130\res\layout\homepage_drawer.xml
+include;obj\Debug\130\res\layout\suggest_drawer.xml
 include;obj\Debug\130\res\layout\tracker_drawer.xml
 item;obj\Debug\130\res\menu\activity_main_drawer.xml
 item;obj\Debug\130\res\menu\menu_main.xml
@@ -48,8 +51,10 @@ LinearLayout;obj\Debug\130\res\layout\homepage.xml
 LinearLayout;obj\Debug\130\res\layout\login.xml
 LinearLayout;obj\Debug\130\res\layout\nav_header_main.xml
 LinearLayout;obj\Debug\130\res\layout\register.xml
+LinearLayout;obj\Debug\130\res\layout\suggest.xml
 LinearLayout;obj\Debug\130\res\layout\tracker.xml
 ListView;obj\Debug\130\res\layout\homepage.xml
+ListView;obj\Debug\130\res\layout\suggest.xml
 menu;obj\Debug\130\res\menu\activity_main_drawer.xml
 menu;obj\Debug\130\res\menu\menu_main.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
@@ -58,7 +63,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
-paths;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RadioButton;obj\Debug\130\res\layout\register.xml
 RadioGroup;obj\Debug\130\res\layout\register.xml
 resources;obj\Debug\130\res\values\colors.xml
@@ -77,6 +82,7 @@ TextView;obj\Debug\130\res\layout\displaypage.xml
 TextView;obj\Debug\130\res\layout\login.xml
 TextView;obj\Debug\130\res\layout\nav_header_main.xml
 TextView;obj\Debug\130\res\layout\register.xml
+TextView;obj\Debug\130\res\layout\suggest.xml
 TextView;obj\Debug\130\res\layout\tracker.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_gallery.xml

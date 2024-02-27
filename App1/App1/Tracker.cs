@@ -32,7 +32,7 @@ namespace App1
 
         string searchemail;
         string email = Login.MyGlobals.Globalemail;
-        string CalorieNum="0", TotalCalorie="0", CalorieDays="0", total_sugar = "0",currentCalorieNum="0";
+        string CalorieNum, TotalCalorie, CalorieDays, total_sugar = "0", currentCalorieNum;
         Button SaveCalorie, ResetSugar;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -56,7 +56,7 @@ namespace App1
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            
+
             // Create your application here
             PrevCalorie = FindViewById<TextView>(Resource.Id.textV_NumPrev);
             CurrentCalorie = FindViewById<TextView>(Resource.Id.textV_NumCurrent);
@@ -64,16 +64,16 @@ namespace App1
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
 
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
-            //SaveCalorie.Click += saveCalorieClick;
+            SaveCalorie.Click += saveCalorieClick;
 
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
-            //ResetSugar.Click += resetSugar;
+            ResetSugar.Click += resetSugar;
 
-            //Update();
+            Update();
 
         }
 
-        /*public void Update()
+        public void Update()
         {
             if (VerifyEmail())
             {
@@ -87,24 +87,26 @@ namespace App1
             {
                 Toast.MakeText(this, "Unable to Retrieve Data", ToastLength.Long).Show();
             }
-<<<<<<< Updated upstream
+
         }
 
         public void saveCalorieClick(object sender, EventArgs e)
         {
+            VerifyEmail();
             int totalCalNum = Int32.Parse(TotalCalorie);
-            int currentCal = Int32.Parse(currentCalorieNum);
-            int calorieDays=Int32.Parse(CalorieDays);
+            int currentCal = Int32.Parse(CurrentCalorie.Text);
+            int calorieDays = Int32.Parse(CalorieDays);
             calorieDays = calorieDays + 1;
-            
+
             int prevCal = Int32.Parse(CalorieNum);
             prevCal = (currentCal + totalCalNum) / calorieDays;
-            
+
             string prevCalString = prevCal.ToString();
             string stringCalDays = calorieDays.ToString();
+            TotalCalorie = (currentCal + totalCalNum).ToString();
 
-            db.InsertData("update_calorie.php?email="+email+ "&daily_calorie_intake"+prevCalString+"&total_calorie_intake"+ TotalCalorie + "&calorie_intake_days"+stringCalDays);
-            
+            db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake" + prevCalString + "&total_calorie_intake" + TotalCalorie + "&calorie_intake_days" + stringCalDays);
+
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
         }
 
@@ -113,9 +115,6 @@ namespace App1
             SugarCount.Text = "0";
             total_sugar = "0";
         }
-
-=======
-        }*/
 
         public bool VerifyEmail()
         {
@@ -179,7 +178,7 @@ namespace App1
 
             Intent i = new Intent(this, page);
             StartActivity(i);
-            
+
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;

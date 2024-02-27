@@ -13,6 +13,9 @@ app1.MainActivity;crc64a7a6b04b89628087.MainActivity
 App1.Register, App1;crc64a7a6b04b89628087.Register
 App1.Register;crc64a7a6b04b89628087.Register
 app1.Register;crc64a7a6b04b89628087.Register
+App1.SuggestFood, App1;crc64a7a6b04b89628087.SuggestFood
+App1.SuggestFood;crc64a7a6b04b89628087.SuggestFood
+app1.SuggestFood;crc64a7a6b04b89628087.SuggestFood
 App1.Tracker, App1;crc64a7a6b04b89628087.Tracker
 App1.Tracker;crc64a7a6b04b89628087.Tracker
 app1.Tracker;crc64a7a6b04b89628087.Tracker

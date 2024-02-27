@@ -21,7 +21,7 @@ namespace App1
             Sa request, call this variable IP_DB then lagyan nalang ng plus 
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
-        string IP_DB = "http://192.168.137.1/CS134P-1P-Thesis/";
+        string IP_DB = "http://192.168.100.17/CS134P-1P-Thesis/";
 
         //Http Response
         HttpWebResponse response;

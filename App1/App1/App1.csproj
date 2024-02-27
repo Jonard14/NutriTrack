@@ -128,8 +128,8 @@
     <PackageReference Include="System.Text.Json">
       <Version>9.0.0-preview.1.24080.9</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.2" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
   <ItemGroup>
@@ -167,8 +167,10 @@
     <AndroidResource Include="Resources\layout\displaypage_drawer.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\layout\suggest.xml" />
-    <Content Include="Resources\layout\suggest_drawer.xml" />
+    <AndroidResource Include="Resources\layout\suggest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\suggest_drawer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

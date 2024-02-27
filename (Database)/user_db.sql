@@ -104,7 +104,7 @@ INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `age`, `height`, `w
 ('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', 20, '1.56', '60.00', '24.97', '2202', '1000', '1', 'F'),
 ('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', 27, '1.67', '55.00', '19.72', '2123', '1000', '1', 'F'),
 ('testname1@mcl.com', 'test', 'name', 23, '1.70', '90.00', '31.14', '2654', '1000', '1', 'M'),
-('testname2@mcl.com', 'Test2', 'Testing2', 22, '1.69', '70.00', '24.51', NULL, NULL, NULL, 'M');
+('testname2@mcl.com', 'Test2', 'Testing2', 22, '1.69', '70.00', '24.51', '0', '0', '0', 'M');
 
 --
 -- Indexes for dumped tables

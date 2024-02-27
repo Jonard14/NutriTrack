@@ -31,7 +31,10 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
-        decimal sugar, cholesterol, sodium, fat, protein;
+        float sugar, cholesterol, sodium, fat, protein;
+        float portions = 100;
+
+
         private ListView lv, lv2;
         private ArrayList illness, foods;
         private ArrayAdapter _adapter, _adapter2;
@@ -40,7 +43,7 @@ namespace App1
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.suggest_drawer);
 
-            
+
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -55,7 +58,7 @@ namespace App1
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
-            
+
             // Create your application here
 
             lv = FindViewById<ListView>(Resource.Id.listview1);
@@ -67,7 +70,7 @@ namespace App1
             _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, illness);
             lv.Adapter = _adapter;
 
-            _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
+            _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem2, foods);
             lv2.Adapter = _adapter;
 
 
@@ -81,16 +84,16 @@ namespace App1
             // Get food data from DB
             root = db.RetrieveData("search_user_illness.php?");
             for (int i = 0; i < root.GetArrayLength(); i++)
-            { 
-                
+            {
+
                 var u1 = root[i];
-                if(email == u1.GetProperty("email").ToString()) 
+                if (email == u1.GetProperty("email").ToString())
                 {
                     illness.Add(u1.GetProperty("types").ToString());
                 }
-                
+
             }
-            
+
         }
         private void addFood()
         {
@@ -101,11 +104,20 @@ namespace App1
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
+
+                sugar = float.Parse(u1.GetProperty("sugar").ToString()) * portions;
+                cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * portions;
+                sodium = float.Parse(u1.GetProperty("sodium").ToString()) * portions;
+                fat = float.Parse(u1.GetProperty("total_fat").ToString()) * portions;
+                protein = float.Parse(u1.GetProperty("protein").ToString()) * portions;
+
+                /*
                 sugar = Convert.ToDecimal(u1.GetProperty("sugar").ToString());
                 cholesterol = Convert.ToDecimal(u1.GetProperty("cholesterol").ToString());
                 sodium = Convert.ToDecimal(u1.GetProperty("sodium").ToString());
                 fat = Convert.ToDecimal(u1.GetProperty("total_fat").ToString());
                 protein = Convert.ToDecimal(u1.GetProperty("protein").ToString());
+                */
 
                 if (illness.Contains("DIABETES") || illness.Contains("HEART DISEASE") || illness.Contains("CANCER"))
                 {
@@ -114,7 +126,7 @@ namespace App1
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
-                else 
+                else
                 {
                     if (protein >= 15 && protein <= 30)
                     {
@@ -122,13 +134,9 @@ namespace App1
                     }
 
                 }
-               
-
-                    
-
             }
-
         }
+
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
         {
