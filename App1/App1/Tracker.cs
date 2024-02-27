@@ -32,7 +32,7 @@ namespace App1
 
         string searchemail;
         string email = Login.MyGlobals.Globalemail;
-        string CalorieNum, TotalCalorie, CalorieDays, total_sugar = "0", currentCalorieNum;
+        string CalorieNum, TotalCalorie, CalorieDays, total_sugar = "0", currentCalorieNum="0";
         Button SaveCalorie, ResetSugar;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -94,7 +94,7 @@ namespace App1
         {
             VerifyEmail();
             int totalCalNum = Int32.Parse(TotalCalorie);
-            int currentCal = Int32.Parse(CurrentCalorie.Text);
+            int currentCal = Int32.Parse(currentCalorieNum);
             int calorieDays = Int32.Parse(CalorieDays);
             calorieDays = calorieDays + 1;
 
