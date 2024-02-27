@@ -71,7 +71,7 @@ namespace App1
             lv.Adapter = _adapter;
 
             _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem2, foods);
-            lv2.Adapter = _adapter;
+            lv2.Adapter = _adapter2;
 
 
 
