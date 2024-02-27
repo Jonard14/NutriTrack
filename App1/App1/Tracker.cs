@@ -32,7 +32,7 @@ namespace App1
 
         string searchemail;
         string email = Login.MyGlobals.Globalemail;
-        string CalorieNum, TotalCalorie, CalorieDays, total_sugar = "0", currentCalorieNum="0";
+        float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum=0;
         Button SaveCalorie, ResetSugar;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -80,10 +80,10 @@ namespace App1
 
             if (VerifyEmail())
             {
-                PrevCalorie.Text = CalorieNum;
-                SugarCount.Text = total_sugar;
-                CurrentCalorie.Text = currentCalorieNum;
-                TotalCalorieNum.Text = TotalCalorie;
+                PrevCalorie.Text = CalorieNum.ToString();
+                SugarCount.Text = total_sugar.ToString();
+                CurrentCalorie.Text = currentCalorieNum.ToString();
+                TotalCalorieNum.Text = TotalCalorie.ToString();
 
             }
             else
@@ -96,19 +96,20 @@ namespace App1
         public void saveCalorieClick(object sender, EventArgs e)
         {
             VerifyEmail();
-            int totalCalNum = Int32.Parse(TotalCalorie);
-            int currentCal = Int32.Parse(currentCalorieNum);
-            int calorieDays = Int32.Parse(CalorieDays);
+            float totalCalNum = TotalCalorie;
+            float currentCal = currentCalorieNum;
+            float calorieDays = CalorieDays;
             calorieDays = calorieDays + 1;
 
-            int prevCal = Int32.Parse(CalorieNum);
+            float prevCal = CalorieNum;
             prevCal = (currentCal + totalCalNum) / calorieDays;
 
             string prevCalString = prevCal.ToString();
             string stringCalDays = calorieDays.ToString();
-            TotalCalorie = (currentCal + totalCalNum).ToString();
+            TotalCalorie = currentCal + totalCalNum;
 
             db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
+            PrevCalorie.Text = TotalCalorie.ToString();
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
         }
@@ -116,9 +117,9 @@ namespace App1
         public void resetSugarCalorie(object sender, EventArgs e)
         {
             SugarCount.Text = "0";
-            total_sugar = "0";
+            total_sugar = 0;
             CurrentCalorie.Text = "0";
-            currentCalorieNum = "0";
+            currentCalorieNum = 0;
             Login.MyGlobals.GlobalSugar = total_sugar;
             Login.MyGlobals.GlobalCalorie = currentCalorieNum;
 
@@ -132,9 +133,9 @@ namespace App1
             {
                 var u1 = root[i];
                 searchemail = u1.GetProperty("email").ToString();
-                CalorieNum = u1.GetProperty("daily_calorie_intake").ToString();
-                TotalCalorie = u1.GetProperty("total_calorie_intake").ToString();
-                CalorieDays = u1.GetProperty("calorie_intake_days").ToString();
+                CalorieNum = float.Parse(u1.GetProperty("daily_calorie_intake").ToString());
+                TotalCalorie = float.Parse(u1.GetProperty("total_calorie_intake").ToString());
+                CalorieDays = float.Parse(u1.GetProperty("calorie_intake_days").ToString());
 
                 if (searchemail == email)
                 { return true; }

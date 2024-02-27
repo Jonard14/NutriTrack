@@ -154,11 +154,10 @@ namespace App1
 
         public void addFood(object sender, EventArgs e)
         {
-            string gCal = calorie_energy.ToString();
-            string gSugar = sugar.ToString();
+            Login.MyGlobals.GlobalCalorie = Login.MyGlobals.GlobalCalorie + calorie_energy;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSugar + sugar;
 
-            Login.MyGlobals.GlobalCalorie = gCal;
-            Login.MyGlobals.GlobalSugar = gSugar;
+            Toast.MakeText(this, "Food Added", ToastLength.Long).Show();
 
         }
 

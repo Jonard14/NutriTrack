@@ -67,6 +67,8 @@ namespace App1
                 Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
                 MyGlobals.Globalemail = email.Text;
+                MyGlobals.GlobalCalorie = 0;
+                MyGlobals.GlobalSugar = 0;
                 StartActivity(i);
             }
             else
@@ -99,8 +101,8 @@ namespace App1
         public static class MyGlobals
         {
             public static string Globalemail { get; set; }
-            public static string GlobalCalorie { get; set; }
-            public static string GlobalSugar { get; set; }
+            public static float GlobalCalorie { get; set; }
+            public static float GlobalSugar { get; set; }
         }
     }
 }

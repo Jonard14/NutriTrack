@@ -1454,10 +1454,7 @@ C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\a
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.AndroidX.ViewPager2.pdb
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Google.ErrorProne.Annotations.dll
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Jetbrains.Annotations.dll
-C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Kotlin.StdLib.Common.dll
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Kotlin.StdLib.dll
-C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Kotlin.StdLib.Jdk7.dll
-C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.Kotlin.StdLib.Jdk8.dll
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.KotlinX.Coroutines.Android.dll
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.KotlinX.Coroutines.Core.Jvm.dll
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\androidx\activity\R.java
@@ -2478,3 +2475,7 @@ C:\Users\GABBY\Downloads\2ND TERM 2023-2024\CS154-1P\PROTOTYPE\CS134-1P-Thesis\A
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\res\layout\suggest.xml
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\res\layout\suggest_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\SuggestFood.java
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\59\jl\files.cache
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.KotlinX.Coroutines.Core.dll
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\androidx\versionedparcelable\R.java
+C:\Users\Acer\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\bin\classes2.dex
