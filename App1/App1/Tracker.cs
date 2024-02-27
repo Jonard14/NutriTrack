@@ -105,7 +105,7 @@ namespace App1
             string stringCalDays = calorieDays.ToString();
             TotalCalorie = (currentCal + totalCalNum).ToString();
 
-            db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake" + prevCalString + "&total_calorie_intake" + TotalCalorie + "&calorie_intake_days" + stringCalDays);
+            db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
         }
