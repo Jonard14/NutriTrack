@@ -67,7 +67,7 @@ namespace App1
             SaveCalorie.Click += saveCalorieClick;
 
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
-            ResetSugar.Click += resetSugar;
+            ResetSugar.Click += resetSugarCalorie;
 
             Update();
 
@@ -75,6 +75,9 @@ namespace App1
 
         public void Update()
         {
+            total_sugar += Login.MyGlobals.GlobalSugar;
+            currentCalorieNum += Login.MyGlobals.GlobalCalorie;
+
             if (VerifyEmail())
             {
                 PrevCalorie.Text = CalorieNum;
@@ -110,10 +113,15 @@ namespace App1
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
         }
 
-        public void resetSugar(object sender, EventArgs e)
+        public void resetSugarCalorie(object sender, EventArgs e)
         {
             SugarCount.Text = "0";
             total_sugar = "0";
+            CurrentCalorie.Text = "0";
+            currentCalorieNum = "0";
+            Login.MyGlobals.GlobalSugar = total_sugar;
+            Login.MyGlobals.GlobalCalorie = currentCalorieNum;
+
         }
 
         public bool VerifyEmail()

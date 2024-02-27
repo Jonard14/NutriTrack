@@ -30,7 +30,7 @@ namespace App1
 
         private TextView tv;
         private TextView tv1;
-        private Button btn1;
+        private Button btn1,btn_add;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -56,6 +56,7 @@ namespace App1
             // Create your application here
 
             btn1 = FindViewById<Button>(Resource.Id.btn1);
+            btn_add = FindViewById<Button>(Resource.Id.btn_Add);
             tv = FindViewById<TextView>(Resource.Id.foodnameTV);
             tv1 = FindViewById<TextView>(Resource.Id.nutritionContentTV);
 
@@ -63,6 +64,7 @@ namespace App1
             updateUI(selectedFood);
 
             btn1.Click += backEvent;
+            btn_add.Click += addFood;
         }
         public void backEvent(object sender,  EventArgs e)
         {
@@ -149,6 +151,17 @@ namespace App1
             */
             return "Nutritional content not available";
         }
+
+        public void addFood(object sender, EventArgs e)
+        {
+            string gCal = calorie_energy.ToString();
+            string gSugar = sugar.ToString();
+
+            Login.MyGlobals.GlobalCalorie = gCal;
+            Login.MyGlobals.GlobalSugar = gSugar;
+
+        }
+
 
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()

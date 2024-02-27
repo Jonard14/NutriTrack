@@ -99,6 +99,8 @@ namespace App1
         public static class MyGlobals
         {
             public static string Globalemail { get; set; }
+            public static string GlobalCalorie { get; set; }
+            public static string GlobalSugar { get; set; }
         }
     }
 }
