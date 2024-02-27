@@ -24,16 +24,17 @@ namespace App1
     [Activity(Label = "Tracker")]
     public class Tracker : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        TextView PrevCalorie, CurrentCalorie, SugarCount, TotalCalorieNum;
+        TextView PrevCalorie, CurrentCalorie, SugarCount, TotalCalorieNum, recommendNum;
         DBClass db = new DBClass();
         JsonElement root;
 
         DrawerNavigation selectedNav = new DrawerNavigation();
 
-        string searchemail;
+        string searchemail, gender;
         string email = Login.MyGlobals.Globalemail;
         float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum=0;
         Button SaveCalorie, ResetSugar;
+        double recommendCalorie, age, height, weight;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -62,6 +63,7 @@ namespace App1
             CurrentCalorie = FindViewById<TextView>(Resource.Id.textV_NumCurrent);
             TotalCalorieNum = FindViewById<TextView>(Resource.Id.textV_TotalCalorieNum);
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
+            recommendNum = FindViewById<TextView>(Resource.Id.textV_recommendNum);
 
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
             SaveCalorie.Click += saveCalorieClick;
@@ -136,11 +138,42 @@ namespace App1
                 CalorieNum = float.Parse(u1.GetProperty("daily_calorie_intake").ToString());
                 TotalCalorie = float.Parse(u1.GetProperty("total_calorie_intake").ToString());
                 CalorieDays = float.Parse(u1.GetProperty("calorie_intake_days").ToString());
-
+                age = double.Parse(u1.GetProperty("age").ToString());
+                height = double.Parse(u1.GetProperty("height").ToString());
+                weight = double.Parse(u1.GetProperty("weight").ToString());
+                gender = u1.GetProperty("gender").ToString();
                 if (searchemail == email)
                 { return true; }
             }
             return false;
+        }
+
+        public void dailyCalorieCalcualte()
+        {
+            //Females: (10*weight [kg]) + (6.25*height [cm]) – (5*age [years]) – 161
+            //Males: (10 * weight[kg]) + (6.25 * height[cm]) – (5 * age[years]) + 5
+
+            
+            height = height * 100; //convert meter to cm
+
+
+
+            if (gender == "M")
+            {
+                recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+                recommendNum.Text = recommendCalorie.ToString();
+
+            }
+            else if (gender == "F")
+            {
+                recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+                recommendNum.Text = recommendCalorie.ToString();
+            }
+
+
+
+
+
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================

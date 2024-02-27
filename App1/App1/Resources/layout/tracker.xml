@@ -24,6 +24,7 @@
         android:paddingBottom="10px"
         
     />
+    
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -33,6 +34,26 @@
         android:id="@+id/linearLayout_INNER"
         android:fadingEdge="none"
         android:background="#ff80d8ff">
+        <TextView
+        android:text="Reccommened Daily Calorie Intake"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:paddingLeft="20px"
+        android:paddingTop="10px"
+        android:paddingBottom="10px"
+        android:gravity="center"
+        android:id="@+id/textView1" />
+        <TextView
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:id="@+id/textV_recommendNum" />
         <LinearLayout
             android:id="@+id/LinearLayout2"
             android:minWidth="25px"
@@ -42,7 +63,7 @@
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
             <TextView
-                android:text="Previous Calorie Count"
+                android:text="Estimated Daily Calorie Count"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

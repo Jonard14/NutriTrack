@@ -152,8 +152,8 @@ public final class R {
 		public static final int tag_window_insets_animation_callback = 0x7f0801f1;
 		public static final int text = 0x7f0801f2;
 		public static final int text2 = 0x7f0801f3;
-		public static final int time = 0x7f08020e;
-		public static final int title = 0x7f08020f;
+		public static final int time = 0x7f080210;
+		public static final int title = 0x7f080211;
 	}
 	public static final class integer {
 		public static final int status_bar_notification_info_maxnum = 0x7f090043;

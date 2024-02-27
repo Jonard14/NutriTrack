@@ -659,14 +659,14 @@ public final class R {
 		public static final int tabMode = 0x7f0801e4;
 		public static final int textSpacerNoButtons = 0x7f0801f5;
 		public static final int textSpacerNoTitle = 0x7f0801f6;
-		public static final int title = 0x7f08020f;
-		public static final int titleDividerNoCustom = 0x7f080210;
-		public static final int title_template = 0x7f080211;
-		public static final int topPanel = 0x7f080215;
-		public static final int unchecked = 0x7f080230;
-		public static final int uniform = 0x7f080231;
-		public static final int up = 0x7f080233;
-		public static final int wrap_content = 0x7f080243;
+		public static final int title = 0x7f080211;
+		public static final int titleDividerNoCustom = 0x7f080212;
+		public static final int title_template = 0x7f080213;
+		public static final int topPanel = 0x7f080217;
+		public static final int unchecked = 0x7f080232;
+		public static final int uniform = 0x7f080233;
+		public static final int up = 0x7f080235;
+		public static final int wrap_content = 0x7f080245;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;

@@ -731,21 +731,21 @@ public final class R {
 		public static final int text2 = 0x7f0801f3;
 		public static final int textSpacerNoButtons = 0x7f0801f5;
 		public static final int textSpacerNoTitle = 0x7f0801f6;
-		public static final int time = 0x7f08020e;
-		public static final int title = 0x7f08020f;
-		public static final int titleDividerNoCustom = 0x7f080210;
-		public static final int title_template = 0x7f080211;
-		public static final int top = 0x7f080214;
-		public static final int topPanel = 0x7f080215;
-		public static final int transition_current_scene = 0x7f08021a;
-		public static final int transition_layout_save = 0x7f08021b;
-		public static final int transition_position = 0x7f08021c;
-		public static final int transition_scene_layoutid_cache = 0x7f08021d;
-		public static final int transition_transform = 0x7f08021e;
-		public static final int uniform = 0x7f080231;
-		public static final int up = 0x7f080233;
-		public static final int visible_removing_fragment_view_tag = 0x7f08023d;
-		public static final int wrap_content = 0x7f080243;
+		public static final int time = 0x7f080210;
+		public static final int title = 0x7f080211;
+		public static final int titleDividerNoCustom = 0x7f080212;
+		public static final int title_template = 0x7f080213;
+		public static final int top = 0x7f080216;
+		public static final int topPanel = 0x7f080217;
+		public static final int transition_current_scene = 0x7f08021c;
+		public static final int transition_layout_save = 0x7f08021d;
+		public static final int transition_position = 0x7f08021e;
+		public static final int transition_scene_layoutid_cache = 0x7f08021f;
+		public static final int transition_transform = 0x7f080220;
+		public static final int uniform = 0x7f080233;
+		public static final int up = 0x7f080235;
+		public static final int visible_removing_fragment_view_tag = 0x7f08023f;
+		public static final int wrap_content = 0x7f080245;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;
