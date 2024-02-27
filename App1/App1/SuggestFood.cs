@@ -70,8 +70,8 @@ namespace App1
             _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, illness);
             lv.Adapter = _adapter;
 
-            _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem2, foods);
-            lv2.Adapter = _adapter2;
+            _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem2, foods);
+            lv2.Adapter = _adapter;
 
 
 
