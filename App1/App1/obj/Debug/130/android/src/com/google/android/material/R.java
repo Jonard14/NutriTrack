@@ -3352,21 +3352,21 @@ public final class R {
 		public static final int transition_scene_layoutid_cache = 0x7f08021f;
 		public static final int transition_transform = 0x7f080220;
 		public static final int triangle = 0x7f080221;
-		public static final int unchecked = 0x7f080232;
-		public static final int uniform = 0x7f080233;
-		public static final int unlabeled = 0x7f080234;
-		public static final int up = 0x7f080235;
-		public static final int view_offset_helper = 0x7f080238;
-		public static final int view_tree_lifecycle_owner = 0x7f08023a;
-		public static final int view_tree_on_back_pressed_dispatcher_owner = 0x7f08023b;
-		public static final int view_tree_saved_state_registry_owner = 0x7f08023c;
-		public static final int view_tree_view_model_store_owner = 0x7f08023d;
-		public static final int visible = 0x7f08023e;
-		public static final int visible_removing_fragment_view_tag = 0x7f08023f;
-		public static final int with_icon = 0x7f080242;
-		public static final int withinBounds = 0x7f080243;
-		public static final int wrap = 0x7f080244;
-		public static final int wrap_content = 0x7f080245;
+		public static final int unchecked = 0x7f080233;
+		public static final int uniform = 0x7f080234;
+		public static final int unlabeled = 0x7f080235;
+		public static final int up = 0x7f080236;
+		public static final int view_offset_helper = 0x7f080239;
+		public static final int view_tree_lifecycle_owner = 0x7f08023b;
+		public static final int view_tree_on_back_pressed_dispatcher_owner = 0x7f08023c;
+		public static final int view_tree_saved_state_registry_owner = 0x7f08023d;
+		public static final int view_tree_view_model_store_owner = 0x7f08023e;
+		public static final int visible = 0x7f08023f;
+		public static final int visible_removing_fragment_view_tag = 0x7f080240;
+		public static final int with_icon = 0x7f080243;
+		public static final int withinBounds = 0x7f080244;
+		public static final int wrap = 0x7f080245;
+		public static final int wrap_content = 0x7f080246;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;

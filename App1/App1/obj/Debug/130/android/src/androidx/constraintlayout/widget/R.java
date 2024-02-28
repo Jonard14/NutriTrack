@@ -1139,18 +1139,18 @@ public final class R {
 		public static final int top = 0x7f080216;
 		public static final int topPanel = 0x7f080217;
 		public static final int triangle = 0x7f080221;
-		public static final int unchecked = 0x7f080232;
-		public static final int uniform = 0x7f080233;
-		public static final int up = 0x7f080235;
-		public static final int vertical_only = 0x7f080237;
-		public static final int view_transition = 0x7f080239;
-		public static final int visible = 0x7f08023e;
-		public static final int west = 0x7f080240;
-		public static final int wrap = 0x7f080244;
-		public static final int wrap_content = 0x7f080245;
-		public static final int wrap_content_constrained = 0x7f080246;
-		public static final int x_left = 0x7f080247;
-		public static final int x_right = 0x7f080248;
+		public static final int unchecked = 0x7f080233;
+		public static final int uniform = 0x7f080234;
+		public static final int up = 0x7f080236;
+		public static final int vertical_only = 0x7f080238;
+		public static final int view_transition = 0x7f08023a;
+		public static final int visible = 0x7f08023f;
+		public static final int west = 0x7f080241;
+		public static final int wrap = 0x7f080245;
+		public static final int wrap_content = 0x7f080246;
+		public static final int wrap_content_constrained = 0x7f080247;
+		public static final int x_left = 0x7f080248;
+		public static final int x_right = 0x7f080249;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f090000;

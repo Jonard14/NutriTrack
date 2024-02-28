@@ -49,12 +49,13 @@
         <EditText
             android:inputType="textEmailAddress"
             android:layout_width="1000px"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:padding="5dp"
             android:hint="Email"
             android:id="@+id/edtTxt_Email"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold"
-            android:paddingLeft="50px" />
+            android:background="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:text="First Name:"
@@ -68,12 +69,13 @@
         <EditText
             android:inputType="text"
             android:layout_width="1000px"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:padding="5dp"
             android:hint="First Name"
             android:id="@+id/edtTxt_FirstName"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold"
-            android:paddingLeft="50px"/>
+            android:background="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:text="Last Name:"
@@ -87,12 +89,13 @@
         <EditText
             android:inputType="text"
             android:layout_width="1000px"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:padding="5dp"
             android:hint="Last Name"
             android:id="@+id/edtTxt_LastName"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold"
-            android:paddingLeft="50px"/>
+            android:background="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
 
 
         <LinearLayout
@@ -101,6 +104,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:id="@+id/linearLayout1">
 
             <TextView
@@ -115,12 +119,13 @@
             <EditText
                 android:inputType="number"
                 android:layout_width="150px"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:padding="5dp"
                 android:hint="Age"
                 android:id="@+id/edtTxt_Age"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:paddingLeft="10px"/>
+                android:background="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold" />
             
             <TextView
                 android:text="Gender:"
@@ -178,12 +183,13 @@
             <EditText
                 android:inputType="numberDecimal"
                 android:layout_width="200px"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_Height"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:paddingLeft="10px" />
+                android:background="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:text="Weight (in kilograms):"
@@ -199,12 +205,13 @@
             <EditText
                 android:inputType="numberDecimal"
                 android:layout_width="200px"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_Weight"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:paddingLeft="10px" />
+                android:background="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold" />
 
             
         </LinearLayout>
@@ -215,6 +222,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:id="@+id/linearLayout3">
 
             <TextView
@@ -230,16 +238,16 @@
             <EditText
                 android:inputType="none"
                 android:layout_width="200px"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_BMI"
-                android:textColor="@android:color/background_light"
+                android:background="@android:color/white"
+                android:layout_marginLeft="20dp"
                 android:textStyle="bold"
-                android:paddingLeft="10px"
                 android:focusable="false"
                 android:clickable="false"
-                android:cursorVisible="false"
-                android:layout_marginLeft="50px" />
+                android:cursorVisible="false" />
 
             <Button
                 android:text="Get BMI"
@@ -261,6 +269,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:id="@+id/linearLayout4">
 
             <TextView
@@ -319,14 +328,14 @@
 
             <EditText
                 android:inputType="none"
-                android:layout_width="500px"
-                android:layout_height="wrap_content"
+                android:layout_width="800px"
+                android:layout_height="45dp"
+                android:padding="5dp"
                 android:hint="health related diseasea, alergies, etc. "
                 android:id="@+id/edtTxt_ill"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:paddingLeft="10px"
-                android:layout_marginLeft="50px" />
+                android:background="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -338,16 +347,19 @@
             android:id="@+id/txtV_Password"
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
-            android:paddingLeft="50px" />
+            android:paddingLeft="50px"
+            android:layout_marginTop="10dp"
+            />
         <EditText
             android:inputType="textPassword"
             android:layout_width="1000px"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:padding="5dp"
             android:hint="Password"
             android:id="@+id/edtTxt_Password"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold"
-            android:paddingLeft="50px"/>
+            android:background="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:text="Re-type Password:"
@@ -357,16 +369,19 @@
             android:id="@+id/txtV_RePassword"
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
-            android:paddingLeft="50px" />
+            android:paddingLeft="50px"
+            android:layout_marginTop="10dp"
+            />
         <EditText
             android:inputType="textPassword"
             android:layout_width="1000px"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:padding="5dp"
             android:hint="Re-type Password"
             android:id="@+id/edtTxt_RePassword"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold"
-            android:paddingLeft="50px"/>
+            android:background="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
 
 
         <Button
@@ -375,6 +390,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_Register"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
