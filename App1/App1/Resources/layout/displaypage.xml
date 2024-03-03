@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#87A922">
 
     <TextView
         android:text="Add Food"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout_INNER"
         android:fadingEdge="none"
-        android:background="#ff80d8ff">
+        android:background="#F7F6BB">
 
         <TextView
             android:id="@+id/foodnameTV"
@@ -61,7 +61,7 @@
             android:layout_height="120px"
             android:layout_weight="1"
             android:text="Add food"
-            android:background="#ff76ff03"/>
+            android:backgroundTint="#114232"/>
 
         <Button
             android:id="@+id/btn1"
@@ -69,7 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="120px"
             android:layout_weight="1"
-            android:background="#ff76ff03"/>
+            android:backgroundTint="#114232"/>
 
     </LinearLayout>
 </LinearLayout>

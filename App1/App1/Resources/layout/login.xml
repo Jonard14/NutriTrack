@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#87A922">
 
     <Button
         android:text="Return Home"
@@ -18,7 +18,7 @@
         android:id="@+id/btn_Home"
         android:textStyle="bold"
         android:textColor="@android:color/background_light"
-        android:background="@android:color/holo_green_light" />
+        android:backgroundTint="#114232"/>
 
 
     <LinearLayout
@@ -84,7 +84,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/background_light"
-            android:background="@android:color/holo_green_light" />
+            android:backgroundTint="#114232" />
         <TextView
             android:text="Don't have an account?"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -104,7 +104,7 @@
             android:id="@+id/txtV_RegisterLink"
             android:autoLink="none"
             android:textStyle="bold"
-            android:textColor="@android:color/holo_green_light" />
+            android:textColor="#114232" />
 
     </LinearLayout>
 </LinearLayout>

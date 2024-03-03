@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#87A922">
 
     <TextView
         android:text="Calorie Tracker"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout_INNER"
         android:fadingEdge="none"
-        android:background="#ff80d8ff">
+        android:background="#F7F6BB">
         <TextView
         android:text="Reccommened Daily Calorie Intake"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -153,7 +153,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
-        android:background="#ff80d8ff">
+        android:background="#F7F6BB">
         <TextView
             android:text="Total Suger Consumed"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -191,7 +191,7 @@
             android:paddingTop="10px"
             android:paddingBottom="10px"
             android:layout_gravity="center"
-            android:background="#ff76ff03"
+            android:backgroundTint="#114232"
             android:layout_marginBottom="10px"
             android:layout_marginTop="10px" />
 
@@ -204,8 +204,7 @@
             android:paddingTop="10px"
             android:paddingBottom="10px"
             android:layout_gravity="center"
-            android:background="#ff76ff03"
-            android:backgroundTint="#ff76ff03"
+            android:backgroundTint="#114232"
             android:layout_marginBottom="10px"
             android:layout_marginTop="10px" />
 

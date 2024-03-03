@@ -73,6 +73,7 @@ namespace App1
             _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
             lv2.Adapter = _adapter2;
 
+            lv2.ItemClick += lv2_ItemClick;
 
 
 
@@ -94,6 +95,14 @@ namespace App1
 
             }
 
+        }
+        private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            string selectedFood = _adapter2.GetItem(e.Position).ToString();
+            Intent i = new Intent(this, typeof(DisplayPage));
+
+            i.PutExtra("SelectedFood", selectedFood);
+            StartActivity(i);
         }
         private void addFood()
         {

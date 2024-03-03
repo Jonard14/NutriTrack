@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#87a922">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,7 +39,7 @@
             android:id="@+id/btn_signup"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
-            android:background="@android:color/holo_green_light" />
+            android:backgroundTint="#114232" />
         <TextView
             android:text="Don't have an account?"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -59,7 +59,7 @@
             android:id="@+id/txtV_RegLink"
             android:autoLink="none"
             android:textStyle="bold"
-            android:textColor="@android:color/holo_green_light" />
+            android:textColor="#114232" />
     
     </LinearLayout>
 </LinearLayout>

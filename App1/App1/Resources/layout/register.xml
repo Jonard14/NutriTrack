@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/outerContainer"
-    android:background="@android:color/holo_blue_dark" >
+    android:background="#87A922" >
 
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:id="@+id/btn_Home"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
-            android:background="@android:color/holo_green_light" />
+            android:backgroundTint="#114232" />
 
         <TextView
             android:text="Register"
@@ -149,7 +149,8 @@
                     android:id="@+id/rdBtn_male"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
-                    android:paddingLeft="10px" />
+                    android:paddingLeft="10px"
+                    android:buttonTint="#F7F6BB"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -157,7 +158,8 @@
                     android:id="@+id/rdBtn_female"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
-                    android:paddingLeft="10px" />
+                    android:paddingLeft="10px"
+                    android:buttonTint="#F7F6BB"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -259,7 +261,7 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="30px"
                 android:textColor="@android:color/background_light"
-                android:background="@android:color/holo_green_light" />
+                android:backgroundTint="#114232" />
 
         </LinearLayout>
 
@@ -287,19 +289,22 @@
                 android:text="Heart Disease"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/checkBox1" />
+                android:id="@+id/checkBox1" 
+                android:buttonTint="#F7F6BB"/>
 
             <CheckBox
                 android:text="Diabetes"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/checkBox2" />
+                android:id="@+id/checkBox2"
+                android:buttonTint="#F7F6BB"/>
 
             <CheckBox
                 android:text="Cancer"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/checkBox3" />
+                android:id="@+id/checkBox3"
+                android:buttonTint="#F7F6BB"/>
 
            
 
@@ -394,7 +399,7 @@
             android:id="@+id/btn_Register"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
-            android:background="@android:color/holo_green_light" />
+            android:backgroundTint="#114232" />
         
     </LinearLayout>
 </ScrollView>
