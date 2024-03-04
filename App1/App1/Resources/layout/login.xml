@@ -12,7 +12,7 @@
     <Button
         android:text="Return Home"
         android:layout_width="350px"
-        android:layout_height="75px"
+        android:layout_height="125px"
         android:gravity="center"
         android:layout_gravity="top"
         android:id="@+id/btn_Home"

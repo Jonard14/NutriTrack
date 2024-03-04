@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.SE.Omapi;
+using Android.Text;
 using Android.Views;
 using Android.Widget;
 using System;
@@ -51,9 +52,8 @@ namespace App1
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
-
-            getbmi = FindViewById<Button>(Resource.Id.btn_GetBMI);
-            getbmi.Click += GetBMIClick;
+            height.TextChanged += GetBMI;
+            weight.TextChanged += GetBMI;
 
             ill_HD = FindViewById<CheckBox>(Resource.Id.checkBox1);
             ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
@@ -87,20 +87,15 @@ namespace App1
         }
 
         // Calculate BMI from the user inputs height and weight
-        public void GetBMIClick(object sender, EventArgs e)
+        private void GetBMI(object sender, EventArgs e)
         {
             try
             {
-                if (Convert.ToDecimal(height.Text) <= 0 || Convert.ToDecimal(weight.Text) <= 0)
-                { Toast.MakeText(this, "Invalid Height and Weight!", ToastLength.Long).Show(); }
-                else
-                {
-                    bmivalue = Convert.ToDecimal(weight.Text) / Convert.ToDecimal(Math.Pow(Convert.ToDouble(height.Text), 2));
-                    bmivalue = Math.Round(bmivalue, 2);
-                    bmi.Text = Convert.ToString(bmivalue);
-                }
+                bmivalue = Convert.ToDecimal(weight.Text) / Convert.ToDecimal(Math.Pow(Convert.ToDouble(height.Text), 2));
+                bmivalue = Math.Round(bmivalue, 2);
+                bmi.Text = Convert.ToString(bmivalue);
             }
-            catch { Toast.MakeText(this, "Invalid Height and Weight!", ToastLength.Long).Show(); }
+            catch { bmi.Text = "0"; }
         }
 
         // Register Account

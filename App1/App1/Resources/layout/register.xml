@@ -17,7 +17,7 @@
         <Button
             android:text="Return Home"
             android:layout_width="350px"
-            android:layout_height="75px"
+            android:layout_height="125px"
             android:gravity="center"
             android:layout_gravity="top"
             android:id="@+id/btn_Home"
@@ -250,18 +250,6 @@
                 android:focusable="false"
                 android:clickable="false"
                 android:cursorVisible="false" />
-
-            <Button
-                android:text="Get BMI"
-                android:layout_width="200px"
-                android:layout_height="75px"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:id="@+id/btn_GetBMI"
-                android:textStyle="bold"
-                android:layout_marginLeft="30px"
-                android:textColor="@android:color/background_light"
-                android:backgroundTint="#114232" />
 
         </LinearLayout>
 
