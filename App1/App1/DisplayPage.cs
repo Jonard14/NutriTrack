@@ -68,8 +68,16 @@ namespace App1
         }
         public void backEvent(object sender,  EventArgs e)
         {
-            Intent i = new Intent(this, typeof(HomePage));
-            StartActivity(i);
+            if (Intent.GetStringExtra("ActivityPage") == "HomePage")
+            {
+                Intent i = new Intent(this, typeof(HomePage));
+                StartActivity(i);
+            }
+            else if (Intent.GetStringExtra("ActivityPage") == "SuggestFood")
+            {
+                Intent i = new Intent(this, typeof(SuggestFood));
+                StartActivity(i);
+            }
         }
         private void updateUI(string selectedFood)
         {

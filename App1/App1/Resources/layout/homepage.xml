@@ -23,14 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="37.5dp"
             android:layout_gravity="top"
-            android:background="#F7F6BB"
             android:id="@+id/searchfood"/>
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/listview1"
-            android:layout_weight ="1"/>
+            android:layout_weight ="1"
+            android:background="#F7F6BB" />
 
     </LinearLayout>
 

@@ -76,6 +76,7 @@ namespace App1
             Intent i = new Intent(this, typeof(DisplayPage));
 
             i.PutExtra("SelectedFood", selectedFood);
+            i.PutExtra("ActivityPage", "HomePage");
             StartActivity(i);
         }
 
