@@ -92,7 +92,7 @@ namespace App1
             {
                 Toast.MakeText(this, "Unable to Retrieve Data", ToastLength.Long).Show();
             }
-
+            dailyCalorieCalcualte();
         }
 
         public void saveCalorieClick(object sender, EventArgs e)
