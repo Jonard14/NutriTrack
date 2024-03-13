@@ -129,21 +129,47 @@ namespace App1
                 protein = Convert.ToDecimal(u1.GetProperty("protein").ToString());
                 */
 
-                if (illness.Contains("DIABETES") || illness.Contains("HEART DISEASE") || illness.Contains("CANCER"))
+                if (illness.Contains("HEALTHY"))
                 {
-                    if (sugar < 5 && cholesterol < 100 && sodium < 5)
+                    if (protein >= 15 && protein <= 30)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
                 else
                 {
-                    if (protein >= 15 && protein <= 30)
+                    if (illness.Contains("DIABETES"))
                     {
-                        foods.Add(u1.GetProperty("food_name").ToString());
+                        if (sugar < 5)
+                        {
+                            foods.Add(u1.GetProperty("food_name").ToString());
+                        }
                     }
-
+                    if (illness.Contains("HEART DISEASE"))
+                    {
+                        if (cholesterol < 100)
+                        {
+                            foods.Add(u1.GetProperty("food_name").ToString());
+                        }
+                    }
+                    if (illness.Contains("CANCER"))
+                    {
+                        if (sodium < 5)
+                        {
+                            foods.Add(u1.GetProperty("food_name").ToString());
+                        }
+                    }
+                    else
+                    {
+                        if (sugar < 5 && cholesterol < 100 && sodium < 5)
+                        {
+                            foods.Add(u1.GetProperty("food_name").ToString());
+                        }
+                    }
                 }
+
+                
+                
             }
         }
 
