@@ -31,7 +31,7 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
-        float sugar, cholesterol, sodium, fat, protein;
+        float sugar, cholesterol, sodium, fat, protein, calorie_energy, carbohydrate;
         float portions = 100;
 
 
@@ -115,11 +115,13 @@ namespace App1
             {
                 var u1 = root[i];
 
-                sugar = float.Parse(u1.GetProperty("sugar").ToString()) * portions;
-                cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * portions;
-                sodium = float.Parse(u1.GetProperty("sodium").ToString()) * portions;
-                fat = float.Parse(u1.GetProperty("total_fat").ToString()) * portions;
+                calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString()) * portions;
                 protein = float.Parse(u1.GetProperty("protein").ToString()) * portions;
+                fat = float.Parse(u1.GetProperty("total_fat").ToString()) * portions;
+                carbohydrate = float.Parse(u1.GetProperty("carbohydrate").ToString()) * portions;
+                sugar = float.Parse(u1.GetProperty("sugar").ToString()) * portions;
+                sodium = float.Parse(u1.GetProperty("sodium").ToString()) * portions;
+                cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * portions;
 
                 /*
                 sugar = Convert.ToDecimal(u1.GetProperty("sugar").ToString());
@@ -128,43 +130,33 @@ namespace App1
                 fat = Convert.ToDecimal(u1.GetProperty("total_fat").ToString());
                 protein = Convert.ToDecimal(u1.GetProperty("protein").ToString());
                 */
-
-                if (illness.Contains("HEALTHY"))
+                if (illness.Contains("HEART DISEASE"))
                 {
-                    if (protein >= 15 && protein <= 30)
+                    if (sugar < 5 && cholesterol < 100 && sodium < 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
+                else if (illness.Contains("DIABETES"))
+                {
+                    if (sugar < 5 && cholesterol < 100)
+                    {
+                        foods.Add(u1.GetProperty("food_name").ToString());
+                    }
+                }
+                else if (illness.Contains("CANCER"))
+                {
+                    if (sodium < 5)
+                    {
+                        foods.Add(u1.GetProperty("food_name").ToString());
+                    }
+                }
+
                 else
                 {
-                    if (illness.Contains("DIABETES"))
+                    if (protein >= 15 && protein <= 30 || (fat >= 0.5 && fat <= 1))
                     {
-                        if (sugar < 5)
-                        {
-                            foods.Add(u1.GetProperty("food_name").ToString());
-                        }
-                    }
-                    if (illness.Contains("HEART DISEASE"))
-                    {
-                        if (cholesterol < 100)
-                        {
-                            foods.Add(u1.GetProperty("food_name").ToString());
-                        }
-                    }
-                    if (illness.Contains("CANCER"))
-                    {
-                        if (sodium < 5)
-                        {
-                            foods.Add(u1.GetProperty("food_name").ToString());
-                        }
-                    }
-                    else
-                    {
-                        if (sugar < 5 && cholesterol < 100 && sodium < 5)
-                        {
-                            foods.Add(u1.GetProperty("food_name").ToString());
-                        }
+                        foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
 
