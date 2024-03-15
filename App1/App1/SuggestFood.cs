@@ -132,7 +132,7 @@ namespace App1
                 */
                 if (illness.Contains("HEART DISEASE"))
                 {
-                    if ((sugar * portions) < 5 && (cholesterol * portions) < 100 && (sodium * portions) < 5)
+                    if ((sugar * portions) < 5 && (cholesterol * portions) < 100 && sodium < 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
@@ -146,7 +146,7 @@ namespace App1
                 }
                 else if (illness.Contains("CANCER"))
                 {
-                    if ((sodium * portions) < 5 && (cholesterol * portions) < 100)
+                    if (sodium < 5 && (cholesterol * portions) < 100)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
