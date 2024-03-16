@@ -123,28 +123,21 @@ namespace App1
                 sodium = float.Parse(u1.GetProperty("sodium").ToString()) * portions;
                 cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * portions;
 
-                /*
-                sugar = Convert.ToDecimal(u1.GetProperty("sugar").ToString());
-                cholesterol = Convert.ToDecimal(u1.GetProperty("cholesterol").ToString());
-                sodium = Convert.ToDecimal(u1.GetProperty("sodium").ToString());
-                fat = Convert.ToDecimal(u1.GetProperty("total_fat").ToString());
-                protein = Convert.ToDecimal(u1.GetProperty("protein").ToString());
-                */
-                if (illness.Contains("HEART DISEASE"))
+                if (illness.Contains("Heart Disease"))
                 {
                     if (sugar < 5 && cholesterol < 100 && (sodium/1000) < 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
-                else if (illness.Contains("DIABETES"))
+                else if (illness.Contains("Diabetes"))
                 {
                     if (sugar < 5 && cholesterol < 100)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }
                 }
-                else if (illness.Contains("CANCER"))
+                else if (illness.Contains("Cancer"))
                 {
                     if ((sodium / 1000) < 5 && cholesterol < 100)
                     {
@@ -154,7 +147,7 @@ namespace App1
 
                 else
                 {
-                    if ((protein * portions) >= 15 && (protein * portions) <= 30)
+                    if ((protein) >= 15 && (protein) <= 30)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                     }

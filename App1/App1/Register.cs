@@ -18,7 +18,7 @@ namespace App1
     [Activity(Label = "Register")]
     public class Register : Activity
     {
-        EditText email, firstname, lastname, age, height, weight, bmi, ill, password, repassword;
+        EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
         RadioButton rd_male, rd_female, rdEvent; 
         CheckBox ill_HD, ill_D, ill_C;
         string selectedGender, valueGender, success;
@@ -58,7 +58,6 @@ namespace App1
             ill_HD = FindViewById<CheckBox>(Resource.Id.checkBox1);
             ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
             ill_C = FindViewById<CheckBox>(Resource.Id.checkBox3);
-            ill = FindViewById<EditText>(Resource.Id.edtTxt_ill);
 
             password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
             repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
@@ -164,8 +163,7 @@ namespace App1
             if (ill_HD.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_HD.Text); }
             if (ill_D.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_D.Text); }
             if (ill_C.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_C.Text); }
-            if (ill.Text != "") { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill.Text); }
-            if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked && ill.Text == "") { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + "Healthy"); }
+            if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + "Healthy"); }
             /* Test/Debug
             Toast.MakeText(this, success, ToastLength.Long).Show();
             Console.WriteLine(success);

@@ -45,7 +45,6 @@ INSERT INTO `illnesses` (`email`, `types`) VALUES
 ('hutao@wangsheng.genshin.hoyo', 'Heart Disease'),
 ('hutao@wangsheng.genshin.hoyo', 'Diabetes'),
 ('hutao@wangsheng.genshin.hoyo', 'Cancer'),
-('hutao@wangsheng.genshin.hoyo', 'Allergies'),
 ('testname1@mcl.com', 'Heart Disease'),
 ('testname2@mcl.com', 'Heart Disease'),
 ('testname2@mcl.com', 'Diabetes');

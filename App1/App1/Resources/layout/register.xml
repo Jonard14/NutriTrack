@@ -130,7 +130,7 @@
                 android:hint="Age"
                 android:id="@+id/edtTxt_Age"
                 android:background="@android:color/white"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="50dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -177,12 +177,12 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_height="150px"
+            android:layout_marginTop="10dp"
             android:id="@+id/linearLayout2">
 
             <TextView
-                android:text="Height \n(meters):"
+                android:text="Height\n(meters):"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -191,7 +191,6 @@
                 android:textStyle="bold"
                 android:paddingLeft="10px"
                 android:gravity="right"
-                android:textSize="30px"
                 
                 android:layout_marginLeft="15dp"
                 />
@@ -203,20 +202,20 @@
                 android:text="0"
                 android:id="@+id/edtTxt_Height"
                 android:background="@android:color/white"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:textStyle="bold" />
 
+
             <TextView
-                android:text="Weight (in kilograms):"
+                android:text="Weight\n(kg):"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="180px"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/txtV_Weight"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:paddingLeft="10px"
-                android:gravity="right"
-                android:textSize="30px" />
+                android:gravity="right"/>
             <EditText
                 android:inputType="numberDecimal"
                 android:layout_width="200px"
@@ -237,7 +236,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/linearLayout3" >
 
             <TextView
@@ -258,7 +257,7 @@
                 android:text="0"
                 android:id="@+id/edtTxt_BMI"
                 android:background="@android:color/white"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="50dp"
                 android:textStyle="bold"
                 android:focusable="false"
                 android:clickable="false"
@@ -313,45 +312,6 @@
                 android:id="@+id/checkBox3"
                 android:textColor="@android:color/background_light"
                 android:buttonTint="#F7F6BB"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout5"
-            android:layout_marginTop="15dp"
-            >
-
-
-
-            <TextView
-                android:text="Others:"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/txtV_BMI"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:paddingLeft="50px"
-                android:gravity="right" />
-
-            <EditText
-                android:inputType="none"
-                android:layout_width="780px"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:hint="health related; disease, alergies, etc. "
-                android:id="@+id/edtTxt_ill"
-                android:background="@android:color/white"
-                android:layout_marginLeft="20dp"
-                android:textStyle="bold" />
-
         </LinearLayout>
 
         <TextView
