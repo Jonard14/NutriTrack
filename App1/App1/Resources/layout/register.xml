@@ -141,8 +141,9 @@
                 android:id="@+id/txtV_gender"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:paddingLeft="10px" />
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="10px"
+                android:textSize="20dp"/>
             <RadioGroup
                 android:minWidth="25px"
                 android:minHeight="25px"
@@ -213,7 +214,7 @@
                 android:id="@+id/txtV_Weight"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:paddingLeft="10px"
+                android:paddingLeft="20px"
                 android:gravity="right"/>
             <EditText
                 android:inputType="numberDecimal"
