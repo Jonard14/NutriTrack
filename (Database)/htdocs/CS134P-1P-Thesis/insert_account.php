@@ -14,6 +14,7 @@ $bmi =  $_GET['bmi'];
 $password =  $_GET['password'];
 
 $result = mysqli_query($con,"INSERT INTO user_data (email, first_name, last_name, age, gender, height, weight, bmi) VALUES ('$email', '$first_name', '$last_name', '$age', '$gender', '$height', '$weight', '$bmi')");
+$result = mysqli_query($con,"UPDATE user_data SET daily_calorie_intake='0', total_calorie_intake='0', calorie_intake_days='0' WHERE email='$email'");
 $result = mysqli_query($con,"INSERT INTO login VALUES ('$email', MD5('$password'))");
 
 echo "Data Inserted";

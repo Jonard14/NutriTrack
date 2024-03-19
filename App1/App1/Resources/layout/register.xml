@@ -141,15 +141,14 @@
                 android:id="@+id/txtV_gender"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:layout_marginLeft="60dp"
-                android:paddingLeft="10px"
-                android:textSize="40px" />
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10px" />
             <RadioGroup
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/rdGrp_gender">
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -202,7 +201,7 @@
                 android:text="0"
                 android:id="@+id/edtTxt_Height"
                 android:background="@android:color/white"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="14dp"
                 android:textStyle="bold" />
 
 

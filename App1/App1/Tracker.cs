@@ -152,11 +152,8 @@ namespace App1
         {
             //Females: (10*weight [kg]) + (6.25*height [cm]) – (5*age [years]) – 161
             //Males: (10 * weight[kg]) + (6.25 * height[cm]) – (5 * age[years]) + 5
-
             
             height = height * 100; //convert meter to cm
-
-
 
             if (gender == "M")
             {
@@ -169,11 +166,6 @@ namespace App1
                 recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) - 161;
                 recommendNum.Text = recommendCalorie.ToString();
             }
-
-
-
-
-
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================

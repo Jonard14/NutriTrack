@@ -119,7 +119,7 @@ namespace App1
             
         }
 
-        //Validation - need to revise cause this is not the best conditions to use but still works tho -Jonard
+        //Validation
         public bool Validation()
         {
             if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||

@@ -95,18 +95,6 @@ namespace App1
                 var u1 = root[i];
                 foods.Add(u1.GetProperty("food_name").ToString());
             }
-            /*
-            foods.Add("Chicken Breast Fillet");
-            foods.Add("Chicken Thigh");
-            foods.Add("Fried Tofu");
-            foods.Add("Bangus");
-            foods.Add("Tilapia");
-            foods.Add("Shrimp");
-            foods.Add("Lean Beef");
-            foods.Add("Pork Belly");
-            foods.Add("Greek Yogurt(Non-Fat)");
-            foods.Add("Crab");
-            */
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================

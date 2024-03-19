@@ -57,7 +57,7 @@ namespace App1
         //Login of acct
         public void loginClick(object sender, EventArgs e)
         {
-            /*
+            /* Debug/Testing
             Intent i = new Intent(this, typeof(HomePage));
             StartActivity(i);
             */
