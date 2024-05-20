@@ -13,6 +13,7 @@ using AndroidX.DrawerLayout.Widget;
 using Google.Android.Material.Navigation;
 using Google.Android.Material.Snackbar;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,10 @@ namespace App1
         float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum=0;
         Button SaveCalorie, ResetSugar;
         double recommendCalorie, age, height, weight;
+
+        private ListView lv;
+        private ArrayList history;
+        private ArrayAdapter _adapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -70,6 +75,11 @@ namespace App1
 
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
             ResetSugar.Click += resetSugarCalorie;
+
+            history = new ArrayList();
+            lv = FindViewById<ListView>(Resource.Id.listview1);
+
+
 
             Update();
 
@@ -114,6 +124,10 @@ namespace App1
             PrevCalorie.Text = TotalCalorie.ToString();
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
+
+            history.Add(DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")+"\n"+"Calorie Count: "+ CurrentCalorie.Text+"\nSugar Count: "+ SugarCount.Text);
+            updateLog();
+
         }
 
         public void resetSugarCalorie(object sender, EventArgs e)
@@ -166,6 +180,12 @@ namespace App1
                 recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) - 161;
                 recommendNum.Text = recommendCalorie.ToString();
             }
+        }
+
+        private void updateLog()
+        {
+            _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, history);
+            lv.Adapter = _adapter;
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================
