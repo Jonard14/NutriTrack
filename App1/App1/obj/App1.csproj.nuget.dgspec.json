@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj": {}
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\App1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
-        "packagesPath": "C:\\Users\\GABBY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\obj\\",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\App1.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\GABBY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,6 @@
           "monoandroid13.0": {
             "projectReferences": {}
           }
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

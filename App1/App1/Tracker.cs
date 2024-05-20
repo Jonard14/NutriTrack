@@ -82,7 +82,8 @@ namespace App1
 
 
             Update();
-
+            retrieveTrackerLog();
+            updateLog();
         }
 
         public void Update()
@@ -120,11 +121,15 @@ namespace App1
             string stringCalDays = calorieDays.ToString();
             TotalCalorie = currentCal + totalCalNum;
 
-            history.Add(DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt") + "\n" + "Calorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
-            updateLog();
-
             db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
             PrevCalorie.Text = TotalCalorie.ToString();
+
+            
+            string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
+            //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
+            db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text);
+            retrieveTrackerLog();
+            updateLog();
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
 
@@ -189,6 +194,34 @@ namespace App1
             _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, history);
             lv.Adapter = _adapter;
         }
+
+        private void retrieveTrackerLog()
+        {
+            history = new ArrayList();
+
+            // Get food data from DB
+            root = db.RetrieveData("search_trackerlog.php?");
+            try
+            {
+                for (int i = 0; i < root.GetArrayLength(); i++)
+                {
+                    var u1 = root[i];
+                    if (email == u1.GetProperty("email").ToString())
+                    {
+                        history.Add(u1.GetProperty("time_log").ToString() +
+                                    "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() +
+                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString());
+                    }
+                }
+            }
+            catch
+            {
+                history.Add("No logs available");
+
+            }
+            Console.WriteLine(root);
+        }
+
 
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
