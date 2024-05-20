@@ -120,13 +120,15 @@ namespace App1
             string stringCalDays = calorieDays.ToString();
             TotalCalorie = currentCal + totalCalNum;
 
+            history.Add(DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt") + "\n" + "Calorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
+            updateLog();
+
             db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
             PrevCalorie.Text = TotalCalorie.ToString();
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
 
-            history.Add(DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")+"\n"+"Calorie Count: "+ CurrentCalorie.Text+"\nSugar Count: "+ SugarCount.Text);
-            updateLog();
+            
 
         }
 

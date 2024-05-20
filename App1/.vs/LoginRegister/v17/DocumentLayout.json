@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\gabby\\downloads\\2nd term 2023-2024\\cs154-1p\\prototype\\cs134-1p-thesis\\app1\\app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\gabby\\downloads\\2nd term 2023-2024\\cs154-1p\\prototype\\cs134-1p-thesis\\app1\\app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\tracker.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "App1\\Tracker.cs",
               "ToolTip": "C:\\Users\\GABBY\\Downloads\\2ND TERM 2023-2024\\CS154-1P\\PROTOTYPE\\CS134-1P-Thesis\\App1\\App1\\Tracker.cs",
               "RelativeToolTip": "App1\\Tracker.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAzAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAnwH8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T00:59:14.152Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "App1\\Login.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAQwGUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T06:35:39.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T06:35:39.108Z"
             }
           ]
         }
