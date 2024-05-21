@@ -37,7 +37,7 @@
         android:paddingTop="20px"
         android:paddingBottom="20px">
         <TextView
-            android:text="Recommended Daily Calorie Intake"
+            android:text="Recommended Daily Calorie Intake (kcal)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:textSize="20dp"
             android:id="@+id/textV_recommendNum" />
         <TextView
-            android:text="Estimated Daily Calorie Count"
+            android:text="Estimated Daily Calorie Count (kcal)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             android:textSize="20dp"
             android:id="@+id/textV_NumPrev" />
         <TextView
-            android:text="Current Calorie Count"
+            android:text="Current Calorie Count (kcal)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
             android:id="@+id/textV_NumCurrent" />
 
         <TextView
-            android:text="Total Calorie Count"
+            android:text="Total Calorie Count (kcal)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
             android:textSize="20dp"
             android:id="@+id/textV_TotalCalorieNum" />
         <TextView
-            android:text="Total Suger Consumed"
+            android:text="Total Suger Consumed (g)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

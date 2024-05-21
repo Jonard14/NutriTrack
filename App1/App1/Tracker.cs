@@ -209,8 +209,8 @@ namespace App1
                     if (email == u1.GetProperty("email").ToString())
                     {
                         history.Add(u1.GetProperty("time_log").ToString() +
-                                    "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() +
-                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString());
+                                    "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() + " kcal" +
+                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString() + " g");
                     }
                 }
             }
