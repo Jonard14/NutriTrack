@@ -1,7 +1,12 @@
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\app_bar_main.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage_drawer.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\suggest.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\homepage.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\displaypage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
@@ -19,6 +24,10 @@ CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\app_bar_main.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\homepage.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\homepage_drawer.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\suggest.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\tracker.xml
 com.google.android.material.floatingactionbutton.FloatingActionButton;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\activity_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\displaypage_drawer.xml
@@ -32,6 +41,7 @@ external-cache-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\De
 external-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
+FrameLayout;obj\Debug\130\res\layout\homepage.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
 group;obj\Debug\130\res\menu\activity_main_drawer.xml
 ImageView;obj\Debug\130\res\layout\nav_header_main.xml

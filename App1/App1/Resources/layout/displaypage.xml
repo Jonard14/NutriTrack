@@ -32,6 +32,8 @@
         android:fadingEdge="none"
         android:background="#F7F6BB">
 
+
+
         <TextView
             android:id="@+id/foodnameTV"
             android:layout_width="match_parent"
