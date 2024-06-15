@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:background="#87A922">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="580dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="#F7F6BB">
+
+
+        <!-- Food Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food Name"
+            android:textAppearance="Bold"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/food_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter food name" />
+
+        <!-- Calories -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calories (per 100g)"
+           android:textAppearance="Bold"
+            android:textSize="20dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/calories_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter calories" />
+
+        <!-- Macronutrients -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Macronutrients (per 100g)"
+            android:textAppearance="Bold"
+            android:textSize="20dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carbohydrates"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/carbohydrates_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter carbohydrates" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Protein"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/protein_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter protein" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fat"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/fat_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter fat" />
+
+        <!-- Micronutrients -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Micronutrients (per 100g)"
+            android:textAppearance="Bold"
+            android:textSize="20dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sugar"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/sugar_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter sugar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sodium"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/sodium_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter sodium" />
+
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cholesterol"
+            android:textAppearance="Bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/cholesterol_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter cholesterol" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#114232"
+            android:layout_margin="10dp"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</LinearLayout>

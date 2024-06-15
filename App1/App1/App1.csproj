@@ -61,6 +61,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.cs" />
     <Compile Include="DBClass.cs" />
     <Compile Include="DisplayPage.cs" />
     <Compile Include="DrawerNavigation.cs" />
@@ -183,6 +184,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <Content Include="Resources\layout\activity_profile.xml" />
+    <Content Include="Resources\layout\admin.xml" />
     <Content Include="Resources\layout\profile_page_drawer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

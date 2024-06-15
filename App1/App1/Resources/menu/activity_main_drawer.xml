@@ -8,7 +8,7 @@
 		   android:id="@+id/prof_btn"
 		   android:icon="@drawable/ic_menu_gallery"
 		   android:iconTint="#FCDC2A"
-		   android:title="Profile Page" />
+		   android:title="Profile" />
         <item
             android:id="@+id/home_btn"
             android:icon="@drawable/ic_menu_gallery"

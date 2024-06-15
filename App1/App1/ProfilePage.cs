@@ -15,6 +15,7 @@ using Android.Provider;
 using AndroidX.Core.View;
 using AndroidX.DrawerLayout.Widget;
 using Google.Android.Material.Snackbar;
+using System.Text.Json;
 
 
 namespace App1
@@ -22,6 +23,11 @@ namespace App1
     [Activity(Label = "ProfilePage")]
     public class ProfilePage : Activity
     {
+        DrawerNavigation selectedNav = new DrawerNavigation();
+        DBClass db = new DBClass();
+        JsonElement root;
+        string email = Login.MyGlobals.Globalemail;
+
         private const int PickImageRequest = 1;
         private ImageView profilePicture;
         private EditText weightInput;
@@ -31,7 +37,7 @@ namespace App1
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_profile);
+            SetContentView(Resource.Layout.profile_page_drawer);
 
             profilePicture = FindViewById<ImageView>(Resource.Id.profile_picture);
             weightInput = FindViewById<EditText>(Resource.Id.weight_input);
