@@ -131,7 +131,7 @@
             android:textSize="20dp"
             android:id="@+id/textV_TotalCalorieNum" />
         <TextView
-            android:text="Total Suger Consumed (g)"
+            android:text="Total Sugar Consumed (g)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

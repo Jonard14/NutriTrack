@@ -67,6 +67,7 @@
     <Compile Include="HomePage.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="ProfilePage.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +172,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\suggest_drawer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\search_view_background.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_profile_placeholder.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Content Include="Resources\layout\activity_profile.xml" />
+    <Content Include="Resources\layout\profile_page_drawer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -13,7 +13,7 @@ androidlinkmode=none
 androidlinkskip=
 androidsdkbuildtoolsversion=32.0.0
 androidsdkpath=c:\program files (x86)\android\android-sdk\
-androidndkpath=
+androidndkpath=c:\program files (x86)\android\android-sdk\ndk-bundle\
 javasdkpath=c:\program files (x86)\android\openjdk\jdk-17.0.8.101-hotspot\
 androidsequencepointsmode=none
 xamarinandroidversion=13.2.2-0
@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638518851352042470
+_nugetassetstimestamp=638540772345414242
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\acer\documents\github\cs134-thesis\app1\app1\app1.csproj
+projectfullpath=c:\users\norys\onedrive\documents\github\cs134-1p-thesis\app1\app1\app1.csproj

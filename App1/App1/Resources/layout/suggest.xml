@@ -25,41 +25,30 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Layout Starts Here -->
-
     <TextView
-        android:text="Suggested Foods"
+        android:text="Health Restrictions"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textV_Calorie_Track"
+        android:id="@+id/textV_SugarTracker"
         android:textStyle="bold"
         android:textSize="20dp"
         android:textColor="@android:color/background_light"
         android:paddingLeft="20px"
         android:paddingTop="10px"
-        android:paddingBottom="10px"
-        
-    />
+        android:paddingBottom="10px"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="match_parent"
+        android:layout_width="580dp"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout_INNER"
-        android:fadingEdge="none"
-        android:background="#F7F6BB">
+        android:layout_gravity="center"
+        android:background="#F7F6BB"
+        android:orientation="horizontal">
         
-        <TextView
-            android:text="Health Restrictions"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:id="@+id/textV_healthill" />
+        
        <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,23 +62,22 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textV_SugarTracker"
+        android:id="@+id/foods"
         android:textStyle="bold"
         android:textSize="20dp"
         android:textColor="@android:color/background_light"
         android:paddingLeft="20px"
         android:paddingTop="10px"
-        android:paddingBottom="10px"
-      
-  />
+        android:paddingBottom="10px"/>
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="match_parent"
+        android:layout_width="580dp"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2"
-        android:background="#F7F6BB">
+        android:layout_gravity="center"
+        android:background="#F7F6BB"
+        android:orientation="horizontal">
        
         <ListView
             android:layout_width="match_parent"

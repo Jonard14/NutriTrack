@@ -4,6 +4,11 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+		<item
+		   android:id="@+id/prof_btn"
+		   android:icon="@drawable/ic_menu_gallery"
+		   android:iconTint="#FCDC2A"
+		   android:title="Profile Page" />
         <item
             android:id="@+id/home_btn"
             android:icon="@drawable/ic_menu_gallery"

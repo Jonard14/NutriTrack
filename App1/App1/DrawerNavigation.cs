@@ -43,6 +43,10 @@ namespace App1
             {
                 return typeof(SuggestFood);
             }
+            else if (id == Resource.Id.prof_btn)
+            {
+                return typeof(ProfilePage);
+            }
             return null;
         }
     }

@@ -1,5 +1,6 @@
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
+androidx.appcompat.widget.SearchView;obj\Debug\130\res\layout\homepage.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage_drawer.xml
@@ -34,6 +35,8 @@ com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\d
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\suggest_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\tracker_drawer.xml
+corners;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
+corners;obj\Debug\130\res\drawable\search_view_background.xml
 dimen;obj\Debug\130\res\values\dimens.xml
 EditText;obj\Debug\130\res\layout\login.xml
 EditText;obj\Debug\130\res\layout\register.xml
@@ -55,6 +58,8 @@ item;obj\Debug\130\res\menu\activity_main_drawer.xml
 item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\styles.xml
+LinearLayout;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
+LinearLayout;obj\Debug\130\res\drawable\search_view_background.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
 LinearLayout;obj\Debug\130\res\layout\displaypage.xml
 LinearLayout;obj\Debug\130\res\layout\homepage.xml
@@ -68,6 +73,8 @@ ListView;obj\Debug\130\res\layout\suggest.xml
 ListView;obj\Debug\130\res\layout\tracker.xml
 menu;obj\Debug\130\res\menu\activity_main_drawer.xml
 menu;obj\Debug\130\res\menu\menu_main.xml
+padding;obj\Debug\130\res\drawable\search_view_background.xml
+path;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_gallery.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
@@ -86,16 +93,23 @@ resources;obj\Debug\130\res\values\styles.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\tracker.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
+shape;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
+shape;obj\Debug\130\res\drawable\search_view_background.xml
 shape;obj\Debug\130\res\drawable\side_nav_bar.xml
+size;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
+solid;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
+solid;obj\Debug\130\res\drawable\search_view_background.xml
 string;obj\Debug\130\res\values\strings.xml
 style;obj\Debug\130\res\values\styles.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
 TextView;obj\Debug\130\res\layout\displaypage.xml
+TextView;obj\Debug\130\res\layout\homepage.xml
 TextView;obj\Debug\130\res\layout\login.xml
 TextView;obj\Debug\130\res\layout\nav_header_main.xml
 TextView;obj\Debug\130\res\layout\register.xml
 TextView;obj\Debug\130\res\layout\suggest.xml
 TextView;obj\Debug\130\res\layout\tracker.xml
+vector;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_gallery.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
