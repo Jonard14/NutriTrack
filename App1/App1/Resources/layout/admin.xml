@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
     android:background="#87A922">
-
+    
     <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Food Name"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp"/>
 
         <EditText
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Calories (per 100g)"
-           android:textAppearance="Bold"
+           android:textStyle="bold"
             android:textSize="20dp"
             android:layout_marginTop="8dp" />
 
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Macronutrients (per 100g)"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp"
             android:layout_marginTop="8dp" />
 
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Carbohydrates"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText
@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Protein"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText
@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fat"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText
@@ -122,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Micronutrients (per 100g)"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp"
             android:layout_marginTop="8dp" />
 
@@ -130,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sugar"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText
@@ -144,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sodium"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText
@@ -158,7 +158,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cholesterol"
-            android:textAppearance="Bold"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <EditText

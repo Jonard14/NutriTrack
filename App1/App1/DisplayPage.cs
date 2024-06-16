@@ -29,7 +29,7 @@ namespace App1
 
         private TextView tv;
         private TextView tv1;
-        private Button btn1,btn_add;
+        private Button btn1, btn_add;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -65,7 +65,7 @@ namespace App1
             btn1.Click += backEvent;
             btn_add.Click += addFood;
         }
-        public void backEvent(object sender,  EventArgs e)
+        public void backEvent(object sender, EventArgs e)
         {
             if (Intent.GetStringExtra("ActivityPage") == "HomePage")
             {

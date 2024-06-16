@@ -28,8 +28,9 @@ namespace App1
                 return;
             }
 
-            SetContentView(Resource.Layout.activity_admin);
-
+            SetContentView(Resource.Layout.admin);
+            /*
+            
             // Initialize views
             foodNameInput = FindViewById<EditText>(Resource.Id.food_name_input);
             caloriesInput = FindViewById<EditText>(Resource.Id.calories_input);
@@ -40,9 +41,11 @@ namespace App1
             sodiumInput = FindViewById<EditText>(Resource.Id.sodium_input);
             cholesterolInput = FindViewById<EditText>(Resource.Id.cholesterol_input);
             submitButton = FindViewById<Button>(Resource.Id.submit_button);
+            */
 
             // Set submit button click event
             submitButton.Click += OnSubmitButtonClick;
+            
         }
 
         private void OnSubmitButtonClick(object sender, EventArgs e)

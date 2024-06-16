@@ -1,3 +1,6 @@
+App1.AdminPage, App1;crc64a7a6b04b89628087.AdminPage
+App1.AdminPage;crc64a7a6b04b89628087.AdminPage
+app1.AdminPage;crc64a7a6b04b89628087.AdminPage
 App1.DisplayPage, App1;crc64a7a6b04b89628087.DisplayPage
 App1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
 app1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
@@ -10,6 +13,9 @@ app1.Login;crc64a7a6b04b89628087.Login
 App1.MainActivity, App1;crc64a7a6b04b89628087.MainActivity
 App1.MainActivity;crc64a7a6b04b89628087.MainActivity
 app1.MainActivity;crc64a7a6b04b89628087.MainActivity
+App1.ProfilePage, App1;crc64a7a6b04b89628087.ProfilePage
+App1.ProfilePage;crc64a7a6b04b89628087.ProfilePage
+app1.ProfilePage;crc64a7a6b04b89628087.ProfilePage
 App1.Register, App1;crc64a7a6b04b89628087.Register
 App1.Register;crc64a7a6b04b89628087.Register
 app1.Register;crc64a7a6b04b89628087.Register

@@ -61,7 +61,7 @@ namespace App1
             Intent i = new Intent(this, typeof(HomePage));
             StartActivity(i);
             */
-            if (VerifyLogin()) 
+            if (VerifyLogin())
             {
                 Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
@@ -77,7 +77,7 @@ namespace App1
             }
         }
 
-        public void RegisterLink(object sender, EventArgs e) 
+        public void RegisterLink(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(Register));
             StartActivity(i);

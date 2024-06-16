@@ -85,7 +85,7 @@ namespace App1
         private void sv_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             _adapter.Filter.InvokeFilter(e.NewText);
-        }      
+        }
         private void addData()
         {
             foods = new ArrayList();
@@ -103,7 +103,7 @@ namespace App1
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if(drawer.IsDrawerOpen(GravityCompat.Start))
+            if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
                 drawer.CloseDrawer(GravityCompat.Start);
             }
@@ -132,7 +132,7 @@ namespace App1
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
+            View view = (View)sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }

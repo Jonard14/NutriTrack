@@ -56,11 +56,11 @@ namespace App1
 
         public void Login(object sender, EventArgs e)
         {
-                Intent i = new Intent(this, typeof(Login));
-                //i.PutExtra("Text", variable);
-                StartActivity(i);
+            Intent i = new Intent(this, typeof(Login));
+            //i.PutExtra("Text", variable);
+            StartActivity(i);
         }
-        
+
         public void RegLink(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(Register));

@@ -1,5 +1,4 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -16,12 +15,13 @@ using AndroidX.Core.View;
 using AndroidX.DrawerLayout.Widget;
 using Google.Android.Material.Snackbar;
 using System.Text.Json;
-
+using AndroidX.AppCompat.App;
+using Google.Android.Material.Navigation;
 
 namespace App1
 {
     [Activity(Label = "ProfilePage")]
-    public class ProfilePage : Activity
+    public class ProfilePage : Activity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
@@ -30,23 +30,42 @@ namespace App1
 
         private const int PickImageRequest = 1;
         private ImageView profilePicture;
-        private EditText weightInput;
+        private TextView weightInput;
         private TextView bmiDisplay;
         private double height = 1.75; // User's height in meters (example value)
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.profile_page_drawer);
 
+            // Drawer Layout
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
+
+            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            //fab.Click += FabOnClick;
+
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+            drawer.AddDrawerListener(toggle);
+            toggle.SyncState();
+
+            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView.SetNavigationItemSelectedListener(this);
+
+            // Create your application here
             profilePicture = FindViewById<ImageView>(Resource.Id.profile_picture);
-            weightInput = FindViewById<EditText>(Resource.Id.weight_input);
-            bmiDisplay = FindViewById<TextView>(Resource.Id.bmi_display);
+            weightInput = FindViewById<TextView>(Resource.Id.weight_input);
+            bmiDisplay = FindViewById<TextView>(Resource.Id.BMI);
             var changePictureButton = FindViewById<Button>(Resource.Id.change_picture_button);
-            var updateButton = FindViewById<Button>(Resource.Id.update_button);
+            var updateButton1 = FindViewById<Button>(Resource.Id.update_button1);
+            var updateButton2 = FindViewById<Button>(Resource.Id.update_button2);
+            var updateButton3 = FindViewById<Button>(Resource.Id.update_button3);
 
             changePictureButton.Click += ChangePictureButton_Click;
-            updateButton.Click += UpdateButton_Click;
+            updateButton2.Click += UpdateButton_Click;
         }
 
         private void ChangePictureButton_Click(object sender, EventArgs e)
@@ -63,7 +82,7 @@ namespace App1
 
             if (requestCode == PickImageRequest && resultCode == Result.Ok && data != null && data.Data != null)
             {
-                Uri uri = data.Data;
+                Android.Net.Uri uri = data.Data;
                 try
                 {
                     Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, uri);

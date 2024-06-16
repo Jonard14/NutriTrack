@@ -59,7 +59,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="580dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minWidth="25px"
             android:minHeight="25px"

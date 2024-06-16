@@ -19,7 +19,7 @@ namespace App1
     public class Register : Activity
     {
         EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
-        RadioButton rd_male, rd_female, rdEvent; 
+        RadioButton rd_male, rd_female, rdEvent;
         CheckBox ill_HD, ill_D, ill_C;
         string selectedGender, valueGender, success;
         Button register, home, getbmi;
@@ -37,15 +37,15 @@ namespace App1
 
             // Create your application here
             home = FindViewById<Button>(Resource.Id.btn_Home);
-            home.Click += homeClick;  
+            home.Click += homeClick;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
             firstname = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
             age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
-            
+
             rd_male = FindViewById<RadioButton>(Resource.Id.rdBtn_male);
-            rd_male.Click += rdEvent_male; 
+            rd_male.Click += rdEvent_male;
             rd_female = FindViewById<RadioButton>(Resource.Id.rdBtn_female);
             rd_female.Click += rdEvent_female;
 
@@ -103,7 +103,7 @@ namespace App1
             if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
             {
                 valueGender = getGender();
-                success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender+
+                success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender +
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
                 SaveIllness();
                 Console.WriteLine(success);
@@ -116,7 +116,7 @@ namespace App1
             }
             else if (!NoDuplicate()) { Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show(); }
             else { Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show(); }
-            
+
         }
 
         //Validation
@@ -139,7 +139,7 @@ namespace App1
         public bool NoDuplicate()
         {
             root = db.RetrieveData("search_noduplicate_acct.php?");
-            for (int i = 0; i < root.GetArrayLength(); i ++)
+            for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
                 searchemail = u1.GetProperty("email").ToString();

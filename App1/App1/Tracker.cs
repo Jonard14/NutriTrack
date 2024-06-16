@@ -33,7 +33,7 @@ namespace App1
 
         string searchemail, gender;
         string email = Login.MyGlobals.Globalemail;
-        float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum=0;
+        float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum = 0;
         Button SaveCalorie, ResetSugar;
         double recommendCalorie, age, height, weight;
 
@@ -124,7 +124,7 @@ namespace App1
             db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
             PrevCalorie.Text = TotalCalorie.ToString();
 
-            
+
             string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
             db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text);
@@ -133,7 +133,7 @@ namespace App1
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
 
-            
+
 
         }
 
@@ -173,7 +173,7 @@ namespace App1
         {
             //Females: (10*weight [kg]) + (6.25*height [cm]) – (5*age [years]) – 161
             //Males: (10 * weight[kg]) + (6.25 * height[cm]) – (5 * age[years]) + 5
-            
+
             height = height * 100; //convert meter to cm
 
             if (gender == "M")
