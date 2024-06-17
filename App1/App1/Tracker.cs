@@ -25,7 +25,7 @@ namespace App1
     [Activity(Label = "Tracker")]
     public class Tracker : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        TextView PrevCalorie, CurrentCalorie, SugarCount, TotalCalorieNum, recommendNum;
+        TextView PrevCalorie, CurrentCalorie, SugarCount, TotalCalorieNum, recommendNum, numOfCal;
         DBClass db = new DBClass();
         JsonElement root;
 
@@ -38,7 +38,10 @@ namespace App1
         float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum = 0;
         Button SaveCalorie, ResetSugar;
         double recommendCalorie, age, height, weight;
-        float protein, fat, cholesterol, carbohydrates, sodium;
+        float protein, fat, cholesterol, carbohydrates, sodium, d;
+        int prog;
+
+        ProgressBar pieChart;
 
         private ListView lv;
         private ArrayList history;
@@ -72,6 +75,9 @@ namespace App1
             TotalCalorieNum = FindViewById<TextView>(Resource.Id.textV_TotalCalorieNum);
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
             recommendNum = FindViewById<TextView>(Resource.Id.textV_recommendNum);
+            numOfCal = FindViewById<TextView>(Resource.Id.number_of_calories);
+
+            pieChart = FindViewById<ProgressBar>(Resource.Id.stats_progressbar);
 
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
             SaveCalorie.Click += saveCalorieClick;
@@ -224,6 +230,11 @@ namespace App1
                 recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) - 161;
                 recommendNum.Text = recommendCalorie.ToString();
             }
+            //Update chart
+            numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
+            d = currentCalorieNum / (float)recommendCalorie;
+            prog = (int)d * 100;
+            pieChart.SetProgress(prog, true);
         }
 
         private void updateLog()

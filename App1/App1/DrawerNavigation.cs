@@ -47,6 +47,10 @@ namespace App1
             {
                 return typeof(ProfilePage);
             }
+            else if (id == Resource.Id.logs_btn)
+            {
+                return typeof(Logs);
+            }
             return null;
         }
     }

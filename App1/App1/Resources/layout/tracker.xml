@@ -25,6 +25,66 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Layout Starts Here -->
+     <!-- Progress Bar for Calorie Count -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Calorie Count vs. Recommended Calories"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:textColor="@android:color/background_light"
+        android:paddingLeft="20px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:layout_gravity="center"/>
+
+<!-- Doughnut chart starts here -->
+  <RelativeLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F7F6BB" >
+
+    <!-- ProgressBar that represents a total of 100% -->
+    <ProgressBar
+        android:id="@+id/background_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:layout_marginLeft="150dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/stats_full"/>
+
+    <!-- ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice -->
+    <ProgressBar
+        android:id="@+id/stats_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:indeterminate="false"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:progress="75"
+        android:layout_marginLeft="300dp"
+        android:layout_gravity="center"
+        android:progressDrawable="@drawable/stats_progress"/>
+
+     <TextView
+        android:id="@+id/number_of_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="254dp"
+        android:layout_marginTop="135dp"
+        android:text="1500/2000"
+        android:textSize="20dp"/>
+
+    <!-- The text that goes in a center of the chart -->
+     
+</RelativeLayout>
+<!-- Doughnut chart ends here -->
     <TextView
         android:text="Calorie Tracker"
         android:textAppearance="?android:attr/textAppearanceLarge"
