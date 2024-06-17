@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Graphics;
+using Android.Hardware.Lights;
 using Android.OS;
 using Android.Runtime;
 using Android.Text;
@@ -37,7 +38,9 @@ namespace App1
             home.Click += Home;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_email);
+            email.TextChanged += Input_TextChanged;
             password = FindViewById<EditText>(Resource.Id.edtTxt_password);
+            password.TextChanged += Input_TextChanged;
             login = FindViewById<Button>(Resource.Id.btn_Login);
             login.Click += loginClick;
 
@@ -45,6 +48,23 @@ namespace App1
             register.PaintFlags = PaintFlags.UnderlineText;
             register.Click += RegisterLink;
 
+        }
+
+        // Dynamically show error prompt in input field
+        private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (email.Text == "")
+                email.Error = "Please enter your Email!";
+            else if (isValidEmail(email.Text) == false)
+                email.Error = "Email is not Valid!";
+           
+            if (password.Text == "")
+                password.Error = "Please enter your Password!";
+        }
+        // Checks if Email format is valid
+        public bool isValidEmail(string email)
+        {
+            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
         }
 
 
@@ -74,6 +94,8 @@ namespace App1
             else
             {
                 Toast.MakeText(this, "Email or Password are incorrect!", ToastLength.Long).Show();
+                email.Error = "Email or Password are incorrect!";
+                password.Error = "Email or Password are incorrect!";
             }
         }
 

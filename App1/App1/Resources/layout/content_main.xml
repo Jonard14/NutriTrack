@@ -39,7 +39,8 @@
             android:id="@+id/btn_signup"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
-            android:backgroundTint="#114232" />
+            android:backgroundTint="#114232" 
+            android:background="@drawable/buttons" />
         <TextView
             android:text="Don't have an account?"
             android:textAppearance="?android:attr/textAppearanceMedium"

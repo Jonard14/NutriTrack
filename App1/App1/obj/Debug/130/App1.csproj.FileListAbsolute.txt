@@ -4073,3 +4073,7 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\stamp\_Conv
 C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\res\drawable\register_inputbox_design.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\res\drawable\buttons.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\res\drawable\login_inputbox_top.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\res\drawable\login_inputbox_bottom.xml

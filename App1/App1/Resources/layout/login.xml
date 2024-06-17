@@ -11,14 +11,15 @@
 
     <Button
         android:text="Return Home"
-        android:layout_width="350px"
-        android:layout_height="125px"
+        android:layout_width="450px"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="top"
         android:id="@+id/btn_Home"
         android:textStyle="bold"
         android:textColor="@android:color/background_light"
-        android:backgroundTint="#114232"/>
+        android:backgroundTint="#114232"
+        android:background="@drawable/buttons" />
 
 
     <LinearLayout
@@ -62,7 +63,7 @@
             android:layout_gravity="center"
             android:hint="Email"
             android:id="@+id/edtTxt_email"
-            android:background="@android:color/white"
+            android:background="@drawable/login_inputbox_top"
             android:textStyle="bold" />
         <EditText
             android:inputType="textPassword"
@@ -72,7 +73,7 @@
             android:layout_gravity="center"
             android:hint="Password"
             android:id="@+id/edtTxt_password"
-            android:background="@android:color/white"
+            android:background="@drawable/login_inputbox_bottom"
             android:textStyle="bold" />
         <Button
             android:text="Log In"
@@ -84,7 +85,8 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/background_light"
-            android:backgroundTint="#114232" />
+            android:backgroundTint="#114232"
+            android:background="@drawable/buttons" />
         <TextView
             android:text="Don't have an account?"
             android:textAppearance="?android:attr/textAppearanceMedium"
