@@ -35,11 +35,10 @@ namespace App1
 
         string searchemail, gender;
         string email = Login.MyGlobals.Globalemail;
-        float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum = 0;
+        float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum = 0, prog = 0;
         Button SaveCalorie, ResetSugar;
         double recommendCalorie, age, height, weight;
         float protein, fat, cholesterol, carbohydrates, sodium, d;
-        int prog;
 
         ProgressBar pieChart;
 
@@ -96,10 +95,8 @@ namespace App1
             Tfats = FindViewById<TextView>(Resource.Id.textV_numfats);
 
 
-
+            pieChart.Progress = (int)prog;
             Update();
-            retrieveTrackerLog();
-            updateLog();
         }
 
         public void Update()
@@ -154,8 +151,6 @@ namespace App1
             string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
             db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
-            retrieveTrackerLog();
-            updateLog();
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
 
@@ -233,46 +228,7 @@ namespace App1
             //Update chart
             numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
             d = currentCalorieNum / (float)recommendCalorie;
-            prog = (int)d * 100;
-            pieChart.Progress = prog;
-        }
-
-        private void updateLog()
-        {
-            _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, history);
-            lv.Adapter = _adapter;
-        }
-
-        private void retrieveTrackerLog()
-        {
-            history = new ArrayList();
-
-            // Get food data from DB
-            root = db.RetrieveData("search_trackerlog.php?");
-            try
-            {
-                for (int i = 0; i < root.GetArrayLength(); i++)
-                {
-                    var u1 = root[i];
-                    if (email == u1.GetProperty("email").ToString())
-                    {
-                        history.Add(u1.GetProperty("time_log").ToString() +
-                                    "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() + " kcal" +
-                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString() + " g" +
-                                    "\nProtein Count: " + u1.GetProperty("protein_count").ToString() + " g" +
-                                    "\nFats Count: " + u1.GetProperty("fats_count").ToString() + " g" +
-                                    "\nCarbohydrates Count: " + u1.GetProperty("carbohydrates_count").ToString() + " g" +
-                                    "\nCholesterol Count: " + u1.GetProperty("cholesterol_count").ToString() + " mg" +
-                                    "\nSodium Count: " + u1.GetProperty("sodium_count").ToString() + " mg");
-                    }
-                }
-            }
-            catch
-            {
-                history.Add("No logs available");
-
-            }
-            Console.WriteLine(root);
+            prog = d * 100;
         }
 
 

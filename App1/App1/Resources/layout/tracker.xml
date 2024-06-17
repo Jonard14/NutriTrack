@@ -74,7 +74,7 @@
         android:layout_height="300dp"
         android:indeterminate="false"
         android:max="100"
-        android:progress="75"
+        android:progress="65"
         android:progressDrawable="@drawable/stats_progress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

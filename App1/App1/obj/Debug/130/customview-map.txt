@@ -117,6 +117,7 @@ resources;obj\Debug\130\res\values\styles.xml
 rotate;obj\Debug\130\res\drawable\stats_full.xml
 rotate;obj\Debug\130\res\drawable\stats_progress.xml
 ScrollView;obj\Debug\130\res\layout\activity_profile.xml
+ScrollView;obj\Debug\130\res\layout\homepage.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
 shape;obj\Debug\130\res\drawable\buttons.xml

@@ -63,7 +63,6 @@ namespace App1
 
             addData();
 
-            sv.SetQueryHint("Search...");
 
             _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
             lv.Adapter = _adapter;
