@@ -234,7 +234,7 @@ namespace App1
             numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
             d = currentCalorieNum / (float)recommendCalorie;
             prog = (int)d * 100;
-            pieChart.SetProgress(prog, true);
+            pieChart.Progress = prog;
         }
 
         private void updateLog()
