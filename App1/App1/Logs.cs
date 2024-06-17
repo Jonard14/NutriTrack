@@ -31,7 +31,6 @@ namespace App1
 
         DrawerNavigation selectedNav = new DrawerNavigation();
 
-        string searchemail, gender;
         string email = Login.MyGlobals.Globalemail;
 
         private ListView lv;

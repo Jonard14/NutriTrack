@@ -31,6 +31,7 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
+        TextView food;
         float sugar, cholesterol, sodium, fat, protein, calorie_energy, carbohydrate;
         float portions = 100;
 
@@ -61,6 +62,7 @@ namespace App1
 
             // Create your application here
 
+            food = FindViewById<TextView>(Resource.Id.foods);
             lv = FindViewById<ListView>(Resource.Id.listview1);
             lv2 = FindViewById<ListView>(Resource.Id.listview2);
 
@@ -92,8 +94,8 @@ namespace App1
                 {
                     illness.Add(u1.GetProperty("types").ToString());
                 }
-
             }
+            food.Text = "Recommended Foods to eat when you have: " + illness.ToString();
 
         }
         private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

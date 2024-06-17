@@ -26,7 +26,7 @@
 
     <!-- Layout Starts Here -->
 
-    <TextView
+    <!--<TextView
         android:text="Suggested Foods"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
@@ -65,15 +65,15 @@
             android:layout_height="match_parent"
             android:id="@+id/listview1"
             android:layout_weight ="1"/>
-
-    </LinearLayout>
+    
+    </LinearLayout>-->
 
     <TextView
         android:text="Foods"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textV_SugarTracker"
+        android:id="@+id/foods"
         android:textStyle="bold"
         android:textSize="20dp"
         android:textColor="@android:color/background_light"

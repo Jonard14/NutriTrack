@@ -56,23 +56,24 @@
                 android:paddingTop="20px"
                 android:paddingBottom="20px"
                 android:fontFamily="" />
+        
+        <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10px"
+        android:id="@+id/linearLayout3"
+        android:background="#F7F6BB">
+       
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview1"
+            android:layout_weight ="1"/>
+    </LinearLayout>
 
-        <ScrollView
-            android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_margin="10px"
-            android:background="#F7F6BB"
-            android:orientation="vertical">
-           
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listview1"
-                android:layout_weight ="1"/>
-        </ScrollView>
 
     </LinearLayout>
 

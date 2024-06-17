@@ -95,7 +95,6 @@ namespace App1
             Tfats = FindViewById<TextView>(Resource.Id.textV_numfats);
 
 
-            pieChart.Progress = (int)prog;
             Update();
         }
 
@@ -229,6 +228,7 @@ namespace App1
             numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
             d = currentCalorieNum / (float)recommendCalorie;
             prog = d * 100;
+            pieChart.Progress = (int)prog;
         }
 
 
