@@ -101,8 +101,9 @@ namespace App1
                     }
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 history.Add("No logs available");
 
             }

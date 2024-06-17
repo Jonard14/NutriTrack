@@ -98,7 +98,6 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 paths;C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;obj\Debug\130\res\layout\tracker.xml
-RelativeLayout;obj\Debug\130\res\layout\tracker.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
 resources;obj\Debug\130\res\values\drawables.xml

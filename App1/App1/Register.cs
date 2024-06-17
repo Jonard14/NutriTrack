@@ -40,16 +40,22 @@ namespace App1
             home.Click += homeClick;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
+            email.TextChanged += Input_TextChanged;
             firstname = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
+            firstname.TextChanged += Input_TextChanged;
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
+            lastname.TextChanged += Input_TextChanged;
             age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
+            age.TextChanged += Input_TextChanged;
 
             gender = FindViewById<Spinner>(Resource.Id.spinner_gender);
             selected_gender = gender.SelectedItem.ToString();
             gender.ItemSelected += Gender_ItemSelected;
 
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
+            height.TextChanged += Input_TextChanged;
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
+            weight.TextChanged += Input_TextChanged;
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
             height.TextChanged += GetBMI;
             weight.TextChanged += GetBMI;
@@ -64,13 +70,67 @@ namespace App1
 
 
             password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
+            password.TextChanged += Input_TextChanged;
             repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
-
+            repassword.TextChanged += Input_TextChanged;
 
             register = FindViewById<Button>(Resource.Id.btn_Register);
             register.Click += registerClick;
         }
 
+        private void Weight_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        // Dynamically show error prompt in input field
+        private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (email.Text == "")
+                email.Error = "Please enter your Email!";
+            else if (isValidEmail(email.Text) == false)
+                email.Error = "Email is not Valid!";
+            if (firstname.Text == "")
+                firstname.Error = "Please enter your Firstname!";
+            if (lastname.Text == "")
+                lastname.Error = "Please enter your Lastname!";
+            if (lastname.Text == "")
+                lastname.Error = "Please enter your Lastname!";
+
+            if (age.Text == "")
+                age.Error = "Please enter your Age!";
+            else if (age.Text == "0")
+                age.Error = "Age cannot have 0 value!";
+
+            if (height.Text == "")
+                height.Error = "Please enter your Weight!";
+            else if (height.Text == "0")
+                height.Error = "Height cannot have 0 value!";
+
+            if (weight.Text == "")
+                weight.Error = "Please enter your Height!";
+            else if (weight.Text == "0")
+                weight.Error = "Weight cannot have 0 value!";
+
+            if (password.Text == "")
+                password.Error = "Please enter your Password!";
+            else if ((password.Text).Length < 8)
+                password.Error = "Password must be minimum of 8 characters!";
+            if (repassword.Text == "")
+                repassword.Error = "Please re-type your Password!";
+            else if (password.Text != repassword.Text)
+                repassword.Error = "Passwords do not match!";
+
+        }
+        // Checks if Email format is valid
+        public bool isValidEmail(string email)
+        {
+            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
+        }
+
+        // Return Home
         public void homeClick(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(MainActivity));
@@ -116,42 +176,51 @@ namespace App1
 
             }
             else if (!NoDuplicate()) Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show();
-            //else Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show();
+            else Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show();
         }
 
         //Validation
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
-                password.Text == "" || repassword.Text == "")// || selectedGender == null)
+            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" || age.Text == "0" ||
+                height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0" ||
+                password.Text == "" || (password.Text).Length < 8 || repassword.Text == "" || password.Text != repassword.Text)
             {
                 if (email.Text == "")
-                    Toast.MakeText(this, "Please Enter your Email!", ToastLength.Long).Show();
-                else if (firstname.Text == "")
-                    Toast.MakeText(this, "Please Enter your First Name!", ToastLength.Long).Show();
-                else if (lastname.Text == "")
-                    Toast.MakeText(this, "Please Enter your Last Name!", ToastLength.Long).Show();
-                else if (age.Text == "")
-                    Toast.MakeText(this, "Please Enter your Age!", ToastLength.Long).Show();
-                else if (password.Text == "")
-                    Toast.MakeText(this, "Please Enter your Password!", ToastLength.Long).Show();
-                else if (repassword.Text == "")
-                    Toast.MakeText(this, "Please Re-type your Password!", ToastLength.Long).Show();
+                    email.Error = "Please enter your Email!";
+                else if (isValidEmail(email.Text) == false)
+                    email.Error = "Email is not Valid!";
+                if (firstname.Text == "")
+                    firstname.Error = "Please enter your Firstname!";
+                if (lastname.Text == "")
+                    lastname.Error = "Please enter your Lastname!";
+                if (lastname.Text == "")
+                    lastname.Error = "Please enter your Lastname!";
 
-                return false;
-            }
+                if (age.Text == "")
+                    age.Error = "Please enter your Age!";
+                else if (age.Text == "0")
+                    age.Error = "Age cannot have 0 value!";
 
-            try
-            {
-                if (Convert.ToDecimal(height.Text) <= 0 || Convert.ToDecimal(weight.Text) <= 0 || Convert.ToDecimal(bmi.Text) <= 0 ||
-                    Convert.ToDecimal(age.Text) <= 0)
-                    return false;
-            }
-            catch { return false; }
+                if (height.Text == "")
+                    height.Error = "Please enter your Weight!";
+                else if (height.Text == "0")
+                    height.Error = "Height cannot have 0 value!";
 
-            if (password.Text != repassword.Text)
-            {
-                Toast.MakeText(this, "Passwords do not match!", ToastLength.Long).Show();
+                if (weight.Text == "")
+                    weight.Error = "Please enter your Height!";
+                else if (weight.Text == "0")
+                    weight.Error = "Weight cannot have 0 value!";
+
+                if (password.Text == "")
+                    password.Error = "Please enter your Password!";
+                else if ((password.Text).Length < 8)
+                    password.Error = "Password must be minimum of 8 characters!";
+                if (repassword.Text == "")
+                    repassword.Error = "Please re-type your Password!";
+                else if (password.Text != repassword.Text)
+                    repassword.Error = "Passwords do not match!";
+
                 return false;
             }
 
@@ -166,7 +235,11 @@ namespace App1
                 var u1 = root[i];
                 searchemail = u1.GetProperty("email").ToString();
 
-                if (searchemail == email.Text) return false;
+                if (searchemail == email.Text)
+                {
+                    email.Error = "Account Already Exists!";
+                    return false;
+                }
             }
             return true;
         }
