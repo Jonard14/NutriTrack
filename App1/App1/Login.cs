@@ -103,6 +103,15 @@ namespace App1
             public static string Globalemail { get; set; }
             public static float GlobalCalorie { get; set; }
             public static float GlobalSugar { get; set; }
+            public static float GlobalFat { get; set; }
+            public static float GlobalProtein { get; set; }
+            public static float GlobalCholesterol { get; set; }
+            public static float GlobalCarbohyrates { get; set; }
+            public static float GlobalSodium { get; set; }
+
+
+
+
         }
     }
 }

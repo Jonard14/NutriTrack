@@ -87,16 +87,21 @@ CREATE TABLE `tracker_log` (
   `time_log` varchar(30) NOT NULL,
   `calorie_count` float NOT NULL,
   `sugar_count` float NOT NULL
+  `protein_count` float NOT NULL
+  `fats_count` float NOT NULL
+  `cholesterol_count` float NOT NULL
+  `carbohydrates_count` float NOT NULL
+  `sodiumn_count` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tracker_log`
 --
 
-INSERT INTO `tracker_log` (`email`, `time_log`, `calorie_count`, `sugar_count`) VALUES
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:10:34 PM', 404, 0),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:12:07 PM', 245, 0.14),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:17:36 PM', 192, 0.1);
+INSERT INTO `tracker_log` (`email`, `time_log`, `calorie_count`, `sugar_count`,`protein_count`,`fats_count`,`cholesterol_count`,`carbohydrates_count`,`sodiumn_count`) VALUES
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:10:34 PM', 404, 0,1,1,1,1,1),
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:12:07 PM', 245, 0.14,1,1,1,1,1),
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:17:36 PM', 192, 0.1,1,1,1,1,1);
 
 -- --------------------------------------------------------
 

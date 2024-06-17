@@ -121,6 +121,12 @@ namespace App1
         {
             Login.MyGlobals.GlobalCalorie = Login.MyGlobals.GlobalCalorie + calorie_energy;
             Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSugar + sugar;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalFat + total_fat;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalProtein + protein;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalCholesterol + cholesterol;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalCarbohyrates + carbohydrate;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSodium + sodium;
+
 
             Toast.MakeText(this, "Food Added", ToastLength.Long).Show();
 
