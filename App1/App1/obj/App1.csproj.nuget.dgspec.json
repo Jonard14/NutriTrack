@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\App1.csproj": {}
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\App1.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\App1.csproj",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

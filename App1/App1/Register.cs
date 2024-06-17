@@ -19,9 +19,9 @@ namespace App1
     public class Register : Activity
     {
         EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
-        RadioButton rd_male, rd_female, rdEvent;
+        Spinner gender, illness;
         CheckBox ill_HD, ill_D, ill_C;
-        string selectedGender, valueGender, success;
+        string selected_gender, valueGender, selected_illness, success;
         Button register, home, getbmi;
         Decimal bmivalue;
         DBClass db = new DBClass();
@@ -44,10 +44,9 @@ namespace App1
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
             age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
 
-            rd_male = FindViewById<RadioButton>(Resource.Id.rdBtn_male);
-            rd_male.Click += rdEvent_male;
-            rd_female = FindViewById<RadioButton>(Resource.Id.rdBtn_female);
-            rd_female.Click += rdEvent_female;
+            gender = FindViewById<Spinner>(Resource.Id.spinner_gender);
+            selected_gender = gender.SelectedItem.ToString();
+            gender.ItemSelected += Gender_ItemSelected;
 
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
@@ -55,9 +54,14 @@ namespace App1
             height.TextChanged += GetBMI;
             weight.TextChanged += GetBMI;
 
+            //illness = FindViewById<Spinner>(Resource.Id.spinner_illness);
+            selected_gender = gender.SelectedItem.ToString();
+            gender.ItemSelected += Gender_ItemSelected;
+
             ill_HD = FindViewById<CheckBox>(Resource.Id.checkBox1);
             ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
             ill_C = FindViewById<CheckBox>(Resource.Id.checkBox3);
+
 
             password = FindViewById<EditText>(Resource.Id.edtTxt_Password);
             repassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
@@ -73,16 +77,14 @@ namespace App1
             StartActivity(i);
         }
 
-        // Get values of gender
-        public void rdEvent_male(object sender, EventArgs e)
+        // Get value of Gender Selected
+        private void Gender_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            rdEvent = sender as RadioButton;
-            selectedGender = rdEvent.Text;
-        }
-        public void rdEvent_female(object sender, EventArgs e)
-        {
-            rdEvent = sender as RadioButton;
-            selectedGender = rdEvent.Text;
+            selected_gender = e.Parent.GetItemAtPosition(e.Position).ToString();
+
+            // Convnert to single character to insert db
+            if (selected_gender == "Male") { valueGender = "M"; }
+            else if (selected_gender == "Female") { valueGender = "F"; }
         }
 
         // Calculate BMI from the user inputs height and weight
@@ -100,9 +102,8 @@ namespace App1
         // Register Account
         public void registerClick(object sender, EventArgs e)
         {
-            if (Validation() && NoDuplicate() && (password.Text == repassword.Text))
+            if (Validation() && NoDuplicate())// && (password.Text == repassword.Text))
             {
-                valueGender = getGender();
                 success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender +
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
                 SaveIllness();
@@ -114,25 +115,46 @@ namespace App1
                 StartActivity(i);
 
             }
-            else if (!NoDuplicate()) { Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show(); }
-            else { Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show(); }
-
+            else if (!NoDuplicate()) Toast.MakeText(this, "Account Already Exists!", ToastLength.Long).Show();
+            //else Toast.MakeText(this, "Unable to Register!", ToastLength.Long).Show();
         }
 
         //Validation
         public bool Validation()
         {
             if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" ||
-                password.Text == "" || repassword.Text == "" || selectedGender == null)
-            { return false; }
+                password.Text == "" || repassword.Text == "")// || selectedGender == null)
+            {
+                if (email.Text == "")
+                    Toast.MakeText(this, "Please Enter your Email!", ToastLength.Long).Show();
+                else if (firstname.Text == "")
+                    Toast.MakeText(this, "Please Enter your First Name!", ToastLength.Long).Show();
+                else if (lastname.Text == "")
+                    Toast.MakeText(this, "Please Enter your Last Name!", ToastLength.Long).Show();
+                else if (age.Text == "")
+                    Toast.MakeText(this, "Please Enter your Age!", ToastLength.Long).Show();
+                else if (password.Text == "")
+                    Toast.MakeText(this, "Please Enter your Password!", ToastLength.Long).Show();
+                else if (repassword.Text == "")
+                    Toast.MakeText(this, "Please Re-type your Password!", ToastLength.Long).Show();
+
+                return false;
+            }
 
             try
             {
                 if (Convert.ToDecimal(height.Text) <= 0 || Convert.ToDecimal(weight.Text) <= 0 || Convert.ToDecimal(bmi.Text) <= 0 ||
                     Convert.ToDecimal(age.Text) <= 0)
-                { return false; }
+                    return false;
             }
             catch { return false; }
+
+            if (password.Text != repassword.Text)
+            {
+                Toast.MakeText(this, "Passwords do not match!", ToastLength.Long).Show();
+                return false;
+            }
+
             return true;
         }
         //Validation - checks if the email already exists or not
@@ -144,19 +166,11 @@ namespace App1
                 var u1 = root[i];
                 searchemail = u1.GetProperty("email").ToString();
 
-                if (searchemail == email.Text)
-                { return false; }
+                if (searchemail == email.Text) return false;
             }
             return true;
         }
-        // Get gender value (Validation)
-        public string getGender()
-        {
-            if (selectedGender == "Male") { valueGender = "M"; }
-            else if (selectedGender == "Female") { valueGender = "F"; }
-            else { valueGender = null; }
-            return valueGender;
-        }
+
         // Insert Illness
         public void SaveIllness()
         {

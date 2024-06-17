@@ -8,14 +8,14 @@ package androidx.drawerlayout;
 
 public final class R {
 	public static final class attr {
-		public static final int drawerLayoutStyle = 0x7f030192;
-		public static final int elevation = 0x7f03019b;
+		public static final int drawerLayoutStyle = 0x7f040192;
+		public static final int elevation = 0x7f04019b;
 	}
 	public static final class dimen {
-		public static final int def_drawer_elevation = 0x7f060061;
+		public static final int def_drawer_elevation = 0x7f070061;
 	}
 	public static final class styleable {
-		public static final int[] DrawerLayout = new int[] { 0x7f03019b };
+		public static final int[] DrawerLayout = new int[] { 0x7f04019b };
 		public static final int DrawerLayout_elevation = 0;
 	}
 }

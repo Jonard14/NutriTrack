@@ -14,6 +14,8 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <!-- Email, First & Last name-->
         <Button
             android:text="Return Home"
             android:layout_width="350px"
@@ -103,7 +105,7 @@
             android:layout_marginLeft="20dp"
             android:textStyle="bold" />
 
-
+        <!-- Age & Gender -->
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -144,6 +146,28 @@
                 android:layout_marginLeft="15dp"
                 android:paddingLeft="10px"
                 android:textSize="20dp"/>
+            
+            <Spinner
+                android:padding="5dp"
+                android:entries="@array/dropdown_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_gender"
+                android:layout_marginLeft="18dp"
+                android:background="@android:color/white"
+                android:textStyle="bold" />
+            
+            <!--
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_gender"
+                android:entries="@array/dropdown_gender"
+                android:layout_marginLeft="18dp"
+                android:background="@android:color/white"
+                android:textStyle="bold" />
+            -->
+            <!--
             <RadioGroup
                 android:minWidth="25px"
                 android:minHeight="25px"
@@ -170,15 +194,18 @@
                     android:paddingLeft="10px"
                     android:buttonTint="#F7F6BB"/>
             </RadioGroup>
+            -->
         </LinearLayout>
 
+
+        <!-- Height & Weight -->
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:id="@+id/linearLayout2">
 
             <TextView
@@ -191,7 +218,6 @@
                 android:textStyle="bold"
                 android:paddingLeft="10px"
                 android:gravity="right"
-                
                 android:layout_marginLeft="15dp"
                 />
             <EditText
@@ -230,6 +256,8 @@
 
         </LinearLayout>
 
+
+        <!-- BMI -->
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -237,7 +265,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/linearLayout3" >
+            android:id="@+id/linearLayout3">
 
             <TextView
                 android:text="BMI:"
@@ -287,7 +315,25 @@
                 android:paddingRight="10px"
                 android:gravity="right"
                 />
-
+            <!--
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/appCompatSpinner1"
+                android:entries="@array/dropdown_gender" />
+            -->
+            <!--
+            <Spinner
+                android:padding="5dp"
+                android:entries="@array/dropdown_illness"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_gender"
+                android:layout_marginLeft="18dp"
+                android:background="@android:color/white"
+                android:textStyle="bold" />
+            -->
+            
             <CheckBox
                 android:text="Heart Disease"
                 android:layout_width="wrap_content"
@@ -312,8 +358,11 @@
                 android:id="@+id/checkBox3"
                 android:textColor="@android:color/background_light"
                 android:buttonTint="#F7F6BB"/>
+            
         </LinearLayout>
 
+
+        <!-- Password -->
         <TextView
             android:text="Password:"
             android:textAppearance="?android:attr/textAppearanceMedium"
