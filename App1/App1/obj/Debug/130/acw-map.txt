@@ -10,6 +10,9 @@ app1.HomePage;crc64a7a6b04b89628087.HomePage
 App1.Login, App1;crc64a7a6b04b89628087.Login
 App1.Login;crc64a7a6b04b89628087.Login
 app1.Login;crc64a7a6b04b89628087.Login
+App1.Logs, App1;crc64a7a6b04b89628087.Logs
+App1.Logs;crc64a7a6b04b89628087.Logs
+app1.Logs;crc64a7a6b04b89628087.Logs
 App1.MainActivity, App1;crc64a7a6b04b89628087.MainActivity
 App1.MainActivity;crc64a7a6b04b89628087.MainActivity
 app1.MainActivity;crc64a7a6b04b89628087.MainActivity

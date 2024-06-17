@@ -69,7 +69,7 @@ namespace App1
             updateLog();
         }
 
-       
+
 
         private void updateLog()
         {

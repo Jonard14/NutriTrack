@@ -90,9 +90,9 @@ namespace App1
 
             //Other Textviews
             Tprotein = FindViewById<TextView>(Resource.Id.textV_numprotein);
-            Tcholesterol= FindViewById<TextView>(Resource.Id.textV_numcholesterol);
+            Tcholesterol = FindViewById<TextView>(Resource.Id.textV_numcholesterol);
             Tsodium = FindViewById<TextView>(Resource.Id.textV_numsodium);
-            Tcarbohydrates= FindViewById<TextView>(Resource.Id.textV_numcarbohydrates);
+            Tcarbohydrates = FindViewById<TextView>(Resource.Id.textV_numcarbohydrates);
             Tfats = FindViewById<TextView>(Resource.Id.textV_numfats);
 
 
@@ -153,7 +153,7 @@ namespace App1
 
             string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
-            db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text+ "&protein_count="+Tprotein.Text+ "&fats_count="+Tfats.Text+ "&cholesterol_count="+Tcholesterol.Text+ "&carbohydrates_count="+Tcarbohydrates.Text+ "&sodium_count="+Tsodium.Text);
+            db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
             retrieveTrackerLog();
             updateLog();
 
@@ -167,15 +167,15 @@ namespace App1
         {
             SugarCount.Text = "0";
             CurrentCalorie.Text = "0";
-            Tprotein.Text= "0";
-            Tcarbohydrates.Text= "0";
-            Tsodium.Text= "0";
-            Tfats.Text= "0";
-            Tcholesterol.Text= "0";
+            Tprotein.Text = "0";
+            Tcarbohydrates.Text = "0";
+            Tsodium.Text = "0";
+            Tfats.Text = "0";
+            Tcholesterol.Text = "0";
 
             Login.MyGlobals.GlobalSugar = 0;
             Login.MyGlobals.GlobalCalorie = 0;
-            Login.MyGlobals.GlobalProtein=0;
+            Login.MyGlobals.GlobalProtein = 0;
             Login.MyGlobals.GlobalFat = 0;
             Login.MyGlobals.GlobalCholesterol = 0;
             Login.MyGlobals.GlobalCarbohyrates = 0;
@@ -258,7 +258,7 @@ namespace App1
                     {
                         history.Add(u1.GetProperty("time_log").ToString() +
                                     "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() + " kcal" +
-                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString() + " g"+
+                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString() + " g" +
                                     "\nProtein Count: " + u1.GetProperty("protein_count").ToString() + " g" +
                                     "\nFats Count: " + u1.GetProperty("fats_count").ToString() + " g" +
                                     "\nCarbohydrates Count: " + u1.GetProperty("carbohydrates_count").ToString() + " g" +
