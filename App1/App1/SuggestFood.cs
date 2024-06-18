@@ -38,7 +38,7 @@ namespace App1
 
         private ListView lv, lv2;
         private ArrayList illness, foods;
-        private ArrayAdapter _adapter, _adapter2;
+        private ArrayAdapter _adapter2;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -69,9 +69,6 @@ namespace App1
             addIll();
             addFood();
 
-            _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, illness);
-            lv.Adapter = _adapter;
-
             _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
             lv2.Adapter = _adapter2;
 
@@ -95,7 +92,7 @@ namespace App1
                     illness.Add(u1.GetProperty("types").ToString());
                 }
             }
-            food.Text = "Recommended Foods to eat when you have: " + illness.ToString();
+            food.Text = "Recommended Foods to eat when you have: ";// + illness.ToString();
 
         }
         private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

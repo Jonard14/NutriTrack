@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2024 at 02:20 PM
+-- Generation Time: Jun 18, 2024 at 10:37 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -86,22 +86,23 @@ CREATE TABLE `tracker_log` (
   `email` varchar(40) NOT NULL,
   `time_log` varchar(30) NOT NULL,
   `calorie_count` float NOT NULL,
-  `sugar_count` float NOT NULL
-  `protein_count` float NOT NULL
-  `fats_count` float NOT NULL
-  `cholesterol_count` float NOT NULL
-  `carbohydrates_count` float NOT NULL
-  `sodiumn_count` float NOT NULL
+  `sugar_count` float NOT NULL,
+  `protein_count` float NOT NULL,
+  `fats_count` float NOT NULL,
+  `cholesterol_count` float NOT NULL,
+  `carbohydrates_count` float NOT NULL,
+  `sodium_count` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tracker_log`
 --
 
-INSERT INTO `tracker_log` (`email`, `time_log`, `calorie_count`, `sugar_count`,`protein_count`,`fats_count`,`cholesterol_count`,`carbohydrates_count`,`sodiumn_count`) VALUES
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:10:34 PM', 404, 0,1,1,1,1,1),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:12:07 PM', 245, 0.14,1,1,1,1,1),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:17:36 PM', 192, 0.1,1,1,1,1,1);
+INSERT INTO `tracker_log` (`email`, `time_log`, `calorie_count`, `sugar_count`, `protein_count`, `fats_count`, `cholesterol_count`, `carbohydrates_count`, `sodium_count`) VALUES
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:10:34 PM', 404, 0, 1, 1, 1, 1, 1),
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:12:07 PM', 245, 0.14, 1, 1, 1, 1, 1),
+('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:17:36 PM', 192, 0.1, 1, 1, 1, 1, 1),
+('jcsfrancisco@live.mcl.edu.ph', '06/18/2024 4:34:45 PM', 296, 15.9, 2.7, 15.3, 7, 37.6, 217);
 
 -- --------------------------------------------------------
 
@@ -128,7 +129,7 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `age`, `height`, `weight`, `bmi`, `daily_calorie_intake`, `total_calorie_intake`, `calorie_intake_days`, `gender`) VALUES
-('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', 23, '1.66', '70.00', '25.40', 280.333, 841, 3, 'M'),
+('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', 23, '1.66', '70.00', '25.40', 284.25, 1137, 4, 'M'),
 ('weltyang@starrail.hoyo', 'Welt', 'Yang', 50, '1.74', '60.00', '26.67', 2587, 1000, 1, 'M'),
 ('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', 20, '1.56', '60.00', '24.97', 2202, 1000, 1, 'F'),
 ('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', 27, '1.67', '55.00', '19.72', 2123, 1000, 1, 'F'),

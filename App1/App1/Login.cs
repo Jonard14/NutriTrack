@@ -57,7 +57,7 @@ namespace App1
                 email.Error = "Please enter your Email!";
             else if (isValidEmail(email.Text) == false)
                 email.Error = "Email is not Valid!";
-           
+
             if (password.Text == "")
                 password.Error = "Please enter your Password!";
         }
@@ -89,6 +89,11 @@ namespace App1
                 MyGlobals.Globalemail = email.Text;
                 MyGlobals.GlobalCalorie = 0;
                 MyGlobals.GlobalSugar = 0;
+                MyGlobals.GlobalProtein = 0;
+                MyGlobals.GlobalFat = 0;
+                MyGlobals.GlobalCholesterol = 0;
+                MyGlobals.GlobalCarbohyrates = 0;
+                MyGlobals.GlobalSodium = 0;
                 StartActivity(i);
             }
             else

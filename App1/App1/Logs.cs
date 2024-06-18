@@ -97,6 +97,7 @@ namespace App1
                                     "\nCarbohydrates Count: " + u1.GetProperty("carbohydrates_count").ToString() + " g" +
                                     "\nCholesterol Count: " + u1.GetProperty("cholesterol_count").ToString() + " mg" +
                                     "\nSodium Count: " + u1.GetProperty("sodium_count").ToString() + " mg");
+
                     }
                 }
             }
