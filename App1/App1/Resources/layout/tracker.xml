@@ -151,7 +151,7 @@
                 android:id="@+id/linearLayout4">
 
                 <TextView
-                    android:text="Recommended Daily Calorie Intake (kcal)"
+                    android:text="Recommended Calorie (kcal)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout5">
                 <TextView
-                    android:text="Estimated Daily Calorie Count (kcal)"
+                    android:text="Daily Calorie (kcal)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
                 android:id="@+id/linearLayout6">
 
                 <TextView
-                    android:text="Current Calorie Count (kcal)"
+                    android:text="Current Calorie (kcal)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -431,7 +431,7 @@
                 android:layout_width="550px"
                 android:layout_height="130px"
                 android:id="@+id/btn_saveCalorie"
-                android:textSize="30px"
+                android:textSize="15dp"
                 android:paddingTop="10px"
                 android:paddingBottom="10px"
                 android:layout_gravity="center"
@@ -446,7 +446,7 @@
                 android:layout_width="550px"
                 android:layout_height="130px"
                 android:id="@+id/btnn_resetSugar"
-                android:textSize="30px"
+                android:textSize="15dp"
                 android:paddingTop="10px"
                 android:paddingBottom="10px"
                 android:layout_gravity="center"
