@@ -78,6 +78,7 @@ namespace App1
 
         private void retrieveTrackerLog()
         {
+            bool notempty = true;
             history = new ArrayList();
 
             // Get food data from DB
@@ -97,9 +98,11 @@ namespace App1
                                     "\nCarbohydrates Count: " + u1.GetProperty("carbohydrates_count").ToString() + " g" +
                                     "\nCholesterol Count: " + u1.GetProperty("cholesterol_count").ToString() + " mg" +
                                     "\nSodium Count: " + u1.GetProperty("sodium_count").ToString() + " mg");
-
+                        notempty = false;
                     }
                 }
+                if (notempty)
+                    history.Add("No logs available");
             }
             catch (Exception e)
             {
