@@ -213,9 +213,9 @@ namespace App1
             This will accurately get the age especially if the month or day was passed or not. 
             *(my explanation is bad lol so here's the example)
             *
-            Example: Today's date is 2024-06-20
-                Then, the user's birthday is 2001-06-21. Therefore, user's age is 23
-                Then, the user's birthday is 2001-06-19. Therefore, user's age is 22 because it haven't reached their birthday for this year
+            Example: User's birthday is 2024-06-20
+                Then, if the date is 2001-06-21. Therefore, user's age is 23
+                Then, if the date is 2001-06-19. Therefore, user's age is 22 because it haven't reached their birthday for this year
              */
             string[] birthdate_split = new string[2];
             birthdate_split = birthday.Split('-'); // YYYY-MM-DD
