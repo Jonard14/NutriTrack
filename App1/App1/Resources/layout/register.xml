@@ -18,22 +18,23 @@
         <!-- Email, First & Last name-->
         <Button
             android:text="Return Home"
-            android:layout_width="450px"
-            android:layout_height="wrap_content"
+            android:layout_width="350px"
+            android:layout_height="100px"
             android:gravity="center"
             android:layout_gravity="top"
             android:id="@+id/btn_Home"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"
             android:backgroundTint="#114232"
-            android:background="@drawable/buttons"/>
+            android:background="@drawable/buttons"
+            android:textSize="10dp" />
 
         <TextView
             android:text="Register"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:gravity="center"
             android:id="@+id/txtV_Register"
             android:textColor="@android:color/background_light"
@@ -48,7 +49,8 @@
             android:id="@+id/txtV_Email"
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
-            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
             android:paddingLeft="50px" />
         <EditText
             android:inputType="textEmailAddress"
@@ -59,8 +61,9 @@
             android:id="@+id/edtTxt_Email"
             android:background="@drawable/register_inputbox_design"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15dp" />
 
         <TextView
             android:text="First Name:"
@@ -70,8 +73,9 @@
             android:id="@+id/txtV_FirstName"
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="50px" />
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50px"
+            android:textSize="15dp" />
         <EditText
             android:inputType="text"
             android:layout_width="1000px"
@@ -81,8 +85,9 @@
             android:id="@+id/edtTxt_FirstName"
             android:background="@drawable/register_inputbox_design"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15dp" />
 
         <TextView
             android:text="Last Name:"
@@ -92,8 +97,9 @@
             android:id="@+id/txtV_LastName"
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="50px" />
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50px"
+            android:textSize="15dp" />
         <EditText
             android:inputType="text"
             android:layout_width="1000px"
@@ -103,8 +109,9 @@
             android:id="@+id/edtTxt_LastName"
             android:background="@drawable/register_inputbox_design"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="15dp" />
 
         <!-- Age & Gender -->
         <LinearLayout
@@ -113,7 +120,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/linearLayout1">
 
             <TextView
@@ -124,17 +131,22 @@
                 android:id="@+id/txtV_Age"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:paddingLeft="50px" />
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="15px"
+                android:gravity="right"
+                android:textSize="15dp" />
             <EditText
                 android:inputType="number"
-                android:layout_width="200px"
+                android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:hint="Age"
                 android:id="@+id/edtTxt_Age"
                 android:background="@drawable/register_inputbox_design"
-                android:layout_marginLeft="50dp"
-                android:textStyle="bold" />
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold" 
+                android:textSize="15dp" />
 
             <TextView
                 android:text="Gender:"
@@ -144,19 +156,22 @@
                 android:id="@+id/txtV_gender"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:layout_marginLeft="15dp"
+                android:gravity="right"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="3dp"
                 android:paddingLeft="10px"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
             
             <Spinner
                 android:padding="5dp"
                 android:entries="@array/dropdown_gender"
-                android:layout_width="200px"
+                android:layout_width="250px"
                 android:layout_height="match_parent"
                 android:id="@+id/spinner_gender"
                 android:layout_marginLeft="18dp"
                 android:background="@drawable/register_inputbox_design"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -168,7 +183,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/linearLayout2">
 
             <TextView
@@ -181,18 +196,21 @@
                 android:textStyle="bold"
                 android:paddingLeft="10px"
                 android:gravity="right"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
                 />
             <EditText
                 android:inputType="numberDecimal"
-                android:layout_width="200px"
+                android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_Height"
                 android:background="@drawable/register_inputbox_design"
                 android:layout_marginLeft="17dp"
-                android:textStyle="bold" />
+                android:layout_marginTop="7dp"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
 
 
             <TextView
@@ -205,18 +223,20 @@
                 android:textStyle="bold"
                 android:paddingLeft="20px"
                 android:layout_marginLeft="25dp"
-                android:gravity="right"/>
+                android:gravity="right"
+                android:textSize="15dp"/>
             <EditText
                 android:inputType="numberDecimal"
-                android:layout_width="200px"
+                android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_Weight"
                 android:background="@drawable/register_inputbox_design"
                 android:layout_marginLeft="19dp"
-                android:textStyle="bold" />
-
+                android:layout_marginTop="7dp"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
 
         </LinearLayout>
 
@@ -228,7 +248,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:id="@+id/linearLayout3">
 
             <TextView
@@ -240,20 +260,24 @@
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:paddingLeft="50px"
-                android:gravity="right" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:gravity="right"
+                android:textSize="15dp"/>
             <EditText
                 android:inputType="none"
-                android:layout_width="200px"
+                android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="0"
                 android:id="@+id/edtTxt_BMI"
                 android:background="@drawable/register_inputbox_design"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="15dp"
                 android:textStyle="bold"
                 android:focusable="false"
                 android:clickable="false"
-                android:cursorVisible="false" />
+                android:cursorVisible="false"
+                android:textSize="15dp"/>
 
         </LinearLayout>
 
@@ -263,7 +287,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:id="@+id/linearLayout4">
 
             <TextView
@@ -278,6 +302,7 @@
                 android:paddingLeft="40px"
                 android:paddingRight="10px"
                 android:gravity="right"
+                android:textSize="15dp"
                 />
             <!--
             <androidx.appcompat.widget.AppCompatSpinner
@@ -305,6 +330,7 @@
                 android:id="@+id/checkBox1"
                 android:textColor="@android:color/background_light"
                 android:buttonTint="#F7F6BB"
+                android:textSize="12dp"
                 />
 
             <CheckBox
@@ -313,7 +339,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/checkBox2"
                 android:textColor="@android:color/background_light"
-                android:buttonTint="#F7F6BB"/>
+                android:buttonTint="#F7F6BB"
+                android:textSize="12dp"/>
 
             <CheckBox
                 android:text="Cancer"
@@ -321,7 +348,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/checkBox3"
                 android:textColor="@android:color/background_light"
-                android:buttonTint="#F7F6BB"/>
+                android:buttonTint="#F7F6BB"
+                android:textSize="12dp"/>
             
         </LinearLayout>
 
@@ -336,7 +364,8 @@
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
             android:paddingLeft="50px"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
             />
         <EditText
             android:inputType="textPassword"
@@ -346,9 +375,10 @@
             android:hint="Password"
             android:id="@+id/edtTxt_Password"
             android:background="@drawable/register_inputbox_design"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:textStyle="bold"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
             />
 
         <TextView
@@ -360,7 +390,8 @@
             android:textColor="@android:color/background_light"
             android:textStyle="bold"
             android:paddingLeft="50px"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
             />
         <EditText
             android:inputType="textPassword"
@@ -370,9 +401,11 @@
             android:hint="Re-type Password"
             android:id="@+id/edtTxt_RePassword"
             android:background="@drawable/register_inputbox_design"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" 
+            android:textSize="15dp"
+            />
 
 
         <Button
@@ -381,7 +414,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/btn_Register"
             android:textStyle="bold"
             android:textColor="@android:color/background_light"

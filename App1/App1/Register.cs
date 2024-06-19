@@ -18,6 +18,8 @@ namespace App1
     [Activity(Label = "Register")]
     public class Register : Activity
     {
+        TextView txtemail, txtfirstname, txtlastname, txtage, txtheight, txtweight, txtpassword, txtrepassword;
+        string required;
         EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
         Spinner gender, illness;
         CheckBox ill_HD, ill_D, ill_C;
@@ -27,6 +29,8 @@ namespace App1
         DBClass db = new DBClass();
         JsonElement root;
         string searchemail;
+
+        int val;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,6 +42,10 @@ namespace App1
             // Create your application here
             home = FindViewById<Button>(Resource.Id.btn_Home);
             home.Click += homeClick;
+            
+            txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
+            txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
+
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
             email.TextChanged += Input_TextChanged;
