@@ -7,6 +7,7 @@ using Android.Text;
 using Android.Views;
 using Android.Widget;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace App1
     {
         TextView txtemail, txtfirstname, txtlastname, txtage, txtheight, txtweight, txtpassword, txtrepassword;
         string required;
-        EditText email, firstname, lastname, age, height, weight, bmi, password, repassword;
+        EditText email, firstname, lastname, height, weight, bmi, password, repassword;
         Spinner gender, illness;
         CheckBox ill_HD, ill_D, ill_C;
         string selected_gender, valueGender, selected_illness, success;
@@ -29,6 +30,12 @@ namespace App1
         DBClass db = new DBClass();
         JsonElement root;
         string searchemail;
+
+        // Birthday
+        private Spinner bmonth, bday, byear;
+        private string selected_bmonth, selected_bday, selected_byear, birthday_format;
+        private ArrayAdapter _adapter_day, _adapter_year;
+        private ArrayList array_day, array_year;
 
         int val;
 
@@ -46,6 +53,17 @@ namespace App1
             txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
             txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
 
+            bmonth = FindViewById<Spinner>(Resource.Id.spinner_birthmonth);
+            selected_bmonth = bmonth.SelectedItem.ToString();
+            bmonth.ItemSelected += Bmonth_ItemSelected;
+            bday = FindViewById<Spinner>(Resource.Id.spinner_birthday);
+            load_days();
+            selected_bday = bday.SelectedItem.ToString();
+            bday.ItemSelected += Bday_ItemSelected;
+            byear = FindViewById<Spinner>(Resource.Id.spinner_birthyear);
+            load_years();
+            selected_byear = byear.SelectedItem.ToString();
+            byear.ItemSelected += Byear_ItemSelected;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
             email.TextChanged += Input_TextChanged;
@@ -53,8 +71,6 @@ namespace App1
             firstname.TextChanged += Input_TextChanged;
             lastname = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
             lastname.TextChanged += Input_TextChanged;
-            age = FindViewById<EditText>(Resource.Id.edtTxt_Age);
-            age.TextChanged += Input_TextChanged;
 
             gender = FindViewById<Spinner>(Resource.Id.spinner_gender);
             selected_gender = gender.SelectedItem.ToString();
@@ -86,15 +102,19 @@ namespace App1
             register.Click += registerClick;
         }
 
-        private void Weight_TextChanged(object sender, TextChangedEventArgs e)
+        // Return Home
+        public void homeClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Intent i = new Intent(this, typeof(MainActivity));
+            StartActivity(i);
         }
-
-
 
         // Dynamically show error prompt in input field
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DynamicValidation();
+        }
+        private void DynamicValidation()
         {
             if (email.Text == "")
                 email.Error = "Please enter your Email!";
@@ -106,11 +126,6 @@ namespace App1
                 lastname.Error = "Please enter your Lastname!";
             if (lastname.Text == "")
                 lastname.Error = "Please enter your Lastname!";
-
-            if (age.Text == "")
-                age.Error = "Please enter your Age!";
-            else if (age.Text == "0")
-                age.Error = "Age cannot have 0 value!";
 
             if (height.Text == "")
                 height.Error = "Please enter your Weight!";
@@ -130,20 +145,119 @@ namespace App1
                 repassword.Error = "Please re-type your Password!";
             else if (password.Text != repassword.Text)
                 repassword.Error = "Passwords do not match!";
-
         }
+
         // Checks if Email format is valid
         public bool isValidEmail(string email)
         {
             return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
         }
 
-        // Return Home
-        public void homeClick(object sender, EventArgs e)
+        
+        // ===== Birthday Functions =====
+        private void load_days() // Generate Drop down list of days based on Month
         {
-            Intent i = new Intent(this, typeof(MainActivity));
-            StartActivity(i);
+            array_day = new ArrayList();
+
+            if (selected_bmonth == "January" || selected_bmonth == "March" || selected_bmonth == "May" || selected_bmonth == "July" ||
+                selected_bmonth == "August" || selected_bmonth == "October" || selected_bmonth == "December")
+                for (int i = 1; i <= 31; i++)
+                    array_day.Add(i.ToString());
+            else if (selected_bmonth == "February")
+            {
+                leap_year();
+            }
+            else
+                for (int i = 1; i <= 30; i++)
+                    array_day.Add(i.ToString());
+
+            _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
+            bday.Adapter = _adapter_day;
+
         }
+        private void leap_year() // Checks for both month and year that are the month of February and year is divisible by 4
+        {
+            array_day = new ArrayList();
+
+            if ((Int32.Parse(selected_byear) % 4) == 0)
+                for (int i = 1; i <= 29; i++)
+                    array_day.Add(i.ToString());
+            else
+                for (int i = 1; i <= 28; i++)
+                    array_day.Add(i.ToString());
+        }
+        // Generates Drop down list of birth year from 1900 to a year before the present year
+        private void load_years()
+        {
+            array_year = new ArrayList();
+
+            for (int i = 1900; i < DateTime.Now.Year; i++)
+                array_year.Add(i.ToString());
+
+            _adapter_year = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_year);
+            byear.Adapter = _adapter_year;
+        }
+
+        private void Bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        { 
+            selected_bmonth = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Month
+            load_days(); // Dynamic Drop down event to change list of days based on month selected
+        }
+
+        private void Bday_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_bday = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Days
+        }
+
+        private void Byear_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_byear = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Year
+
+            // Same way as selecting month above, but also checks for month of February if the selected year is leap year
+            if (selected_bmonth == "February")
+            {
+                leap_year();
+                _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
+                bday.Adapter = _adapter_day;
+            }
+        }
+        private string Format_Date() // Birthday Format - converts to YYYY-MM-DD and save to DB
+        {
+            string month_format = "00", day = "00";
+            switch (selected_bmonth)
+            {
+                case "January":
+                    month_format = "01"; break;
+                case "February":
+                    month_format = "02"; break;
+                case "March":
+                    month_format = "03"; break;
+                case "April":
+                    month_format = "04"; break;
+                case "May":
+                    month_format = "05"; break;
+                case "June":
+                    month_format = "06"; break;
+                case "July":
+                    month_format = "07"; break;
+                case "August":
+                    month_format = "08"; break;
+                case "September":
+                    month_format = "09"; break;
+                case "October":
+                    month_format = "10"; break;
+                case "November":
+                    month_format = "11"; break;
+                case "December":
+                    month_format = "12"; break;
+            }
+            if (Int32.Parse(selected_bday) <= 9)
+                day = "0" + selected_bday;
+            else
+                day = selected_bday;
+            return selected_byear + "-" + month_format + "-" + day;
+        }
+        // ===== Birthday Functions Ends Here=====
 
         // Get value of Gender Selected
         private void Gender_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -170,9 +284,11 @@ namespace App1
         // Register Account
         public void registerClick(object sender, EventArgs e)
         {
+            birthday_format = Format_Date(); // Convert birthday format to YYYY-MM-DD to save to DB
+
             if (Validation() && NoDuplicate())// && (password.Text == repassword.Text))
             {
-                success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&age=" + age.Text + "&gender=" + valueGender +
+                success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&birthday=" + birthday_format+ "&gender=" + valueGender +
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
                 SaveIllness();
                 Console.WriteLine(success);
@@ -190,44 +306,11 @@ namespace App1
         //Validation
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" || age.Text == "" || age.Text == "0" ||
+            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" ||
                 height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0" ||
                 password.Text == "" || (password.Text).Length < 8 || repassword.Text == "" || password.Text != repassword.Text)
             {
-                if (email.Text == "")
-                    email.Error = "Please enter your Email!";
-                else if (isValidEmail(email.Text) == false)
-                    email.Error = "Email is not Valid!";
-                if (firstname.Text == "")
-                    firstname.Error = "Please enter your Firstname!";
-                if (lastname.Text == "")
-                    lastname.Error = "Please enter your Lastname!";
-                if (lastname.Text == "")
-                    lastname.Error = "Please enter your Lastname!";
-
-                if (age.Text == "")
-                    age.Error = "Please enter your Age!";
-                else if (age.Text == "0")
-                    age.Error = "Age cannot have 0 value!";
-
-                if (height.Text == "")
-                    height.Error = "Please enter your Weight!";
-                else if (height.Text == "0")
-                    height.Error = "Height cannot have 0 value!";
-
-                if (weight.Text == "")
-                    weight.Error = "Please enter your Height!";
-                else if (weight.Text == "0")
-                    weight.Error = "Weight cannot have 0 value!";
-
-                if (password.Text == "")
-                    password.Error = "Please enter your Password!";
-                else if ((password.Text).Length < 8)
-                    password.Error = "Password must be minimum of 8 characters!";
-                if (repassword.Text == "")
-                    repassword.Error = "Please re-type your Password!";
-                else if (password.Text != repassword.Text)
-                    repassword.Error = "Passwords do not match!";
+                DynamicValidation();
 
                 return false;
             }

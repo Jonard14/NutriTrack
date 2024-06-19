@@ -113,7 +113,62 @@
             android:textStyle="bold"
             android:textSize="15dp" />
 
-        <!-- Age & Gender -->
+        <!-- Birthday -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginTop="15dp"
+            android:id="@+id/linearLayout5">
+
+            <TextView
+                android:text="Birthday:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtV_birthday"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="15px"
+                android:gravity="right"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:padding="0dp"
+                android:layout_width="250px"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_birthmonth"
+                android:entries="@array/dropdown_birthmonth"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold"
+                android:textSize="10dp" />
+            <Spinner
+                android:padding="0dp"
+                android:layout_width="160px"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_birthday"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+            <Spinner
+                android:padding="0dp"
+                android:layout_width="250px"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_birthyear" 
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <!-- Gender -->
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -124,31 +179,6 @@
             android:id="@+id/linearLayout1">
 
             <TextView
-                android:text="Age:"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/txtV_Age"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:layout_marginLeft="42dp"
-                android:layout_marginTop="3dp"
-                android:paddingLeft="15px"
-                android:gravity="right"
-                android:textSize="15dp" />
-            <EditText
-                android:inputType="number"
-                android:layout_width="250px"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:hint="Age"
-                android:id="@+id/edtTxt_Age"
-                android:background="@drawable/register_inputbox_design"
-                android:layout_marginLeft="15dp"
-                android:textStyle="bold" 
-                android:textSize="15dp" />
-
-            <TextView
                 android:text="Gender:"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="wrap_content"
@@ -156,10 +186,10 @@
                 android:id="@+id/txtV_gender"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:gravity="right"
-                android:layout_marginLeft="24dp"
+                android:layout_marginLeft="17dp"
                 android:layout_marginTop="3dp"
-                android:paddingLeft="10px"
+                android:paddingLeft="15px"
+                android:gravity="right"
                 android:textSize="15dp" />
             
             <Spinner
@@ -183,7 +213,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:id="@+id/linearLayout2">
 
             <TextView

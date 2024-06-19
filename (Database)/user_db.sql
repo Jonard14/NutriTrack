@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2024 at 10:37 AM
+-- Generation Time: Jun 19, 2024 at 11:19 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -114,7 +114,7 @@ CREATE TABLE `user_data` (
   `email` varchar(40) DEFAULT NULL,
   `first_name` varchar(30) DEFAULT NULL,
   `last_name` varchar(20) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
+  `birthday` varchar(10) DEFAULT NULL,
   `height` decimal(10,2) DEFAULT NULL,
   `weight` decimal(10,2) DEFAULT NULL,
   `bmi` varchar(15) DEFAULT NULL,
@@ -128,15 +128,15 @@ CREATE TABLE `user_data` (
 -- Dumping data for table `user_data`
 --
 
-INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `age`, `height`, `weight`, `bmi`, `daily_calorie_intake`, `total_calorie_intake`, `calorie_intake_days`, `gender`) VALUES
-('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', 23, '1.66', '70.00', '25.40', 284.25, 1137, 4, 'M'),
-('weltyang@starrail.hoyo', 'Welt', 'Yang', 50, '1.74', '60.00', '26.67', 2587, 1000, 1, 'M'),
-('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', 20, '1.56', '60.00', '24.97', 2202, 1000, 1, 'F'),
-('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', 27, '1.67', '55.00', '19.72', 2123, 1000, 1, 'F'),
-('testname1@mcl.com', 'test', 'name', 23, '1.70', '90.00', '31.14', 0, 0, 0, 'M'),
-('testname2@mcl.com', 'Test2', 'Testing2', 22, '1.69', '70.00', '24.51', 0, 0, 0, 'M'),
-('jonard14games@gmail.com', 'Jon', 'Cyu', 21, '1.70', '74.00', '25.61', 1126, 2252, 2, 'M'),
-('j14@gmail.com', 'Jonard', 'Francisco', 21, '1.70', '60.00', '20.76', 404, 404, 1, 'M');
+INSERT INTO `user_data` (`email`, `first_name`, `last_name`, `birthday`, `height`, `weight`, `bmi`, `daily_calorie_intake`, `total_calorie_intake`, `calorie_intake_days`, `gender`) VALUES
+('jcsfrancisco@live.mcl.edu.ph', 'Jonard ', 'Francisco ', '2001-02-26', '1.66', '70.00', '25.40', 284.25, 1137, 4, 'M'),
+('weltyang@starrail.hoyo', 'Welt', 'Yang', '1955-01-01', '1.74', '60.00', '26.67', 2587, 1000, 1, 'M'),
+('hutao@wangsheng.genshin.hoyo', 'Hu', 'Tao', '2002-07-15', '1.56', '60.00', '24.97', 2202, 1000, 1, 'F'),
+('muratahimeko@hi3.hoyo', 'Himeko', 'Murata', '1996-06-11', '1.67', '55.00', '19.72', 2123, 1000, 1, 'F'),
+('testname1@mcl.com', 'test', 'name', '1979-03-31', '1.70', '90.00', '31.14', 0, 0, 0, 'M'),
+('testname2@mcl.com', 'Test2', 'Testing2', '1982-12-12', '1.69', '70.00', '24.51', 0, 0, 0, 'M'),
+('jonard14games@gmail.com', 'Jon', 'Cyu', '1999-12-31', '1.70', '74.00', '25.61', 1126, 2252, 2, 'M'),
+('j14@gmail.com', 'Jonard', 'Francisco', '2010-08-25', '1.70', '60.00', '20.76', 404, 404, 1, 'M');
 
 --
 -- Indexes for dumped tables
