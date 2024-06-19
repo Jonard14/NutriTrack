@@ -34,7 +34,7 @@ namespace App1
         DrawerNavigation selectedNav = new DrawerNavigation();
 
         string searchemail, gender;
-        string email = Login.MyGlobals.Globalemail;
+        string email = Login.MyGlobals.Globalemail, birthday;
         float CalorieNum, TotalCalorie, CalorieDays, total_sugar = 0, currentCalorieNum = 0, prog = 0;
         Button SaveCalorie, ResetSugar;
         double recommendCalorie, age, height, weight;
@@ -197,7 +197,7 @@ namespace App1
                 CalorieNum = float.Parse(u1.GetProperty("daily_calorie_intake").ToString());
                 TotalCalorie = float.Parse(u1.GetProperty("total_calorie_intake").ToString());
                 CalorieDays = float.Parse(u1.GetProperty("calorie_intake_days").ToString());
-                age = double.Parse(u1.GetProperty("age").ToString());
+                birthday = u1.GetProperty("birthday").ToString();
                 height = double.Parse(u1.GetProperty("height").ToString());
                 weight = double.Parse(u1.GetProperty("weight").ToString());
                 gender = u1.GetProperty("gender").ToString();
@@ -207,8 +207,28 @@ namespace App1
             return false;
         }
 
+        public double ConvertBirthdayToAge() // Convert Birthday to Age
+        {
+            /* Jonard's Note:
+            This will accurately get the age especially if the month or day was passed or not. 
+            *(my explanation is bad lol so here's the example)
+            *
+            Example: Today's date is 2024-06-20
+                Then, the user's birthday is 2001-06-21. Therefore, user's age is 23
+                Then, the user's birthday is 2001-06-19. Therefore, user's age is 22 because it haven't reached their birthday for this year
+             */
+            string[] birthdate_split = new string[2];
+            birthdate_split = birthday.Split('-'); // YYYY-MM-DD
+
+            if (Int32.Parse(birthdate_split[1]) < DateTime.Now.Month || 
+                (Int32.Parse(birthdate_split[1]) == DateTime.Now.Month && Int32.Parse(birthdate_split[2]) < DateTime.Now.Day))
+                return (DateTime.Now.Year - Int32.Parse(birthdate_split[0])) - 1;
+            return DateTime.Now.Year - Int32.Parse(birthdate_split[0]);
+        }
+
         public void dailyCalorieCalcualte()
         {
+            age = ConvertBirthdayToAge();
             //Females: (10*weight [kg]) + (6.25*height [cm]) – (5*age [years]) – 161
             //Males: (10 * weight[kg]) + (6.25 * height[cm]) – (5 * age[years]) + 5
 

@@ -33,7 +33,7 @@ namespace App1
 
         // Birthday
         private Spinner bmonth, bday, byear;
-        private string selected_bmonth, selected_bday, selected_byear, birthday_format;
+        private string set_bday, selected_bmonth, selected_bday, selected_byear, birthday_format;
         private ArrayAdapter _adapter_day, _adapter_year;
         private ArrayList array_day, array_year;
 
@@ -164,9 +164,7 @@ namespace App1
                 for (int i = 1; i <= 31; i++)
                     array_day.Add(i.ToString());
             else if (selected_bmonth == "February")
-            {
                 leap_year();
-            }
             else
                 for (int i = 1; i <= 30; i++)
                     array_day.Add(i.ToString());
@@ -201,7 +199,9 @@ namespace App1
         private void Bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         { 
             selected_bmonth = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Month
+            set_bday = selected_bday; 
             load_days(); // Dynamic Drop down event to change list of days based on month selected
+            bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
         }
 
         private void Bday_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -216,9 +216,11 @@ namespace App1
             // Same way as selecting month above, but also checks for month of February if the selected year is leap year
             if (selected_bmonth == "February")
             {
+                set_bday = selected_bday;
                 leap_year();
                 _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
                 bday.Adapter = _adapter_day;
+                bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
             }
         }
         private string Format_Date() // Birthday Format - converts to YYYY-MM-DD and save to DB
