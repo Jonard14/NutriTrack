@@ -24,7 +24,7 @@ namespace App1
         //string IP_DB = "http://192.168.61.210/CS134P-1P-Thesis/";
         //string IP_DB = "http://192.168.100.17/CS134P-1P-Thesis/";
         //string IP_DB = "http://192.168.100.5/CS134P-1P-Thesis/";
-        //string IP_DB = "http://192.168.137.1/CS134P-1P-Thesis/";
+        string IP_DB = "http://192.168.137.1/CS134P-1P-Thesis/";
 
         //Http Response
         HttpWebResponse response;
