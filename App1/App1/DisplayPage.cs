@@ -89,7 +89,7 @@ namespace App1
                 StartActivity(i);
             }
         }
-        public void getNutriContent(object sender, EventArgs e)
+        public void getNutriContent(object sender, Android.Text.TextChangedEventArgs e)
         {
             // Get food data from DB
             root = db.RetrieveData("search_fooddata.php?");
