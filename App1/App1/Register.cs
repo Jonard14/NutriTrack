@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.SE.Omapi;
@@ -16,7 +17,7 @@ using System.Text.Json;
 
 namespace App1
 {
-    [Activity(Label = "Register")]
+    [Activity(Label = "Register", ScreenOrientation = ScreenOrientation.Portrait)]
     public class Register : Activity
     {
         TextView txtemail, txtfirstname, txtlastname, txtage, txtheight, txtweight, txtpassword, txtrepassword;

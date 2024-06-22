@@ -12,21 +12,21 @@
   <permission android:name="com.companyname.app1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.app1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
-    <activity android:name="crc64a7a6b04b89628087.AdminPage" android:label="AdminPage" />
-    <activity android:name="crc64a7a6b04b89628087.DisplayPage" android:label="DisplayPage" />
-    <activity android:name="crc64a7a6b04b89628087.HomePage" android:label="HomePage" />
-    <activity android:name="crc64a7a6b04b89628087.Login" android:label="Login" />
-    <activity android:name="crc64a7a6b04b89628087.Logs" android:label="Logs" />
-    <activity android:name="crc64a7a6b04b89628087.MainActivity" android:exported="true" android:label="@string/app_name" android:theme="@style/AppTheme.NoActionBar">
+    <activity android:name="crc64a7a6b04b89628087.AdminPage" android:label="Admin" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.DisplayPage" android:label="DisplayPage" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.HomePage" android:label="Home" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Login" android:label="Login" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Logs" android:label="Logs" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.MainActivity" android:exported="true" android:label="@string/app_name" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name="crc64a7a6b04b89628087.ProfilePage" android:label="ProfilePage" />
-    <activity android:name="crc64a7a6b04b89628087.Register" android:label="Register" />
-    <activity android:name="crc64a7a6b04b89628087.SuggestFood" android:label="SuggestFood" />
-    <activity android:name="crc64a7a6b04b89628087.Tracker" android:label="Tracker" />
+    <activity android:name="crc64a7a6b04b89628087.ProfilePage" android:label="Profile" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Register" android:label="Register" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.SuggestFood" android:label="Suggest Food" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Tracker" android:label="Tracker" android:screenOrientation="portrait" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <receiver android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" />
     <receiver android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />

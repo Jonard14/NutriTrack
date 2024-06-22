@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Provider;
@@ -23,7 +24,7 @@ using System.Text.Json;
 namespace App1
 {
 
-    [Activity(Label = "HomePage")]
+    [Activity(Label = "Home", ScreenOrientation = ScreenOrientation.Portrait)]
     public class HomePage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();

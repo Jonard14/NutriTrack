@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.Hardware.Lights;
 using Android.OS;
@@ -16,7 +17,7 @@ using static Android.Provider.DocumentsContract;
 
 namespace App1
 {
-    [Activity(Label = "Login")]
+    [Activity(Label = "Login", ScreenOrientation = ScreenOrientation.Portrait)]
     public class Login : Activity
     {
         EditText email, password;

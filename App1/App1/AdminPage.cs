@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -11,7 +12,7 @@ using System.Text;
 
 namespace App1
 {
-    [Activity(Label = "AdminPage")]
+    [Activity(Label = "Admin", ScreenOrientation = ScreenOrientation.Portrait)]
     public class AdminPage : Activity
     {
         private EditText foodNameInput, caloriesInput, carbohydratesInput, proteinInput, fatInput, sugarInput, sodiumInput, cholesterolInput;

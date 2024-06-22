@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Text;
@@ -18,14 +19,15 @@ using System.Text.Json;
 
 namespace App1
 {
-    [Activity(Label = "DisplayPage")]
+    [Activity(Label = "DisplayPage", ScreenOrientation = ScreenOrientation.Portrait)]
     public class DisplayPage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
         JsonElement root;
         string food_id, food_name, selectedFood;
-        float calorie_energy, protein, total_fat, carbohydrate, sugar, sodium, cholesterol;
+        float calorie_energy, protein, total_fat, carbohydrate, sugar, sodium, cholesterol,
+              calorie_compute, protein_compute, total_fat_compute, carbohydrate_compute, sugar_compute, sodium_compute, cholesterol_compute;
         string cal_comp, fat_comp;
 
         TextView cal, fat, chol, sod, carb, sug, prot, fname;
@@ -73,7 +75,6 @@ namespace App1
             fname.Text = selectedFood;
 
             portions = FindViewById<EditText>(Resource.Id.serv_size);
-            //portions.TextChanged += updatePortions;
             portions.TextChanged += getNutriContent;
 
             retrieveData(selectedFood);
@@ -115,91 +116,58 @@ namespace App1
                     sugar = float.Parse(u1.GetProperty("sugar").ToString());
                     sodium = float.Parse(u1.GetProperty("sodium").ToString());
                     cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString());
-                }
-
-                    
+                } 
             }
-
         }
         private void updateUI()
         {
-            cal.Text = "Calories " + (calorie_energy*100).ToString();
-            fat.Text = "Total Fat " + (total_fat*100).ToString() + "g";
-            chol.Text = "Cholesterol " + (cholesterol * 100).ToString() + "mg";
-            sod.Text = "Sodium " + (sodium*100).ToString() + "mg";
-            carb.Text = "Total Carbohydrates " + (carbohydrate * 100).ToString() + "g";
-            sug.Text = "Total Sugars " + (sugar*100).ToString() + "g";
-            prot.Text = "Protein " + (protein * 100).ToString() + "g";
+            calorie_compute = calorie_energy * float.Parse(portions.Text);
+            protein_compute = protein * float.Parse(portions.Text);
+            total_fat_compute = total_fat * float.Parse(portions.Text);
+            carbohydrate_compute = carbohydrate * float.Parse(portions.Text);
+            sugar_compute = sugar * float.Parse(portions.Text);
+            sodium_compute = sodium * float.Parse(portions.Text);
+            cholesterol_compute = cholesterol * float.Parse(portions.Text);
 
+            cal.Text = "Calories " + Math.Round(calorie_compute, 2).ToString();
+            fat.Text = "Total Fat " + Math.Round(total_fat_compute, 2).ToString() + "g";
+            chol.Text = "Cholesterol " + Math.Round(cholesterol_compute, 2).ToString() + "mg";
+            sod.Text = "Sodium " + Math.Round(sodium_compute, 2).ToString() + "mg";
+            carb.Text = "Total Carbohydrates " + Math.Round(carbohydrate_compute, 2).ToString() + "g";
+            sug.Text = "Total Sugars " + Math.Round(sugar_compute, 2).ToString() + "g";
+            prot.Text = "Protein " + Math.Round(protein_compute, 2).ToString() + "g";
         }
 
         public void getNutriContent(object sender, TextChangedEventArgs e)
         {
             try
             {
-                calorie_energy = calorie_energy * float.Parse(portions.Text);
-                protein = protein * float.Parse(portions.Text);
-                total_fat = total_fat * float.Parse(portions.Text);
-                carbohydrate = carbohydrate * float.Parse(portions.Text);
-                sugar = sugar * float.Parse(portions.Text);
-                sodium = sodium * float.Parse(portions.Text);
-                cholesterol = cholesterol * float.Parse(portions.Text);
-
-                cal.Text = "Calories" + Math.Round(calorie_energy, 2).ToString();
-                fat.Text = "Total Fat " + Math.Round(total_fat, 2).ToString() + "g";
-                chol.Text = "Cholesterol " + Math.Round(cholesterol, 2).ToString() + "mg";
-                sod.Text = "Sodium " + Math.Round(sodium, 2).ToString() + "mg";
-                carb.Text = "Total Carbohydrates " + Math.Round(carbohydrate, 2).ToString() + "g";
-                sug.Text = "Total Sugars " + Math.Round(sugar, 2).ToString() + "g";
-                prot.Text = "Protein " + Math.Round(protein, 2).ToString() + "g";
-
-                 /*if (selectedFood.Equals(food_name))
-                {
-                    
-
-                    "\n Size: " + Math.Round(portions, 2) + " g" +
-                           "\n Calories: " + Math.Round(calorie_energy, 2) + " kcal" +
-                           "\n Protein: " + Math.Round(protein, 2) + " g" +
-                           "\n Fat: " + Math.Round(total_fat, 2) + " g" +
-                           "\n Carbohydrates: " + Math.Round(carbohydrate, 2) + " g" +
-                           "\n Sugar: " + Math.Round(sugar, 2) + " g" +
-                           "\n Sodium: " + Math.Round(sodium, 2) + " mg" +
-                           "\n Cholesterol: " + Math.Round(cholesterol, 2) + " mg";
-                }*/
-
+                updateUI();
             }
             catch
             {
                 portions.Error = "Invalid Value!";
 
-                calorie_energy = 0;
-                protein = 0;
-                total_fat = 0;
-                carbohydrate = 0;
-                sugar = 0;
-                sodium = 0;
-                cholesterol = 0;
-
                 fname.Text = selectedFood;
-                cal.Text = "Calories " + calorie_energy.ToString();
-                fat.Text = "Total Fat " + total_fat.ToString() + "g";
-                chol.Text = "Cholesterol " + cholesterol.ToString() + "mg";
-                sod.Text = "Sodium " + sodium.ToString() + "mg";
-                carb.Text = "Total Carbohydrates " + carbohydrate.ToString() + "g";
-                sug.Text = "Total Sugars " + sugar.ToString() + "g";
-                prot.Text = "Protein " + protein.ToString() + "g";
+                cal.Text = "Calories 0";
+                fat.Text = "Total Fat 0g";
+                chol.Text = "Cholesterol 0mg";
+                sod.Text = "Sodium 0mg";
+                carb.Text = "Total Carbohydrates 0g";
+                sug.Text = "Total Sugars 0g";
+                prot.Text = "Protein 0g";
             }
         }
 
         public void addFood(object sender, EventArgs e)
         {
-            Login.MyGlobals.GlobalCalorie = Login.MyGlobals.GlobalCalorie + calorie_energy;
-            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSugar + sugar;
-            Login.MyGlobals.GlobalFat = Login.MyGlobals.GlobalFat + total_fat;
-            Login.MyGlobals.GlobalProtein = Login.MyGlobals.GlobalProtein + protein;
-            Login.MyGlobals.GlobalCholesterol = Login.MyGlobals.GlobalCholesterol + cholesterol;
-            Login.MyGlobals.GlobalCarbohyrates = Login.MyGlobals.GlobalCarbohyrates + carbohydrate;
-            Login.MyGlobals.GlobalSodium = Login.MyGlobals.GlobalSodium + sodium;
+            Login.MyGlobals.GlobalCalorie = Login.MyGlobals.GlobalCalorie + calorie_compute;
+            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSugar + sugar_compute;
+            Login.MyGlobals.GlobalFat = Login.MyGlobals.GlobalFat + total_fat_compute;
+            Login.MyGlobals.GlobalProtein = Login.MyGlobals.GlobalProtein + protein_compute;
+            Login.MyGlobals.GlobalCholesterol = Login.MyGlobals.GlobalCholesterol + cholesterol_compute;
+            Login.MyGlobals.GlobalCarbohyrates = Login.MyGlobals.GlobalCarbohyrates + carbohydrate_compute;
+            Login.MyGlobals.GlobalSodium = Login.MyGlobals.GlobalSodium + sodium_compute;
 
 
             Toast.MakeText(this, "Food Added", ToastLength.Long).Show();

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.Hardware.Lights;
 using Android.OS;
@@ -22,7 +23,7 @@ using static Android.Provider.DocumentsContract;
 
 namespace App1
 {
-    [Activity(Label = "Tracker")]
+    [Activity(Label = "Tracker", ScreenOrientation = ScreenOrientation.Portrait)]
     public class Tracker : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         TextView PrevCalorie, CurrentCalorie, SugarCount, TotalCalorieNum, recommendNum, numOfCal;

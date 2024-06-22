@@ -17,10 +17,11 @@ using Google.Android.Material.Snackbar;
 using System.Text.Json;
 using AndroidX.AppCompat.App;
 using Google.Android.Material.Navigation;
+using Android.Content.PM;
 
 namespace App1
 {
-    [Activity(Label = "ProfilePage")]
+    [Activity(Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]
     public class ProfilePage : Activity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();

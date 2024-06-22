@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
@@ -16,7 +17,7 @@ using Google.Android.Material.Snackbar;
 
 namespace App1
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity//, NavigationView.IOnNavigationItemSelectedListener
     {
         Button btn_Login;
