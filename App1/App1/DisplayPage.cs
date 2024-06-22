@@ -60,7 +60,7 @@ namespace App1
             btn1 = FindViewById<Button>(Resource.Id.btn1);
             btn_add = FindViewById<Button>(Resource.Id.btn_Add);
 
-            fname = FindViewById<TextView>(Resource.Id.textView);
+            fname = FindViewById<TextView>(Resource.Id.fName);
             cal = FindViewById<TextView>(Resource.Id.calServ);
             fat = FindViewById<TextView>(Resource.Id.textV_fat);
             chol = FindViewById<TextView>(Resource.Id.textV_cholesterol);
@@ -76,7 +76,8 @@ namespace App1
             //portions.TextChanged += updatePortions;
             portions.TextChanged += getNutriContent;
 
-            updateUI(selectedFood);
+            retrieveData(selectedFood);
+            updateUI();
             btn1.Click += backEvent;
             btn_add.Click += addFood;
         }
@@ -94,35 +95,41 @@ namespace App1
             }
         }
 
-        private void updateUI(string selectedFood)
+        private void retrieveData(string selectedFood)
         {
             root = db.RetrieveData("search_fooddata.php?");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
-
                 food_id = u1.GetProperty("food_id").ToString();
                 food_name = u1.GetProperty("food_name").ToString();
-                calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString());
-                protein = float.Parse(u1.GetProperty("protein").ToString());
-                total_fat = float.Parse(u1.GetProperty("total_fat").ToString());
-                carbohydrate = float.Parse(u1.GetProperty("carbohydrate").ToString());
-                sugar = float.Parse(u1.GetProperty("sugar").ToString());
-                sodium = float.Parse(u1.GetProperty("sodium").ToString());
-                cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString());
 
                 if (selectedFood.Equals(food_name))
                 {
-                    fname.Text = selectedFood;
-                    cal.Text = "Calories" + calorie_energy.ToString();
-                    fat.Text = "Total Fat " + total_fat.ToString() + "g";
-                    chol.Text = "Cholesterol " + cholesterol.ToString() + "g";
-                    sod.Text = "Sodium " + sodium.ToString() + "g";
-                    carb.Text = "Total Carbohydrates " + carbohydrate.ToString() + "g";
-                    sug.Text = "Total Sugars " + sugar.ToString() + "g";
-                    prot.Text = "Protein " + protein.ToString() + "g";
+                    food_id = u1.GetProperty("food_id").ToString();
+                    food_name = u1.GetProperty("food_name").ToString();
+                    calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString());
+                    protein = float.Parse(u1.GetProperty("protein").ToString());
+                    total_fat = float.Parse(u1.GetProperty("total_fat").ToString());
+                    carbohydrate = float.Parse(u1.GetProperty("carbohydrate").ToString());
+                    sugar = float.Parse(u1.GetProperty("sugar").ToString());
+                    sodium = float.Parse(u1.GetProperty("sodium").ToString());
+                    cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString());
                 }
+
+                    
             }
+
+        }
+        private void updateUI()
+        {
+            cal.Text = "Calories " + (calorie_energy*100).ToString();
+            fat.Text = "Total Fat " + (total_fat*100).ToString() + "g";
+            chol.Text = "Cholesterol " + (cholesterol * 100).ToString() + "mg";
+            sod.Text = "Sodium " + (sodium*100).ToString() + "mg";
+            carb.Text = "Total Carbohydrates " + (carbohydrate * 100).ToString() + "g";
+            sug.Text = "Total Sugars " + (sugar*100).ToString() + "g";
+            prot.Text = "Protein " + (protein * 100).ToString() + "g";
 
         }
 
@@ -130,43 +137,36 @@ namespace App1
         {
             try
             {
-                // Get food data from DB
-                root = db.RetrieveData("search_fooddata.php?");
-                for (int i = 0; i < root.GetArrayLength(); i++)
+                calorie_energy = calorie_energy * float.Parse(portions.Text);
+                protein = protein * float.Parse(portions.Text);
+                total_fat = total_fat * float.Parse(portions.Text);
+                carbohydrate = carbohydrate * float.Parse(portions.Text);
+                sugar = sugar * float.Parse(portions.Text);
+                sodium = sodium * float.Parse(portions.Text);
+                cholesterol = cholesterol * float.Parse(portions.Text);
+
+                cal.Text = "Calories" + Math.Round(calorie_energy, 2).ToString();
+                fat.Text = "Total Fat " + Math.Round(total_fat, 2).ToString() + "g";
+                chol.Text = "Cholesterol " + Math.Round(cholesterol, 2).ToString() + "mg";
+                sod.Text = "Sodium " + Math.Round(sodium, 2).ToString() + "mg";
+                carb.Text = "Total Carbohydrates " + Math.Round(carbohydrate, 2).ToString() + "g";
+                sug.Text = "Total Sugars " + Math.Round(sugar, 2).ToString() + "g";
+                prot.Text = "Protein " + Math.Round(protein, 2).ToString() + "g";
+
+                 /*if (selectedFood.Equals(food_name))
                 {
-                    var u1 = root[i];
+                    
 
-                    food_id = u1.GetProperty("food_id").ToString();
-                    food_name = u1.GetProperty("food_name").ToString();
-                    calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString()) * float.Parse(portions.Text);
-                    protein = float.Parse(u1.GetProperty("protein").ToString()) * float.Parse(portions.Text);
-                    total_fat = float.Parse(u1.GetProperty("total_fat").ToString()) * float.Parse(portions.Text);
-                    carbohydrate = float.Parse(u1.GetProperty("carbohydrate").ToString()) * float.Parse(portions.Text);
-                    sugar = float.Parse(u1.GetProperty("sugar").ToString()) * float.Parse(portions.Text);
-                    sodium = float.Parse(u1.GetProperty("sodium").ToString()) * float.Parse(portions.Text);
-                    cholesterol = float.Parse(u1.GetProperty("cholesterol").ToString()) * float.Parse(portions.Text);
+                    "\n Size: " + Math.Round(portions, 2) + " g" +
+                           "\n Calories: " + Math.Round(calorie_energy, 2) + " kcal" +
+                           "\n Protein: " + Math.Round(protein, 2) + " g" +
+                           "\n Fat: " + Math.Round(total_fat, 2) + " g" +
+                           "\n Carbohydrates: " + Math.Round(carbohydrate, 2) + " g" +
+                           "\n Sugar: " + Math.Round(sugar, 2) + " g" +
+                           "\n Sodium: " + Math.Round(sodium, 2) + " mg" +
+                           "\n Cholesterol: " + Math.Round(cholesterol, 2) + " mg";
+                }*/
 
-                    if (selectedFood.Equals(food_name))
-                    {
-                        fname.Text = selectedFood;
-                        cal.Text = "Calories" + calorie_energy.ToString();
-                        fat.Text = "Total Fat " + total_fat.ToString() + "g";
-                        chol.Text = "Cholesterol " + cholesterol.ToString() + "g";
-                        sod.Text = "Sodium " + sodium.ToString() + "g";
-                        carb.Text = "Total Carbohydrates " + carbohydrate.ToString() + "g";
-                        sug.Text = "Total Sugars " + sugar.ToString() + "g";
-                        prot.Text = "Protein " + protein.ToString() + "g";
-
-                        /* "\n Size: " + Math.Round(portions, 2) + " g" +
-                               "\n Calories: " + Math.Round(calorie_energy, 2) + " kcal" +
-                               "\n Protein: " + Math.Round(protein, 2) + " g" +
-                               "\n Fat: " + Math.Round(total_fat, 2) + " g" +
-                               "\n Carbohydrates: " + Math.Round(carbohydrate, 2) + " g" +
-                               "\n Sugar: " + Math.Round(sugar, 2) + " g" +
-                               "\n Sodium: " + Math.Round(sodium, 2) + " mg" +
-                               "\n Cholesterol: " + Math.Round(cholesterol, 2) + " mg";*/
-                    }
-                }
             }
             catch
             {
@@ -181,10 +181,10 @@ namespace App1
                 cholesterol = 0;
 
                 fname.Text = selectedFood;
-                cal.Text = "Calories" + calorie_energy.ToString();
+                cal.Text = "Calories " + calorie_energy.ToString();
                 fat.Text = "Total Fat " + total_fat.ToString() + "g";
-                chol.Text = "Cholesterol " + cholesterol.ToString() + "g";
-                sod.Text = "Sodium " + sodium.ToString() + "g";
+                chol.Text = "Cholesterol " + cholesterol.ToString() + "mg";
+                sod.Text = "Sodium " + sodium.ToString() + "mg";
                 carb.Text = "Total Carbohydrates " + carbohydrate.ToString() + "g";
                 sug.Text = "Total Sugars " + sugar.ToString() + "g";
                 prot.Text = "Protein " + protein.ToString() + "g";
