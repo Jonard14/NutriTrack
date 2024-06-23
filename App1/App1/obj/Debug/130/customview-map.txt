@@ -77,8 +77,6 @@ item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\strings.xml
 item;obj\Debug\130\res\values\styles.xml
-LinearLayout;obj\Debug\130\res\drawable\stat_nut_progress.xml
-LinearLayout;obj\Debug\130\res\drawable\stats_nut_full.xml
 LinearLayout;obj\Debug\130\res\layout\activity_profile.xml
 LinearLayout;obj\Debug\130\res\layout\admin.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
@@ -116,9 +114,7 @@ resources;obj\Debug\130\res\values\drawables.xml
 resources;obj\Debug\130\res\values\ic_launcher_background.xml
 resources;obj\Debug\130\res\values\strings.xml
 resources;obj\Debug\130\res\values\styles.xml
-rotate;obj\Debug\130\res\drawable\stat_nut_progress.xml
 rotate;obj\Debug\130\res\drawable\stats_full.xml
-rotate;obj\Debug\130\res\drawable\stats_nut_full.xml
 rotate;obj\Debug\130\res\drawable\stats_progress.xml
 ScrollView;obj\Debug\130\res\layout\activity_profile.xml
 ScrollView;obj\Debug\130\res\layout\displaypage.xml

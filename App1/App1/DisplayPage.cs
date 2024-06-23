@@ -198,19 +198,19 @@ namespace App1
             Login.MyGlobals.GlobalCarbohyrates = Login.MyGlobals.GlobalCarbohyrates + carbohydrate_compute;
             Login.MyGlobals.GlobalSodium = Login.MyGlobals.GlobalSodium + sodium_compute;
 
-
+            Update();
             Toast.MakeText(this, "Food Added", ToastLength.Long).Show();
 
         }
         public void Update()
         {
-            total_sugar += Login.MyGlobals.GlobalSugar;
-            currentCalorieNum += Login.MyGlobals.GlobalCalorie;
-            protein2 += Login.MyGlobals.GlobalProtein;
-            fat2 += Login.MyGlobals.GlobalFat;
-            cholesterol2 += Login.MyGlobals.GlobalCholesterol;
-            carbohydrates += Login.MyGlobals.GlobalCarbohyrates;
-            sodium2 += Login.MyGlobals.GlobalSodium;
+            total_sugar = Login.MyGlobals.GlobalSugar;
+            currentCalorieNum = Login.MyGlobals.GlobalCalorie;
+            protein2 = Login.MyGlobals.GlobalProtein;
+            fat2 = Login.MyGlobals.GlobalFat;
+            cholesterol2 = Login.MyGlobals.GlobalCholesterol;
+            carbohydrates = Login.MyGlobals.GlobalCarbohyrates;
+            sodium2 = Login.MyGlobals.GlobalSodium;
 
             if (VerifyEmail())
             {
