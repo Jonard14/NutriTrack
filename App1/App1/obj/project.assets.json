@@ -4168,30 +4168,31 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
       "System.Text.Json >= 9.0.0-preview.1.24080.9",
+      "System.Threading.Tasks.Extensions >= 4.5.4",
       "Xamarin.AndroidX.AppCompat >= 1.6.1.7",
       "Xamarin.Essentials >= 1.8.1",
       "Xamarin.Google.Android.Material >= 1.10.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {},
+    "C:\\Users\\norys\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\norys\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\norys\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4206,6 +4207,11 @@
         "monoandroid13.0": {
           "projectReferences": {}
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4214,6 +4220,10 @@
           "System.Text.Json": {
             "target": "Package",
             "version": "[9.0.0-preview.1.24080.9, )"
+          },
+          "System.Threading.Tasks.Extensions": {
+            "target": "Package",
+            "version": "[4.5.4, )"
           },
           "Xamarin.AndroidX.AppCompat": {
             "target": "Package",

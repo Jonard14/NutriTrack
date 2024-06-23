@@ -584,9 +584,9 @@ public final class R {
 		public static final int btn_radio_off_to_on_mtrl_animation = 0x7f08007e;
 		public static final int btn_radio_on_mtrl = 0x7f08007f;
 		public static final int btn_radio_on_to_off_mtrl_animation = 0x7f080080;
-		public static final int test_level_drawable = 0x7f0800f1;
-		public static final int tooltip_frame_dark = 0x7f0800f2;
-		public static final int tooltip_frame_light = 0x7f0800f3;
+		public static final int test_level_drawable = 0x7f0800f3;
+		public static final int tooltip_frame_dark = 0x7f0800f4;
+		public static final int tooltip_frame_light = 0x7f0800f5;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f090034;
@@ -659,14 +659,14 @@ public final class R {
 		public static final int tabMode = 0x7f090202;
 		public static final int textSpacerNoButtons = 0x7f090213;
 		public static final int textSpacerNoTitle = 0x7f090214;
-		public static final int title = 0x7f090238;
-		public static final int titleDividerNoCustom = 0x7f090239;
-		public static final int title_template = 0x7f09023a;
-		public static final int topPanel = 0x7f09023e;
-		public static final int unchecked = 0x7f09025a;
-		public static final int uniform = 0x7f09025b;
-		public static final int up = 0x7f09025d;
-		public static final int wrap_content = 0x7f090272;
+		public static final int title = 0x7f09023e;
+		public static final int titleDividerNoCustom = 0x7f09023f;
+		public static final int title_template = 0x7f090240;
+		public static final int topPanel = 0x7f090244;
+		public static final int unchecked = 0x7f090260;
+		public static final int uniform = 0x7f090261;
+		public static final int up = 0x7f090263;
+		public static final int wrap_content = 0x7f090278;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;

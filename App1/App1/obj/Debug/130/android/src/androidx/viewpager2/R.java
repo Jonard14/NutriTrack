@@ -148,8 +148,8 @@ public final class R {
 		public static final int tag_unhandled_key_listeners = 0x7f09020e;
 		public static final int text = 0x7f090210;
 		public static final int text2 = 0x7f090211;
-		public static final int time = 0x7f090237;
-		public static final int title = 0x7f090238;
+		public static final int time = 0x7f09023d;
+		public static final int title = 0x7f09023e;
 	}
 	public static final class integer {
 		public static final int status_bar_notification_info_maxnum = 0x7f0a0043;

@@ -892,8 +892,8 @@ public final class R {
 		public static final int notification_template_icon_low_bg = 0x7f0800e9;
 		public static final int notification_tile_bg = 0x7f0800ea;
 		public static final int notify_panel_notification_icon_bg = 0x7f0800eb;
-		public static final int tooltip_frame_dark = 0x7f0800f2;
-		public static final int tooltip_frame_light = 0x7f0800f3;
+		public static final int tooltip_frame_dark = 0x7f0800f4;
+		public static final int tooltip_frame_light = 0x7f0800f5;
 	}
 	public static final class id {
 		public static final int NO_DEBUG = 0x7f090007;
@@ -1132,25 +1132,25 @@ public final class R {
 		public static final int text2 = 0x7f090211;
 		public static final int textSpacerNoButtons = 0x7f090213;
 		public static final int textSpacerNoTitle = 0x7f090214;
-		public static final int time = 0x7f090237;
-		public static final int title = 0x7f090238;
-		public static final int titleDividerNoCustom = 0x7f090239;
-		public static final int title_template = 0x7f09023a;
-		public static final int top = 0x7f09023d;
-		public static final int topPanel = 0x7f09023e;
-		public static final int triangle = 0x7f090248;
-		public static final int unchecked = 0x7f09025a;
-		public static final int uniform = 0x7f09025b;
-		public static final int up = 0x7f09025d;
-		public static final int vertical_only = 0x7f090263;
-		public static final int view_transition = 0x7f090265;
-		public static final int visible = 0x7f09026a;
-		public static final int west = 0x7f09026d;
-		public static final int wrap = 0x7f090271;
-		public static final int wrap_content = 0x7f090272;
-		public static final int wrap_content_constrained = 0x7f090273;
-		public static final int x_left = 0x7f090274;
-		public static final int x_right = 0x7f090275;
+		public static final int time = 0x7f09023d;
+		public static final int title = 0x7f09023e;
+		public static final int titleDividerNoCustom = 0x7f09023f;
+		public static final int title_template = 0x7f090240;
+		public static final int top = 0x7f090243;
+		public static final int topPanel = 0x7f090244;
+		public static final int triangle = 0x7f09024e;
+		public static final int unchecked = 0x7f090260;
+		public static final int uniform = 0x7f090261;
+		public static final int up = 0x7f090263;
+		public static final int vertical_only = 0x7f090269;
+		public static final int view_transition = 0x7f09026b;
+		public static final int visible = 0x7f090270;
+		public static final int west = 0x7f090273;
+		public static final int wrap = 0x7f090277;
+		public static final int wrap_content = 0x7f090278;
+		public static final int wrap_content_constrained = 0x7f090279;
+		public static final int x_left = 0x7f09027a;
+		public static final int x_right = 0x7f09027b;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;
