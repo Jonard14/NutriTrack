@@ -7,6 +7,7 @@ androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\logs.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\suggest.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\tracker.xml
+androidx.cardview.widget.CardView;obj\Debug\130\res\layout\activity_profile.xml
 androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml

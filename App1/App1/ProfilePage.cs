@@ -31,9 +31,19 @@ namespace App1
 
         private const int PickImageRequest = 1;
         private ImageView profilePicture;
-        private TextView weightInput;
-        private TextView bmiDisplay;
-        private double height = 1.75; // User's height in meters (example value)
+        private TextView firstNameText;
+        private TextView lastNameText;
+        private TextView emailText;
+        private TextView birthdayText;
+        private TextView genderText;
+        private TextView heightText;
+        private TextView weightText;
+        private TextView bmiText;
+        private TextView illnessText;
+        private Button updateProfileButton;
+        private Button backToHomeButton;
+        private double height = 1.75;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -56,17 +66,25 @@ namespace App1
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            // Create your application here
-            profilePicture = FindViewById<ImageView>(Resource.Id.profile_picture);
-            weightInput = FindViewById<TextView>(Resource.Id.weight_input);
-            bmiDisplay = FindViewById<TextView>(Resource.Id.BMI);
-            var changePictureButton = FindViewById<Button>(Resource.Id.change_picture_button);
-            var updateButton1 = FindViewById<Button>(Resource.Id.update_button1);
-            var updateButton2 = FindViewById<Button>(Resource.Id.update_button2);
-            var updateButton3 = FindViewById<Button>(Resource.Id.update_button3);
+            // Initialize UI components
+            profilePicture = FindViewById<ImageView>(Resource.Id.img_ProfilePicture);
+            firstNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileFirstName);
+            lastNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileLastName);
+            emailText = FindViewById<TextView>(Resource.Id.txtV_ProfileEmail);
+            birthdayText = FindViewById<TextView>(Resource.Id.txtV_ProfileBirthday);
+            genderText = FindViewById<TextView>(Resource.Id.txtV_ProfileGender);
+            heightText = FindViewById<TextView>(Resource.Id.txtV_ProfileHeight);
+            weightText = FindViewById<TextView>(Resource.Id.txtV_ProfileWeight);
+            bmiText = FindViewById<TextView>(Resource.Id.txtV_ProfileBMI);
+            illnessText = FindViewById<TextView>(Resource.Id.txtV_ProfileIllness);
+            updateProfileButton = FindViewById<Button>(Resource.Id.btn_UpdateProfile);
+            backToHomeButton = FindViewById<Button>(Resource.Id.btn_BackToHome);
 
-            changePictureButton.Click += ChangePictureButton_Click;
-            updateButton2.Click += UpdateButton_Click;
+            // Set up click events
+            profilePicture.Click += ChangePictureButton_Click;
+            updateProfileButton.Click += UpdateProfileButton_Click;
+            backToHomeButton.Click += BackToHomeButton_Click;
+
         }
 
         private void ChangePictureButton_Click(object sender, EventArgs e)
@@ -96,26 +114,78 @@ namespace App1
             }
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void UpdateProfileButton_Click(object sender, EventArgs e)
         {
-            string weightStr = weightInput.Text;
-            if (!string.IsNullOrEmpty(weightStr))
+            if (ValidateInputs())
             {
+                string weightStr = weightText.Text;
                 if (double.TryParse(weightStr, out double weight))
                 {
                     double bmi = weight / (height * height);
-                    bmiDisplay.Text = $"Your BMI: {bmi:F2}";
+                    bmiText.Text = $"Your BMI: {bmi:F2}";
                 }
                 else
                 {
-                    bmiDisplay.Text = "Please enter a valid weight";
+                    bmiText.Text = "Please enter a valid weight";
                 }
             }
-            else
-            {
-                bmiDisplay.Text = "Please enter your weight";
-            }
         }
+
+        private bool ValidateInputs()
+        {
+            bool isValid = true;
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            if (string.IsNullOrWhiteSpace(firstNameText.Text))
+            {
+                firstNameText.Error = "First name is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(lastNameText.Text))
+            {
+                lastNameText.Error = "Last name is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(emailText.Text) || !Regex.IsMatch(emailText.Text, emailPattern))
+            {
+                emailText.Error = "Valid email is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(birthdayText.Text))
+            {
+                birthdayText.Error = "Birthday is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(genderText.Text))
+            {
+                genderText.Error = "Gender is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(heightText.Text) || !double.TryParse(heightText.Text, out _))
+            {
+                heightText.Error = "Valid height is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(weightText.Text) || !double.TryParse(weightText.Text, out _))
+            {
+                weightText.Error = "Valid weight is required";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(illnessText.Text))
+            {
+                illnessText.Error = "Illness information is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        private void BackToHomeButton_Click(object sender, EventArgs e)
+        {
+            // Implement navigation back to home
+            Finish();
+        }
+
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
         {
