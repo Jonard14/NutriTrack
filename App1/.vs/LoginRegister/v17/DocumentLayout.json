@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\",
+  "WorkspaceRootPath": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-1p-thesis\\app1\\app1\\resources\\layout\\activity_profile.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\activity_profile.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-1p-thesis\\app1\\app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\win10\\desktop\\cs134-thesis\\app1\\app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-1p-thesis\\app1\\app1\\resources\\layout\\profile_page_drawer.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\app1\\resources\\layout\\activity_profile.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\activity_profile.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\app1\\resources\\layout\\profile_page_drawer.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\profile_page_drawer.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     }
   ],
@@ -25,41 +25,43 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProfilePage.cs",
-              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\ProfilePage.cs",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\ProfilePage.cs",
               "RelativeDocumentMoniker": "App1\\ProfilePage.cs",
-              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\ProfilePage.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\ProfilePage.cs",
               "RelativeToolTip": "App1\\ProfilePage.cs",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAIwLsAAAAAAAAA",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAwwGwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T09:30:57.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "activity_profile.xml",
-              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\activity_profile.xml",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\Resources\\layout\\activity_profile.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\activity_profile.xml",
-              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\activity_profile.xml",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\Resources\\layout\\activity_profile.xml",
               "RelativeToolTip": "App1\\Resources\\layout\\activity_profile.xml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-06-25T09:28:00.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T09:28:00.477Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "profile_page_drawer.xml",
-              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\profile_page_drawer.xml",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\Resources\\layout\\profile_page_drawer.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\profile_page_drawer.xml",
-              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\Resources\\layout\\profile_page_drawer.xml",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\Resources\\layout\\profile_page_drawer.xml",
               "RelativeToolTip": "App1\\Resources\\layout\\profile_page_drawer.xml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-06-25T09:27:57.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T09:27:57.477Z"
             }
           ]
         }
