@@ -663,10 +663,10 @@ public final class R {
 		public static final int titleDividerNoCustom = 0x7f09023c;
 		public static final int title_template = 0x7f09023d;
 		public static final int topPanel = 0x7f090241;
-		public static final int unchecked = 0x7f090265;
-		public static final int uniform = 0x7f090266;
-		public static final int up = 0x7f090268;
-		public static final int wrap_content = 0x7f090278;
+		public static final int unchecked = 0x7f090267;
+		public static final int uniform = 0x7f090268;
+		public static final int up = 0x7f09026a;
+		public static final int wrap_content = 0x7f09027a;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;
@@ -712,10 +712,10 @@ public final class R {
 		public static final int abc_search_view = 0x7f0c0019;
 		public static final int abc_select_dialog_material = 0x7f0c001a;
 		public static final int abc_tooltip = 0x7f0c001b;
-		public static final int select_dialog_item_material = 0x7f0c0078;
-		public static final int select_dialog_multichoice_material = 0x7f0c0079;
-		public static final int select_dialog_singlechoice_material = 0x7f0c007a;
-		public static final int support_simple_spinner_dropdown_item = 0x7f0c007d;
+		public static final int select_dialog_item_material = 0x7f0c0079;
+		public static final int select_dialog_multichoice_material = 0x7f0c007a;
+		public static final int select_dialog_singlechoice_material = 0x7f0c007b;
+		public static final int support_simple_spinner_dropdown_item = 0x7f0c007e;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f110000;

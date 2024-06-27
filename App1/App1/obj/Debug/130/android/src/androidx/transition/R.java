@@ -742,10 +742,10 @@ public final class R {
 		public static final int transition_position = 0x7f090248;
 		public static final int transition_scene_layoutid_cache = 0x7f090249;
 		public static final int transition_transform = 0x7f09024a;
-		public static final int uniform = 0x7f090266;
-		public static final int up = 0x7f090268;
-		public static final int visible_removing_fragment_view_tag = 0x7f090272;
-		public static final int wrap_content = 0x7f090278;
+		public static final int uniform = 0x7f090268;
+		public static final int up = 0x7f09026a;
+		public static final int visible_removing_fragment_view_tag = 0x7f090274;
+		public static final int wrap_content = 0x7f09027a;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;
@@ -790,10 +790,10 @@ public final class R {
 		public static final int notification_template_icon_group = 0x7f0c0073;
 		public static final int notification_template_part_chronometer = 0x7f0c0074;
 		public static final int notification_template_part_time = 0x7f0c0075;
-		public static final int select_dialog_item_material = 0x7f0c0078;
-		public static final int select_dialog_multichoice_material = 0x7f0c0079;
-		public static final int select_dialog_singlechoice_material = 0x7f0c007a;
-		public static final int support_simple_spinner_dropdown_item = 0x7f0c007d;
+		public static final int select_dialog_item_material = 0x7f0c0079;
+		public static final int select_dialog_multichoice_material = 0x7f0c007a;
+		public static final int select_dialog_singlechoice_material = 0x7f0c007b;
+		public static final int support_simple_spinner_dropdown_item = 0x7f0c007e;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f110000;

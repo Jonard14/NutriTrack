@@ -8,12 +8,15 @@ androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\logs.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\suggest.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\tracker.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\activity_profile.xml
+androidx.cardview.widget.CardView;obj\Debug\130\res\layout\profile_page.xml
+androidx.cardview.widget.CardView;obj\Debug\130\res\layout\profile_page_drawer.xml
 androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\displaypage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\logs_drawer.xml
+androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\profile_page.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\profile_page_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\suggest_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawer.xml
@@ -24,6 +27,8 @@ Button;obj\Debug\130\res\layout\admin.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\displaypage.xml
 Button;obj\Debug\130\res\layout\login.xml
+Button;obj\Debug\130\res\layout\profile_page.xml
+Button;obj\Debug\130\res\layout\profile_page_drawer.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
 cache-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis3\App1\App1\obj\Debug\130\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -42,6 +47,7 @@ com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\a
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\displaypage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\logs_drawer.xml
+com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\profile_page.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\profile_page_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\suggest_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\tracker_drawer.xml
@@ -65,11 +71,14 @@ gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
 group;obj\Debug\130\res\menu\activity_main_drawer.xml
 ImageView;obj\Debug\130\res\layout\activity_profile.xml
 ImageView;obj\Debug\130\res\layout\nav_header_main.xml
+ImageView;obj\Debug\130\res\layout\profile_page.xml
+ImageView;obj\Debug\130\res\layout\profile_page_drawer.xml
 include;obj\Debug\130\res\layout\activity_main.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
 include;obj\Debug\130\res\layout\displaypage_drawer.xml
 include;obj\Debug\130\res\layout\homepage_drawer.xml
 include;obj\Debug\130\res\layout\logs_drawer.xml
+include;obj\Debug\130\res\layout\profile_page.xml
 include;obj\Debug\130\res\layout\profile_page_drawer.xml
 include;obj\Debug\130\res\layout\suggest_drawer.xml
 include;obj\Debug\130\res\layout\tracker_drawer.xml
@@ -86,6 +95,8 @@ LinearLayout;obj\Debug\130\res\layout\homepage.xml
 LinearLayout;obj\Debug\130\res\layout\login.xml
 LinearLayout;obj\Debug\130\res\layout\logs.xml
 LinearLayout;obj\Debug\130\res\layout\nav_header_main.xml
+LinearLayout;obj\Debug\130\res\layout\profile_page.xml
+LinearLayout;obj\Debug\130\res\layout\profile_page_drawer.xml
 LinearLayout;obj\Debug\130\res\layout\register.xml
 LinearLayout;obj\Debug\130\res\layout\suggest.xml
 LinearLayout;obj\Debug\130\res\layout\tracker.xml
@@ -119,6 +130,8 @@ rotate;obj\Debug\130\res\drawable\stats_full.xml
 rotate;obj\Debug\130\res\drawable\stats_progress.xml
 ScrollView;obj\Debug\130\res\layout\activity_profile.xml
 ScrollView;obj\Debug\130\res\layout\displaypage.xml
+ScrollView;obj\Debug\130\res\layout\profile_page.xml
+ScrollView;obj\Debug\130\res\layout\profile_page_drawer.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\tracker.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
@@ -153,6 +166,8 @@ TextView;obj\Debug\130\res\layout\homepage.xml
 TextView;obj\Debug\130\res\layout\login.xml
 TextView;obj\Debug\130\res\layout\logs.xml
 TextView;obj\Debug\130\res\layout\nav_header_main.xml
+TextView;obj\Debug\130\res\layout\profile_page.xml
+TextView;obj\Debug\130\res\layout\profile_page_drawer.xml
 TextView;obj\Debug\130\res\layout\register.xml
 TextView;obj\Debug\130\res\layout\suggest.xml
 TextView;obj\Debug\130\res\layout\tracker.xml

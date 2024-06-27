@@ -146,7 +146,7 @@ namespace App1
                 lastNameText.Error = "Last name is required";
                 isValid = false;
             }
-            if (string.IsNullOrWhiteSpace(emailText.Text) || !Regex.IsMatch(emailText.Text, emailPattern))
+            if (string.IsNullOrWhiteSpace(emailText.Text)) //|| !Regex.IsMatch(emailText.Text, emailPattern))
             {
                 emailText.Error = "Valid email is required";
                 isValid = false;
