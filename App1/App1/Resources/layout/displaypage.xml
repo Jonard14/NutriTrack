@@ -15,7 +15,7 @@
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F7F6BB">
+        android:background="@drawable/layout_bg">
 
        <LinearLayout
                 android:orientation="horizontal"
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:textSize="26dp"
+        android:textSize="24dp"
         android:id="@+id/calServ"
         android:paddingLeft="10dp"
         android:paddingBottom="10dp"
@@ -231,7 +231,7 @@
             android:id="@+id/linearLayout_INNER"
             android:fadingEdge="none"
             android:layout_margin="5dp"
-            android:background="#F7F6BB">
+            android:background="@drawable/layout_bg">
                 <TextView
                 android:text="Total Intakes"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_Calorie_Track"
                 android:textStyle="bold"
-                android:textSize="25dp"
+                android:textSize="24dp"
                 android:textColor="#000000"
                 android:paddingLeft="20px"
                 android:paddingTop="20px"

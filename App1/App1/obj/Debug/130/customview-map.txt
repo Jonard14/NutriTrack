@@ -52,6 +52,7 @@ com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\p
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\suggest_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\tracker_drawer.xml
 corners;obj\Debug\130\res\drawable\buttons.xml
+corners;obj\Debug\130\res\drawable\layout_bg.xml
 corners;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
 corners;obj\Debug\130\res\drawable\login_inputbox_top.xml
 corners;obj\Debug\130\res\drawable\register_inputbox_design.xml
@@ -87,6 +88,7 @@ item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\strings.xml
 item;obj\Debug\130\res\values\styles.xml
+LinearLayout;obj\Debug\130\res\drawable\layout_bg.xml
 LinearLayout;obj\Debug\130\res\layout\activity_profile.xml
 LinearLayout;obj\Debug\130\res\layout\admin.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
@@ -107,6 +109,7 @@ ListView;obj\Debug\130\res\layout\suggest.xml
 menu;obj\Debug\130\res\menu\activity_main_drawer.xml
 menu;obj\Debug\130\res\menu\menu_main.xml
 padding;obj\Debug\130\res\drawable\buttons.xml
+padding;obj\Debug\130\res\drawable\layout_bg.xml
 padding;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
 padding;obj\Debug\130\res\drawable\login_inputbox_top.xml
 padding;obj\Debug\130\res\drawable\register_inputbox_design.xml
@@ -136,6 +139,7 @@ ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\tracker.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
 shape;obj\Debug\130\res\drawable\buttons.xml
+shape;obj\Debug\130\res\drawable\layout_bg.xml
 shape;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
 shape;obj\Debug\130\res\drawable\login_inputbox_top.xml
 shape;obj\Debug\130\res\drawable\register_inputbox_design.xml
@@ -146,6 +150,7 @@ shape;obj\Debug\130\res\drawable\stats_full.xml
 shape;obj\Debug\130\res\drawable\stats_nut_full.xml
 shape;obj\Debug\130\res\drawable\stats_progress.xml
 solid;obj\Debug\130\res\drawable\buttons.xml
+solid;obj\Debug\130\res\drawable\layout_bg.xml
 solid;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
 solid;obj\Debug\130\res\drawable\login_inputbox_top.xml
 solid;obj\Debug\130\res\drawable\register_inputbox_design.xml
@@ -157,6 +162,7 @@ solid;obj\Debug\130\res\drawable\stats_progress.xml
 Spinner;obj\Debug\130\res\layout\register.xml
 string;obj\Debug\130\res\values\strings.xml
 string-array;obj\Debug\130\res\values\strings.xml
+stroke;obj\Debug\130\res\drawable\layout_bg.xml
 style;obj\Debug\130\res\values\styles.xml
 TextView;obj\Debug\130\res\layout\activity_profile.xml
 TextView;obj\Debug\130\res\layout\admin.xml
@@ -179,3 +185,4 @@ vector;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 View;obj\Debug\130\res\layout\displaypage.xml
+View;obj\Debug\130\res\layout\tracker.xml

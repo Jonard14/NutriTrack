@@ -3,6 +3,8 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using System.Data;
+using System.Data.SqlClient;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
