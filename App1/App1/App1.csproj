@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AdminPage.cs" />
     <Compile Include="DBClass.cs" />
+    <Compile Include="DietDisplay.cs" />
     <Compile Include="DisplayPage.cs" />
     <Compile Include="DrawerNavigation.cs" />
     <Compile Include="HomePage.cs" />
@@ -248,6 +249,17 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\layout_bg.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\highprot.jpg" />
+    <Content Include="Resources\drawable-v21\lesschol.jpg" />
+    <Content Include="Resources\drawable-v21\lesssod.jpg" />
+    <Content Include="Resources\drawable-v21\lesssug.jpg" />
+    <Content Include="Resources\drawable-v21\lowcarb.png" />
+    <Content Include="Resources\drawable-v21\lowfat.jpg" />
+    <AndroidResource Include="Resources\layout\diet_display.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -9,6 +9,7 @@ using Android.Text;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using AndroidX.CardView.Widget;
 using AndroidX.Core.View;
 using AndroidX.DrawerLayout.Widget;
 using Google.Android.Material.FloatingActionButton;
@@ -32,13 +33,14 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
+        CardView lessug, hiprot, lessod, locarb, lofat, zerchol;
         TextView food;
         float sugar, cholesterol, sodium, fat, protein, calorie_energy, carbohydrate;
         float portions = 100;
 
 
         private ListView lv, lv2;
-        private ArrayList illness, foods;
+        private ArrayList illness, foods, diets, dietsFilts;
         private ArrayAdapter _adapter2;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -64,23 +66,99 @@ namespace App1
             // Create your application here
 
             food = FindViewById<TextView>(Resource.Id.foods);
-            lv = FindViewById<ListView>(Resource.Id.listview1);
-            lv2 = FindViewById<ListView>(Resource.Id.listview2);
+            //lv = FindViewById<ListView>(Resource.Id.listview1);
+            //lv2 = FindViewById<ListView>(Resource.Id.listview2);
+
+            //CardView
+            lessug = FindViewById<CardView>(Resource.Id.less_sugar_card);
+            lessug.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Sugar";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
+
+            hiprot = FindViewById<CardView>(Resource.Id.high_prot_card);
+            hiprot.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Protein";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
+
+            lessod = FindViewById<CardView>(Resource.Id.less_sod_card);
+            lessod.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Sodium";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
+
+            locarb = FindViewById<CardView>(Resource.Id.low_carb_card);
+            locarb.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Carbohydrates";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
+
+            lofat = FindViewById<CardView>(Resource.Id.low_fat_card);
+            lofat.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Fat";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
+
+            zerchol = FindViewById<CardView>(Resource.Id.less_chol_card);
+            zerchol.Click += (s, e) =>
+            {
+                // Handle Less Sugar card click
+                string d = "Cholesterol";
+                Intent i = new Intent(this, typeof(DietDisplay));
+
+                i.PutExtra("SelectedDiet", d);
+                i.PutExtra("ActivityPage", "SuggestFood");
+                StartActivity(i);
+            };
 
             addIll();
             addFood();
 
-            _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
-            lv2.Adapter = _adapter2;
+            //_adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
+            //lv2.Adapter = _adapter2;
 
-            lv2.ItemClick += lv2_ItemClick;
+            //lv2.ItemClick += lv2_ItemClick;
 
 
 
         }
+
         private void addIll()
         {
             illness = new ArrayList();
+            diets= new ArrayList();
+            dietsFilts = new ArrayList();
 
             // Get food data from DB
             root = db.RetrieveData("search_user_illness.php?");
@@ -93,7 +171,34 @@ namespace App1
                     illness.Add(u1.GetProperty("types").ToString());
                 }
             }
-            food.Text = "Recommended Foods to eat when you have: ";// + illness.ToString();
+
+            //Recommended Diets
+            if (illness.Contains("Heart Disease"))
+            {
+                diets.Add("Less Sugar");
+                diets.Add("Zero Cholesterol");
+                diets.Add("Less Sodium");
+            }
+            else if (illness.Contains("Diabetes"))
+            {
+                diets.Add("Less Sugar");
+                diets.Add("Zero Cholesterol");
+            }
+            else if (illness.Contains("Cancer"))
+            {
+                diets.Add("Zero Cholesterol");
+                diets.Add("Less Sodium");
+            }
+
+            else
+            {
+                diets.Add("Low Carb");
+                diets.Add("High Protein");
+                diets.Add("Low-Fat Content");
+            }
+
+            string recom = String.Join(",",diets);
+            food.Text = "Suggested diets for you: " + recom;// + illness.ToString();
 
         }
         private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

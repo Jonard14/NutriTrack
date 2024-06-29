@@ -10,6 +10,7 @@ androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\tracker.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\activity_profile.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\profile_page.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\profile_page_drawer.xml
+androidx.cardview.widget.CardView;obj\Debug\130\res\layout\suggest.xml
 androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
@@ -25,6 +26,7 @@ background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\130\res\layout\activity_profile.xml
 Button;obj\Debug\130\res\layout\admin.xml
 Button;obj\Debug\130\res\layout\content_main.xml
+Button;obj\Debug\130\res\layout\diet_display.xml
 Button;obj\Debug\130\res\layout\displaypage.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\profile_page.xml
@@ -74,6 +76,7 @@ ImageView;obj\Debug\130\res\layout\activity_profile.xml
 ImageView;obj\Debug\130\res\layout\nav_header_main.xml
 ImageView;obj\Debug\130\res\layout\profile_page.xml
 ImageView;obj\Debug\130\res\layout\profile_page_drawer.xml
+ImageView;obj\Debug\130\res\layout\suggest.xml
 include;obj\Debug\130\res\layout\activity_main.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
 include;obj\Debug\130\res\layout\displaypage_drawer.xml
@@ -92,6 +95,7 @@ LinearLayout;obj\Debug\130\res\drawable\layout_bg.xml
 LinearLayout;obj\Debug\130\res\layout\activity_profile.xml
 LinearLayout;obj\Debug\130\res\layout\admin.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
+LinearLayout;obj\Debug\130\res\layout\diet_display.xml
 LinearLayout;obj\Debug\130\res\layout\displaypage.xml
 LinearLayout;obj\Debug\130\res\layout\homepage.xml
 LinearLayout;obj\Debug\130\res\layout\login.xml
@@ -103,6 +107,7 @@ LinearLayout;obj\Debug\130\res\layout\register.xml
 LinearLayout;obj\Debug\130\res\layout\suggest.xml
 LinearLayout;obj\Debug\130\res\layout\tracker.xml
 ListView;obj\Debug\130\res\layout\activity_profile.xml
+ListView;obj\Debug\130\res\layout\diet_display.xml
 ListView;obj\Debug\130\res\layout\homepage.xml
 ListView;obj\Debug\130\res\layout\logs.xml
 ListView;obj\Debug\130\res\layout\suggest.xml
@@ -137,6 +142,7 @@ ScrollView;obj\Debug\130\res\layout\profile_page.xml
 ScrollView;obj\Debug\130\res\layout\profile_page_drawer.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\tracker.xml
+SearchView;obj\Debug\130\res\layout\diet_display.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
 shape;obj\Debug\130\res\drawable\buttons.xml
 shape;obj\Debug\130\res\drawable\layout_bg.xml
@@ -167,6 +173,7 @@ style;obj\Debug\130\res\values\styles.xml
 TextView;obj\Debug\130\res\layout\activity_profile.xml
 TextView;obj\Debug\130\res\layout\admin.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
+TextView;obj\Debug\130\res\layout\diet_display.xml
 TextView;obj\Debug\130\res\layout\displaypage.xml
 TextView;obj\Debug\130\res\layout\homepage.xml
 TextView;obj\Debug\130\res\layout\login.xml

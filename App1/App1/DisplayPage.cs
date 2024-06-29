@@ -118,9 +118,9 @@ namespace App1
                 Intent i = new Intent(this, typeof(HomePage));
                 StartActivity(i);
             }
-            else if (Intent.GetStringExtra("ActivityPage") == "SuggestFood")
+            else if (Intent.GetStringExtra("ActivityPage") == "DietDisplay")
             {
-                Intent i = new Intent(this, typeof(SuggestFood));
+                Intent i = new Intent(this, typeof(DietDisplay));
                 StartActivity(i);
             }
         }

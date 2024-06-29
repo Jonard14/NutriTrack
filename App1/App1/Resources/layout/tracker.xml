@@ -57,10 +57,7 @@
                     android:id="@+id/textV_NumPrev" />
 
             </LinearLayout>
-          <View
-            android:layout_width="match_parent"
-            android:layout_height="9dp"
-            android:background="#000000"/>
+       
     <androidx.constraintlayout.widget.ConstraintLayout 
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -293,6 +290,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout8">
@@ -320,6 +318,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout10">
@@ -347,6 +346,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linear1">
@@ -374,6 +374,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linear2">
@@ -401,6 +402,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linear3">
@@ -428,6 +430,7 @@
                 android:orientation="horizontal"
                 android:minWidth="25px"
                 android:minHeight="25px"
+                android:layout_margin="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linear4">
@@ -450,10 +453,15 @@
                 android:textSize="18dp"/>
         
             </LinearLayout>
-
+            <View
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="#000000"/>
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
                

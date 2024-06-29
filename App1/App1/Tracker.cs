@@ -73,7 +73,7 @@ namespace App1
             // Create your application here
             estim = FindViewById<LinearLayout>(Resource.Id.linearLayout5);
             PrevCalorie = FindViewById<TextView>(Resource.Id.textV_NumPrev);
-            CurrentCalorie = FindViewById<TextView>(Resource.Id.textV_NumCurrent);
+            //CurrentCalorie = FindViewById<TextView>(Resource.Id.textV_NumCurrent);
             //TotalCalorieNum = FindViewById<TextView>(Resource.Id.textV_TotalCalorieNum);
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
             //recommendNum = FindViewById<TextView>(Resource.Id.textV_recommendNum);
