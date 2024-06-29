@@ -31,6 +31,7 @@ namespace App1
         JsonElement root;
 
         TextView Tprotein, Tcholesterol, Tfats, Tsodium, Tcarbohydrates;
+        LinearLayout estim;
 
         DrawerNavigation selectedNav = new DrawerNavigation();
 
@@ -70,11 +71,12 @@ namespace App1
 
 
             // Create your application here
+            estim = FindViewById<LinearLayout>(Resource.Id.linearLayout5);
             PrevCalorie = FindViewById<TextView>(Resource.Id.textV_NumPrev);
             CurrentCalorie = FindViewById<TextView>(Resource.Id.textV_NumCurrent);
-            TotalCalorieNum = FindViewById<TextView>(Resource.Id.textV_TotalCalorieNum);
+            //TotalCalorieNum = FindViewById<TextView>(Resource.Id.textV_TotalCalorieNum);
             SugarCount = FindViewById<TextView>(Resource.Id.textV_NumSugar);
-            recommendNum = FindViewById<TextView>(Resource.Id.textV_recommendNum);
+            //recommendNum = FindViewById<TextView>(Resource.Id.textV_recommendNum);
             numOfCal = FindViewById<TextView>(Resource.Id.number_of_calories);
 
             pieChart = FindViewById<ProgressBar>(Resource.Id.stats_progressbar);
@@ -84,6 +86,8 @@ namespace App1
 
             ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
             ResetSugar.Click += resetSugarCalorie;
+
+            estim.Click += estimClick;
 
             history = new ArrayList();
             lv = FindViewById<ListView>(Resource.Id.listview1);
@@ -97,6 +101,11 @@ namespace App1
 
 
             Update();
+        }
+
+        private void estimClick(object sender, EventArgs e)
+        {
+            Toast.MakeText(this, "Use the app daily to get accurate results", ToastLength.Long).Show();
         }
 
         public void Update()

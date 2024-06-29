@@ -65,7 +65,7 @@
         android:layout_height="match_parent"
         android:layout_margin="10px"
         android:id="@+id/linearLayout3"
-        android:background="#F7F6BB">
+        android:background="@drawable/layout_bg">
        
         <ListView
             android:layout_width="match_parent"
