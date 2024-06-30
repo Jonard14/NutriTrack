@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="#87A922">
+    android:background="@drawable/nutritrack">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
@@ -42,10 +42,12 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="5dp"
         android:background="#F7F6BB">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="5dp"
             android:id="@+id/listview1"
             android:layout_weight ="1"
             android:background="@drawable/layout_bg" />

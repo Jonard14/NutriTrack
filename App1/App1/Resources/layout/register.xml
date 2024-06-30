@@ -17,17 +17,14 @@
 
         <!-- Email, First & Last name-->
         <Button
-            android:text="Return Home"
-            android:layout_width="350px"
-            android:layout_height="100px"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="top"
             android:id="@+id/btn_Home"
-            android:textStyle="bold"
-            android:textColor="@android:color/background_light"
+            android:layout_margin="8dp"
             android:backgroundTint="#114232"
-            android:background="@drawable/buttons"
-            android:textSize="10dp" />
+            android:background="@drawable/ic_arrow_back_black_24"/>
 
         <TextView
             android:text="Register"

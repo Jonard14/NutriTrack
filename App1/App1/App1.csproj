@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Json" />
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
@@ -136,12 +137,20 @@
       <Version>4.8.6</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
-      <Version>9.0.0-preview.1.24080.9</Version>
+      <Version>9.0.0-preview.5.24306.7</Version>
     </PackageReference>
     <PackageReference Include="System.Threading.Tasks.Extensions">
       <Version>4.5.4</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat.AppCompatResources">
+      <Version>1.6.1.8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources">
+      <Version>1.1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.CardView">
+      <Version>1.0.0.19</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
@@ -259,17 +268,33 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\drawable-v21\highprot.jpg" />
-    <Content Include="Resources\drawable-v21\lesschol.jpg" />
-    <Content Include="Resources\drawable-v21\lesssod.jpg" />
-    <Content Include="Resources\drawable-v21\lesssug.jpg" />
-    <Content Include="Resources\drawable-v21\lowcarb.png" />
-    <Content Include="Resources\drawable-v21\lowfat.jpg" />
+    <AndroidResource Include="Resources\drawable-v21\highprot.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\lesschol.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\lesssod.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\lesssug.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\lowcarb.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\lowfat.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\diet_display.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <Content Include="Resources\drawable-v21\Untitled design %289%29.png" />
-    <Content Include="Resources\drawable\NutriTrack.png" />
+    <AndroidResource Include="Resources\drawable-v21\Untitled design %289%29.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\NutriTrack.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

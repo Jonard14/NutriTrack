@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v13.0": {
-      "Microsoft.Bcl.AsyncInterfaces/9.0.0-preview.1.24080.9": {
+      "Microsoft.Bcl.AsyncInterfaces/9.0.0-preview.5.24306.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -60,6 +60,24 @@
           }
         }
       },
+      "System.IO.Pipelines/9.0.0-preview.5.24306.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Memory/4.5.5": {
         "type": "package",
         "dependencies": {
@@ -99,7 +117,7 @@
           }
         }
       },
-      "System.Text.Encodings.Web/9.0.0-preview.1.24080.9": {
+      "System.Text.Encodings.Web/9.0.0-preview.5.24306.7": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
@@ -117,14 +135,15 @@
           }
         }
       },
-      "System.Text.Json/9.0.0-preview.1.24080.9": {
+      "System.Text.Json/9.0.0-preview.5.24306.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "9.0.0-preview.1.24080.9",
+          "Microsoft.Bcl.AsyncInterfaces": "9.0.0-preview.5.24306.7",
           "System.Buffers": "4.5.1",
+          "System.IO.Pipelines": "9.0.0-preview.5.24306.7",
           "System.Memory": "4.5.5",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "9.0.0-preview.1.24080.9",
+          "System.Text.Encodings.Web": "9.0.0-preview.5.24306.7",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -354,6 +373,32 @@
           "buildTransitive/monoandroid12.0/Xamarin.AndroidX.AppCompat.AppCompatResources.targets": {}
         }
       },
+      "Xamarin.AndroidX.AppCompat.Resources/1.1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.AppCompat.AppCompatResources": "1.6.1.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/monoandroid12.0/Xamarin.AndroidX.AppCompat.Resources.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid12.0/Xamarin.AndroidX.AppCompat.Resources.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Xamarin.AndroidX.Arch.Core.Common/2.2.0.7": {
         "type": "package",
         "dependencies": {
@@ -437,10 +482,10 @@
           "buildTransitive/monoandroid9.0/Xamarin.AndroidX.Browser.targets": {}
         }
       },
-      "Xamarin.AndroidX.CardView/1.0.0.25": {
+      "Xamarin.AndroidX.CardView/1.0.0.19": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.7.1.1"
+          "Xamarin.AndroidX.Annotation": "1.6.0.1"
         },
         "frameworkAssemblies": [
           "Java.Interop",
@@ -2026,10 +2071,10 @@
     }
   },
   "libraries": {
-    "Microsoft.Bcl.AsyncInterfaces/9.0.0-preview.1.24080.9": {
-      "sha512": "ixv3AAbVFcglpVhMm6orJlHvoAukx5LfnPwDe7y7Ezi3SYgffUyBGqVxehZE7oFHi6p7m4/rq3EZ/8Codp08lA==",
+    "Microsoft.Bcl.AsyncInterfaces/9.0.0-preview.5.24306.7": {
+      "sha512": "SbFWp1nHR30ggwvvQgzvDGe5hpoUv3gEeLxY7uUHUu4PDvbeu1ul+q2hTcedxq4ywwYZ5QWFspIVKgQbPx4MCQ==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/9.0.0-preview.1.24080.9",
+      "path": "microsoft.bcl.asyncinterfaces/9.0.0-preview.5.24306.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2047,7 +2092,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.9.0.0-preview.1.24080.9.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.9.0.0-preview.5.24306.7.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2201,6 +2246,34 @@
         "version.txt"
       ]
     },
+    "System.IO.Pipelines/9.0.0-preview.5.24306.7": {
+      "sha512": "zZs8KCITvX7F/hrkI1M+jajptlTTH4UKQLVOLYQWIe8PHtJarFJHINRdyKvx52DdeThjeiF9CvmX7FkTXF5DdQ==",
+      "type": "package",
+      "path": "system.io.pipelines/9.0.0-preview.5.24306.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Pipelines.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "lib/net462/System.IO.Pipelines.dll",
+        "lib/net462/System.IO.Pipelines.xml",
+        "lib/net8.0/System.IO.Pipelines.dll",
+        "lib/net8.0/System.IO.Pipelines.xml",
+        "lib/net9.0/System.IO.Pipelines.dll",
+        "lib/net9.0/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.9.0.0-preview.5.24306.7.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Memory/4.5.5": {
       "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
@@ -2296,10 +2369,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Encodings.Web/9.0.0-preview.1.24080.9": {
-      "sha512": "wrNOdhCIL6lzzoqF8qZGE7rULrEntpjqeAGD01TqAfBPa4jzOhEY3eyDt0vKo5XxXac58lARXwulaxPoBh65Sw==",
+    "System.Text.Encodings.Web/9.0.0-preview.5.24306.7": {
+      "sha512": "so8FgvDDNzOfyeZ2f3wOIa9ZR4KEu/2Uaqw8C1hsHBC3Vo2vZCg12DlnGFD0jufbNS/WoJBkLPpM1gonrJr2Kg==",
       "type": "package",
-      "path": "system.text.encodings.web/9.0.0-preview.1.24080.9",
+      "path": "system.text.encodings.web/9.0.0-preview.5.24306.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2323,15 +2396,15 @@
         "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
         "runtimes/browser/lib/net9.0/System.Text.Encodings.Web.dll",
         "runtimes/browser/lib/net9.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.9.0.0-preview.1.24080.9.nupkg.sha512",
+        "system.text.encodings.web.9.0.0-preview.5.24306.7.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/9.0.0-preview.1.24080.9": {
-      "sha512": "V9p7C+F6OQ/MPOEjs1/35mBnxgwqd9BvboaCR8DZhZUSAcqtkFx6zJD2zfKbi3Kry7ww4oEzvfVCB28qteanaQ==",
+    "System.Text.Json/9.0.0-preview.5.24306.7": {
+      "sha512": "t2VlMCSAqqZRbEGviNdnmT6Y7yJ1PrgI+T0pqAm9kwije6qdvrIZIb0ZsShq8nMbItPUPgZMpwDjIQQszaus9g==",
       "type": "package",
-      "path": "system.text.json/9.0.0-preview.1.24080.9",
+      "path": "system.text.json/9.0.0-preview.5.24306.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2394,7 +2467,7 @@
         "lib/net9.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.9.0.0-preview.1.24080.9.nupkg.sha512",
+        "system.text.json.9.0.0-preview.5.24306.7.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2623,6 +2696,27 @@
         "xamarin.androidx.appcompat.appcompatresources.nuspec"
       ]
     },
+    "Xamarin.AndroidX.AppCompat.Resources/1.1.0.3": {
+      "sha512": "KtGFsxW148QCIWk2manCd21jO8gz03pUYty3HXIqOcVk/UnLe+1W5h/nA7u6QUjlYFDL2MUp0DDYBCxe7CPwtQ==",
+      "type": "package",
+      "path": "xamarin.androidx.appcompat.resources/1.1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/monoandroid12.0/Xamarin.AndroidX.AppCompat.Resources.dll",
+        "lib/monoandroid12.0/Xamarin.AndroidX.AppCompat.Resources.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.AppCompat.Resources.dll",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.AppCompat.Resources.pdb",
+        "lib/net6.0-android31.0/Xamarin.AndroidX.AppCompat.Resources.xml",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.AppCompat.Resources.dll",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.AppCompat.Resources.pdb",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.AppCompat.Resources.xml",
+        "xamarin.androidx.appcompat.resources.1.1.0.3.nupkg.sha512",
+        "xamarin.androidx.appcompat.resources.nuspec"
+      ]
+    },
     "Xamarin.AndroidX.Arch.Core.Common/2.2.0.7": {
       "sha512": "zuVwJwX2VAsruqcYwtvtps2c5tj/Bdq5eQ/UyBYBcrj4jxn1e5ilT3HHdkLTtsu2uC53Tskh+/Ak81lqxvsauQ==",
       "type": "package",
@@ -2702,10 +2796,10 @@
         "xamarin.androidx.browser.nuspec"
       ]
     },
-    "Xamarin.AndroidX.CardView/1.0.0.25": {
-      "sha512": "5TnvOGxT70UQm/4ukuTGfXPnEmjojovzSaDoDOBhdTfS0H4cMJ4/at0QzmiByeMsEuvDmRgjI8sdzv/fctYinw==",
+    "Xamarin.AndroidX.CardView/1.0.0.19": {
+      "sha512": "SDjinyb+6580qMyhLLBA/UogjFGaA+pKOu82OiM5nOj9VWGnEFm6zelRbq9785ePVaDMoHz207NS1T4LyReJUw==",
       "type": "package",
-      "path": "xamarin.androidx.cardview/1.0.0.25",
+      "path": "xamarin.androidx.cardview/1.0.0.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2714,10 +2808,8 @@
         "aar/androidx.cardview.cardview.aar",
         "build/monoandroid12.0/Xamarin.AndroidX.CardView.targets",
         "build/net6.0-android31.0/Xamarin.AndroidX.CardView.targets",
-        "build/net7.0-android33.0/Xamarin.AndroidX.CardView.targets",
         "buildTransitive/monoandroid12.0/Xamarin.AndroidX.CardView.targets",
         "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.CardView.targets",
-        "buildTransitive/net7.0-android33.0/Xamarin.AndroidX.CardView.targets",
         "icon.png",
         "lib/monoandroid12.0/Xamarin.AndroidX.CardView.dll",
         "lib/monoandroid12.0/Xamarin.AndroidX.CardView.pdb",
@@ -2725,11 +2817,7 @@
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.dll",
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.pdb",
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.xml",
-        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.dll",
-        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.pdb",
-        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.xml",
-        "readme.md",
-        "xamarin.androidx.cardview.1.0.0.25.nupkg.sha512",
+        "xamarin.androidx.cardview.1.0.0.19.nupkg.sha512",
         "xamarin.androidx.cardview.nuspec"
       ]
     },
@@ -4319,32 +4407,34 @@
     "MonoAndroid,Version=v13.0": [
       "System.Data.OleDb >= 9.0.0-preview.5.24306.7",
       "System.Data.SqlClient >= 4.8.6",
-      "System.Text.Json >= 9.0.0-preview.1.24080.9",
+      "System.Text.Json >= 9.0.0-preview.5.24306.7",
       "System.Threading.Tasks.Extensions >= 4.5.4",
-      "Xamarin.AndroidX.AppCompat >= 1.6.1.7",
+      "Xamarin.AndroidX.AppCompat.AppCompatResources >= 1.6.1.8",
+      "Xamarin.AndroidX.AppCompat.Resources >= 1.1.0.3",
+      "Xamarin.AndroidX.CardView >= 1.0.0.19",
       "Xamarin.Essentials >= 1.8.1",
       "Xamarin.Google.Android.Material >= 1.10.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10\\.nuget\\packages\\": {},
+    "C:\\Users\\norys\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\norys\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\norys\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4373,53 +4463,33 @@
             "target": "Package",
             "version": "[9.0.0-preview.5.24306.7, )"
           },
-          "System.Data.OleDb": {
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.6, )"
+          },
+          "System.Text.Json": {
             "target": "Package",
             "version": "[9.0.0-preview.5.24306.7, )"
           },
-          "System.Data.SqlClient": {
-            "target": "Package",
-            "version": "[4.8.6, )"
-          },
-          "System.Data.SqlClient": {
-            "target": "Package",
-            "version": "[4.8.6, )"
-          },
-          "System.Text.Json": {
-            "target": "Package",
-            "version": "[9.0.0-preview.1.24080.9, )"
-          },
-          "System.Text.Json": {
-            "target": "Package",
-            "version": "[9.0.0-preview.1.24080.9, )"
-          },
           "System.Threading.Tasks.Extensions": {
             "target": "Package",
             "version": "[4.5.4, )"
           },
-          "System.Threading.Tasks.Extensions": {
+          "Xamarin.AndroidX.AppCompat.AppCompatResources": {
             "target": "Package",
-            "version": "[4.5.4, )"
+            "version": "[1.6.1.8, )"
           },
-          "Xamarin.AndroidX.AppCompat": {
+          "Xamarin.AndroidX.AppCompat.Resources": {
             "target": "Package",
-            "version": "[1.6.1.7, )"
+            "version": "[1.1.0.3, )"
           },
-          "Xamarin.AndroidX.AppCompat": {
+          "Xamarin.AndroidX.CardView": {
             "target": "Package",
-            "version": "[1.6.1.7, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.8.1, )"
+            "version": "[1.0.0.19, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.8.1, )"
-          },
-          "Xamarin.Google.Android.Material": {
-            "target": "Package",
-            "version": "[1.10.0.3, )"
           },
           "Xamarin.Google.Android.Material": {
             "target": "Package",
@@ -4428,5 +4498,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.AndroidX.CardView from 1.0.0.25 to 1.0.0.19. Reference the package directly from the project to select a different version. \r\n App1 -> Xamarin.Google.Android.Material 1.10.0.3 -> Xamarin.AndroidX.CardView (>= 1.0.0.25) \r\n App1 -> Xamarin.AndroidX.CardView (>= 1.0.0.19)",
+      "libraryId": "Xamarin.AndroidX.CardView",
+      "targetGraphs": [
+        "MonoAndroid,Version=v13.0"
+      ]
+    }
+  ]
 }

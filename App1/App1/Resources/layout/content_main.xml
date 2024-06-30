@@ -17,10 +17,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/linearLayout2"
-        android:gravity="center">
+        android:layout_marginTop="300dp">
+
+        <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logo"/>-->
 
         <TextView
-            android:text="NutriTrack A Personalized Tracking App"
+            android:text="NutriTrack"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,10 +34,21 @@
             android:id="@+id/txtV_Login"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
+         <TextView
+            android:text=" A Personalized Tracking App"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/txtV_Login1"
+            android:textColor="@android:color/background_light"
+           />
 
         <Button
             android:text="Sign In"
-            android:layout_width="650px"
+            android:layout_width="500px"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center"
@@ -47,6 +63,7 @@
             android:layout_width="650px"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="15dp"
             android:layout_gravity="center"
             android:id="@+id/txtV_NoAcct"
             android:textColor="@android:color/background_light" />
@@ -56,6 +73,7 @@
             android:layout_width="650px"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="15dp"
             android:layout_gravity="center"
             android:id="@+id/txtV_RegLink"
             android:autoLink="none"
