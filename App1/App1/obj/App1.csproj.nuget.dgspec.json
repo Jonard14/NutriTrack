@@ -43,6 +43,14 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[9.0.0-preview.5.24306.7, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.0-preview.1.24080.9, )"

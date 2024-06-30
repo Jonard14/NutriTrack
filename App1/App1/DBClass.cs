@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,11 @@ namespace App1
             e.g. (HttpWebRequest)WebRequest.Create(IP_DB + "update.php?name=" + name + "&status=" + status)
          */
         //string IP_DB = "http://192.168.61.210/CS134P-1P-Thesis/";
-        string IP_DB = "http://192.168.100.17/CS134P-1P-Thesis/";
-        //string IP_DB = "http://192.168.100.5/CS134P-1P-Thesis/";
+        //string IP_DB = "http://192.168.100.17/CS134P-1P-Thesis/";
+        string IP_DB = "http://192.168.100.5/CS134P-1P-Thesis/";
         //string IP_DB = "http://192.168.137.1/CS134P-1P-Thesis/";
+        string user_db = "Server=tcp:cs134-2p.database.windows.net,1433;Initial Catalog=user_db;Persist Security Info=False;User ID=admin-stud;Password=Mcl.edu123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        string food_db = "Server=tcp:cs134-2p.database.windows.net,1433;Initial Catalog=food_db;Persist Security Info=False;User ID=admin-stud;Password=Mcl.edu123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         //Http Response
         HttpWebResponse response;
@@ -64,6 +67,69 @@ namespace App1
             JsonElement root = doc.RootElement.Clone();
             request.Abort();
             return root;
+        }
+        public string UpdateStatusAzure(string query)
+        {
+            string connectionString = "";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return $"Rows affected: {rowsAffected}";
+                }
+                catch (Exception ex)
+                {
+                    return $"Error: {ex.Message}";
+                }
+            }
+        }
+
+        public string InsertDataAzure(string query)
+        {
+            string connectionString = "";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return $"Rows affected: {rowsAffected}";
+                }
+                catch (Exception ex)
+                {
+                    return $"Error: {ex.Message}";
+                }
+            }
+        }
+
+        public DataTable RetrieveDataAzure(string query)
+        {
+            string connectionString = "";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception (log it, rethrow it, or return a specific error message)
+                    return null; // Return null or handle the exception as needed
+                }
+
+                return dataTable;
+            }
         }
     }
 }

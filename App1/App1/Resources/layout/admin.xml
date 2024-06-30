@@ -29,11 +29,11 @@
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="580dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_margin ="5dp"
         android:layout_gravity="center"
-        android:background="#F7F6BB">
+        android:background="@drawable/layout_bg">
 
 
         <!-- Food Name -->
@@ -168,15 +168,22 @@
             android:inputType="numberDecimal"
             android:hint="Enter cholesterol" />
 
+         <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
         <!-- Submit Button -->
         <Button
             android:id="@+id/submit_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
             android:backgroundTint="#114232"
             android:layout_margin="10dp"
             android:text="Submit" />
+        </LinearLayout>
 
     </LinearLayout>
 

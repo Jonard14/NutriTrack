@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4ImAHQHZlpo=",
+  "dgSpecHash": "ZiW/zaXCLKg=",
   "success": true,
   "projectFilePath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\norys\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.0-preview.1.24080.9\\microsoft.bcl.asyncinterfaces.9.0.0-preview.1.24080.9.nupkg.sha512",
     "C:\\Users\\norys\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\norys\\.nuget\\packages\\system.data.oledb\\9.0.0-preview.5.24306.7\\system.data.oledb.9.0.0-preview.5.24306.7.nupkg.sha512",
+    "C:\\Users\\norys\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\norys\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\norys\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\norys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

@@ -5,7 +5,7 @@
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <ActiveDebugProfile>Pixel 5 - API 30 %28Android 11.0 - API 30%29</ActiveDebugProfile>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
-    <AndroidDesignerPreferredDevice>pixel_3</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredDevice>pixel_3a_xl</AndroidDesignerPreferredDevice>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
   </PropertyGroup>
 </Project>

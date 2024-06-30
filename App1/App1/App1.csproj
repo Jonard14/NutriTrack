@@ -129,6 +129,12 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="System.Data.OleDb">
+      <Version>9.0.0-preview.5.24306.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.8.6</Version>
+    </PackageReference>
     <PackageReference Include="System.Text.Json">
       <Version>9.0.0-preview.1.24080.9</Version>
     </PackageReference>
@@ -262,6 +268,8 @@
     <AndroidResource Include="Resources\layout\diet_display.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <Content Include="Resources\drawable-v21\Untitled design %289%29.png" />
+    <Content Include="Resources\drawable\NutriTrack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
