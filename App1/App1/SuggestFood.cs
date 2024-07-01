@@ -157,7 +157,7 @@ namespace App1
         private void addIll()
         {
             illness = new ArrayList();
-            diets= new ArrayList();
+            diets = new ArrayList();
             dietsFilts = new ArrayList();
 
             // Get food data from DB
@@ -197,8 +197,8 @@ namespace App1
                 diets.Add("Low-Fat Content");
             }
 
-            string recom = String.Join(",",diets);
-            food.Text = "Suggested diets for you: " + recom;// + illness.ToString();
+            string recom = String.Join(",", diets.ToArray());
+            food.Text = "Suggested foods for you: " + recom;// + illness.ToString();
 
         }
         private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

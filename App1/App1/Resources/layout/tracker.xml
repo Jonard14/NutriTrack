@@ -23,6 +23,11 @@
         android:background="?attr/colorPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
+     <View
+            android:layout_width="350dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"/>
+    
 
     <!-- Layout Starts Here -->
      <LinearLayout
@@ -31,7 +36,7 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/layout_bg"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
                 android:clickable="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -57,13 +62,16 @@
                     android:id="@+id/textV_NumPrev" />
 
             </LinearLayout>
+    <View
+            android:layout_width="350dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"/>
        
     <androidx.constraintlayout.widget.ConstraintLayout 
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#87A922"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -83,7 +91,7 @@
       <androidx.constraintlayout.widget.ConstraintLayout 
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:background="@drawable/layout_bg"
         android:layout_margin="5dp"
@@ -156,14 +164,17 @@
      
     </androidx.constraintlayout.widget.ConstraintLayout >
     <!-- Doughnut chart ends here -->
+              <View
+            android:layout_width="350dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"/>
 
        <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/outerContainer"
-        android:background="#87A922" >
+        android:id="@+id/outerContainer" >
 
 
         <LinearLayout
@@ -179,7 +190,7 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:id="@+id/linearLayout_INNER"
             android:fadingEdge="none"
             android:background="@drawable/layout_bg"

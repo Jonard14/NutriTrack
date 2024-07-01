@@ -25,17 +25,19 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
+    <View
+                    android:layout_width="350dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"/>
         <!-- Profile Header with Picture -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp"
+            android:padding="7dp"
             android:gravity="center_vertical"
             android:elevation="4dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
             android:background="@drawable/layout_bg">
 
             <ImageView
@@ -64,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="First Name"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
 
@@ -73,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Last Name"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
             </LinearLayout>
@@ -83,16 +85,16 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_margin ="5dp"
             app:cardElevation="4dp"
             app:cardCornerRadius="10dp"
-            android:background="#FFFFFF">
+            android:background="#114232">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:background="@drawable/layout_bg">>
 
                 <TextView
@@ -157,19 +159,39 @@
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:paddingBottom="15dp"/>
-
+                 <View
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="#000000"/>
+                  <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btn_UpdateProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Update Profile"/>
+                  </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Buttons -->
+        <!-- Buttons
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
         <Button
             android:id="@+id/btn_UpdateProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Profile"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:padding="15dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_weight="1"
+            android:text="Update Profile"/>
+        </LinearLayout> -->
 
 </LinearLayout>

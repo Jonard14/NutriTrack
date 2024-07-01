@@ -160,7 +160,12 @@ namespace App1
             string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
             string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + currentCalorieNum + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
+            string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" +"'" +email+ "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + currentCalorieNum + "'" + "," +
+                                                           "'" + SugarCount.Text + "'" + "," + "'" + Tprotein.Text + "'" + "," + "'" + Tfats.Text + "'" + "," +
+                                                           "'" + Tcholesterol + "'" + "," + "'" + Tcarbohydrates + "'" + "," + "'" +
+                                                           Tsodium + "'" + ");");
             Console.WriteLine(success);
+            Console.WriteLine(success2);
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
 

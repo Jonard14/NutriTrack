@@ -54,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
         android:backgroundTint="#114232"
         android:id="@+id/less_sugar_card"
         android:clickable="true"
@@ -66,8 +67,10 @@
                 android:background="@drawable/layout_bg">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="7dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/lesssug"/>
 
                 <LinearLayout
@@ -100,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:backgroundTint="#114232"
+        app:cardCornerRadius="10dp"
         android:id="@+id/high_prot_card"
         android:clickable="true"
         android:focusable="true">
@@ -111,8 +115,10 @@
                 android:layout_margin="1dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                     android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="7dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/highprot"/>
 
                 <LinearLayout
@@ -146,6 +152,7 @@
         android:layout_margin="5dp"
         android:backgroundTint="#114232"
         android:id="@+id/less_sod_card"
+        app:cardCornerRadius="10dp"
         android:clickable="true"
         android:focusable="true">
           <LinearLayout
@@ -156,8 +163,10 @@
                 android:layout_margin="1dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="7dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/lesssod"/>
 
                 <LinearLayout
@@ -192,6 +201,7 @@
         android:backgroundTint="#114232"
         android:id="@+id/low_carb_card"
         android:clickable="true"
+        app:cardCornerRadius="10dp"
         android:focusable="true">
           <LinearLayout
                 android:orientation="horizontal"
@@ -201,8 +211,10 @@
                 android:layout_margin="1dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="7dp"
                     android:src="@drawable/lowcarb"/>
 
                 <LinearLayout
@@ -237,6 +249,7 @@
         android:id="@+id/low_fat_card"
         android:clickable="true"
         android:backgroundTint="#114232"
+        app:cardCornerRadius="10dp"
         android:focusable="true">
            <LinearLayout
                 android:orientation="horizontal"
@@ -246,8 +259,10 @@
                 android:layout_margin="1dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="7dp"
                     android:src="@drawable/lowfat"/>
 
                 <LinearLayout
@@ -281,6 +296,7 @@
         android:layout_margin="5dp"
         android:id="@+id/less_chol_card"
         android:clickable="true"
+        app:cardCornerRadius="10dp"
         android:backgroundTint="#114232"
         android:focusable="true">
            <LinearLayout
@@ -291,8 +307,10 @@
                 android:layout_margin="1dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                   android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="7dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/lesschol"/>
 
                 <LinearLayout

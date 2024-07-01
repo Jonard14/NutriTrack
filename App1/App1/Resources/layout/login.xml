@@ -10,16 +10,14 @@
     android:background="#87A922">
 
     <Button
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:gravity="center"
         android:layout_gravity="top"
-        android:layout_margin="5dp"
+        android:layout_margin="8dp"
         android:id="@+id/btn_Home"
         android:backgroundTint="#114232"
-        android:background="@drawable/ic_arrow_back_black_24"
-        android:drawable="@drawable/buttons"
-        android:textSize="10dp" />
+        android:background="@drawable/ic_arrow_back_black_24"/>
 
 
     <LinearLayout

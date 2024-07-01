@@ -89,7 +89,7 @@ namespace App1
 
         public string InsertDataAzure(string query)
         {
-            string connectionString = "";
+            string connectionString = user_db;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);

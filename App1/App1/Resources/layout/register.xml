@@ -17,8 +17,8 @@
 
         <!-- Email, First & Last name-->
         <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:gravity="center"
             android:layout_gravity="top"
             android:id="@+id/btn_Home"
