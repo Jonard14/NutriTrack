@@ -647,13 +647,13 @@ public final class R {
 		public static final int async = 0x7f090053;
 		public static final int blocking = 0x7f09005e;
 		public static final int bottom = 0x7f09005f;
-		public static final int buttonPanel = 0x7f090073;
-		public static final int checkbox = 0x7f090086;
-		public static final int chronometer = 0x7f090089;
-		public static final int content = 0x7f090096;
-		public static final int contentPanel = 0x7f090097;
-		public static final int custom = 0x7f09009f;
-		public static final int customPanel = 0x7f0900a0;
+		public static final int buttonPanel = 0x7f090072;
+		public static final int checkbox = 0x7f090085;
+		public static final int chronometer = 0x7f090088;
+		public static final int content = 0x7f090095;
+		public static final int contentPanel = 0x7f090096;
+		public static final int custom = 0x7f09009e;
+		public static final int customPanel = 0x7f09009f;
 		public static final int decor_content_parent = 0x7f0900a5;
 		public static final int default_activity_button = 0x7f0900a6;
 		public static final int dialog_button = 0x7f0900ae;
@@ -742,10 +742,10 @@ public final class R {
 		public static final int transition_position = 0x7f090249;
 		public static final int transition_scene_layoutid_cache = 0x7f09024a;
 		public static final int transition_transform = 0x7f09024b;
-		public static final int uniform = 0x7f090269;
-		public static final int up = 0x7f09026b;
-		public static final int visible_removing_fragment_view_tag = 0x7f090275;
-		public static final int wrap_content = 0x7f09027b;
+		public static final int uniform = 0x7f090268;
+		public static final int up = 0x7f09026a;
+		public static final int visible_removing_fragment_view_tag = 0x7f090274;
+		public static final int wrap_content = 0x7f09027a;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;

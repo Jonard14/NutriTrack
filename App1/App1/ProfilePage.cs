@@ -78,12 +78,12 @@ namespace App1
             bmiText = FindViewById<TextView>(Resource.Id.txtV_ProfileBMI);
             illnessText = FindViewById<TextView>(Resource.Id.txtV_ProfileIllness);
             updateProfileButton = FindViewById<Button>(Resource.Id.btn_UpdateProfile);
-            backToHomeButton = FindViewById<Button>(Resource.Id.btn_BackToHome);
+            //backToHomeButton = FindViewById<Button>(Resource.Id.btn_BackToHome);
 
             // Set up click events
             profilePicture.Click += ChangePictureButton_Click;
             updateProfileButton.Click += UpdateProfileButton_Click;
-            backToHomeButton.Click += BackToHomeButton_Click;
+            //backToHomeButton.Click += BackToHomeButton_Click;
 
         }
 

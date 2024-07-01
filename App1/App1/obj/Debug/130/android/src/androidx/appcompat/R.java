@@ -605,13 +605,13 @@ public final class R {
 		public static final int activity_chooser_view_content = 0x7f090046;
 		public static final int add = 0x7f090047;
 		public static final int alertTitle = 0x7f090048;
-		public static final int buttonPanel = 0x7f090073;
-		public static final int checkbox = 0x7f090086;
-		public static final int checked = 0x7f090087;
-		public static final int content = 0x7f090096;
-		public static final int contentPanel = 0x7f090097;
-		public static final int custom = 0x7f09009f;
-		public static final int customPanel = 0x7f0900a0;
+		public static final int buttonPanel = 0x7f090072;
+		public static final int checkbox = 0x7f090085;
+		public static final int checked = 0x7f090086;
+		public static final int content = 0x7f090095;
+		public static final int contentPanel = 0x7f090096;
+		public static final int custom = 0x7f09009e;
+		public static final int customPanel = 0x7f09009f;
 		public static final int decor_content_parent = 0x7f0900a5;
 		public static final int default_activity_button = 0x7f0900a6;
 		public static final int edit_query = 0x7f0900c6;
@@ -663,10 +663,10 @@ public final class R {
 		public static final int titleDividerNoCustom = 0x7f09023d;
 		public static final int title_template = 0x7f09023e;
 		public static final int topPanel = 0x7f090242;
-		public static final int unchecked = 0x7f090268;
-		public static final int uniform = 0x7f090269;
-		public static final int up = 0x7f09026b;
-		public static final int wrap_content = 0x7f09027b;
+		public static final int unchecked = 0x7f090267;
+		public static final int uniform = 0x7f090268;
+		public static final int up = 0x7f09026a;
+		public static final int wrap_content = 0x7f09027a;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;

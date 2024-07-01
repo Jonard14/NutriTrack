@@ -122,8 +122,8 @@ namespace App1
             {
                 PrevCalorie.Text = CalorieNum.ToString();
                 SugarCount.Text = total_sugar.ToString();
-                CurrentCalorie.Text = currentCalorieNum.ToString();
-                TotalCalorieNum.Text = TotalCalorie.ToString();
+                //CurrentCalorie.Text = currentCalorieNum.ToString();
+                //TotalCalorieNum.Text = TotalCalorie.ToString();
                 Tprotein.Text = protein.ToString();
                 Tcholesterol.Text = cholesterol.ToString();
                 Tfats.Text = fat.ToString();
@@ -159,7 +159,7 @@ namespace App1
 
             string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
-            string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + CurrentCalorie.Text + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
+            string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + currentCalorieNum + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
             Console.WriteLine(success);
 
             Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
@@ -171,7 +171,7 @@ namespace App1
         public void resetSugarCalorie(object sender, EventArgs e)
         {
             SugarCount.Text = "0";
-            CurrentCalorie.Text = "0";
+            //CurrentCalorie.Text = "0";
             Tprotein.Text = "0";
             Tcarbohydrates.Text = "0";
             Tsodium.Text = "0";
@@ -230,7 +230,7 @@ namespace App1
             string[] birthdate_split = new string[2];
             birthdate_split = birthday.Split('-'); // YYYY-MM-DD
 
-            if (Int32.Parse(birthdate_split[1]) < DateTime.Now.Month || 
+            if (Int32.Parse(birthdate_split[1]) < DateTime.Now.Month ||
                 (Int32.Parse(birthdate_split[1]) == DateTime.Now.Month && Int32.Parse(birthdate_split[2]) < DateTime.Now.Day))
                 return (DateTime.Now.Year - Int32.Parse(birthdate_split[0])) - 1;
             return DateTime.Now.Year - Int32.Parse(birthdate_split[0]);
@@ -247,13 +247,13 @@ namespace App1
             if (gender == "M")
             {
                 recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-                recommendNum.Text = recommendCalorie.ToString();
+                //recommendNum.Text = recommendCalorie.ToString();
 
             }
             else if (gender == "F")
             {
                 recommendCalorie = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-                recommendNum.Text = recommendCalorie.ToString();
+                //recommendNum.Text = recommendCalorie.ToString();
             }
             //Update chart
             numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
