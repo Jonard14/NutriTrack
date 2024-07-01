@@ -4,6 +4,7 @@ Xamarin.AndroidX.Annotation.Experimental.dll
 Xamarin.AndroidX.Annotation.Jvm.dll
 Xamarin.AndroidX.AppCompat.AppCompatResources.dll
 Xamarin.AndroidX.AppCompat.dll
+Xamarin.AndroidX.AppCompat.Resources.dll
 Xamarin.AndroidX.Arch.Core.Common.dll
 Xamarin.AndroidX.Arch.Core.Runtime.dll
 Xamarin.AndroidX.Browser.dll
@@ -99,4 +100,3 @@ androidx.constraintlayout.constraintlayout.aar
 androidx.cardview.cardview.aar
 com.google.android.material.material.aar
 androidx.browser.browser.aar
-Xamarin.AndroidX.AppCompat.Resources.dll

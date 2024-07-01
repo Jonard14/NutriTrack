@@ -482,10 +482,10 @@
           "buildTransitive/monoandroid9.0/Xamarin.AndroidX.Browser.targets": {}
         }
       },
-      "Xamarin.AndroidX.CardView/1.0.0.19": {
+      "Xamarin.AndroidX.CardView/1.0.0.25": {
         "type": "package",
         "dependencies": {
-          "Xamarin.AndroidX.Annotation": "1.6.0.1"
+          "Xamarin.AndroidX.Annotation": "1.7.1.1"
         },
         "frameworkAssemblies": [
           "Java.Interop",
@@ -2796,10 +2796,10 @@
         "xamarin.androidx.browser.nuspec"
       ]
     },
-    "Xamarin.AndroidX.CardView/1.0.0.19": {
-      "sha512": "SDjinyb+6580qMyhLLBA/UogjFGaA+pKOu82OiM5nOj9VWGnEFm6zelRbq9785ePVaDMoHz207NS1T4LyReJUw==",
+    "Xamarin.AndroidX.CardView/1.0.0.25": {
+      "sha512": "5TnvOGxT70UQm/4ukuTGfXPnEmjojovzSaDoDOBhdTfS0H4cMJ4/at0QzmiByeMsEuvDmRgjI8sdzv/fctYinw==",
       "type": "package",
-      "path": "xamarin.androidx.cardview/1.0.0.19",
+      "path": "xamarin.androidx.cardview/1.0.0.25",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2808,8 +2808,10 @@
         "aar/androidx.cardview.cardview.aar",
         "build/monoandroid12.0/Xamarin.AndroidX.CardView.targets",
         "build/net6.0-android31.0/Xamarin.AndroidX.CardView.targets",
+        "build/net7.0-android33.0/Xamarin.AndroidX.CardView.targets",
         "buildTransitive/monoandroid12.0/Xamarin.AndroidX.CardView.targets",
         "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.CardView.targets",
+        "buildTransitive/net7.0-android33.0/Xamarin.AndroidX.CardView.targets",
         "icon.png",
         "lib/monoandroid12.0/Xamarin.AndroidX.CardView.dll",
         "lib/monoandroid12.0/Xamarin.AndroidX.CardView.pdb",
@@ -2817,7 +2819,11 @@
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.dll",
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.pdb",
         "lib/net6.0-android31.0/Xamarin.AndroidX.CardView.xml",
-        "xamarin.androidx.cardview.1.0.0.19.nupkg.sha512",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.dll",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.pdb",
+        "lib/net7.0-android33.0/Xamarin.AndroidX.CardView.xml",
+        "readme.md",
+        "xamarin.androidx.cardview.1.0.0.25.nupkg.sha512",
         "xamarin.androidx.cardview.nuspec"
       ]
     },
@@ -4411,30 +4417,30 @@
       "System.Threading.Tasks.Extensions >= 4.5.4",
       "Xamarin.AndroidX.AppCompat.AppCompatResources >= 1.6.1.8",
       "Xamarin.AndroidX.AppCompat.Resources >= 1.1.0.3",
-      "Xamarin.AndroidX.CardView >= 1.0.0.19",
+      "Xamarin.AndroidX.CardView >= 1.0.0.25",
       "Xamarin.Essentials >= 1.8.1",
       "Xamarin.Google.Android.Material >= 1.10.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\norys\\.nuget\\packages\\": {},
+    "C:\\Users\\Acer\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\norys\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-1P-Thesis\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\norys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4449,11 +4455,6 @@
         "monoandroid13.0": {
           "projectReferences": {}
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4485,7 +4486,7 @@
           },
           "Xamarin.AndroidX.CardView": {
             "target": "Package",
-            "version": "[1.0.0.19, )"
+            "version": "[1.0.0.25, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -4498,17 +4499,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.AndroidX.CardView from 1.0.0.25 to 1.0.0.19. Reference the package directly from the project to select a different version. \r\n App1 -> Xamarin.Google.Android.Material 1.10.0.3 -> Xamarin.AndroidX.CardView (>= 1.0.0.25) \r\n App1 -> Xamarin.AndroidX.CardView (>= 1.0.0.19)",
-      "libraryId": "Xamarin.AndroidX.CardView",
-      "targetGraphs": [
-        "MonoAndroid,Version=v13.0"
-      ]
-    }
-  ]
+  }
 }

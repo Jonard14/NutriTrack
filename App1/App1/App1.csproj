@@ -149,7 +149,7 @@
       <Version>1.1.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.CardView">
-      <Version>1.0.0.19</Version>
+      <Version>1.0.0.25</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
@@ -289,7 +289,7 @@
     <AndroidResource Include="Resources\layout\diet_display.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-v21\Untitled design %289%29.png">
+    <AndroidResource Include="Resources\drawable-v21\Untitleddesign.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\NutriTrack.png">
