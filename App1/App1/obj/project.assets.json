@@ -4423,24 +4423,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {},
+    "C:\\Users\\Win10\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\App1.csproj",
       "projectName": "App1",
-      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\App1.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CS134-Thesis3\\App1\\App1\\obj\\",
+      "projectPath": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Win10\\Desktop\\CS134-Thesis\\App1\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4455,6 +4455,11 @@
         "monoandroid13.0": {
           "projectReferences": {}
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4464,9 +4469,21 @@
             "target": "Package",
             "version": "[9.0.0-preview.5.24306.7, )"
           },
+          "System.Data.OleDb": {
+            "target": "Package",
+            "version": "[9.0.0-preview.5.24306.7, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.6, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.6, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[9.0.0-preview.5.24306.7, )"
           },
           "System.Text.Json": {
             "target": "Package",
@@ -4476,9 +4493,21 @@
             "target": "Package",
             "version": "[4.5.4, )"
           },
+          "System.Threading.Tasks.Extensions": {
+            "target": "Package",
+            "version": "[4.5.4, )"
+          },
           "Xamarin.AndroidX.AppCompat.AppCompatResources": {
             "target": "Package",
             "version": "[1.6.1.8, )"
+          },
+          "Xamarin.AndroidX.AppCompat.AppCompatResources": {
+            "target": "Package",
+            "version": "[1.6.1.8, )"
+          },
+          "Xamarin.AndroidX.AppCompat.Resources": {
+            "target": "Package",
+            "version": "[1.1.0.3, )"
           },
           "Xamarin.AndroidX.AppCompat.Resources": {
             "target": "Package",
@@ -4488,9 +4517,21 @@
             "target": "Package",
             "version": "[1.0.0.25, )"
           },
+          "Xamarin.AndroidX.CardView": {
+            "target": "Package",
+            "version": "[1.0.0.25, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.8.1, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.8.1, )"
+          },
+          "Xamarin.Google.Android.Material": {
+            "target": "Package",
+            "version": "[1.10.0.3, )"
           },
           "Xamarin.Google.Android.Material": {
             "target": "Package",

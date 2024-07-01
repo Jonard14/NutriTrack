@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#87A922">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:background="@drawable/nutritrack">
 
         <!-- Profile Header with Picture -->
         <LinearLayout
@@ -22,7 +21,8 @@
             android:gravity="center_vertical"
             android:elevation="4dp"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:background="@drawable/layout_bg">
 
             <ImageView
                 android:id="@+id/img_ProfilePicture"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="First Name"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
 
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Last Name"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
             </LinearLayout>
@@ -78,7 +78,8 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:background="@drawable/layout_bg">>
 
                 <TextView
                     android:id="@+id/txtV_ProfileEmail"
@@ -87,7 +88,7 @@
                     android:text="Email:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileBirthday"
@@ -96,7 +97,7 @@
                     android:text="Birthday:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileGender"
@@ -105,7 +106,7 @@
                     android:text="Gender:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileHeight"
@@ -114,7 +115,7 @@
                     android:text="Height:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileWeight"
@@ -123,7 +124,7 @@
                     android:text="Weight:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileBMI"
@@ -132,7 +133,7 @@
                     android:text="BMI:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
                 <TextView
                     android:id="@+id/txtV_ProfileIllness"
@@ -141,7 +142,7 @@
                     android:text="Illness:"
                     android:textStyle="bold"
                     android:textColor="#000000"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="15dp"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -152,16 +153,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update Profile"
-            android:padding="16dp"
-            android:layout_marginTop="5dp"/>
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"/>
 
-        <Button
-            android:id="@+id/btn_BackToHome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Back to Home"
-            android:padding="16dp"
-            android:layout_marginTop="5dp"/>
-        
     </LinearLayout>
 </ScrollView>
