@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\verifyemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\verifyemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\changepass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\changepass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\changepass.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\changepass.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\verifyemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\verifyemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\verifyemail.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\suggest.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\suggest.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
-      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\login.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +46,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Login.cs",
+              "RelativeDocumentMoniker": "App1\\Login.cs",
+              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Login.cs",
+              "RelativeToolTip": "App1\\Login.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAJoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T07:05:49.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "login.xml",
+              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\login.xml",
+              "RelativeDocumentMoniker": "App1\\Resources\\layout\\login.xml",
+              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\login.xml",
+              "RelativeToolTip": "App1\\Resources\\layout\\login.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-07-01T19:10:48.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "changepass.xml",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\changepass.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\changepass.xml",
@@ -57,20 +86,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "changePass.cs",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\changePass.cs",
               "RelativeDocumentMoniker": "App1\\changePass.cs",
               "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\changePass.cs",
               "RelativeToolTip": "App1\\changePass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAABAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwDgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T05:45:58.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "verifyemail.xml",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\verifyemail.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\verifyemail.xml",
@@ -87,13 +116,14 @@
               "RelativeDocumentMoniker": "App1\\verifyEmail.cs",
               "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\verifyEmail.cs",
               "RelativeToolTip": "App1\\verifyEmail.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAAwEYAAAABAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwEYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T05:44:33.915Z"
+              "WhenOpened": "2024-07-02T05:44:33.915Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Tracker.cs",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Tracker.cs",
               "RelativeDocumentMoniker": "App1\\Tracker.cs",
@@ -105,18 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "login.xml",
-              "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\login.xml",
-              "RelativeDocumentMoniker": "App1\\Resources\\layout\\login.xml",
-              "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\login.xml",
-              "RelativeToolTip": "App1\\Resources\\layout\\login.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-07-01T19:10:48.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "suggest.xml",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\Resources\\layout\\suggest.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\suggest.xml",
@@ -127,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DBClass.cs",
               "DocumentMoniker": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\DBClass.cs",
               "RelativeDocumentMoniker": "App1\\DBClass.cs",

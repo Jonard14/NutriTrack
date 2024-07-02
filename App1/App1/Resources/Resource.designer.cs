@@ -11395,6 +11395,9 @@ namespace App1
 			// aapt resource value: 0x7F090253
 			public const int txtV_FirstName = 2131296851;
 			
+			// aapt resource value: 0x7F09026B
+			public const int txtv_Forgotpass = 2131296875;
+			
 			// aapt resource value: 0x7F090269
 			public const int txtV_gender = 2131296873;
 			
@@ -11461,74 +11464,74 @@ namespace App1
 			// aapt resource value: 0x7F090267
 			public const int txtV_Weight = 2131296871;
 			
-			// aapt resource value: 0x7F09026B
-			public const int @unchecked = 2131296875;
-			
 			// aapt resource value: 0x7F09026C
-			public const int uniform = 2131296876;
+			public const int @unchecked = 2131296876;
 			
 			// aapt resource value: 0x7F09026D
-			public const int unlabeled = 2131296877;
+			public const int uniform = 2131296877;
 			
 			// aapt resource value: 0x7F09026E
-			public const int up = 2131296878;
+			public const int unlabeled = 2131296878;
 			
 			// aapt resource value: 0x7F09026F
-			public const int useLogo = 2131296879;
+			public const int up = 2131296879;
 			
 			// aapt resource value: 0x7F090270
-			public const int vertical_only = 2131296880;
+			public const int useLogo = 2131296880;
 			
 			// aapt resource value: 0x7F090271
-			public const int view_offset_helper = 2131296881;
+			public const int vertical_only = 2131296881;
 			
 			// aapt resource value: 0x7F090272
-			public const int view_transition = 2131296882;
+			public const int view_offset_helper = 2131296882;
 			
 			// aapt resource value: 0x7F090273
-			public const int view_tree_lifecycle_owner = 2131296883;
+			public const int view_transition = 2131296883;
 			
 			// aapt resource value: 0x7F090274
-			public const int view_tree_on_back_pressed_dispatcher_owner = 2131296884;
+			public const int view_tree_lifecycle_owner = 2131296884;
 			
 			// aapt resource value: 0x7F090275
-			public const int view_tree_saved_state_registry_owner = 2131296885;
+			public const int view_tree_on_back_pressed_dispatcher_owner = 2131296885;
 			
 			// aapt resource value: 0x7F090276
-			public const int view_tree_view_model_store_owner = 2131296886;
+			public const int view_tree_saved_state_registry_owner = 2131296886;
 			
 			// aapt resource value: 0x7F090277
-			public const int visible = 2131296887;
+			public const int view_tree_view_model_store_owner = 2131296887;
 			
 			// aapt resource value: 0x7F090278
-			public const int visible_removing_fragment_view_tag = 2131296888;
+			public const int visible = 2131296888;
 			
 			// aapt resource value: 0x7F090279
-			public const int west = 2131296889;
-			
-			// aapt resource value: 0x7F09027C
-			public const int withinBounds = 2131296892;
+			public const int visible_removing_fragment_view_tag = 2131296889;
 			
 			// aapt resource value: 0x7F09027A
-			public const int withText = 2131296890;
-			
-			// aapt resource value: 0x7F09027B
-			public const int with_icon = 2131296891;
+			public const int west = 2131296890;
 			
 			// aapt resource value: 0x7F09027D
-			public const int wrap = 2131296893;
+			public const int withinBounds = 2131296893;
+			
+			// aapt resource value: 0x7F09027B
+			public const int withText = 2131296891;
+			
+			// aapt resource value: 0x7F09027C
+			public const int with_icon = 2131296892;
 			
 			// aapt resource value: 0x7F09027E
-			public const int wrap_content = 2131296894;
+			public const int wrap = 2131296894;
 			
 			// aapt resource value: 0x7F09027F
-			public const int wrap_content_constrained = 2131296895;
+			public const int wrap_content = 2131296895;
 			
 			// aapt resource value: 0x7F090280
-			public const int x_left = 2131296896;
+			public const int wrap_content_constrained = 2131296896;
 			
 			// aapt resource value: 0x7F090281
-			public const int x_right = 2131296897;
+			public const int x_left = 2131296897;
+			
+			// aapt resource value: 0x7F090282
+			public const int x_right = 2131296898;
 			
 			static Id()
 			{

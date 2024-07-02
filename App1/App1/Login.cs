@@ -22,7 +22,7 @@ namespace App1
     {
         EditText email, password;
         Button login, home;
-        TextView register;
+        TextView register, forgotpass;
         DBClass db = new DBClass();
         JsonElement root;
         string searchemail;
@@ -48,6 +48,10 @@ namespace App1
             register = FindViewById<TextView>(Resource.Id.txtV_RegisterLink);
             register.PaintFlags = PaintFlags.UnderlineText;
             register.Click += RegisterLink;
+
+            forgotpass = FindViewById<TextView>(Resource.Id.txtv_Forgotpass);
+            forgotpass.PaintFlags = PaintFlags.UnderlineText;
+            forgotpass.Click += forgotPassLink;
 
         }
 
@@ -108,6 +112,12 @@ namespace App1
         public void RegisterLink(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(Register));
+            StartActivity(i);
+        }
+
+        public void forgotPassLink(object sender, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(verifyEmail));
             StartActivity(i);
         }
 
