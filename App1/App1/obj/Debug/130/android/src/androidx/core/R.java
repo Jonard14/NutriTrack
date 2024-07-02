@@ -160,14 +160,14 @@ public final class R {
 	}
 	public static final class layout {
 		public static final int custom_dialog = 0x7f0c0023;
-		public static final int ime_base_split_test_activity = 0x7f0c0038;
-		public static final int ime_secondary_split_test_activity = 0x7f0c0039;
-		public static final int notification_action = 0x7f0c0071;
-		public static final int notification_action_tombstone = 0x7f0c0072;
-		public static final int notification_template_custom_big = 0x7f0c0073;
-		public static final int notification_template_icon_group = 0x7f0c0074;
-		public static final int notification_template_part_chronometer = 0x7f0c0075;
-		public static final int notification_template_part_time = 0x7f0c0076;
+		public static final int ime_base_split_test_activity = 0x7f0c0037;
+		public static final int ime_secondary_split_test_activity = 0x7f0c0038;
+		public static final int notification_action = 0x7f0c0070;
+		public static final int notification_action_tombstone = 0x7f0c0071;
+		public static final int notification_template_custom_big = 0x7f0c0072;
+		public static final int notification_template_icon_group = 0x7f0c0073;
+		public static final int notification_template_part_chronometer = 0x7f0c0074;
+		public static final int notification_template_part_time = 0x7f0c0075;
 	}
 	public static final class string {
 		public static final int call_notification_answer_action = 0x7f110025;

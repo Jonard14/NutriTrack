@@ -74,72 +74,42 @@ namespace App1
             lessug.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Sugar";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Sugar");
             };
 
             hiprot = FindViewById<CardView>(Resource.Id.high_prot_card);
             hiprot.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Protein";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Protein");
             };
 
             lessod = FindViewById<CardView>(Resource.Id.less_sod_card);
             lessod.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Sodium";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Sodium");
             };
 
             locarb = FindViewById<CardView>(Resource.Id.low_carb_card);
             locarb.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Carbohydrates";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Carbohydrates");
             };
 
             lofat = FindViewById<CardView>(Resource.Id.low_fat_card);
             lofat.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Fat";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Fat");
             };
 
             zerchol = FindViewById<CardView>(Resource.Id.less_chol_card);
             zerchol.Click += (s, e) =>
             {
                 // Handle Less Sugar card click
-                string d = "Cholesterol";
-                Intent i = new Intent(this, typeof(DietDisplay));
-
-                i.PutExtra("SelectedDiet", d);
-                i.PutExtra("ActivityPage", "SuggestFood");
-                StartActivity(i);
+                ToDietDisplayPage("Cholesterol");
             };
 
             addIll();
@@ -149,9 +119,15 @@ namespace App1
             //lv2.Adapter = _adapter2;
 
             //lv2.ItemClick += lv2_ItemClick;
+        }
 
+        private void ToDietDisplayPage(string diet)
+        {
+            Intent i = new Intent(this, typeof(DietDisplay));
 
-
+            i.PutExtra("SelectedDiet", diet);
+            i.PutExtra("ActivityPage", "SuggestFood");
+            StartActivity(i);
         }
 
         private void addIll()

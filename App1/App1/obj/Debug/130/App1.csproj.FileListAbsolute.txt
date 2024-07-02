@@ -2687,7 +2687,6 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\t
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\displaypage.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\homepage_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\tracker_drawer.xml
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\displaypage_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\suggest.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\suggest_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\uploadflags.txt
@@ -4141,3 +4140,4 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Logs.java
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\menu\admin_drawer.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\logo2.jpg

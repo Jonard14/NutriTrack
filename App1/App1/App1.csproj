@@ -187,9 +187,6 @@
     <AndroidResource Include="Resources\layout\tracker_drawer.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\displaypage_drawer.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\suggest.xml" />
   </ItemGroup>
   <ItemGroup>

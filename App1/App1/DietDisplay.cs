@@ -26,7 +26,7 @@ using System.Text.Json;
 namespace App1
 {
     [Activity(Label = "DietDisplay", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class DietDisplay : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    public class DietDisplay : AppCompatActivity//, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
@@ -48,14 +48,14 @@ namespace App1
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.diet_display);
 
-
+            /*
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             //fab.Click += FabOnClick;
-
+            
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
             drawer.AddDrawerListener(toggle);
@@ -63,6 +63,7 @@ namespace App1
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+            */
 
             // Create your application here
             btn1 = FindViewById<Button>(Resource.Id.btn1);
@@ -154,6 +155,7 @@ namespace App1
 
             i.PutExtra("SelectedFood", selectedFood);
             i.PutExtra("ActivityPage", "DietDisplay");
+            i.PutExtra("SelectedDiet", selectedDiet);
             StartActivity(i);
         }
         private void addFood()
@@ -219,7 +221,7 @@ namespace App1
 
             }
         }
-
+        /*
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
         {
@@ -270,5 +272,6 @@ namespace App1
             return true;
         }
         // ============ built-in template functions for drawer (code ends here) =======================
+        */
     }
 }

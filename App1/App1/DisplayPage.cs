@@ -20,7 +20,7 @@ using System.Text.Json;
 namespace App1
 {
     [Activity(Label = "DisplayPage", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class DisplayPage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    public class DisplayPage : AppCompatActivity//, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
@@ -49,8 +49,9 @@ namespace App1
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.displaypage_drawer);
+            SetContentView(Resource.Layout.displaypage);
 
+            /*
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -65,6 +66,7 @@ namespace App1
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+            */
 
 
             // Create your application here
@@ -121,6 +123,7 @@ namespace App1
             else if (Intent.GetStringExtra("ActivityPage") == "DietDisplay")
             {
                 Intent i = new Intent(this, typeof(DietDisplay));
+                i.PutExtra("SelectedDiet", Intent.GetStringExtra("SelectedDiet"));
                 StartActivity(i);
             }
         }
@@ -348,7 +351,7 @@ namespace App1
             return DateTime.Now.Year - Int32.Parse(birthdate_split[0]);
         }
 
-
+        /*
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
         {
@@ -399,5 +402,6 @@ namespace App1
             return true;
         }
         // ============ built-in template functions for drawer (code ends here) =======================
+        */
     }
 }
