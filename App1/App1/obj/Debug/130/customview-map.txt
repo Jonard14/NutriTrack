@@ -13,7 +13,6 @@ androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\track
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_drawer.xml
-androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\displaypage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\logs_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\profile_page_drawer.xml
@@ -45,7 +44,6 @@ com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\tracker
 com.google.android.material.floatingactionbutton.FloatingActionButton;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\activity_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\admin_drawer.xml
-com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\displaypage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\logs_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\profile_page_drawer.xml
@@ -79,7 +77,6 @@ ImageView;obj\Debug\130\res\layout\suggest.xml
 include;obj\Debug\130\res\layout\activity_main.xml
 include;obj\Debug\130\res\layout\admin_drawer.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
-include;obj\Debug\130\res\layout\displaypage_drawer.xml
 include;obj\Debug\130\res\layout\homepage_drawer.xml
 include;obj\Debug\130\res\layout\logs_drawer.xml
 include;obj\Debug\130\res\layout\profile_page_drawer.xml

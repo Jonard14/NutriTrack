@@ -17,24 +17,34 @@ using static Android.Provider.DocumentsContract;
 
 namespace App1
 {
-    [Activity(Label = "verifyEmail")]
+    [Activity(Label = "verifyEmail", ScreenOrientation = ScreenOrientation.Portrait)]
     public class verifyEmail : Activity
     {
         EditText email;
-        Button verify;
+        Button verify, back;
         JsonElement root;
         DBClass db = new DBClass();
         string searchemail;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.verifyemail);
+
+            // Create your application 
+            back = FindViewById<Button>(Resource.Id.btn_Back);
+            back.Click += Back_Click;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_email);
             verify = FindViewById<Button>(Resource.Id.btn_verify);
 
             verify.Click += emailverify;
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(Login));
+            StartActivity(i);
         }
 
         public void emailverify(object sender, EventArgs e)
@@ -55,7 +65,7 @@ namespace App1
 
         public bool verification()
         {
-            root = db.RetrieveData("search_accountlogin.php?email=" + email.Text);
+            root = db.RetrieveData("search_accountforgot.php?email=" + email.Text);
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {

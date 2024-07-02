@@ -1,6 +1,9 @@
 App1.AdminPage, App1;crc64a7a6b04b89628087.AdminPage
 App1.AdminPage;crc64a7a6b04b89628087.AdminPage
 app1.AdminPage;crc64a7a6b04b89628087.AdminPage
+App1.changePass, App1;crc64a7a6b04b89628087.changePass
+App1.changePass;crc64a7a6b04b89628087.changePass
+app1.changePass;crc64a7a6b04b89628087.changePass
 App1.DietDisplay, App1;crc64a7a6b04b89628087.DietDisplay
 App1.DietDisplay;crc64a7a6b04b89628087.DietDisplay
 app1.DietDisplay;crc64a7a6b04b89628087.DietDisplay
@@ -31,6 +34,9 @@ app1.SuggestFood;crc64a7a6b04b89628087.SuggestFood
 App1.Tracker, App1;crc64a7a6b04b89628087.Tracker
 App1.Tracker;crc64a7a6b04b89628087.Tracker
 app1.Tracker;crc64a7a6b04b89628087.Tracker
+App1.verifyEmail, App1;crc64a7a6b04b89628087.verifyEmail
+App1.verifyEmail;crc64a7a6b04b89628087.verifyEmail
+app1.verifyEmail;crc64a7a6b04b89628087.verifyEmail
 AndroidX.Activity.BackEventCompat+ISwipeEdge, Xamarin.AndroidX.Activity;androidx.activity.BackEventCompat$SwipeEdge
 AndroidX.Activity.BackEventCompat.ISwipeEdge;androidx.activity.BackEventCompat$SwipeEdge
 androidx.activity.BackEventCompat$SwipeEdge;androidx.activity.BackEventCompat$SwipeEdge

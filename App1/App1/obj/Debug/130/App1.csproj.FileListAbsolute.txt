@@ -2719,13 +2719,9 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\asse
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.IO.Compression.FileSystem.pdb
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.IO.Compression.pdb
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Json.dll
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Json.pdb
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Memory.dll
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Net.dll
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Net.Http.dll
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Net.Http.pdb
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Net.pdb
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Numerics.dll
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Numerics.pdb
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\System.Numerics.Vectors.dll
@@ -4141,3 +4137,7 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\menu\admin_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\logo2.jpg
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\verifyemail.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\changepass.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\changePass.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\verifyEmail.java

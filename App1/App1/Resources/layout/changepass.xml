@@ -15,7 +15,7 @@
         android:gravity="center"
         android:layout_gravity="top"
         android:layout_margin="8dp"
-        android:id="@+id/btn_Home"
+        android:id="@+id/btn_Back"
         android:backgroundTint="#114232"
         android:background="@drawable/ic_arrow_back_black_24"/>
 
@@ -71,9 +71,8 @@
             android:layout_gravity="center"
             android:hint="Confirm Password"
             android:id="@+id/edtTxt_confirmpass"
-            android:background="@drawable/login_inputbox_top"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp" />
+            android:background="@drawable/login_inputbox_bottom"
+            android:textStyle="bold" />
         <Button
             android:text="Change Password"
             android:layout_width="650px"
