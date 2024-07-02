@@ -481,7 +481,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_saveCalorie"
-                android:layout_weight="1"
                 android:backgroundTint="#114232"/>
 
             <Button
@@ -489,7 +488,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnn_resetSugar"
-                android:layout_weight="1"
                 android:backgroundTint="#114232"/>
             </LinearLayout>
         </LinearLayout>

@@ -11,6 +11,7 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.View;
 using AndroidX.DrawerLayout.Widget;
+using AndroidX.Loader.Content;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Navigation;
 using Google.Android.Material.Snackbar;
@@ -20,6 +21,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using static Android.Graphics.Paint;
+using static Java.Text.Normalizer;
 
 namespace App1
 {
@@ -91,7 +94,8 @@ namespace App1
             foods = new ArrayList();
 
             // Get food data from DB
-            root = db.RetrieveData("search_fooddata.php?");
+            //root = db.RetrieveData("search_fooddata.php?");
+            root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];

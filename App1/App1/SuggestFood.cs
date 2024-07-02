@@ -113,7 +113,7 @@ namespace App1
             };
 
             addIll();
-            addFood();
+            //addFood();
 
             //_adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
             //lv2.Adapter = _adapter2;
@@ -137,7 +137,7 @@ namespace App1
             dietsFilts = new ArrayList();
 
             // Get food data from DB
-            root = db.RetrieveData("search_user_illness.php?");
+            /*root = db.RetrieveData("search_user_illness.php?");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
 
@@ -146,38 +146,49 @@ namespace App1
                 {
                     illness.Add(u1.GetProperty("types").ToString());
                 }
-            }
+            }*/
 
-            //Recommended Diets
-            if (illness.Contains("Heart Disease"))
+            root = db.RetrieveDataAzure("SELECT * FROM illnesses;", null, "user_db");
+            for (int i = 0; i < root.GetArrayLength(); i++)
             {
-                diets.Add("Less Sugar");
-                diets.Add("Zero Cholesterol");
-                diets.Add("Less Sodium");
-            }
-            else if (illness.Contains("Diabetes"))
-            {
-                diets.Add("Less Sugar");
-                diets.Add("Zero Cholesterol");
-            }
-            else if (illness.Contains("Cancer"))
-            {
-                diets.Add("Zero Cholesterol");
-                diets.Add("Less Sodium");
-            }
 
-            else
-            {
-                diets.Add("Low Carb");
-                diets.Add("High Protein");
-                diets.Add("Low-Fat Content");
+                var u1 = root[i];
+                if (email == u1.GetProperty("email").ToString())
+                {
+                    illness.Add(u1.GetProperty("types").ToString());
+                }
+
+                //Recommended Diets
+                if (illness.Contains("Heart Disease"))
+                {
+                    diets.Add("Less Sugar");
+                    diets.Add("Zero Cholesterol");
+                    diets.Add("Less Sodium");
+                }
+                else if (illness.Contains("Diabetes"))
+                {
+                    diets.Add("Less Sugar");
+                    diets.Add("Zero Cholesterol");
+                }
+                else if (illness.Contains("Cancer"))
+                {
+                    diets.Add("Zero Cholesterol");
+                    diets.Add("Less Sodium");
+                }
+
+                else
+                {
+                    diets.Add("Low Carb");
+                    diets.Add("High Protein");
+                    diets.Add("Low-Fat Content");
+                }
+
+                string recom = String.Join(",", diets.ToArray());
+                food.Text = "Suggested foods for you: " + recom;// + illness.ToString();
+
             }
-
-            string recom = String.Join(",", diets.ToArray());
-            food.Text = "Suggested foods for you: " + recom;// + illness.ToString();
-
-        }
-        private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        
+        /*private void lv2_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string selectedFood = _adapter2.GetItem(e.Position).ToString();
             Intent i = new Intent(this, typeof(DisplayPage));
@@ -236,7 +247,7 @@ namespace App1
 
 
 
-            }
+            }*/
         }
 
         // ============ built-in template functions for drawer (code starts here) =======================

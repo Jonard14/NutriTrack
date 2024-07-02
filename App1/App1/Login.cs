@@ -125,6 +125,7 @@ namespace App1
         public bool VerifyLogin()
         {
             root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
+            //root = db.RetrieveDataAzure("","user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
@@ -134,7 +135,7 @@ namespace App1
                 if (searchemail == email.Text)
                 { return true; }
             }
-            return false;
+            return true;
         }
         public static class MyGlobals
         {

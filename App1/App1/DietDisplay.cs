@@ -12,6 +12,7 @@ using AndroidX.AppCompat.App;
 using AndroidX.CardView.Widget;
 using AndroidX.Core.View;
 using AndroidX.DrawerLayout.Widget;
+using AndroidX.Loader.Content;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Navigation;
 using Google.Android.Material.Snackbar;
@@ -22,6 +23,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using static Android.Graphics.Paint;
+using static Java.Text.Normalizer;
 
 namespace App1
 {
@@ -72,7 +75,6 @@ namespace App1
             dietType = FindViewById<TextView>(Resource.Id.dietType);
 
             selectedDiet = Intent.GetStringExtra("SelectedDiet");
-            dietType.Text = selectedDiet;
 
             sv.QueryTextChange += sv_QueryTextChange;
             //food = FindViewById<TextView>(Resource.Id.foods);
@@ -92,7 +94,7 @@ namespace App1
 
         }
 
-        private void addIll()
+        /*private void addIll()
         {
             illness = new ArrayList();
             diets = new ArrayList();
@@ -138,7 +140,7 @@ namespace App1
             string recom = String.Join(",", diets);
             //food.Text = "Suggested diets for you: " + recom;// + illness.ToString();
 
-        }
+        }*/
         private void sv_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             _adapter2.Filter.InvokeFilter(e.NewText);
@@ -155,7 +157,7 @@ namespace App1
 
             i.PutExtra("SelectedFood", selectedFood);
             i.PutExtra("ActivityPage", "DietDisplay");
-            i.PutExtra("SelectedDiet", selectedDiet);
+            //i.PutExtra("SelectedDiet", selectedDiet);
             StartActivity(i);
         }
         private void addFood()
@@ -163,7 +165,8 @@ namespace App1
             foods = new ArrayList();
 
             // Get food data from DB
-            root = db.RetrieveData("search_fooddata.php?");
+            //root = db.RetrieveData("search_fooddata.php?");
+            root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
@@ -181,6 +184,8 @@ namespace App1
                     if (sugar <= 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "Low sugar";
+
                     }
                 }
                 else if (selectedDiet == "Protein")
@@ -188,6 +193,7 @@ namespace App1
                     if (protein >= 15)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "High Protein";
                     }
                 }
                 else if (selectedDiet == "Sodium")
@@ -195,6 +201,7 @@ namespace App1
                     if ((sodium / 1000) < 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "Less Sodium";
                     }
                 }
                 else if (selectedDiet == "Carbohydrates")
@@ -202,6 +209,7 @@ namespace App1
                     if (carbohydrate <= 5 && carbohydrate <= 15)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "Low-Carb";
                     }
                 }
                 else if (selectedDiet == "Fat")
@@ -209,6 +217,7 @@ namespace App1
                     if (fat <= 3)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "Low-Fat Content";
                     }
                 }
                 else if (selectedDiet == "Cholesterol")
@@ -216,6 +225,7 @@ namespace App1
                     if ((cholesterol/100) < 2)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
+                        dietType.Text = "Zero Cholesterol";
                     }
                 }
 

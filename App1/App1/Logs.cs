@@ -83,7 +83,8 @@ namespace App1
             history = new ArrayList();
 
             // Get food data from DB
-            root = db.RetrieveData("search_trackerlog.php?");
+            //root = db.RetrieveData("search_trackerlog.php?");
+            root = db.RetrieveDataAzure("SELECT * FROM tracker_log  ORDER BY time_log DESC;", null, "user_db");
             try
             {
                 for (int i = 0; i < root.GetArrayLength(); i++)

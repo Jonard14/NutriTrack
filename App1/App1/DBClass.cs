@@ -14,6 +14,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.ComponentModel.Design.Serialization;
 
 namespace App1
 {
@@ -35,6 +36,7 @@ namespace App1
         HttpWebResponse response;
         HttpWebRequest request;
         string res;
+        string connectionString;
 
         public string UpdateStatus(string WebReq)
         {
@@ -68,31 +70,31 @@ namespace App1
             request.Abort();
             return root;
         }
-        public string UpdateStatusAzure(string query)
+        public string UpdateStatusAzure(string query, string conn)
         {
-            string connectionString = "";
+            connectionString = connString(conn);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 try
                 {
                     connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();   
+                    int rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
                     return $"Rows affected: {rowsAffected}";
-                 
+
                 }
                 catch (Exception ex)
                 {
                     return $"Error: {ex.Message}";
                 }
-                
+
             }
         }
 
-        public string InsertDataAzure(string query)
+        public string InsertDataAzure(string query, string conn)
         {
-            string connectionString = user_db;
+            connectionString = connString(conn);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -107,36 +109,79 @@ namespace App1
                 {
                     return $"Error: {ex.Message}";
                 }
-                
+
             }
         }
 
-        public DataTable RetrieveDataAzure(string query)
+        public JsonElement RetrieveDataAzure(string query, SqlParameter[] parameters, string conn)
         {
-            string connectionString = user_db;
+            string connectionString = connString(conn);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                DataTable dataTable = new DataTable();
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
 
+                DataTable dataTable = new DataTable();
                 try
                 {
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         dataTable.Load(reader);
-                    }connection.Close();
-                    
+                    }
+                    connection.Close();
                 }
                 catch (Exception ex)
                 {
                     // Handle exception (log it, rethrow it, or return a specific error message)
-                    return null; // Return null or handle the exception as needed
+                    Console.WriteLine($"Error: {ex.Message}");
                 }
-                
-                return dataTable;
 
+                // Convert DataTable to JSON string
+                string jsonString = DataTableToJson(dataTable);
+
+                // Parse JSON string to JsonDocument
+                using (JsonDocument doc = JsonDocument.Parse(jsonString))
+                {
+                    return doc.RootElement.Clone();
+                }
             }
+        }
+
+        private string DataTableToJson(DataTable table)
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            // Convert DataTable to a list of dictionaries
+            var rows = new List<Dictionary<string, object>>();
+            foreach (DataRow row in table.Rows)
+            {
+                var dict = new Dictionary<string, object>();
+                foreach (DataColumn col in table.Columns)
+                {
+                    dict[col.ColumnName] = row[col];
+                }
+                rows.Add(dict);
+            }
+
+            // Serialize the list to JSON
+            return JsonSerializer.Serialize(rows, options);
+        }
+
+
+        public string connString(string conn)
+        {
+            if (conn == "user_db")
+                conn = user_db;
+            else if (conn == "food_db")
+                conn = food_db;
+            return conn;
         }
     }
 }

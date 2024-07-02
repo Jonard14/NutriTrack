@@ -130,7 +130,8 @@ namespace App1
 
         private void retrieveData(string selectedFood)
         {
-            root = db.RetrieveData("search_fooddata.php?");
+            //root = db.RetrieveData("search_fooddata.php?");
+            root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
@@ -235,7 +236,7 @@ namespace App1
             dailyCalorieCalcualte();
         }
 
-        public void saveCalorieClick(object sender, EventArgs e)
+        /*public void saveCalorieClick(object sender, EventArgs e)
         {
             VerifyEmail();
             float totalCalNum = TotalCalorie;
@@ -290,11 +291,12 @@ namespace App1
             carbohydrates += Login.MyGlobals.GlobalCarbohyrates;
             sodium2 += Login.MyGlobals.GlobalSodium;
 
-        }
+        }*/
 
         public bool VerifyEmail()
         {
-            root = db.RetrieveData("get_calorie.php?email=" + email);
+            //root = db.RetrieveData("get_calorie.php?email=" + email);
+            root = db.RetrieveDataAzure("SELECT * FROM user_data WHERE email='" + email + "';",null, "user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {

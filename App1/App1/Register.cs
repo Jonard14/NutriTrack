@@ -297,14 +297,14 @@ namespace App1
                 */
                 success2 = db.InsertDataAzure("INSERT INTO user_data (email, first_name, last_name, birthday, gender, height, weight, bmi) " +
                     "VALUES ('"+ email.Text +"', '"+ firstname.Text +"', '"+ lastname.Text +"', " +
-                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')");
+                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')", "user_db");
 
                 success3 = db.InsertDataAzure("UPDATE user_data SET " +
                     "daily_calorie_intake='0', total_calorie_intake='0', calorie_intake_days='0' " +
-                    "WHERE email='"+ email.Text +"'");
+                    "WHERE email='"+ email.Text +"'", "user_db");
 
                 success4 = db.InsertDataAzure("INSERT INTO login VALUES " +
-                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))");
+                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))", "user_db");
 
                 SaveIllness();
                 //Console.WriteLine(success);
@@ -372,13 +372,13 @@ namespace App1
             */
 
             if (ill_HD.Checked)
-                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('"+ email.Text +"', '"+ ill_HD.Text + "')");
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('"+ email.Text +"', '"+ ill_HD.Text + "')", "user_db");
             if (ill_D.Checked)
-                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_D.Text + "')");
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_D.Text + "')", "user_db");
             if (ill_C.Checked)
-                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_C.Text + "')");
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_C.Text + "')", "user_db");
             if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked)
-                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', 'Healthy')");
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', 'Healthy')", "user_db");
             Console.WriteLine(success);
         }
     }

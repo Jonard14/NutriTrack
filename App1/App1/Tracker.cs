@@ -153,7 +153,8 @@ namespace App1
             string stringCalDays = calorieDays.ToString();
             TotalCalorie = currentCal + totalCalNum;
 
-            db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
+            //db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
+            db.InsertDataAzure("UPDATE user_data SET daily_calorie_intake='"+float.Parse(prevCalString)+"', total_calorie_intake='"+ TotalCalorie+ "', calorie_intake_days='"+float.Parse(stringCalDays)+"' WHERE email='"+email+"';", "user_db");
             PrevCalorie.Text = TotalCalorie.ToString();
 
 
@@ -163,7 +164,7 @@ namespace App1
             string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" +"'" +email+ "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + currentCalorieNum + "'" + "," +
                                                            "'" + float.Parse(SugarCount.Text) + "'" + "," + "'" + float.Parse(Tprotein.Text) + "'" + "," + "'" + float.Parse(Tfats.Text) + "'" + "," +
                                                            "'" + float.Parse(Tcholesterol.Text) + "'" + "," + "'" + float.Parse(Tcarbohydrates.Text) + "'" + "," + "'" +
-                                                           float.Parse(Tsodium.Text) + "'" + ");");
+                                                           float.Parse(Tsodium.Text) + "'" + ");", "user_db");
             //Console.WriteLine(success);
             Console.WriteLine(success2);
 
@@ -203,7 +204,8 @@ namespace App1
 
         public bool VerifyEmail()
         {
-            root = db.RetrieveData("get_calorie.php?email=" + email);
+            //root = db.RetrieveData("get_calorie.php?email=" + email);
+            root = db.RetrieveDataAzure("SELECT * FROM user_data WHERE email='"+email+"';", null, "user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
