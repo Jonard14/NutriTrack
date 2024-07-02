@@ -4141,3 +4141,15 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\v
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\changepass.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\changePass.java
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\verifyEmail.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.CJK.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.CJK.pdb
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.MidEast.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.MidEast.pdb
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.Other.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.Other.pdb
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.pdb
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.Rare.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.Rare.pdb
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.West.dll
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\I18N.West.pdb

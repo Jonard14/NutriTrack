@@ -25,7 +25,7 @@ namespace App1
         EditText email, firstname, lastname, height, weight, bmi, password, repassword;
         Spinner gender, illness;
         CheckBox ill_HD, ill_D, ill_C;
-        string selected_gender, valueGender, selected_illness, success;
+        string selected_gender, valueGender, selected_illness, success, success2, success3, success4;
         Button register, home, getbmi;
         Decimal bmivalue;
         DBClass db = new DBClass();
@@ -291,10 +291,24 @@ namespace App1
 
             if (Validation() && NoDuplicate())// && (password.Text == repassword.Text))
             {
+                /*
                 success = db.InsertData("insert_account.php?email=" + email.Text + "&first_name=" + firstname.Text + "&last_name=" + lastname.Text + "&birthday=" + birthday_format+ "&gender=" + valueGender +
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
+                */
+                success2 = db.InsertDataAzure("INSERT INTO user_data (email, first_name, last_name, birthday, gender, height, weight, bmi) " +
+                    "VALUES ('"+ email.Text +"', '"+ firstname.Text +"', '"+ lastname.Text +"', " +
+                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')");
+
+                success3 = db.InsertDataAzure("UPDATE user_data SET " +
+                    "daily_calorie_intake='0', total_calorie_intake='0', calorie_intake_days='0' " +
+                    "WHERE email='"+ email.Text +"'");
+
+                success4 = db.InsertDataAzure("INSERT INTO login VALUES " +
+                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))");
+
                 SaveIllness();
-                Console.WriteLine(success);
+                //Console.WriteLine(success);
+                Console.WriteLine(success2);
                 //Toast.MakeText(this, success, ToastLength.Long).Show(); // Test/Debug
 
 
@@ -342,10 +356,12 @@ namespace App1
         // Insert Illness
         public void SaveIllness()
         {
+            /*
             if (ill_HD.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_HD.Text); }
             if (ill_D.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_D.Text); }
             if (ill_C.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + ill_C.Text); }
             if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked) { success = db.InsertData("insert_illness.php?email=" + email.Text + "&types=" + "Healthy"); }
+            */
             /* Test/Debug
             Toast.MakeText(this, success, ToastLength.Long).Show();
             Console.WriteLine(success);
@@ -354,6 +370,16 @@ namespace App1
             Console.WriteLine(ill_C.Text);
             Console.WriteLine(ill.Text);
             */
+
+            if (ill_HD.Checked)
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('"+ email.Text +"', '"+ ill_HD.Text + "')");
+            if (ill_D.Checked)
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_D.Text + "')");
+            if (ill_C.Checked)
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_C.Text + "')");
+            if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked)
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', 'Healthy')");
+            Console.WriteLine(success);
         }
     }
 }

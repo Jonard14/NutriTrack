@@ -113,7 +113,7 @@ namespace App1
 
         public DataTable RetrieveDataAzure(string query)
         {
-            string connectionString = "";
+            string connectionString = user_db;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
