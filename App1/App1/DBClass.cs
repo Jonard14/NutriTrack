@@ -77,13 +77,16 @@ namespace App1
                 try
                 {
                     connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
+                    int rowsAffected = command.ExecuteNonQuery();   
+                    connection.Close();
                     return $"Rows affected: {rowsAffected}";
+                 
                 }
                 catch (Exception ex)
                 {
                     return $"Error: {ex.Message}";
                 }
+                
             }
         }
 
@@ -97,12 +100,14 @@ namespace App1
                 {
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
+                    connection.Close();
                     return $"Rows affected: {rowsAffected}";
                 }
                 catch (Exception ex)
                 {
                     return $"Error: {ex.Message}";
                 }
+                
             }
         }
 
@@ -120,7 +125,7 @@ namespace App1
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         dataTable.Load(reader);
-                    }
+                    }connection.Close();
                     
                 }
                 catch (Exception ex)
@@ -128,8 +133,9 @@ namespace App1
                     // Handle exception (log it, rethrow it, or return a specific error message)
                     return null; // Return null or handle the exception as needed
                 }
-
+                
                 return dataTable;
+
             }
         }
     }

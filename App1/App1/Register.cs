@@ -297,6 +297,7 @@ namespace App1
                 Console.WriteLine(success);
                 //Toast.MakeText(this, success, ToastLength.Long).Show(); // Test/Debug
 
+
                 Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(Login));
                 StartActivity(i);

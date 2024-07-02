@@ -161,9 +161,9 @@ namespace App1
             //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
             string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + currentCalorieNum + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
             string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" +"'" +email+ "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + currentCalorieNum + "'" + "," +
-                                                           "'" + SugarCount.Text + "'" + "," + "'" + Tprotein.Text + "'" + "," + "'" + Tfats.Text + "'" + "," +
-                                                           "'" + Tcholesterol + "'" + "," + "'" + Tcarbohydrates + "'" + "," + "'" +
-                                                           Tsodium + "'" + ");");
+                                                           "'" + float.Parse(SugarCount.Text) + "'" + "," + "'" + float.Parse(Tprotein.Text) + "'" + "," + "'" + float.Parse(Tfats.Text) + "'" + "," +
+                                                           "'" + float.Parse(Tcholesterol.Text) + "'" + "," + "'" + float.Parse(Tcarbohydrates.Text) + "'" + "," + "'" +
+                                                           float.Parse(Tsodium.Text) + "'" + ");");
             Console.WriteLine(success);
             Console.WriteLine(success2);
 
