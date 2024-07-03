@@ -29,7 +29,6 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
-        private const int PickImageRequest = 1;
         private ImageView profilePicture;
         private TextView firstNameText;
         private TextView lastNameText;
@@ -67,7 +66,6 @@ namespace App1
             navigationView.SetNavigationItemSelectedListener(this);
 
             // Initialize UI components
-            profilePicture = FindViewById<ImageView>(Resource.Id.img_ProfilePicture);
             firstNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileFirstName);
             lastNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileLastName);
             emailText = FindViewById<TextView>(Resource.Id.txtV_ProfileEmail);
@@ -81,37 +79,9 @@ namespace App1
             //backToHomeButton = FindViewById<Button>(Resource.Id.btn_BackToHome);
 
             // Set up click events
-            profilePicture.Click += ChangePictureButton_Click;
             updateProfileButton.Click += UpdateProfileButton_Click;
             //backToHomeButton.Click += BackToHomeButton_Click;
 
-        }
-
-        private void ChangePictureButton_Click(object sender, EventArgs e)
-        {
-            var intent = new Intent();
-            intent.SetType("image/*");
-            intent.SetAction(Intent.ActionGetContent);
-            StartActivityForResult(Intent.CreateChooser(intent, "Select Picture"), PickImageRequest);
-        }
-
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-
-            if (requestCode == PickImageRequest && resultCode == Result.Ok && data != null && data.Data != null)
-            {
-                Android.Net.Uri uri = data.Data;
-                try
-                {
-                    Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, uri);
-                    profilePicture.SetImageBitmap(bitmap);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
         }
 
         private void UpdateProfileButton_Click(object sender, EventArgs e)
