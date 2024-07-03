@@ -157,7 +157,7 @@ namespace App1
 
             i.PutExtra("SelectedFood", selectedFood);
             i.PutExtra("ActivityPage", "DietDisplay");
-            //i.PutExtra("SelectedDiet", selectedDiet);
+            i.PutExtra("SelectedDiet", selectedDiet);
             StartActivity(i);
         }
         private void addFood()

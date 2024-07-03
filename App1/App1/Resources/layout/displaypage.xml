@@ -71,7 +71,7 @@
                     android:id="@+id/serv_size"
                     android:layout_gravity="right"
                     android:paddingBottom="10dp"
-                    android:inputType="text" />
+                    android:inputType="numberDecimal" />
               <TextView
                     android:text=" g"
                     android:layout_width="wrap_content"
@@ -325,7 +325,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:textSize="16dp"
-                    android:id="@+id/textV_NumCurrent" />
+                    android:id="@+id/textV_NumCurrent"
+                    android:paddingRight="10px"/>
 
             </LinearLayout>
        
@@ -378,7 +379,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numfats"
                 android:gravity="right"
-                android:textSize="16dp"/>
+                android:textSize="16dp"
+                android:paddingRight="10px"/>
         
             </LinearLayout>
              
@@ -404,7 +406,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numcholesterol"
                 android:gravity="right"
-                android:textSize="16dp"/>
+                android:textSize="16dp"
+                android:paddingRight="10px"/>
         
             </LinearLayout>
              
@@ -430,7 +433,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numsodium"
                 android:gravity="right"
-                android:textSize="16dp"/>
+                android:textSize="16dp"
+                android:paddingRight="10px"/>
         
             </LinearLayout>
        
@@ -456,7 +460,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numcarbohydrates"
                 android:gravity="right"
-                android:textSize="16dp"/>
+                android:textSize="16dp"
+                android:paddingRight="10px"/>
         
             </LinearLayout>
            
@@ -482,7 +487,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textV_NumSugar"
                     android:gravity="right"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:paddingRight="10px"/>
         
             </LinearLayout>
            
@@ -508,7 +514,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textV_numprotein"
                     android:gravity="right"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:paddingRight="10px" />
         
             </LinearLayout>
            

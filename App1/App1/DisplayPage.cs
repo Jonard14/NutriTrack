@@ -194,13 +194,13 @@ namespace App1
 
         public void addFood(object sender, EventArgs e)
         {
-            Login.MyGlobals.GlobalCalorie = Login.MyGlobals.GlobalCalorie + calorie_compute;
-            Login.MyGlobals.GlobalSugar = Login.MyGlobals.GlobalSugar + sugar_compute;
-            Login.MyGlobals.GlobalFat = Login.MyGlobals.GlobalFat + total_fat_compute;
-            Login.MyGlobals.GlobalProtein = Login.MyGlobals.GlobalProtein + protein_compute;
-            Login.MyGlobals.GlobalCholesterol = Login.MyGlobals.GlobalCholesterol + cholesterol_compute;
-            Login.MyGlobals.GlobalCarbohyrates = Login.MyGlobals.GlobalCarbohyrates + carbohydrate_compute;
-            Login.MyGlobals.GlobalSodium = Login.MyGlobals.GlobalSodium + sodium_compute;
+            Login.MyGlobals.GlobalCalorie = (float)Math.Round(Login.MyGlobals.GlobalCalorie + calorie_compute, 2);
+            Login.MyGlobals.GlobalSugar = (float)Math.Round(Login.MyGlobals.GlobalSugar + sugar_compute, 2);
+            Login.MyGlobals.GlobalFat = (float)Math.Round(Login.MyGlobals.GlobalFat + total_fat_compute, 2);
+            Login.MyGlobals.GlobalProtein = (float)Math.Round(Login.MyGlobals.GlobalProtein + protein_compute, 2);
+            Login.MyGlobals.GlobalCholesterol = (float)Math.Round(Login.MyGlobals.GlobalCholesterol + cholesterol_compute, 2);
+            Login.MyGlobals.GlobalCarbohyrates = (float)Math.Round(Login.MyGlobals.GlobalCarbohyrates + carbohydrate_compute, 2);
+            Login.MyGlobals.GlobalSodium = (float)Math.Round(Login.MyGlobals.GlobalSodium + sodium_compute, 2);
 
             Update();
             Toast.MakeText(this, "Food Added", ToastLength.Long).Show();

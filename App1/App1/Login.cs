@@ -124,8 +124,9 @@ namespace App1
         // Verify Login if account is registered to db
         public bool VerifyLogin()
         {
-            root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
-            //root = db.RetrieveDataAzure("","user_db");
+            //root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
+            root = db.RetrieveDataAzure("SELECT * FROM login WHERE email='"+ email.Text +"' AND password=HASHBYTES('SHA2_256', '"+  password.Text +"')",
+                                        null, "user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
@@ -135,7 +136,7 @@ namespace App1
                 if (searchemail == email.Text)
                 { return true; }
             }
-            return true;
+            return false;
         }
         public static class MyGlobals
         {

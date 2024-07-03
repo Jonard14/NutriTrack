@@ -93,13 +93,14 @@ namespace App1
                     if (email == u1.GetProperty("email").ToString())
                     {
                         history.Add(u1.GetProperty("time_log").ToString() +
-                                    "\nCalorie Count: " + u1.GetProperty("calorie_count").ToString() + " kcal" +
-                                    "\nSugar Count: " + u1.GetProperty("sugar_count").ToString() + " g" +
-                                    "\nProtein Count: " + u1.GetProperty("protein_count").ToString() + " g" +
-                                    "\nFats Count: " + u1.GetProperty("fats_count").ToString() + " g" +
-                                    "\nCarbohydrates Count: " + u1.GetProperty("carbohydrates_count").ToString() + " g" +
-                                    "\nCholesterol Count: " + u1.GetProperty("cholesterol_count").ToString() + " mg" +
-                                    "\nSodium Count: " + u1.GetProperty("sodium_count").ToString() + " mg");
+                                    "\nCalorie Count: " + (float)Math.Round(float.Parse(u1.GetProperty("calorie_count").ToString()), 2) + " kcal" +
+                                    "\nSugar Count: " + (float)Math.Round(float.Parse(u1.GetProperty("sugar_count").ToString()), 2) + " g" +
+                                    "\nProtein Count: " + (float)Math.Round(float.Parse(u1.GetProperty("protein_count").ToString()), 2) + " g" +
+                                    "\nFats Count: " + (float)Math.Round(float.Parse(u1.GetProperty("fats_count").ToString()), 2) + " g" +
+                                    "\nCarbohydrates Count: " + (float)Math.Round(float.Parse(u1.GetProperty("carbohydrates_count").ToString()), 2) + " g" +
+                                    "\nCholesterol Count: " + (float)Math.Round(float.Parse(u1.GetProperty("cholesterol_count").ToString()), 2) + " mg" +
+                                    "\nSodium Count: " + (float)Math.Round(float.Parse(u1.GetProperty("sodium_count").ToString()), 2) + " mg");
+
                         notempty = false;
                     }
                 }

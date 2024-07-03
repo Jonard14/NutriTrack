@@ -22,7 +22,7 @@ using Android.Content.PM;
 namespace App1
 {
     [Activity(Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class ProfilePage : Activity, NavigationView.IOnNavigationItemSelectedListener
+    public class ProfilePage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
@@ -53,7 +53,7 @@ namespace App1
 
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
+            SetSupportActionBar(toolbar);
 
             //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             //fab.Click += FabOnClick;

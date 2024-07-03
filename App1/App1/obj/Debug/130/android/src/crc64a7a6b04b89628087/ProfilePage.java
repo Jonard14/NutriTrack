@@ -2,7 +2,7 @@ package crc64a7a6b04b89628087;
 
 
 public class ProfilePage
-	extends android.app.Activity
+	extends androidx.appcompat.app.AppCompatActivity
 	implements
 		mono.android.IGCUserPeer,
 		com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
@@ -27,6 +27,15 @@ public class ProfilePage
 		super ();
 		if (getClass () == ProfilePage.class) {
 			mono.android.TypeManager.Activate ("App1.ProfilePage, App1", "", this, new java.lang.Object[] {  });
+		}
+	}
+
+
+	public ProfilePage (int p0)
+	{
+		super (p0);
+		if (getClass () == ProfilePage.class) {
+			mono.android.TypeManager.Activate ("App1.ProfilePage, App1", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 		}
 	}
 

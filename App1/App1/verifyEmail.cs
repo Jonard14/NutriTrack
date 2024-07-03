@@ -65,7 +65,9 @@ namespace App1
 
         public bool verification()
         {
-            root = db.RetrieveData("search_accountforgot.php?email=" + email.Text);
+            //root = db.RetrieveData("search_accountforgot.php?email=" + email.Text);
+            root = db.RetrieveDataAzure("SELECT * FROM login WHERE email='"+ email.Text +"'",
+                                        null, "user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)
             {

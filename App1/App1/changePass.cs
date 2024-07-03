@@ -78,8 +78,10 @@ namespace App1
             else
             {
                 Toast.MakeText(this, "Password Change Successfully!", ToastLength.Long).Show();
-                
-                db.InsertData("update_password.php?email=" + email + "&password=" + pass.Text);
+
+                //db.InsertData("update_password.php?email=" + email + "&password=" + pass.Text);
+                db.InsertDataAzure("UPDATE login SET password=HASHBYTES('SHA2_256', '"+  pass.Text +"') WHERE email='"+ email +"'",
+                                   "user_db");
 
                 Intent i = new Intent(this, typeof(Login));
                 StartActivity(i);

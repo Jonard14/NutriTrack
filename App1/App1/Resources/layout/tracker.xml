@@ -196,106 +196,8 @@
             android:background="@drawable/layout_bg"
             android:paddingTop="20px"
             android:paddingBottom="20px">
-             <!--<TextView
-                    android:text="Percentage based on Current Calorie "
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:paddingLeft="20px"
-                    android:id="@+id/textView1" />
-             <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#000000"/>-->
-            <!-- Recommended Calorie Layout
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout4">
 
-                <TextView
-                    android:text="Recommended Calorie (kcal)"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:paddingLeft="20px"
-                    android:paddingTop="10px"
-                    android:id="@+id/textView1" />
-                <TextView
-                    android:text="0"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:textSize="20dp"
-                    android:id="@+id/textV_recommendNum" />
-
-            </LinearLayout>-->
-
-           
-        
-            <!-- Current Calorie Layout
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout6">
-
-                <TextView
-                    android:text="Current Calorie (kcal)"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20px"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:id="@+id/textV_CurrentCalorie" />
-                <TextView
-                    android:text="0"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:textSize="20dp"
-                    android:id="@+id/textV_NumCurrent" />
-
-            </LinearLayout> -->
-            <!-- Total Calorie Layout 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout7">
-                <TextView
-                    android:text="Total Calorie Count (kcal)"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20px"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:id="@+id/textV_TotalCalorie" />
-                <TextView
-                    android:text="0"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:textSize="20dp"
-                    android:id="@+id/textV_TotalCalorieNum" />
-        
-            </LinearLayout>-->
+          
             <!-- Total Calorie Layout -->
             <LinearLayout
                 android:orientation="horizontal"
@@ -321,7 +223,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textV_NumSugar"
                     android:gravity="right"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp"
+                    android:paddingRight="10px"/>
         
             </LinearLayout>
             <!-- Total Protein Layout -->
@@ -349,7 +252,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textV_numprotein"
                     android:gravity="right"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp"
+                    android:paddingRight="10px"/>
         
             </LinearLayout>
             <!-- Total Fat Layout -->
@@ -377,7 +281,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numfats"
                 android:gravity="right"
-                android:textSize="18dp"/>
+                android:textSize="18dp"
+                android:paddingRight="10px" />
         
             </LinearLayout>
             <!-- Total carbohydrates Layout -->
@@ -405,7 +310,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numcarbohydrates"
                 android:gravity="right"
-                android:textSize="18dp"/>
+                android:textSize="18dp"
+                android:paddingRight="10px" />
         
             </LinearLayout>
             <!-- Total sodium Layout -->
@@ -433,7 +339,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numsodium"
                 android:gravity="right"
-                android:textSize="18dp"/>
+                android:textSize="18dp"
+                android:paddingRight="10px" />
         
             </LinearLayout>
             <!-- Total cholesterol Layout -->
@@ -461,7 +368,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textV_numcholesterol"
                 android:gravity="right"
-                android:textSize="18dp"/>
+                android:textSize="18dp"
+                android:paddingRight="10px"/>
         
             </LinearLayout>
             <View

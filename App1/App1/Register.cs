@@ -14,6 +14,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -123,10 +124,12 @@ namespace App1
                 email.Error = "Email is not Valid!";
             if (firstname.Text == "")
                 firstname.Error = "Please enter your Firstname!";
+            else if (!(Regex.IsMatch(firstname.Text, @"^[\p{L}]+$")))
+                firstname.Error = "Name must only contain letters!";
             if (lastname.Text == "")
                 lastname.Error = "Please enter your Lastname!";
-            if (lastname.Text == "")
-                lastname.Error = "Please enter your Lastname!";
+            else if (!(Regex.IsMatch(lastname.Text, @"^[\p{L}]+$")))
+                lastname.Error = "Name must only contain letters!";
 
             if (height.Text == "")
                 height.Error = "Please enter your Weight!";
@@ -297,14 +300,17 @@ namespace App1
                 */
                 success2 = db.InsertDataAzure("INSERT INTO user_data (email, first_name, last_name, birthday, gender, height, weight, bmi) " +
                     "VALUES ('"+ email.Text +"', '"+ firstname.Text +"', '"+ lastname.Text +"', " +
-                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')", "user_db");
+                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')", 
+                    "user_db");
 
                 success3 = db.InsertDataAzure("UPDATE user_data SET " +
                     "daily_calorie_intake='0', total_calorie_intake='0', calorie_intake_days='0' " +
-                    "WHERE email='"+ email.Text +"'", "user_db");
+                    "WHERE email='"+ email.Text +"'", 
+                    "user_db");
 
                 success4 = db.InsertDataAzure("INSERT INTO login VALUES " +
-                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))", "user_db");
+                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))", 
+                    "user_db");
 
                 SaveIllness();
                 //Console.WriteLine(success);
@@ -324,7 +330,8 @@ namespace App1
         //Validation
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || lastname.Text == "" ||
+            if (email.Text == "" || firstname.Text == "" || !(Regex.IsMatch(firstname.Text, @"^[\p{L}]+$")) ||
+                lastname.Text == "" || !(Regex.IsMatch(lastname.Text, @"^[\p{L}]+$")) ||
                 height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0" ||
                 password.Text == "" || (password.Text).Length < 8 || repassword.Text == "" || password.Text != repassword.Text)
             {
@@ -338,7 +345,9 @@ namespace App1
         //Validation - checks if the email already exists or not
         public bool NoDuplicate()
         {
-            root = db.RetrieveData("search_noduplicate_acct.php?");
+            //root = db.RetrieveData("search_noduplicate_acct.php?");
+            root = db.RetrieveDataAzure("SELECT * FROM login",
+                                        null, "user_db");
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];

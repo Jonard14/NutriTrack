@@ -57,24 +57,15 @@ CREATE TABLE tracker_log (
 
 
 INSERT INTO tracker_log (email, time_log, calorie_count, sugar_count, protein_count, fats_count, cholesterol_count, carbohydrates_count, sodium_count) VALUES
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:10:34 PM', 404, 0, 1, 1, 1, 1, 1),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:12:07 PM', 245, 0.14, 1, 1, 1, 1, 1),
-('jcsfrancisco@live.mcl.edu.ph', '05/20/2024 8:17:36 PM', 192, 0.1, 1, 1, 1, 1, 1),
 ('jcsfrancisco@live.mcl.edu.ph', '06/18/2024 4:34:45 PM', 296, 15.9, 2.7, 15.3, 7, 37.6, 217),
 ('jcsfrancisco@live.mcl.edu.ph', '06/20/2024 1:23:37 AM', 592, 31.8, 5.4, 30.6, 14, 75.2, 434),
 ('jcsfrancisco@live.mcl.edu.ph', '06/23/2024 12:21:39 AM', 592, 31.8, 5.4, 30.6, 14, 75.2, 434),
 ('jcsfrancisco@live.mcl.edu.ph', '06/23/2024 12:28:02 AM', 1810, 0.3, 177, 79.4, 750, 88.6, 5220),
 ('jcsfrancisco@live.mcl.edu.ph', '06/23/2024 12:29:23 AM', 296, 15.9, 2.7, 15.3, 7, 37.6, 217),
 ('jcsfrancisco@live.mcl.edu.ph', '06/23/2024 1:08:48 AM', 1510, 0, 223, 58.1, 680, 23.6, 4500),
-('jcsfrancisco@live.mcl.edu.ph', '07/01/2024 11:14:09 PM', 0, 0, 0, 0, 0, 0, 0),
 ('jcsfrancisco@live.mcl.edu.ph', '07/01/2024 11:14:36 PM', 29.6, 1.59, 0.27, 1.53, 0.7, 3.76, 21.7),
 ('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 12:27:58 PM', 245, 0.14, 20.1, 14.3, 71, 7.79, 357),
-('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 12:29:57 PM', 0, 0, 0, 0, 0, 0, 0),
 ('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 12:59:59 PM', 492.45, 0.2814, 40.401, 28.743, 142.71, 15.6579, 717.57),
-('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 1:00:54 PM', 0, 0, 0, 0, 0, 0, 0),
-('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 3:53:37 PM', 0, 0, 0, 0, 0, 0, 0),
-('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 5:14:10 PM', 0, 0, 0, 0, 0, 0, 0),
-('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 7:03:45 PM', 0, 0, 0, 0, 0, 0, 0),
 ('jcsfrancisco@live.mcl.edu.ph', '07/02/2024 7:08:30 PM', 244, 48.4, 0.68, 0.6, 0, 59.2, 0);
 
 -- --------------------------------------------------------
@@ -115,5 +106,5 @@ INSERT INTO user_data (email, first_name, last_name, birthday, height, weight, b
 
 -- Indexes for table `login`
 ALTER TABLE login
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (email);
 COMMIT;
