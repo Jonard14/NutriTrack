@@ -1,42 +1,15 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 08:44 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `food_db`
---
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `food_data`
 --
 
-CREATE TABLE `food_data` (
-  `food_id` varchar(6) NOT NULL,
-  `food_name` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `ood_data (
+  food_id varchar(6) NOT NULL,
+  food_name varchar(50) DEFAULT NULL
+);
 
---
 -- Dumping data for table `food_data`
---
 
-INSERT INTO `food_data` (`food_id`, `food_name`) VALUES
+INSERT INTO food_data (food_id, food_name) VALUES
 ('000001', 'Chicken Breast Fillet'),
 ('000002', 'Chicken Thigh'),
 ('000003', 'Fried Tofu'),
@@ -104,22 +77,22 @@ INSERT INTO `food_data` (`food_id`, `food_name`) VALUES
 -- Table structure for table `nutrients`
 --
 
-CREATE TABLE `nutrients` (
-  `food_id` varchar(6) DEFAULT NULL,
-  `calorie_energy` float DEFAULT NULL,
-  `protein` float DEFAULT NULL,
-  `total_fat` float DEFAULT NULL,
-  `carbohydrate` float DEFAULT NULL,
-  `sugar` float DEFAULT NULL,
-  `sodium` float DEFAULT NULL,
-  `cholesterol` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE nutrients (
+  food_id varchar(6) DEFAULT NULL,
+  calorie_energy float DEFAULT NULL,
+  protein float DEFAULT NULL,
+  total_fat float DEFAULT NULL,
+  carbohydrate float DEFAULT NULL,
+  sugar float DEFAULT NULL,
+  sodium float DEFAULT NULL,
+  cholesterol float DEFAULT NULL
+);
 
 --
 -- Dumping data for table `nutrients`
 --
 
-INSERT INTO `nutrients` (`food_id`, `calorie_energy`, `protein`, `total_fat`, `carbohydrate`, `sugar`, `sodium`, `cholesterol`) VALUES
+INSERT INTO nutrients (food_id, calorie_energy, protein, total_fat, carbohydrate, sugar, sodium, cholesterol) VALUES
 ('000001', 1.51, 0.223, 0.0581, 0.0236, 0, 4.5, 0.68),
 ('000002', 2.26, 0.225, 0.151, 0.0012, 0.0012, 3.35, 1.27),
 ('000003', 1.17, 0.0401, 0.16, 0.0449, 0.0163, 0.23, 0.57),
@@ -181,17 +154,9 @@ INSERT INTO `nutrients` (`food_id`, `calorie_energy`, `protein`, `total_fat`, `c
 ('000059', 3.1, 0.117, 0.28, 0.0289, 0.0126, 8.28, 0.58),
 ('000060', 4.8, 0.042, 0.3, 0.639, 0.545, 0.11, 0);
 
---
 -- Indexes for dumped tables
---
 
---
 -- Indexes for table `food_data`
---
-ALTER TABLE `food_data`
-  ADD PRIMARY KEY (`food_id`);
+ALTER TABLE food_data
+  ADD PRIMARY KEY (food_id);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
