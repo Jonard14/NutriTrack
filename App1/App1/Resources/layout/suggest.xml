@@ -25,18 +25,19 @@
 
     <!-- Layout Starts Here -->
     <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg"
+                android:layout_margin="5dp"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Diets"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white" />
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:background="#114232"
+                    android:src="@android:drawable/ic_dialog_info"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -44,7 +45,7 @@
                     android:text="long message text"
                     android:id="@+id/foods"
                     android:textSize="14sp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:paddingBottom="1dp" />
     </LinearLayout>
 

@@ -183,7 +183,7 @@ namespace App1
                     diets.Add("Low-Fat Content");
                 }
 
-                string recom = String.Join(",", diets.ToArray());
+                string recom = String.Join(", ", diets.ToArray().Distinct());
                 food.Text = "Suggested foods for you: " + recom;// + illness.ToString();
 
             }

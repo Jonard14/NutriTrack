@@ -181,7 +181,7 @@ namespace App1
 
                 if (selectedDiet == "Sugar")
                 {
-                    if (sugar <= 5)
+                    if (((sugar / calorie_energy) * 100) <= 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low sugar";
@@ -190,7 +190,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Protein")
                 {
-                    if (protein >= 15)
+                    if (protein >= 20)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "High Protein";
@@ -198,7 +198,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Sodium")
                 {
-                    if ((sodium / 1000) < 5)
+                    if (sodium <= 5)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Less Sodium";
@@ -206,7 +206,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Carbohydrates")
                 {
-                    if (carbohydrate <= 5 && carbohydrate <= 15)
+                    if (carbohydrate <= 10)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low-Carb";
@@ -222,7 +222,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Cholesterol")
                 {
-                    if ((cholesterol/100) < 2)
+                    if (cholesterol <= 2)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Zero Cholesterol";

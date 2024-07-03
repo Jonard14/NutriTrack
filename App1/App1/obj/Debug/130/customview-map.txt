@@ -1,6 +1,5 @@
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
-androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\admin.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\admin_addfood.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage.xml
@@ -14,7 +13,6 @@ androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\track
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_addfood_drawer.xml
-androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\logs_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\profile_page_drawer.xml
@@ -22,7 +20,6 @@ androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\suggest_drawe
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawer.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
-Button;obj\Debug\130\res\layout\admin.xml
 Button;obj\Debug\130\res\layout\admin_addfood.xml
 Button;obj\Debug\130\res\layout\admin_login.xml
 Button;obj\Debug\130\res\layout\changepass.xml
@@ -34,11 +31,10 @@ Button;obj\Debug\130\res\layout\profile_page.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
 Button;obj\Debug\130\res\layout\verifyemail.xml
-cache-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
-com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\admin.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\admin_addfood.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\homepage.xml
@@ -49,7 +45,6 @@ com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\tracker
 com.google.android.material.floatingactionbutton.FloatingActionButton;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\activity_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\admin_addfood_drawer.xml
-com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\admin_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\logs_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\profile_page_drawer.xml
@@ -64,7 +59,6 @@ corners;obj\Debug\130\res\drawable\search_view_background.xml
 corners;obj\Debug\130\res\drawable\stat_nut_progress.xml
 corners;obj\Debug\130\res\drawable\stats_nut_full.xml
 dimen;obj\Debug\130\res\values\dimens.xml
-EditText;obj\Debug\130\res\layout\admin.xml
 EditText;obj\Debug\130\res\layout\admin_addfood.xml
 EditText;obj\Debug\130\res\layout\admin_login.xml
 EditText;obj\Debug\130\res\layout\changepass.xml
@@ -72,8 +66,8 @@ EditText;obj\Debug\130\res\layout\displaypage.xml
 EditText;obj\Debug\130\res\layout\login.xml
 EditText;obj\Debug\130\res\layout\register.xml
 EditText;obj\Debug\130\res\layout\verifyemail.xml
-external-cache-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
@@ -84,7 +78,6 @@ ImageView;obj\Debug\130\res\layout\profile_page.xml
 ImageView;obj\Debug\130\res\layout\suggest.xml
 include;obj\Debug\130\res\layout\activity_main.xml
 include;obj\Debug\130\res\layout\admin_addfood_drawer.xml
-include;obj\Debug\130\res\layout\admin_drawer.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
 include;obj\Debug\130\res\layout\homepage_drawer.xml
 include;obj\Debug\130\res\layout\logs_drawer.xml
@@ -97,7 +90,6 @@ item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\strings.xml
 item;obj\Debug\130\res\values\styles.xml
-LinearLayout;obj\Debug\130\res\layout\admin.xml
 LinearLayout;obj\Debug\130\res\layout\admin_addfood.xml
 LinearLayout;obj\Debug\130\res\layout\admin_login.xml
 LinearLayout;obj\Debug\130\res\layout\changepass.xml
@@ -132,7 +124,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
-paths;C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;obj\Debug\130\res\layout\tracker.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
@@ -173,7 +165,6 @@ string;obj\Debug\130\res\values\strings.xml
 string-array;obj\Debug\130\res\values\strings.xml
 stroke;obj\Debug\130\res\drawable\layout_bg.xml
 style;obj\Debug\130\res\values\styles.xml
-TextView;obj\Debug\130\res\layout\admin.xml
 TextView;obj\Debug\130\res\layout\admin_addfood.xml
 TextView;obj\Debug\130\res\layout\admin_login.xml
 TextView;obj\Debug\130\res\layout\changepass.xml
