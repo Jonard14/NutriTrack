@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/outerContainer"
-    android:background="#87A922" >
+    android:background="@drawable/NutriTrack" >
 
 
     <LinearLayout

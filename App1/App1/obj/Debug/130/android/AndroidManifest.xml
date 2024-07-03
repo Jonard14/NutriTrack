@@ -12,7 +12,8 @@
   <permission android:name="com.companyname.app1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.app1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@drawable/logo2" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
-    <activity android:name="crc64a7a6b04b89628087.AdminPage" android:label="Admin" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Admin_AddFood" android:label="Admin - Add Food" android:screenOrientation="portrait" />
+    <activity android:name="crc64a7a6b04b89628087.Admin_Login" android:label="Admin Login" android:screenOrientation="portrait" />
     <activity android:name="crc64a7a6b04b89628087.changePass" android:label="changePass" android:screenOrientation="portrait" />
     <activity android:name="crc64a7a6b04b89628087.DietDisplay" android:label="DietDisplay" android:screenOrientation="portrait" />
     <activity android:name="crc64a7a6b04b89628087.DisplayPage" android:label="DisplayPage" android:screenOrientation="portrait" />

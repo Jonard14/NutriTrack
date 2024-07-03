@@ -3052,7 +3052,6 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_Gener
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\profile_page_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\ProfilePage.java
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\AdminPage.java
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable\ic_profile_placeholder.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable\search_view_background.xml
@@ -4118,7 +4117,6 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\asse
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\assets\Xamarin.AndroidX.AppCompat.Resources.pdb
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\DietDisplay.java
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Logs.java
-C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\menu\admin_drawer.xml
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\logo2.jpg
 C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\verifyemail.xml
@@ -4184,3 +4182,8 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\changePass.java
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\DietDisplay.java
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\verifyEmail.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_addfood.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_addfood_drawer.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_login.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_AddFood.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_Login.java

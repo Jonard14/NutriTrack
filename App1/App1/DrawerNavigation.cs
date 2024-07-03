@@ -53,5 +53,26 @@ namespace App1
             }
             return null;
         }
+
+        public Type SelectedNavigation_Admin(IMenuItem item)
+        {
+            //selected_drawer = item.TitleFormatted.ToString(); // stores title of category in string var
+
+            int id = item.ItemId;
+
+            if (id == Resource.Id.addfood_btn)
+            {
+                return typeof(Admin_AddFood);
+            }
+            else if (id == Resource.Id.removefood_btn)
+            {
+                return typeof(Admin_AddFood);
+            }
+            else if (id == Resource.Id.logout_btn)
+            {
+                return typeof(MainActivity);
+            }
+            return null;
+        }
     }
 }

@@ -1,11 +1,15 @@
 TRUNCATE TABLE login;
 
-INSERT INTO login (email, password) VALUES
-('hutao@wangsheng.genshin.hoyo', HASHBYTES('SHA2_256','funeralparlor')),
-('jcsfrancisco@live.mcl.edu.ph', HASHBYTES('SHA2_256','jonard14')),
-('jonard14games@gmail.com', HASHBYTES('SHA2_256','j14games')),
-('muratahimeko@hi3.hoyo', HASHBYTES('SHA2_256','finallesson')),
-('weltyang@starrail.hoyo', HASHBYTES('SHA2_256','blackhole'));
+INSERT INTO login (email, password, acct_type) VALUES
+('hutao@wangsheng.genshin.hoyo', HASHBYTES('SHA2_256','funeralparlor'), 'user'),
+('jcsfrancisco@live.mcl.edu.ph', HASHBYTES('SHA2_256','jonard14'), 'user'),
+('jonard14games@gmail.com', HASHBYTES('SHA2_256','j14games'), 'user'),
+('muratahimeko@hi3.hoyo', HASHBYTES('SHA2_256','finallesson'), 'user'),
+('testname1@mcl.com', HASHBYTES('SHA2_256','Testing1'), 'user'),
+('testname2@mcl.com', HASHBYTES('SHA2_256','Testing2'), 'user'),
+('weltyang@starrail.hoyo', HASHBYTES('SHA2_256','blackhole'), 'user'),
+
+('jonard@admin.com', HASHBYTES('SHA2_256','jonard14'), 'admin');
 
 SELECT * FROM login
 

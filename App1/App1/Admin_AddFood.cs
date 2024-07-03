@@ -17,10 +17,10 @@ using System.Text;
 
 namespace App1
 {
-    [Activity(Label = "Admin", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class AdminPage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    [Activity(Label = "Admin - Add Food", ScreenOrientation = ScreenOrientation.Portrait)]
+    public class Admin_AddFood : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        DrawerNavigation_Admin selectedNav = new DrawerNavigation_Admin();
+        DrawerNavigation selectedNav = new DrawerNavigation();
 
         private EditText foodNameInput, caloriesInput, carbohydratesInput, proteinInput, fatInput, sugarInput, sodiumInput, cholesterolInput;
         private Button submitButton;
@@ -31,16 +31,7 @@ namespace App1
         {
             base.OnCreate(savedInstanceState);
 
-            /*
-            if (!IsAdmin())
-            {
-                Toast.MakeText(this, "Access denied!", ToastLength.Short).Show();
-                Finish();
-                return;
-            }
-            */
-
-            SetContentView(Resource.Layout.admin_drawer);
+            SetContentView(Resource.Layout.admin_addfood_drawer);
 
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
@@ -154,7 +145,7 @@ namespace App1
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            Type page = selectedNav.SelectedNavigation(item);
+            Type page = selectedNav.SelectedNavigation_Admin(item);
 
             Intent i = new Intent(this, page);
             StartActivity(i);

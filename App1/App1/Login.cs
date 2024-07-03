@@ -22,7 +22,7 @@ namespace App1
     {
         EditText email, password;
         Button login, home;
-        TextView register, forgotpass;
+        TextView register, forgotpass, admin;
         DBClass db = new DBClass();
         JsonElement root;
         string searchemail;
@@ -37,6 +37,10 @@ namespace App1
             // Create your application here
             home = FindViewById<Button>(Resource.Id.btn_Home);
             home.Click += Home;
+
+            admin = FindViewById<TextView>(Resource.Id.txtV_Admin);
+            admin.PaintFlags = PaintFlags.UnderlineText;
+            admin.Click += Admin_Click;
 
             email = FindViewById<EditText>(Resource.Id.edtTxt_email);
             email.TextChanged += Input_TextChanged;
@@ -76,6 +80,13 @@ namespace App1
         public void Home(object sender, EventArgs e)
         {
             Intent i = new Intent(this, typeof(MainActivity));
+            StartActivity(i);
+        }
+
+        // Admin Login Page
+        private void Admin_Click(object sender, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(Admin_Login));
             StartActivity(i);
         }
 
@@ -125,7 +136,7 @@ namespace App1
         public bool VerifyLogin()
         {
             //root = db.RetrieveData("search_accountlogin.php?email=" + email.Text + "&password=" + password.Text);
-            root = db.RetrieveDataAzure("SELECT * FROM login WHERE email='"+ email.Text +"' AND password=HASHBYTES('SHA2_256', '"+  password.Text +"')",
+            root = db.RetrieveDataAzure("SELECT * FROM login WHERE email='"+ email.Text +"' AND password=HASHBYTES('SHA2_256', '"+  password.Text +"')  AND acct_type='user'",
                                         null, "user_db");
 
             for (int i = 0; i < root.GetArrayLength(); i++)

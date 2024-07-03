@@ -1,6 +1,7 @@
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\admin.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\admin_addfood.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\homepage.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\logs.xml
@@ -12,6 +13,7 @@ androidx.cardview.widget.CardView;obj\Debug\130\res\layout\suggest.xml
 androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
+androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_addfood_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\homepage_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\logs_drawer.xml
@@ -21,6 +23,8 @@ androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawe
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\130\res\layout\admin.xml
+Button;obj\Debug\130\res\layout\admin_addfood.xml
+Button;obj\Debug\130\res\layout\admin_login.xml
 Button;obj\Debug\130\res\layout\changepass.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\diet_display.xml
@@ -35,6 +39,7 @@ CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\admin.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\admin_addfood.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\homepage.xml
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\logs.xml
@@ -43,6 +48,7 @@ com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\suggest
 com.google.android.material.appbar.AppBarLayout;obj\Debug\130\res\layout\tracker.xml
 com.google.android.material.floatingactionbutton.FloatingActionButton;obj\Debug\130\res\layout\app_bar_main.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\activity_main.xml
+com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\admin_addfood_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\admin_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\homepage_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\logs_drawer.xml
@@ -59,6 +65,8 @@ corners;obj\Debug\130\res\drawable\stat_nut_progress.xml
 corners;obj\Debug\130\res\drawable\stats_nut_full.xml
 dimen;obj\Debug\130\res\values\dimens.xml
 EditText;obj\Debug\130\res\layout\admin.xml
+EditText;obj\Debug\130\res\layout\admin_addfood.xml
+EditText;obj\Debug\130\res\layout\admin_login.xml
 EditText;obj\Debug\130\res\layout\changepass.xml
 EditText;obj\Debug\130\res\layout\displaypage.xml
 EditText;obj\Debug\130\res\layout\login.xml
@@ -75,6 +83,7 @@ ImageView;obj\Debug\130\res\layout\nav_header_main.xml
 ImageView;obj\Debug\130\res\layout\profile_page.xml
 ImageView;obj\Debug\130\res\layout\suggest.xml
 include;obj\Debug\130\res\layout\activity_main.xml
+include;obj\Debug\130\res\layout\admin_addfood_drawer.xml
 include;obj\Debug\130\res\layout\admin_drawer.xml
 include;obj\Debug\130\res\layout\app_bar_main.xml
 include;obj\Debug\130\res\layout\homepage_drawer.xml
@@ -89,6 +98,8 @@ item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\strings.xml
 item;obj\Debug\130\res\values\styles.xml
 LinearLayout;obj\Debug\130\res\layout\admin.xml
+LinearLayout;obj\Debug\130\res\layout\admin_addfood.xml
+LinearLayout;obj\Debug\130\res\layout\admin_login.xml
 LinearLayout;obj\Debug\130\res\layout\changepass.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
 LinearLayout;obj\Debug\130\res\layout\diet_display.xml
@@ -131,6 +142,7 @@ resources;obj\Debug\130\res\values\strings.xml
 resources;obj\Debug\130\res\values\styles.xml
 rotate;obj\Debug\130\res\drawable\stats_full.xml
 rotate;obj\Debug\130\res\drawable\stats_progress.xml
+ScrollView;obj\Debug\130\res\layout\admin_addfood.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\tracker.xml
 SearchView;obj\Debug\130\res\layout\diet_display.xml
@@ -162,6 +174,8 @@ string-array;obj\Debug\130\res\values\strings.xml
 stroke;obj\Debug\130\res\drawable\layout_bg.xml
 style;obj\Debug\130\res\values\styles.xml
 TextView;obj\Debug\130\res\layout\admin.xml
+TextView;obj\Debug\130\res\layout\admin_addfood.xml
+TextView;obj\Debug\130\res\layout\admin_login.xml
 TextView;obj\Debug\130\res\layout\changepass.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
 TextView;obj\Debug\130\res\layout\diet_display.xml

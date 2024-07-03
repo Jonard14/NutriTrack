@@ -65,13 +65,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPage.cs" />
+    <Compile Include="Admin_AddFood.cs" />
+    <Compile Include="Admin_Login.cs" />
     <Compile Include="changePass.cs" />
     <Compile Include="DBClass.cs" />
     <Compile Include="DietDisplay.cs" />
     <Compile Include="DisplayPage.cs" />
     <Compile Include="DrawerNavigation.cs" />
-    <Compile Include="DrawerNavigation_Admin.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Logs.cs" />
@@ -203,7 +203,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\admin.xml">
+    <AndroidResource Include="Resources\layout\admin_addfood.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -295,7 +295,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\admin_drawer.xml" />
+    <AndroidResource Include="Resources\layout\admin_addfood_drawer.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\admin_drawer.xml" />
@@ -312,6 +312,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\changepass.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_login.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -1,6 +1,9 @@
-App1.AdminPage, App1;crc64a7a6b04b89628087.AdminPage
-App1.AdminPage;crc64a7a6b04b89628087.AdminPage
-app1.AdminPage;crc64a7a6b04b89628087.AdminPage
+App1.Admin_AddFood, App1;crc64a7a6b04b89628087.Admin_AddFood
+App1.Admin_AddFood;crc64a7a6b04b89628087.Admin_AddFood
+app1.Admin_AddFood;crc64a7a6b04b89628087.Admin_AddFood
+App1.Admin_Login, App1;crc64a7a6b04b89628087.Admin_Login
+App1.Admin_Login;crc64a7a6b04b89628087.Admin_Login
+app1.Admin_Login;crc64a7a6b04b89628087.Admin_Login
 App1.changePass, App1;crc64a7a6b04b89628087.changePass
 App1.changePass;crc64a7a6b04b89628087.changePass
 app1.changePass;crc64a7a6b04b89628087.changePass

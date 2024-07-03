@@ -7,8 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="#87A922">
+    android:background="@drawable/NutriTrack">
 
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
     <Button
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -19,7 +24,20 @@
         android:backgroundTint="#114232"
         android:background="@drawable/ic_arrow_back_black_24"/>
 
+        <TextView
+            android:id="@+id/txtV_Admin"
+            android:text="Admin Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="13dp"
+            android:layout_gravity="center"
+            android:autoLink="none"
+            android:textStyle="bold"
+            android:textColor="#114232"/>
 
+    </LinearLayout>
+    
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"

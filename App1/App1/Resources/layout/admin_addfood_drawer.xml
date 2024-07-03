@@ -10,7 +10,7 @@
                                         tools:openDrawer="start">
 
   <include
-    layout="@layout/admin"
+    layout="@layout/admin_addfood"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
 
