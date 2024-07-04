@@ -10,6 +10,7 @@
         android:useLevel="true">
 
 		<solid android:color="#FCDC2A" />
+		<corners android:radius="50dp" />
 
 	</shape>
 </rotate>

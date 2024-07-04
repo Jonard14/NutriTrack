@@ -176,7 +176,7 @@ namespace App1
                     diets.Add("Less Sodium");
                 }
 
-                else
+                else if (illness.Contains("Healthy"))
                 {
                     diets.Add("Low Carb");
                     diets.Add("High Protein");
@@ -275,10 +275,16 @@ namespace App1
             int id = item.ItemId;
             if (id == Resource.Id.action_settings)
             {
+                OpenWebLink("https://www.canva.com/design/DAF-j62aMQg/G1IK-EeQPP3ZUL7q-K_qyg/edit?utm_content=DAF-j62aMQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton");
                 return true;
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+        private void OpenWebLink(string url)
+        {
+            Intent intent = new Intent(Intent.ActionView, Android.Net.Uri.Parse(url));
+            StartActivity(intent);
         }
 
         private void FabOnClick(object sender, EventArgs eventArgs)

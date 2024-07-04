@@ -99,7 +99,7 @@ namespace App1
             */
             if (VerifyLogin())
             {
-                Toast.MakeText(this, "Login successfull!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Login successful!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
                 MyGlobals.Globalemail = email.Text;

@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@drawable/nutritrack">
+    android:background="@drawable/bg2">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
@@ -38,11 +38,10 @@
         android:paddingTop="20px"
         android:paddingBottom="20px"/>
     <LinearLayout
-        android:orientation="vertical"
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F7F6BB">
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

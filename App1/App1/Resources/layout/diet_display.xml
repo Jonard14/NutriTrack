@@ -30,7 +30,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/nutritrack">
+        android:background="@drawable/bg2">
         <Button
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -57,7 +57,7 @@
             android:layout_margin="5dp"
             android:layout_height="wrap_content"
         >
-         <TextView
+             <TextView
                 android:text="Select Food"
                 android:id="@+id/dietType"
                 android:layout_width="wrap_content"
@@ -67,7 +67,6 @@
                 android:textSize="25dp"
                 android:textColor="#000000"
                 android:fontFamily="" />
-
         <!--<Button
             android:id="@+id/btn1"
             android:text="Go Back"
@@ -88,6 +87,8 @@
         android:layout_margin="10px"
         android:id="@+id/linearLayout3"
         android:background="@drawable/layout_bg">
+
+        
        
         <ListView
             android:layout_width="match_parent"

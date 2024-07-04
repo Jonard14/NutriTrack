@@ -6,11 +6,16 @@
     android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nutritrack">
-      <View
-            android:layout_width="350dp"
-            android:layout_height="10dp"
-            android:layout_gravity="center"/>
+    android:background="@drawable/bg3">
+     <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:id="@+id/btn1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#114232"
+            android:background="@drawable/ic_arrow_back_black_24"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -127,14 +132,14 @@
             android:textSize="16dp"/>
        
         <TextView
-            android:text="Cholesterol 2g"
+            android:text="Cholesterol 2mg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:id="@+id/textV_cholesterol"
             android:textSize="16dp"/>
         <TextView
-            android:text="Sodium 7g"
+            android:text="Sodium 7mg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
@@ -522,11 +527,10 @@
        
              <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="#000000"/>
+                android:layout_height="8dp"/>
 
            
-             <LinearLayout
+              <!--<LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -539,7 +543,7 @@
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:backgroundTint="#114232"/>
-            <!--<Button
+           <Button
                 android:text="Save Calorie Intake"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
@@ -553,8 +557,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnn_resetSugar"
                 android:layout_weight="1"
-                android:backgroundTint="#114232"/>-->
-            </LinearLayout>
+                android:backgroundTint="#114232"/>
+            </LinearLayout>-->
         </LinearLayout>
         </LinearLayout>
 

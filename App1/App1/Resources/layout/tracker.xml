@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@drawable/nutritrack">
+    android:background="@drawable/bg3">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
@@ -385,14 +385,14 @@
                 android:layout_gravity="center">
                
             <Button
-                android:text="Save Calorie Intake"
+                android:text="Save Progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_saveCalorie"
                 android:backgroundTint="#114232"/>
 
             <Button
-                android:text="Reset All Values"
+                android:text="Reset Values"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnn_resetSugar"

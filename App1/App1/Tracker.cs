@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Android.Animation;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Graphics;
@@ -7,6 +8,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Text;
 using Android.Views;
+using Android.Views.Animations;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.View;
@@ -271,6 +273,17 @@ namespace App1
             d = currentCalorieNum / (float)recommendCalorie;
             prog = d * 100;
             pieChart.Progress = (int)prog;
+            // Animate the progress bar
+            // Create a ValueAnimator to animate the progress
+            ValueAnimator animator = ValueAnimator.OfInt(0, (int)prog);
+            animator.SetDuration(1000); // 1 second
+            animator.SetInterpolator(new DecelerateInterpolator()); // For smooth animation
+            animator.Update += (object sender, ValueAnimator.AnimatorUpdateEventArgs e) =>
+            {
+                int animatedValue = (int)e.Animation.AnimatedValue;
+                pieChart.Progress = animatedValue;
+            };
+            animator.Start();
         }
 
 
@@ -299,10 +312,16 @@ namespace App1
             int id = item.ItemId;
             if (id == Resource.Id.action_settings)
             {
+                OpenWebLink("https://www.canva.com/design/DAF-j62aMQg/G1IK-EeQPP3ZUL7q-K_qyg/edit?utm_content=DAF-j62aMQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton");
                 return true;
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+        private void OpenWebLink(string url)
+        {
+            Intent intent = new Intent(Intent.ActionView, Android.Net.Uri.Parse(url));
+            StartActivity(intent);
         }
 
         private void FabOnClick(object sender, EventArgs eventArgs)
