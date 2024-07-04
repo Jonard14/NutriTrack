@@ -4188,3 +4188,8 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\res\layout\admin_login.xml
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_AddFood.java
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_Login.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_editdelfoodlist.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_editdelfoodlist_drawer.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\admin_displayfood.xml
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_DisplayFood.java
+C:\Users\Acer\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\Admin_EditDelFoodList.java

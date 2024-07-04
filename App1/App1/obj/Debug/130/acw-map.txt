@@ -1,6 +1,12 @@
 App1.Admin_AddFood, App1;crc64a7a6b04b89628087.Admin_AddFood
 App1.Admin_AddFood;crc64a7a6b04b89628087.Admin_AddFood
 app1.Admin_AddFood;crc64a7a6b04b89628087.Admin_AddFood
+App1.Admin_DisplayFood, App1;crc64a7a6b04b89628087.Admin_DisplayFood
+App1.Admin_DisplayFood;crc64a7a6b04b89628087.Admin_DisplayFood
+app1.Admin_DisplayFood;crc64a7a6b04b89628087.Admin_DisplayFood
+App1.Admin_EditDelFoodList, App1;crc64a7a6b04b89628087.Admin_EditDelFoodList
+App1.Admin_EditDelFoodList;crc64a7a6b04b89628087.Admin_EditDelFoodList
+app1.Admin_EditDelFoodList;crc64a7a6b04b89628087.Admin_EditDelFoodList
 App1.Admin_Login, App1;crc64a7a6b04b89628087.Admin_Login
 App1.Admin_Login;crc64a7a6b04b89628087.Admin_Login
 app1.Admin_Login;crc64a7a6b04b89628087.Admin_Login

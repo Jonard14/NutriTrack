@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin_AddFood.cs" />
+    <Compile Include="Admin_DisplayFood.cs" />
+    <Compile Include="Admin_EditDelFoodList.cs" />
     <Compile Include="Admin_Login.cs" />
     <Compile Include="changePass.cs" />
     <Compile Include="DBClass.cs" />
@@ -317,6 +319,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\admin_login.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_editdelfoodlist.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_editdelfoodlist_drawer.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_displayfood.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -93,8 +93,8 @@ INSERT INTO `food_data` (`food_id`, `food_name`) VALUES
 ('000054', 'Lechon'),
 ('000055', 'Coffee (Brewed)'),
 ('000056', 'Coffee (Cappuccino)'),
-('000057', 'Coffe (Espresso)'),
-('000058', 'Coffe (Latte)'),
+('000057', 'Coffee (Espresso)'),
+('000058', 'Coffee (Latte)'),
 ('000059', 'Hot dogs'),
 ('000060', 'Chocolate Chips');
 

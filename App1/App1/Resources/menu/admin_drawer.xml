@@ -9,9 +9,9 @@
             android:iconTint="#FCDC2A"
             android:title="Add Food" />
 		<item
-            android:id="@+id/removefood_btn"
+            android:id="@+id/edtdelfood_btn"
 			android:iconTint="#FCDC2A"
-            android:title="Remove Food" />
+            android:title="Edit and Remove Food" />
 		<item
             android:id="@+id/logout_btn"
 			android:iconTint="#FCDC2A"

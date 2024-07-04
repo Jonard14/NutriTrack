@@ -177,6 +177,9 @@ namespace App1
 
         public void resetSugarCalorie(object sender, EventArgs e)
         {
+            numOfCal.Text = "0" + "/" + recommendCalorie.ToString();
+            pieChart.Progress = 0;
+
             SugarCount.Text = "0";
             //CurrentCalorie.Text = "0";
             Tprotein.Text = "0";

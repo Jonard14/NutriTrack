@@ -135,10 +135,11 @@ namespace App1
             for (int i = 0; i < root.GetArrayLength(); i++)
             {
                 var u1 = root[i];
-                food_id = u1.GetProperty("food_id").ToString();
-                food_name = u1.GetProperty("food_name").ToString();
+                //food_id = u1.GetProperty("food_id").ToString();
+                //food_name = u1.GetProperty("food_name").ToString();
+                string tmpfood_name = u1.GetProperty("food_name").ToString();
 
-                if (selectedFood.Equals(food_name))
+                if (selectedFood.Equals(tmpfood_name))
                 {
                     food_id = u1.GetProperty("food_id").ToString();
                     food_name = u1.GetProperty("food_name").ToString();

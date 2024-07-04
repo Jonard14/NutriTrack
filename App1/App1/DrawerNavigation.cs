@@ -54,8 +54,8 @@ namespace App1
                     return typeof(MainActivity);
                 case Resource.Id.addfood_btn:
                     return typeof(Admin_AddFood);
-                case Resource.Id.removefood_btn:
-                    return typeof(Admin_AddFood);
+                case Resource.Id.edtdelfood_btn:
+                    return typeof(Admin_EditDelFoodList);
             }
 
             return null;

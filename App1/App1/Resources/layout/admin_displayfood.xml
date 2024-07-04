@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:p1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView1"
+    android:background="@drawable/NutriTrack">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/outerContainer"
+        >
+
+        <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:layout_margin="8dp"
+        android:id="@+id/btn_Back"
+        android:backgroundTint="#114232"
+        android:background="@drawable/ic_arrow_back_black_24"/>
+
+       <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg">
+            
+            <!-- Food Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_FoodName"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Food Name:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="Food Name"
+                    android:id="@+id/edtTxt_FoodName"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!-- Serving Size-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_ServSize"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Serving Size:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:text="100"
+                    android:id="@+id/edtTxt_ServSize"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" g"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+            <!-- Calories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Calories"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Calories:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Calories"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!-- Macronutrients -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Macronutrients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Macronutrients:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- Carbohydrates -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Carbohydrates"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Carbohydrates:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Carbohydrates"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" g"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+            <!-- Protein -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Protein"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Protein:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Protein"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" g"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+            <!-- Fat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Fat"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Fat:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Fat"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" g"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+            <!-- Micronutrients -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Micronutrients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Micronutrients:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+             <!-- Sugar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Sugar"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sugar:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Sugar"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" g"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+             <!-- Sodium -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Sodium"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sodium:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Sodium"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" mg"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+             <!-- Cholesterol -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/txtV_Cholesterol"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cholesterol:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="10dp"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/edtTxt_Cholesterol"
+                    android:background="@drawable/register_inputbox_design"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+                <TextView
+                   android:text=" mg"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="16dp"
+                   android:layout_gravity="center"
+                   android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <!-- Update Button -->
+                 <Button
+                    android:id="@+id/update_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#114232"
+                    android:layout_margin="10dp"
+                    android:text="Update" />
+                <!-- Delete Button -->
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#8B0000"
+                    android:layout_margin="10dp"
+                    android:text="Delete" />
+                
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>       
+
