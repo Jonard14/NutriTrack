@@ -51,7 +51,7 @@ namespace App1
             // Create your application here
             home = FindViewById<Button>(Resource.Id.btn_Home);
             home.Click += homeClick;
-            
+
             txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
             txtemail = FindViewById<TextView>(Resource.Id.txtV_Email);
 
@@ -157,7 +157,7 @@ namespace App1
             return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
         }
 
-        
+
         // ===== Birthday Functions =====
         private void load_days() // Generate Drop down list of days based on Month
         {
@@ -201,9 +201,9 @@ namespace App1
         }
 
         private void Bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        { 
+        {
             selected_bmonth = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Month
-            set_bday = selected_bday; 
+            set_bday = selected_bday;
             load_days(); // Dynamic Drop down event to change list of days based on month selected
             bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
         }
@@ -299,17 +299,17 @@ namespace App1
                                                 "&height=" + height.Text + "&weight=" + weight.Text + "&bmi=" + bmi.Text + "&password=" + password.Text);
                 */
                 success2 = db.InsertDataAzure("INSERT INTO user_data (email, first_name, last_name, birthday, gender, height, weight, bmi) " +
-                    "VALUES ('"+ email.Text +"', '"+ firstname.Text +"', '"+ lastname.Text +"', " +
-                    "'"+ birthday_format + "', '"+ valueGender + "', '"+ height.Text + "', '"+ weight.Text +"', '"+ bmi.Text +"')", 
+                    "VALUES ('" + email.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', " +
+                    "'" + birthday_format + "', '" + valueGender + "', '" + height.Text + "', '" + weight.Text + "', '" + bmi.Text + "')",
                     "user_db");
 
                 success3 = db.InsertDataAzure("UPDATE user_data SET " +
                     "daily_calorie_intake='0', total_calorie_intake='0', calorie_intake_days='0' " +
-                    "WHERE email='"+ email.Text +"'", 
+                    "WHERE email='" + email.Text + "'",
                     "user_db");
 
                 success4 = db.InsertDataAzure("INSERT INTO login VALUES " +
-                    "('"+ email.Text + "', HASHBYTES('SHA2_256','" + password.Text +"'))", 
+                    "('" + email.Text + "', HASHBYTES('SHA2_256','" + password.Text + "'), 'user')",
                     "user_db");
 
                 SaveIllness();
@@ -381,7 +381,7 @@ namespace App1
             */
 
             if (ill_HD.Checked)
-                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('"+ email.Text +"', '"+ ill_HD.Text + "')", "user_db");
+                success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_HD.Text + "')", "user_db");
             if (ill_D.Checked)
                 success = db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email.Text + "', '" + ill_D.Text + "')", "user_db");
             if (ill_C.Checked)

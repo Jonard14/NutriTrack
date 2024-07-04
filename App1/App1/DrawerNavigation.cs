@@ -21,57 +21,43 @@ namespace App1
 
     public class DrawerNavigation
     {
+        // User Account Side
         public Type SelectedNavigation(IMenuItem item)
         {
             //selected_drawer = item.TitleFormatted.ToString(); // stores title of category in string var
 
-            int id = item.ItemId;
+            switch (item.ItemId)
+            {
+                case Resource.Id.home_btn:
+                    return typeof(HomePage);
+                case Resource.Id.logout_btn:
+                    return typeof(MainActivity);
+                case Resource.Id.tracker_btn:
+                    return typeof(Tracker);
+                case Resource.Id.suggest_btn:
+                    return typeof(SuggestFood);
+                case Resource.Id.prof_btn:
+                    return typeof(ProfilePage);
+                case Resource.Id.logs_btn:
+                    return typeof(Logs);
+            }
 
-            if (id == Resource.Id.home_btn)
-            {
-                return typeof(HomePage);
-            }
-            else if (id == Resource.Id.tracker_btn)
-            {
-                return typeof(Tracker);
-            }
-            else if (id == Resource.Id.logout_btn)
-            {
-                return typeof(MainActivity);
-            }
-            else if (id == Resource.Id.suggest_btn)
-            {
-                return typeof(SuggestFood);
-            }
-            else if (id == Resource.Id.prof_btn)
-            {
-                return typeof(ProfilePage);
-            }
-            else if (id == Resource.Id.logs_btn)
-            {
-                return typeof(Logs);
-            }
             return null;
         }
 
+        // Admin Account Side
         public Type SelectedNavigation_Admin(IMenuItem item)
         {
-            //selected_drawer = item.TitleFormatted.ToString(); // stores title of category in string var
+            switch (item.ItemId)
+            {
+                case Resource.Id.logout_btn:
+                    return typeof(MainActivity);
+                case Resource.Id.addfood_btn:
+                    return typeof(Admin_AddFood);
+                case Resource.Id.removefood_btn:
+                    return typeof(Admin_AddFood);
+            }
 
-            int id = item.ItemId;
-
-            if (id == Resource.Id.addfood_btn)
-            {
-                return typeof(Admin_AddFood);
-            }
-            else if (id == Resource.Id.removefood_btn)
-            {
-                return typeof(Admin_AddFood);
-            }
-            else if (id == Resource.Id.logout_btn)
-            {
-                return typeof(MainActivity);
-            }
             return null;
         }
     }
