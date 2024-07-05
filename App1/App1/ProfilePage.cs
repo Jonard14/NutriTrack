@@ -29,7 +29,7 @@ namespace App1
         JsonElement root;
         string email = Login.MyGlobals.Globalemail;
 
-        private ImageView profilePicture;
+     
         private TextView firstNameText;
         private TextView lastNameText;
         private TextView emailText;
@@ -40,7 +40,6 @@ namespace App1
         private TextView bmiText;
         private TextView illnessText;
         private Button updateProfileButton;
-        private Button backToHomeButton;
         private double height = 1.75;
 
 
@@ -76,11 +75,11 @@ namespace App1
             bmiText = FindViewById<TextView>(Resource.Id.txtV_ProfileBMI);
             illnessText = FindViewById<TextView>(Resource.Id.txtV_ProfileIllness);
             updateProfileButton = FindViewById<Button>(Resource.Id.btn_UpdateProfile);
-            //backToHomeButton = FindViewById<Button>(Resource.Id.btn_BackToHome);
+
 
             // Set up click events
             updateProfileButton.Click += UpdateProfileButton_Click;
-            //backToHomeButton.Click += BackToHomeButton_Click;
+
 
         }
 
