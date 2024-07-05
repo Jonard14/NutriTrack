@@ -14,9 +14,8 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using static Android.Provider.DocumentsContract;
-using System.Net;
-using System.Net.Mail;
-using System.Text.RegularExpressions;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 namespace App1
 {
@@ -96,23 +95,21 @@ namespace App1
         {
             try
             {
-                var smtpClient = new SmtpClient("smtp.gmail.com")
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("Nutri Track Authentication", "jmoriarty031@gmail.com"));
+                message.To.Add(new MailboxAddress("", email));
+                message.Subject = "Your Verification Code";
+                message.Body = new TextPart("plain")
                 {
-                    Port = 587,
-                    Credentials = new NetworkCredential("jmoriarty031@gmail.com", "gerico@31"),
-                    EnableSsl = true,
-
+                    Text = $"Your verification code is {verificationcode}"
                 };
-                var mailMessage = new MailMessage
+                using (var smtpClient = new SmtpClient())
                 {
-                    From = new MailAddress("tolaybagz@gmail.com"),
-                    Subject = "Your Verification Code",
-                    Body = $"Your verification code is {verificationcode}",
-                    IsBodyHtml = false,
-                };
-                mailMessage.To.Add(email);
-
-                smtpClient.Send(mailMessage);
+                    smtpClient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    smtpClient.Authenticate("jmoriarty031@gmail.com", "yqpw mhpo vsms tfoi");
+                    smtpClient.Send(message);
+                    smtpClient.Disconnect(true);
+                }
             }
             catch (Exception ex)
             {

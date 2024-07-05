@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\verifyemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\codeverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\codeverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\codeverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\resources\\layout\\codeverify.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\resources\\layout\\codeverify.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\codeverify.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\changepass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\changepass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\changepass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,7 +31,7 @@
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\geico\\onedrive\\documents\\github\\cs134-thesis2\\app1\\app1\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\app1\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -69,7 +69,7 @@
               "RelativeDocumentMoniker": "App1\\verifyEmail.cs",
               "ToolTip": "C:\\Users\\Geico\\OneDrive\\Documents\\GitHub\\CS134-Thesis2\\App1\\App1\\verifyEmail.cs",
               "RelativeToolTip": "App1\\verifyEmail.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAYwDYAAAAeAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAwG8AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-04T23:37:26.669Z",
               "EditorCaption": ""
@@ -148,7 +148,8 @@
               "RelativeToolTip": "App1\\Logs.cs",
               "ViewState": "AQIAAIgAAAAAAAAAAAAcwJEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T15:21:26.869Z"
+              "WhenOpened": "2024-07-04T15:21:26.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

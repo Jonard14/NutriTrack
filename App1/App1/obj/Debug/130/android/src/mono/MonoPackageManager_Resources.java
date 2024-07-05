@@ -3,9 +3,14 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "App1.dll" comes first in this list. */
 		"App1.dll",
+		"BouncyCastle.Cryptography.dll",
+		"MailKit.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
+		"MimeKit.dll",
 		"System.Data.OleDb.dll",
+		"System.Formats.Asn1.dll",
 		"System.IO.Pipelines.dll",
+		"System.Security.Cryptography.Pkcs.dll",
 		"System.Text.Encodings.Web.dll",
 		"System.Text.Json.dll",
 		"Xamarin.AndroidX.Activity.dll",

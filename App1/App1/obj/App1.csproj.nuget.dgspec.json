@@ -43,6 +43,10 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "System.Data.OleDb": {
               "target": "Package",
               "version": "[9.0.0-preview.5.24306.7, )"
