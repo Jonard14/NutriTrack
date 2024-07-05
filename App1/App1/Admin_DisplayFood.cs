@@ -80,6 +80,7 @@ namespace App1
         // Back button
         private void Back_btn_Click(object sender, EventArgs e)
         {
+            Finish();
             Intent i = new Intent(this, typeof(Admin_EditDelFoodList));
             StartActivity(i);
         }

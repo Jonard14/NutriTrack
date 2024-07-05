@@ -38,7 +38,7 @@ namespace App1
                data_height, data_weight, data_bmi, 
                data_gender;
 
-        private TextView emailTxt, BMI_Classification, birthdayTxt, genderTxt;
+        private TextView emailTxt, BMI_Classification, birthdayTxt, genderTxt, ageTxt;
         private EditText firstNameEditText, lastNameEditText,
                          height, weight, bmi, 
                          currentPassword, newPassword, rePassword;
@@ -85,6 +85,7 @@ namespace App1
             lastNameEditText.TextChanged += InputProfileText_TextChanged;
 
             birthdayTxt = FindViewById<TextView>(Resource.Id.Txt_Birthday);
+            ageTxt = FindViewById<TextView>(Resource.Id.age);
             genderTxt = FindViewById<TextView>(Resource.Id.Txt_Gender);
 
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
@@ -163,6 +164,8 @@ namespace App1
             data_bmonth = split_bday[1];
             string[] daytime = split_bday[2].Split('T');
             data_bday = daytime[0];
+
+            ageTxt.Text = ConvertBirthdayToAge().ToString();
 
             switch (data_bmonth)
             {
@@ -280,7 +283,24 @@ namespace App1
                 BMI_Classification.Text = "Invalid BMI!";
             }
         }
+        public double ConvertBirthdayToAge() // Convert Birthday to Age
+        {
+            /* Jonard's Note:
+            This will accurately get the age especially if the month or day was passed or not. 
+            *(my explanation is bad lol so here's the example)
+            *
+            Example: User's birthday is 2024-06-20
+                Then, if the date is 2001-06-21. Therefore, user's age is 23
+                Then, if the date is 2001-06-19. Therefore, user's age is 22 because it haven't reached their birthday for this year
+             */
+            string[] birthdate_split = new string[2];
+            birthdate_split = data_birthday.Split('-'); // YYYY-MM-DD
 
+            if (Int32.Parse(birthdate_split[1]) < DateTime.Now.Month ||
+                (Int32.Parse(birthdate_split[1]) == DateTime.Now.Month && Int32.Parse(birthdate_split[2]) < DateTime.Now.Day))
+                return (DateTime.Now.Year - Int32.Parse(birthdate_split[0])) - 1;
+            return DateTime.Now.Year - Int32.Parse(birthdate_split[0]);
+        }
 
         // Update Profile Details
         private void UpdateProfile_Btn(object sender, EventArgs e)

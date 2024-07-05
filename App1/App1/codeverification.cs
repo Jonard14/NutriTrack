@@ -18,7 +18,7 @@ namespace App1
     [Activity(Label = "codeverification", ScreenOrientation = ScreenOrientation.Portrait)]
     public class codeverification : Activity
     {
-        Button submitcode;
+        Button submitcode, btn;
         string email, correctVerificationCode;
         EditText codeField;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,10 +31,19 @@ namespace App1
             correctVerificationCode = Intent.GetStringExtra("verificationCode");
             codeField = FindViewById<EditText>(Resource.Id.edtTxt_codeField);
             submitcode = FindViewById<Button>(Resource.Id.btn_verifycode);
+            btn = FindViewById<Button>(Resource.Id.btn_Back);
+            btn.Click += Back_Click;
             submitcode.Click += verifyCode;
         }
 
-        public void verifyCode(object sender, EventArgs e)
+        private void Back_Click(object sender, EventArgs e)
+            {
+                Finish();
+                Intent i = new Intent(this, typeof(MainActivity));
+                StartActivity(i);
+            }
+
+            public void verifyCode(object sender, EventArgs e)
         {
             if(codeField.Text == correctVerificationCode)
             {

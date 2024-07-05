@@ -145,32 +145,74 @@
                     android:textSize="15sp"/>
             </LinearLayout>
 
-            <!-- Birthday -->
+            
+            <!-- Birthday & Age -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:paddingBottom="15dp">
+
                 <TextView
                     android:id="@+id/txtV_ProfileBirthday"
-                    android:layout_width="75dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Birthday:"
+                    android:paddingLeft="17dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:layout_marginEnd="10dp"
-                    android:gravity="right" />
+                     />
                  <TextView
-                    android:layout_width="260dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:padding="5dp"
-                    android:text="July 5, 2024"
+                    android:paddingLeft="10dp"
+                    android:text="January 5, 2024"
                     android:textColor="#000000"
                     android:id="@+id/Txt_Birthday"
                     android:textStyle="bold"
                     android:textSize="15sp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginLeft="35dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:id="@+id/txtV_Age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:paddingRight="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="21"
+                    android:textColor="#000000"
+                    android:id="@+id/age"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:paddingLeft="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                
             </LinearLayout>
 
             <!-- Gender -->

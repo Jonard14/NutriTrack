@@ -162,9 +162,7 @@ namespace App1
                
             }
             else
-            {
-                
-
+            {            
                 Intent i = new Intent(this, page);
                 StartActivity(i);
 

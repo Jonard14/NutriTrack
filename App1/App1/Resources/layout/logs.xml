@@ -25,7 +25,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Layout Starts Here -->
-    <TextView
+    <!--<TextView
         android:text="History Logs"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
@@ -36,7 +36,17 @@
         android:textColor="@android:color/background_light"
         android:paddingLeft="20px"
         android:paddingTop="20px"
-        android:paddingBottom="20px"/>
+        android:paddingBottom="20px"/>-->
+    <Spinner
+                android:padding="0dp"
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_birthmonth"
+                android:entries="@array/dropdown_birthmonth"
+                android:layout_margin="10dp"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold"
+                android:textSize="10dp" />
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
