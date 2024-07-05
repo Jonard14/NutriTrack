@@ -142,8 +142,43 @@ namespace App1
 
         public void saveCalorieClick(object sender, EventArgs e)
         {
-            VerifyEmail();
-            float totalCalNum = TotalCalorie;
+
+            if (NullValue() && VerifyEmail())
+            {
+                float totalCalNum = TotalCalorie;
+                float currentCal = currentCalorieNum;
+                float calorieDays = CalorieDays;
+                calorieDays = calorieDays + 1;
+
+                float prevCal = CalorieNum;
+                prevCal = (currentCal + totalCalNum) / calorieDays;
+
+                string prevCalString = prevCal.ToString();
+                string stringCalDays = calorieDays.ToString();
+                TotalCalorie = currentCal + totalCalNum;
+
+                //db.InsertData("update_calorie.php?email=" + email + "&daily_calorie_intake=" + prevCalString + "&total_calorie_intake=" + TotalCalorie + "&calorie_intake_days=" + stringCalDays);
+                db.InsertDataAzure("UPDATE user_data SET daily_calorie_intake='" + float.Parse(prevCalString) + "', total_calorie_intake='" + TotalCalorie + "', calorie_intake_days='" + float.Parse(stringCalDays) + "' WHERE email='" + email + "';", "user_db");
+                PrevCalorie.Text = TotalCalorie.ToString();
+
+
+                string tracker_log_time = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm\:ss tt");
+                //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
+                //string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + currentCalorieNum + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
+
+                string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" + "'" + email + "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + currentCalorieNum + "'" + "," +
+                                                               "'" + float.Parse(SugarCount.Text) + "'" + "," + "'" + float.Parse(Tprotein.Text) + "'" + "," + "'" + float.Parse(Tfats.Text) + "'" + "," +
+                                                               "'" + float.Parse(Tcholesterol.Text) + "'" + "," + "'" + float.Parse(Tcarbohydrates.Text) + "'" + "," + "'" +
+                                                               float.Parse(Tsodium.Text) + "'" + ");", "user_db");
+                //Console.WriteLine(success);
+                Console.WriteLine(success2);
+
+                Toast.MakeText(this, "Successfuly saved Progress!", ToastLength.Long).Show();
+            }
+            else
+                Toast.MakeText(this, "No Progress to save!", ToastLength.Long).Show();
+
+            /*float totalCalNum = TotalCalorie;
             float currentCal = currentCalorieNum;
             float calorieDays = CalorieDays;
             calorieDays = calorieDays + 1;
@@ -171,7 +206,7 @@ namespace App1
             //Console.WriteLine(success);
             Console.WriteLine(success2);
 
-            Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();
+            Toast.MakeText(this, "Successfuly saved Calories!", ToastLength.Long).Show();*/
 
 
 
@@ -208,6 +243,15 @@ namespace App1
 
         }
 
+        public bool NullValue()
+        {
+            if (currentCalorieNum == 0 && float.Parse(SugarCount.Text) == 0 && float.Parse(Tprotein.Text) == 0 && float.Parse(Tfats.Text) == 0 && float.Parse(Tcholesterol.Text) == 0 && float.Parse(Tcarbohydrates.Text) == 0 && float.Parse(Tsodium.Text) == 0)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         public bool VerifyEmail()
         {
             //root = db.RetrieveData("get_calorie.php?email=" + email);
@@ -335,11 +379,24 @@ namespace App1
         {
             Type page = selectedNav.SelectedNavigation(item);
 
-            Intent i = new Intent(this, page);
-            StartActivity(i);
+            if (page == typeof(MainActivity))
+            {
+                FinishAffinity();
+                Intent i = new Intent(this, page);
+                StartActivity(i);
 
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            drawer.CloseDrawer(GravityCompat.Start);
+            }
+            else
+            {
+
+
+                Intent i = new Intent(this, page);
+                StartActivity(i);
+
+                DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+                drawer.CloseDrawer(GravityCompat.Start);
+            }
+
             return true;
         }
         // ============ built-in template functions for drawer (code ends here) =======================

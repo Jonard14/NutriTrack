@@ -45,6 +45,7 @@ namespace App1
 
         private void Back_Click(object sender, EventArgs e)
         {
+            Finish();   
             Intent i = new Intent(this, typeof(verifyEmail));
             StartActivity(i);
         }

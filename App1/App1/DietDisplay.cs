@@ -147,6 +147,7 @@ namespace App1
         }
         public void backEvent(object sender, EventArgs e)
         {
+                Finish();
                 Intent i = new Intent(this, typeof(SuggestFood));
                 StartActivity(i);
         }

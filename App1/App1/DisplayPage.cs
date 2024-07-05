@@ -117,11 +117,13 @@ namespace App1
         {
             if (Intent.GetStringExtra("ActivityPage") == "HomePage")
             {
+                Finish();
                 Intent i = new Intent(this, typeof(HomePage));
                 StartActivity(i);
             }
             else if (Intent.GetStringExtra("ActivityPage") == "DietDisplay")
             {
+                Finish();
                 Intent i = new Intent(this, typeof(DietDisplay));
                 i.PutExtra("SelectedDiet", Intent.GetStringExtra("SelectedDiet"));
                 StartActivity(i);

@@ -298,11 +298,24 @@ namespace App1
         {
             Type page = selectedNav.SelectedNavigation(item);
 
-            Intent i = new Intent(this, page);
-            StartActivity(i);
+            if (page == typeof(MainActivity))
+            {
+                FinishAffinity();
+                Intent i = new Intent(this, page);
+                StartActivity(i);
 
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            drawer.CloseDrawer(GravityCompat.Start);
+            }
+            else
+            {
+
+
+                Intent i = new Intent(this, page);
+                StartActivity(i);
+
+                DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+                drawer.CloseDrawer(GravityCompat.Start);
+            }
+
             return true;
         }
         // ============ built-in template functions for drawer (code ends here) =======================

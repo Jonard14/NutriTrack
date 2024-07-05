@@ -55,7 +55,7 @@ namespace App1
             {
                 string verificationCode = generateVerificationCode();
                 sendVerificationEmail(email.Text, verificationCode);
-                Toast.MakeText(this, "Ang Sarap!", ToastLength.Long).Show();
+                Toast.MakeText(this, $"Verification sent to {email.Text}", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(codeverification));
                 i.PutExtra("email", email.Text);
                 i.PutExtra("verificationCode", verificationCode);

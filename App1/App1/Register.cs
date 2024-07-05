@@ -107,6 +107,7 @@ namespace App1
         // Return Home
         public void homeClick(object sender, EventArgs e)
         {
+            Finish();
             Intent i = new Intent(this, typeof(MainActivity));
             StartActivity(i);
         }
