@@ -26,6 +26,7 @@ Button;obj\Debug\130\res\layout\admin_addfood.xml
 Button;obj\Debug\130\res\layout\admin_displayfood.xml
 Button;obj\Debug\130\res\layout\admin_login.xml
 Button;obj\Debug\130\res\layout\changepass.xml
+Button;obj\Debug\130\res\layout\codeverify.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\diet_display.xml
 Button;obj\Debug\130\res\layout\displaypage.xml
@@ -34,7 +35,7 @@ Button;obj\Debug\130\res\layout\profile_page.xml
 Button;obj\Debug\130\res\layout\register.xml
 Button;obj\Debug\130\res\layout\tracker.xml
 Button;obj\Debug\130\res\layout\verifyemail.xml
-cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\Geico\OneDrive\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CheckBox;obj\Debug\130\res\layout\register.xml
 color;obj\Debug\130\res\values\colors.xml
 color;obj\Debug\130\res\values\ic_launcher_background.xml
@@ -70,13 +71,14 @@ EditText;obj\Debug\130\res\layout\admin_addfood.xml
 EditText;obj\Debug\130\res\layout\admin_displayfood.xml
 EditText;obj\Debug\130\res\layout\admin_login.xml
 EditText;obj\Debug\130\res\layout\changepass.xml
+EditText;obj\Debug\130\res\layout\codeverify.xml
 EditText;obj\Debug\130\res\layout\displaypage.xml
 EditText;obj\Debug\130\res\layout\login.xml
 EditText;obj\Debug\130\res\layout\profile_page.xml
 EditText;obj\Debug\130\res\layout\register.xml
 EditText;obj\Debug\130\res\layout\verifyemail.xml
-external-cache-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\Geico\OneDrive\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Geico\OneDrive\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
@@ -104,6 +106,7 @@ LinearLayout;obj\Debug\130\res\layout\admin_displayfood.xml
 LinearLayout;obj\Debug\130\res\layout\admin_editdelfoodlist.xml
 LinearLayout;obj\Debug\130\res\layout\admin_login.xml
 LinearLayout;obj\Debug\130\res\layout\changepass.xml
+LinearLayout;obj\Debug\130\res\layout\codeverify.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
 LinearLayout;obj\Debug\130\res\layout\diet_display.xml
 LinearLayout;obj\Debug\130\res\layout\displaypage.xml
@@ -137,7 +140,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_manage.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
-paths;C:\Users\norys\OneDrive\Documents\GitHub\CS134-1P-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\Geico\OneDrive\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;obj\Debug\130\res\layout\tracker.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
@@ -189,6 +192,7 @@ TextView;obj\Debug\130\res\layout\admin_displayfood.xml
 TextView;obj\Debug\130\res\layout\admin_editdelfoodlist.xml
 TextView;obj\Debug\130\res\layout\admin_login.xml
 TextView;obj\Debug\130\res\layout\changepass.xml
+TextView;obj\Debug\130\res\layout\codeverify.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
 TextView;obj\Debug\130\res\layout\diet_display.xml
 TextView;obj\Debug\130\res\layout\displaypage.xml

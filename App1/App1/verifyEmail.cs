@@ -14,6 +14,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using static Android.Provider.DocumentsContract;
+using System.Net;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -51,9 +54,12 @@ namespace App1
         {
             if (verification())
             {
+                string verificationCode = generateVerificationCode();
+                sendVerificationEmail(email.Text, verificationCode);
                 Toast.MakeText(this, "Ang Sarap!", ToastLength.Long).Show();
-                Intent i = new Intent(this, typeof(changePass));
+                Intent i = new Intent(this, typeof(codeverification));
                 i.PutExtra("email", email.Text);
+                i.PutExtra("verificationCode", verificationCode);
                 StartActivity(i);
             }
             else
@@ -78,6 +84,40 @@ namespace App1
                 { return true; }
             }
             return false;
+        }
+
+        public string generateVerificationCode()
+        {
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString();
+        }
+
+        static void sendVerificationEmail(string email, string verificationcode)
+        {
+            try
+            {
+                var smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("jmoriarty031@gmail.com", "gerico@31"),
+                    EnableSsl = true,
+
+                };
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress("tolaybagz@gmail.com"),
+                    Subject = "Your Verification Code",
+                    Body = $"Your verification code is {verificationcode}",
+                    IsBodyHtml = false,
+                };
+                mailMessage.To.Add(email);
+
+                smtpClient.Send(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Email Sending Failed: " + ex.Message);
+            }
         }
     }
 }

@@ -58,6 +58,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
@@ -70,6 +72,7 @@
     <Compile Include="Admin_EditDelFoodList.cs" />
     <Compile Include="Admin_Login.cs" />
     <Compile Include="changePass.cs" />
+    <Compile Include="codeverification.cs" />
     <Compile Include="DBClass.cs" />
     <Compile Include="DietDisplay.cs" />
     <Compile Include="DisplayPage.cs" />
@@ -324,7 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\admin_editdelfoodlist.xml">
-     <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-v21\bg1.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
@@ -355,6 +358,11 @@
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-v21\bg5.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\codeverify.xml">
+      <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -23,6 +23,9 @@ using System.Text;
 using System.Text.Json;
 using static Android.Graphics.Paint;
 using static Java.Text.Normalizer;
+using System.Net;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace App1
 {

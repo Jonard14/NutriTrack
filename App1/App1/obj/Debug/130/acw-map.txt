@@ -13,6 +13,9 @@ app1.Admin_Login;crc64a7a6b04b89628087.Admin_Login
 App1.changePass, App1;crc64a7a6b04b89628087.changePass
 App1.changePass;crc64a7a6b04b89628087.changePass
 app1.changePass;crc64a7a6b04b89628087.changePass
+App1.codeverification, App1;crc64a7a6b04b89628087.codeverification
+App1.codeverification;crc64a7a6b04b89628087.codeverification
+app1.codeverification;crc64a7a6b04b89628087.codeverification
 App1.DietDisplay, App1;crc64a7a6b04b89628087.DietDisplay
 App1.DietDisplay;crc64a7a6b04b89628087.DietDisplay
 app1.DietDisplay;crc64a7a6b04b89628087.DietDisplay
