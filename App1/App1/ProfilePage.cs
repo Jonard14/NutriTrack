@@ -38,14 +38,12 @@ namespace App1
                data_height, data_weight, data_bmi, 
                data_gender;
 
-        private TextView emailTxt, BMI_Classification;
+        private TextView emailTxt, BMI_Classification, birthdayTxt, genderTxt;
         private EditText firstNameEditText, lastNameEditText,
-                         birthdayEditText, genderEditText,
                          height, weight, bmi, 
                          currentPassword, newPassword, rePassword;
         Decimal bmivalue;
-        Spinner gender;
-        string selected_gender, valueGender;
+
         CheckBox ill_HD, ill_D, ill_C;
         string[] data_illness = new string[3];
 
@@ -55,12 +53,6 @@ namespace App1
         // Birthday
         private string[] split_bday;
         private string data_bmonth, data_bday, databyear;
-
-        private Spinner bmonth, bday, byear;
-        private string set_bday, selected_bmonth, selected_bday, selected_byear, birthday_format;
-        private ArrayAdapter _adapter_day, _adapter_year;
-        private ArrayList array_day, array_year;
-
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -86,34 +78,18 @@ namespace App1
             // Create your application here
             // ---Profile Details---
             emailTxt = FindViewById<TextView>(Resource.Id.Txt_Email);
+
             firstNameEditText = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
-            //firstNameEditText.TextChanged += InputProfile_TextChanged;
             firstNameEditText.TextChanged += InputProfileText_TextChanged;
             lastNameEditText = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
-            //lastNameEditText.TextChanged += InputProfile_TextChanged;
             lastNameEditText.TextChanged += InputProfileText_TextChanged;
 
-            bmonth = FindViewById<Spinner>(Resource.Id.spinner_birthmonth);
-            selected_bmonth = bmonth.SelectedItem.ToString();
-            bmonth.ItemSelected += Bmonth_ItemSelected;
-            bday = FindViewById<Spinner>(Resource.Id.spinner_birthday);
-            load_days();
-            //selected_bday = bday.SelectedItem.ToString(); // DO NOT UNCOMMENT THIS LINE
-            bday.ItemSelected += Bday_ItemSelected;
-            byear = FindViewById<Spinner>(Resource.Id.spinner_birthyear);
-            load_years();
-            selected_byear = byear.SelectedItem.ToString();
-            byear.ItemSelected += Byear_ItemSelected;
-
-            gender = FindViewById<Spinner>(Resource.Id.spinner_gender);
-            selected_gender = gender.SelectedItem.ToString();
-            gender.ItemSelected += Gender_ItemSelected;
+            birthdayTxt = FindViewById<TextView>(Resource.Id.Txt_Birthday);
+            genderTxt = FindViewById<TextView>(Resource.Id.Txt_Gender);
 
             height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
-            //height.TextChanged += InputProfile_TextChanged;
             height.TextChanged += InputProfileNumber_TextChanged;
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
-            //weight.TextChanged += InputProfile_TextChanged;
             weight.TextChanged += InputProfileNumber_TextChanged;
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
             BMI_Classification = FindViewById<TextView>(Resource.Id.txtV_BMI_Classification);
@@ -179,8 +155,8 @@ namespace App1
         // Display Data
         private void UpdateData() 
         {
-            if (data_gender == "M") { data_gender = "0"; }
-            else if (data_gender == "F") { data_gender = "1"; }
+            if (data_gender == "M") { data_gender = "Male"; }
+            else if (data_gender == "F") { data_gender = "Female"; }
 
             split_bday = data_birthday.Split('-');
             databyear = split_bday[0];
@@ -188,22 +164,30 @@ namespace App1
             string[] daytime = split_bday[2].Split('T');
             data_bday = daytime[0];
 
-            //Console.WriteLine("Birthday:" + databyear + data_bmonth + data_bday);
-            //Console.WriteLine("Birthday:" + data_bday);
-            //Console.WriteLine("Gender:" + data_gender);
+            switch (data_bmonth)
+            {
+                case "01": data_bmonth = "January"; break;
+                case "02": data_bmonth = "February"; break;
+                case "03": data_bmonth = "March"; break;
+                case "04": data_bmonth = "April"; break;
+                case "05": data_bmonth = "May"; break;
+                case "06": data_bmonth = "June"; break;
+                case "07": data_bmonth = "July"; break;
+                case "08": data_bmonth = "August"; break;
+                case "09": data_bmonth = "September"; break;
+                case "10": data_bmonth = "October"; break;
+                case "11": data_bmonth = "November"; break;
+                case "12": data_bmonth = "December"; break;
+            }
 
             // Display Data
-            firstNameEditText.Text = data_first_name;
-            lastNameEditText.Text = data_last_name;
-            //emailEditText.Text = email;
             emailTxt.Text = email;
 
-            selected_bday = data_bday; // The "DO NOT UNCOMMENT THIS LINE" is where the day of month loads incorrectly
-            byear.SetSelection(_adapter_year.GetPosition(databyear));
-            bmonth.SetSelection(Int32.Parse(data_bmonth) - 1);
-            //bday.SetSelection(_adapter_day.GetPosition(data_bday)); // DO NOT UNCOMMENT THIS LINE
+            firstNameEditText.Text = data_first_name;
+            lastNameEditText.Text = data_last_name;
 
-            gender.SetSelection(Int32.Parse(data_gender));
+            birthdayTxt.Text = data_bmonth + " " + data_bday + ", " + databyear;
+            genderTxt.Text = data_gender;
 
             height.Text = data_height;
             weight.Text = data_weight;
@@ -220,113 +204,6 @@ namespace App1
             }
            
         }
-
-        // ===== Birthday Functions =====
-        private void load_days() // Generate Drop down list of days based on Month
-        {
-            array_day = new ArrayList();
-
-            if (selected_bmonth == "January" || selected_bmonth == "March" || selected_bmonth == "May" || selected_bmonth == "July" ||
-                selected_bmonth == "August" || selected_bmonth == "October" || selected_bmonth == "December")
-                for (int i = 1; i <= 31; i++)
-                    array_day.Add(i.ToString());
-            else if (selected_bmonth == "February")
-                leap_year();
-            else
-                for (int i = 1; i <= 30; i++)
-                    array_day.Add(i.ToString());
-
-            _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
-            bday.Adapter = _adapter_day;
-
-        }
-        private void leap_year() // Checks for both month and year that are the month of February and year is divisible by 4
-        {
-            array_day = new ArrayList();
-
-            if ((Int32.Parse(selected_byear) % 4) == 0)
-                for (int i = 1; i <= 29; i++)
-                    array_day.Add(i.ToString());
-            else
-                for (int i = 1; i <= 28; i++)
-                    array_day.Add(i.ToString());
-        }
-        // Generates Drop down list of birth year from 1900 to a year before the present year
-        private void load_years()
-        {
-            array_year = new ArrayList();
-
-            for (int i = 1900; i < DateTime.Now.Year; i++)
-                array_year.Add(i.ToString());
-
-            _adapter_year = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_year);
-            byear.Adapter = _adapter_year;
-        }
-
-        private void Bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            selected_bmonth = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Month
-            set_bday = selected_bday;
-            load_days(); // Dynamic Drop down event to change list of days based on month selected
-            bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
-        }
-
-        private void Bday_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            selected_bday = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Days
-        }
-
-        private void Byear_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            selected_byear = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Year
-
-            // Same way as selecting month above, but also checks for month of February if the selected year is leap year
-            if (selected_bmonth == "February")
-            {
-                set_bday = selected_bday;
-                leap_year();
-                _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
-                bday.Adapter = _adapter_day;
-                bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
-            }
-        }
-        private string Format_Date() // Birthday Format - converts to YYYY-MM-DD and save to DB
-        {
-            string month_format = "00", day = "00";
-            switch (selected_bmonth)
-            {
-                case "January":
-                    month_format = "01"; break;
-                case "February":
-                    month_format = "02"; break;
-                case "March":
-                    month_format = "03"; break;
-                case "April":
-                    month_format = "04"; break;
-                case "May":
-                    month_format = "05"; break;
-                case "June":
-                    month_format = "06"; break;
-                case "July":
-                    month_format = "07"; break;
-                case "August":
-                    month_format = "08"; break;
-                case "September":
-                    month_format = "09"; break;
-                case "October":
-                    month_format = "10"; break;
-                case "November":
-                    month_format = "11"; break;
-                case "December":
-                    month_format = "12"; break;
-            }
-            if (Int32.Parse(selected_bday) <= 9)
-                day = "0" + selected_bday;
-            else
-                day = selected_bday;
-            return selected_byear + "-" + month_format + "-" + day;
-        }
-        // ===== Birthday Functions Ends Here=====
 
         // Dynamically show error prompt in input field
 
@@ -354,16 +231,9 @@ namespace App1
             else if (value.Text == "0")
                 value.Error = "Value cannot have 0 value!";
         }
-
-        
-        private void InputProfile_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            DynamicValidation_Profile();
-        }
         
         private void DynamicValidation_Profile()
         {
-
             if (firstNameEditText.Text == "")
                 firstNameEditText.Error = "Please enter your Firstname!";
             //else if (!(Regex.IsMatch(firstNameEditText.Text, @"^[\p{L}]+$")))
@@ -384,16 +254,6 @@ namespace App1
                 weight.Error = "Please enter your Height!";
             else if (weight.Text == "0")
                 weight.Error = "Weight cannot have 0 value!";
-        }
-
-        // Get value of Gender Selected
-        private void Gender_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            selected_gender = e.Parent.GetItemAtPosition(e.Position).ToString();
-
-            // Convnert to single character to insert db
-            if (selected_gender == "Male") { valueGender = "M"; }
-            else if (selected_gender == "Female") { valueGender = "F"; }
         }
 
         // Calculate BMI from the user inputs height and weight
@@ -424,9 +284,7 @@ namespace App1
 
         // Update Profile Details
         private void UpdateProfile_Btn(object sender, EventArgs e)
-        {
-            birthday_format = Format_Date(); 
-
+        { 
             if (Validation())
             {
                 db.InsertDataAzure("UPDATE user_data SET " +
