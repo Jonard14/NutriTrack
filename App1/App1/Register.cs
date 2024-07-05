@@ -31,7 +31,7 @@ namespace App1
         Decimal bmivalue;
         DBClass db = new DBClass();
         JsonElement root;
-        string searchemail;
+        string searchemail, searchtype;
 
         // Birthday
         private Spinner bmonth, bday, byear;
@@ -125,11 +125,13 @@ namespace App1
                 email.Error = "Email is not Valid!";
             if (firstname.Text == "")
                 firstname.Error = "Please enter your Firstname!";
-            else if (!(Regex.IsMatch(firstname.Text, @"^[\p{L}]+$")))
+            //else if (!(Regex.IsMatch(firstname.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(firstname.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
                 firstname.Error = "Name must only contain letters!";
             if (lastname.Text == "")
                 lastname.Error = "Please enter your Lastname!";
-            else if (!(Regex.IsMatch(lastname.Text, @"^[\p{L}]+$")))
+            //else if (!(Regex.IsMatch(lastname.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(lastname.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
                 lastname.Error = "Name must only contain letters!";
 
             if (height.Text == "")
@@ -353,8 +355,9 @@ namespace App1
             {
                 var u1 = root[i];
                 searchemail = u1.GetProperty("email").ToString();
+                searchtype = u1.GetProperty("acct_type").ToString();
 
-                if (searchemail == email.Text)
+                if (searchemail == email.Text && searchtype == "user")
                 {
                     email.Error = "Account Already Exists!";
                     return false;

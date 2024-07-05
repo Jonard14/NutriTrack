@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Content.Res;
 using Android.Graphics;
 using Android.Hardware.Lights;
 using Android.OS;
@@ -21,168 +22,526 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using static Android.Provider.DocumentsContract;
 
 namespace App1
 {
     [Activity(Label = "Profile", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class ProfilePage : AppCompatActivity
+    public class ProfilePage : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        DrawerNavigation selectedNav = new DrawerNavigation();
         DBClass db = new DBClass();
+        JsonElement root;
         string email = Login.MyGlobals.Globalemail;
+        string data_email, data_first_name, data_last_name, data_birthday, 
+               data_height, data_weight, data_bmi, 
+               data_gender;
 
-        private TextView firstNameText;
-        private TextView lastNameText;
-        private EditText emailEditText;
-        private EditText birthdayEditText;
-        private EditText genderEditText;
-        private EditText heightEditText;
-        private EditText weightEditText;
-        private EditText bmiEditText;
-        private EditText illnessEditText;
-        private Button updateProfileButton;
+        private TextView emailTxt, BMI_Classification;
+        private EditText firstNameEditText, lastNameEditText,
+                         birthdayEditText, genderEditText,
+                         height, weight, bmi, 
+                         currentPassword, newPassword, rePassword;
+        Decimal bmivalue;
+        Spinner gender;
+        string selected_gender, valueGender;
+        CheckBox ill_HD, ill_D, ill_C;
+        string[] data_illness = new string[3];
+
+        private Button updateProfile_Btn, updatePass_Btn;
+
+
+        // Birthday
+        private string[] split_bday;
+        private string data_bmonth, data_bday, databyear;
+
+        private Spinner bmonth, bday, byear;
+        private string set_bday, selected_bmonth, selected_bday, selected_byear, birthday_format;
+        private ArrayAdapter _adapter_day, _adapter_year;
+        private ArrayList array_day, array_year;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.profile_page_drawer);
+            
+            // Drawer Layout
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
 
-            // Initialize UI components from XML layout
-            firstNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileFirstName);
-            lastNameText = FindViewById<TextView>(Resource.Id.txtV_ProfileLastName);
-            emailEditText = FindViewById<EditText>(Resource.Id.edtTxt_Email);
-            birthdayEditText = FindViewById<EditText>(Resource.Id.edtTxt_Birthday);
-            genderEditText = FindViewById<EditText>(Resource.Id.edtTxt_Gender);
-            heightEditText = FindViewById<EditText>(Resource.Id.edtTxt_Height);
-            weightEditText = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
-            bmiEditText = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
-            illnessEditText = FindViewById<EditText>(Resource.Id.edtTxt_Illness);
-            updateProfileButton = FindViewById<Button>(Resource.Id.btn_UpdateProfile);
+            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            //fab.Click += FabOnClick;
+
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+            drawer.AddDrawerListener(toggle);
+            toggle.SyncState();
+
+            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView.SetNavigationItemSelectedListener(this);
+
+            // Create your application here
+            // ---Profile Details---
+            emailTxt = FindViewById<TextView>(Resource.Id.Txt_Email);
+            firstNameEditText = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
+            //firstNameEditText.TextChanged += InputProfile_TextChanged;
+            firstNameEditText.TextChanged += InputProfileText_TextChanged;
+            lastNameEditText = FindViewById<EditText>(Resource.Id.edtTxt_LastName);
+            //lastNameEditText.TextChanged += InputProfile_TextChanged;
+            lastNameEditText.TextChanged += InputProfileText_TextChanged;
+
+            bmonth = FindViewById<Spinner>(Resource.Id.spinner_birthmonth);
+            selected_bmonth = bmonth.SelectedItem.ToString();
+            bmonth.ItemSelected += Bmonth_ItemSelected;
+            bday = FindViewById<Spinner>(Resource.Id.spinner_birthday);
+            load_days();
+            //selected_bday = bday.SelectedItem.ToString(); // DO NOT UNCOMMENT THIS LINE
+            bday.ItemSelected += Bday_ItemSelected;
+            byear = FindViewById<Spinner>(Resource.Id.spinner_birthyear);
+            load_years();
+            selected_byear = byear.SelectedItem.ToString();
+            byear.ItemSelected += Byear_ItemSelected;
+
+            gender = FindViewById<Spinner>(Resource.Id.spinner_gender);
+            selected_gender = gender.SelectedItem.ToString();
+            gender.ItemSelected += Gender_ItemSelected;
+
+            height = FindViewById<EditText>(Resource.Id.edtTxt_Height);
+            //height.TextChanged += InputProfile_TextChanged;
+            height.TextChanged += InputProfileNumber_TextChanged;
+            weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
+            //weight.TextChanged += InputProfile_TextChanged;
+            weight.TextChanged += InputProfileNumber_TextChanged;
+            bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
+            BMI_Classification = FindViewById<TextView>(Resource.Id.txtV_BMI_Classification);
+            height.TextChanged += GetBMI;
+            weight.TextChanged += GetBMI;
+
+            ill_HD = FindViewById<CheckBox>(Resource.Id.checkBox1);
+            ill_D = FindViewById<CheckBox>(Resource.Id.checkBox2);
+            ill_C = FindViewById<CheckBox>(Resource.Id.checkBox3);
+
+            // --- Change Password ---
+            currentPassword = FindViewById<EditText>(Resource.Id.edtTxt_CurrentPassword);
+            newPassword = FindViewById<EditText>(Resource.Id.edtTxt_NewPassword);
+            rePassword = FindViewById<EditText>(Resource.Id.edtTxt_RePassword);
 
             // Fetch and display user profile data
-            FetchProfileData();
-
+            LoadUserData();
+            UpdateData();
             // Set click listener for the update button
-            updateProfileButton.Click += UpdateProfileButton_Click;
+            updateProfile_Btn = FindViewById<Button>(Resource.Id.btn_UpdateProfile);
+            updateProfile_Btn.Click += UpdateProfile_Btn;
+            updatePass_Btn = FindViewById<Button>(Resource.Id.btn_UpdatePassword);
+            updatePass_Btn.Click += UpdatePass_Btn;
         }
 
-        private void FetchProfileData()
-        {
-            var userProfile = db.GetUserProfile(email);
+        
 
-            if (userProfile != null)
+        private void LoadUserData()
+        {
+            // Get user data from DB
+            root = db.RetrieveDataAzure("SELECT * FROM user_data WHERE email='"+ email +"'", 
+                                        null, "user_db");
+            for (int i = 0; i < root.GetArrayLength(); i++)
             {
-                firstNameText.Text = userProfile.FirstName;
-                lastNameText.Text = userProfile.LastName;
-                emailEditText.Text = userProfile.Email;
-                birthdayEditText.Text = userProfile.Birthday;
-                genderEditText.Text = userProfile.Gender;
-                heightEditText.Text = userProfile.Height.ToString();
-                weightEditText.Text = userProfile.Weight.ToString();
-                bmiEditText.Text = userProfile.BMI.ToString();
-                illnessEditText.Text = userProfile.Illness;
+                var u1 = root[i];
+
+                data_email = u1.GetProperty("email").ToString();
+                data_first_name = u1.GetProperty("first_name").ToString();
+                data_last_name = u1.GetProperty("last_name").ToString();
+                data_birthday = u1.GetProperty("birthday").ToString();
+                data_height = u1.GetProperty("height").ToString();
+                data_weight = u1.GetProperty("weight").ToString();
+                data_bmi = u1.GetProperty("bmi").ToString();
+                data_gender = u1.GetProperty("gender").ToString();
+            }
+
+            // Get illness from DB
+            root = db.RetrieveDataAzure("SELECT * FROM illnesses WHERE email='" + email + "'",
+                                        null, "user_db");
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+                //data_email = u1.GetProperty("email").ToString();
+                data_illness[i] = u1.GetProperty("types").ToString();
+            }
+            // Debug/Testing
+            /*
+            for (int i = 0;i < data_illness.Length; i++)
+                Console.WriteLine(data_illness[i]);
+            */
+        }
+
+        // Display Data
+        private void UpdateData() 
+        {
+            if (data_gender == "M") { data_gender = "0"; }
+            else if (data_gender == "F") { data_gender = "1"; }
+
+            split_bday = data_birthday.Split('-');
+            databyear = split_bday[0];
+            data_bmonth = split_bday[1];
+            string[] daytime = split_bday[2].Split('T');
+            data_bday = daytime[0];
+
+            //Console.WriteLine("Birthday:" + databyear + data_bmonth + data_bday);
+            //Console.WriteLine("Birthday:" + data_bday);
+            //Console.WriteLine("Gender:" + data_gender);
+
+            // Display Data
+            firstNameEditText.Text = data_first_name;
+            lastNameEditText.Text = data_last_name;
+            //emailEditText.Text = email;
+            emailTxt.Text = email;
+
+            selected_bday = data_bday; // The "DO NOT UNCOMMENT THIS LINE" is where the day of month loads incorrectly
+            byear.SetSelection(_adapter_year.GetPosition(databyear));
+            bmonth.SetSelection(Int32.Parse(data_bmonth) - 1);
+            //bday.SetSelection(_adapter_day.GetPosition(data_bday)); // DO NOT UNCOMMENT THIS LINE
+
+            gender.SetSelection(Int32.Parse(data_gender));
+
+            height.Text = data_height;
+            weight.Text = data_weight;
+            //bmi.Text = data_bmi; // No need to uncomment because textchanged event will trigger bmi from height and weight editboxes
+
+            for (int i = 0; i < data_illness.Length; i++)
+            {
+                if (ill_HD.Text == data_illness[i]) // Heart Disease
+                    ill_HD.Checked = true;
+                else if (ill_D.Text == data_illness[i]) // Diabetes
+                    ill_D.Checked = true;
+                else if (ill_C.Text == data_illness[i]) // Cancer
+                    ill_C.Checked = true;
+            }
+           
+        }
+
+        // ===== Birthday Functions =====
+        private void load_days() // Generate Drop down list of days based on Month
+        {
+            array_day = new ArrayList();
+
+            if (selected_bmonth == "January" || selected_bmonth == "March" || selected_bmonth == "May" || selected_bmonth == "July" ||
+                selected_bmonth == "August" || selected_bmonth == "October" || selected_bmonth == "December")
+                for (int i = 1; i <= 31; i++)
+                    array_day.Add(i.ToString());
+            else if (selected_bmonth == "February")
+                leap_year();
+            else
+                for (int i = 1; i <= 30; i++)
+                    array_day.Add(i.ToString());
+
+            _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
+            bday.Adapter = _adapter_day;
+
+        }
+        private void leap_year() // Checks for both month and year that are the month of February and year is divisible by 4
+        {
+            array_day = new ArrayList();
+
+            if ((Int32.Parse(selected_byear) % 4) == 0)
+                for (int i = 1; i <= 29; i++)
+                    array_day.Add(i.ToString());
+            else
+                for (int i = 1; i <= 28; i++)
+                    array_day.Add(i.ToString());
+        }
+        // Generates Drop down list of birth year from 1900 to a year before the present year
+        private void load_years()
+        {
+            array_year = new ArrayList();
+
+            for (int i = 1900; i < DateTime.Now.Year; i++)
+                array_year.Add(i.ToString());
+
+            _adapter_year = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_year);
+            byear.Adapter = _adapter_year;
+        }
+
+        private void Bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_bmonth = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Month
+            set_bday = selected_bday;
+            load_days(); // Dynamic Drop down event to change list of days based on month selected
+            bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
+        }
+
+        private void Bday_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_bday = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Days
+        }
+
+        private void Byear_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_byear = e.Parent.GetItemAtPosition(e.Position).ToString(); // Get value of Year
+
+            // Same way as selecting month above, but also checks for month of February if the selected year is leap year
+            if (selected_bmonth == "February")
+            {
+                set_bday = selected_bday;
+                leap_year();
+                _adapter_day = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_day);
+                bday.Adapter = _adapter_day;
+                bday.SetSelection(_adapter_day.GetPosition(set_bday)); // Retain the selected day after resetting the entire list of days
+            }
+        }
+        private string Format_Date() // Birthday Format - converts to YYYY-MM-DD and save to DB
+        {
+            string month_format = "00", day = "00";
+            switch (selected_bmonth)
+            {
+                case "January":
+                    month_format = "01"; break;
+                case "February":
+                    month_format = "02"; break;
+                case "March":
+                    month_format = "03"; break;
+                case "April":
+                    month_format = "04"; break;
+                case "May":
+                    month_format = "05"; break;
+                case "June":
+                    month_format = "06"; break;
+                case "July":
+                    month_format = "07"; break;
+                case "August":
+                    month_format = "08"; break;
+                case "September":
+                    month_format = "09"; break;
+                case "October":
+                    month_format = "10"; break;
+                case "November":
+                    month_format = "11"; break;
+                case "December":
+                    month_format = "12"; break;
+            }
+            if (Int32.Parse(selected_bday) <= 9)
+                day = "0" + selected_bday;
+            else
+                day = selected_bday;
+            return selected_byear + "-" + month_format + "-" + day;
+        }
+        // ===== Birthday Functions Ends Here=====
+
+        // Dynamically show error prompt in input field
+
+        private void InputProfileText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EditText value = (EditText)sender;
+
+            if (value.Text == "")
+                value.Error = "Please enter your Firstname!";
+            //else if (!(Regex.IsMatch(value.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(value.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
+                value.Error = "Name must only contain letters!";
+            if (value.Text == "")
+                value.Error = "Please enter your Lastname!";
+            //else if (!(Regex.IsMatch(value.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(value.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
+                value.Error = "Name must only contain letters!";
+        }
+        private void InputProfileNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EditText value = (EditText)sender;
+
+            if (value.Text == "")
+                value.Error = "Empty value!";
+            else if (value.Text == "0")
+                value.Error = "Value cannot have 0 value!";
+        }
+
+        
+        private void InputProfile_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DynamicValidation_Profile();
+        }
+        
+        private void DynamicValidation_Profile()
+        {
+
+            if (firstNameEditText.Text == "")
+                firstNameEditText.Error = "Please enter your Firstname!";
+            //else if (!(Regex.IsMatch(firstNameEditText.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(firstNameEditText.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
+                firstNameEditText.Error = "Name must only contain letters!";
+            if (lastNameEditText.Text == "")
+                lastNameEditText.Error = "Please enter your Lastname!";
+            //else if (!(Regex.IsMatch(lastNameEditText.Text, @"^[\p{L}]+$")))
+            else if (!(Regex.IsMatch(lastNameEditText.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")))
+                lastNameEditText.Error = "Name must only contain letters!";
+
+            if (height.Text == "")
+                height.Error = "Please enter your Weight!";
+            else if (height.Text == "0")
+                height.Error = "Height cannot have 0 value!";
+
+            if (weight.Text == "")
+                weight.Error = "Please enter your Height!";
+            else if (weight.Text == "0")
+                weight.Error = "Weight cannot have 0 value!";
+        }
+
+        // Get value of Gender Selected
+        private void Gender_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_gender = e.Parent.GetItemAtPosition(e.Position).ToString();
+
+            // Convnert to single character to insert db
+            if (selected_gender == "Male") { valueGender = "M"; }
+            else if (selected_gender == "Female") { valueGender = "F"; }
+        }
+
+        // Calculate BMI from the user inputs height and weight
+        private void GetBMI(object sender, EventArgs e)
+        {
+            try
+            {
+                bmivalue = Convert.ToDecimal(weight.Text) / Convert.ToDecimal(Math.Pow(Convert.ToDouble(height.Text), 2));
+                bmivalue = Math.Round(bmivalue, 2);
+                bmi.Text = Convert.ToString(bmivalue);
+
+                if ((double)bmivalue < 18.5)
+                    BMI_Classification.Text = "Underweight";
+                else if ((double)bmivalue >= 18.5 && (double)bmivalue < 24.9)
+                    BMI_Classification.Text = "Normal weight";
+                else if ((double)bmivalue >= 25 && (double)bmivalue < 29.9)
+                    BMI_Classification.Text = "Overweight";
+                else
+                    BMI_Classification.Text = "Obese";
+            }
+            catch 
+            { 
+                bmi.Text = "0";
+                BMI_Classification.Text = "Invalid BMI!";
             }
         }
 
-        private void UpdateProfileButton_Click(object sender, EventArgs e)
-        {
-            if (ValidateInputs())
-            {
-                // Update profile data in database
-                bool success = UpdateUserProfile();
 
-                if (success)
-                {
-                    Snackbar.Make(updateProfileButton, "Profile updated successfully", Snackbar.LengthShort)
-                            .Show();
-                }
+        // Update Profile Details
+        private void UpdateProfile_Btn(object sender, EventArgs e)
+        {
+            birthday_format = Format_Date(); 
+
+            if (Validation())
+            {
+                db.InsertDataAzure("UPDATE user_data SET " +
+                    "first_name='" + firstNameEditText.Text + "', " +
+                    "last_name='" + lastNameEditText.Text + "', " +
+                    "height='" + height.Text + "', " +
+                    "weight='" + weight.Text + "', " +
+                    "bmi='" + bmi.Text + "'" +
+                    "WHERE email='" + email + "'",
+                    "user_db");
+
+                SaveIllness();
+
+                Toast.MakeText(this, "Account Updated Successfully!", ToastLength.Long).Show();
+            }
+            else Toast.MakeText(this, "Unable to Update!", ToastLength.Long).Show();
+        }
+
+        //Validation
+        public bool Validation()
+        {
+            if (firstNameEditText.Text == "" || !(Regex.IsMatch(firstNameEditText.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")) || //!(Regex.IsMatch(firstNameEditText.Text, @"^[\p{L}]+$")) ||
+                lastNameEditText.Text == "" || !(Regex.IsMatch(firstNameEditText.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")) || //!(Regex.IsMatch(lastNameEditText.Text, @"^[\p{L}]+$")) ||
+                height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0")
+            {
+                DynamicValidation_Profile();
+                return false;
+            }
+
+            return true;
+        }
+
+        // Insert Illness
+        public void SaveIllness()
+        {
+            db.InsertDataAzure("DELETE FROM illnesses WHERE email='"+ email +"'", "user_db");
+
+            if (ill_HD.Checked)
+                db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email + "', '" + ill_HD.Text + "')", "user_db");
+            if (ill_D.Checked)
+                db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email + "', '" + ill_D.Text + "')", "user_db");
+            if (ill_C.Checked)
+                db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email + "', '" + ill_C.Text + "')", "user_db");
+            if (!ill_HD.Checked && !ill_D.Checked && !ill_C.Checked)
+                db.InsertDataAzure("INSERT INTO illnesses VALUES ('" + email + "', 'Healthy')", "user_db");
+        }
+
+        // Update Password
+        private void UpdatePass_Btn(object sender, EventArgs e)
+        {
+            if (IsValid_CurrentPass())
+            {
+                if (newPassword.Text == "" || (newPassword.Text).Length < 8 ||
+                    rePassword.Text == "" || rePassword.Text != rePassword.Text)
+                    Validation_ChangePass();
                 else
                 {
-                    Snackbar.Make(updateProfileButton, "Failed to update profile", Snackbar.LengthShort)
-                            .Show();
+                    db.InsertDataAzure("UPDATE login SET " +
+                                       "password=HASHBYTES('SHA2_256', '" + newPassword.Text + "')" +
+                                       "WHERE email='"+ email +"' AND acct_type='user'", 
+                                       "user_db");
+                    Toast.MakeText(this, "Password Updated Successfully!", ToastLength.Long).Show();
                 }
+
+            }
+            else
+                currentPassword.Error = "Invalid Password!";
+        }
+
+        private bool IsValid_CurrentPass()
+        {
+            root = db.RetrieveDataAzure("SELECT * FROM login WHERE email='" + email + "' AND password=HASHBYTES('SHA2_256', '" + currentPassword.Text + "')  AND acct_type='user'",
+                                        null, "user_db");
+
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+                string searchemail = u1.GetProperty("email").ToString();
+
+                if (searchemail == email)
+                    return true;
+            }
+            return false;
+        }
+
+        private void Validation_ChangePass()
+        {
+            if (newPassword.Text == "")
+                newPassword.Error = "Please enter your Password!";
+            else if ((newPassword.Text).Length < 8)
+                newPassword.Error = "Password must be minimum of 8 characters!";
+            if (rePassword.Text == "")
+                rePassword.Error = "Please re-type your Password!";
+            else if (rePassword.Text != rePassword.Text)
+                rePassword.Error = "Passwords do not match!";
+        }
+
+        // ============ built-in template functions for drawer (code starts here) =======================
+        public override void OnBackPressed()
+        {
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            if (drawer.IsDrawerOpen(GravityCompat.Start))
+            {
+                drawer.CloseDrawer(GravityCompat.Start);
+            }
+            else
+            {
+                base.OnBackPressed();
             }
         }
 
-        private bool UpdateUserProfile()
+        public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            var updatedProfile = new UserProfile
-            {
-                FirstName = firstNameText.Text,
-                LastName = lastNameText.Text,
-                Email = emailEditText.Text,
-                Birthday = birthdayEditText.Text,
-                Gender = genderEditText.Text,
-                Height = double.Parse(heightEditText.Text),
-                Weight = double.Parse(weightEditText.Text),
-                BMI = CalculateBMI(double.Parse(weightEditText.Text), double.Parse(heightEditText.Text)),
-                Illness = illnessEditText.Text
-            };
-
-            // Update profile in database
-            return db.UpdateUserProfile(email, updatedProfile);
-        }
-
-        private double CalculateBMI(double weight, double height)
-        {
-            // Calculate BMI
-            return weight / (height * height);
-        }
-
-        private bool ValidateInputs()
-        {
-            // Implement your validation logic here
-            bool isValid = true;
-            if (string.IsNullOrWhiteSpace(firstNameText.Text))
-            {
-                firstNameText.Error = "First name is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(lastNameText.Text))
-            {
-                lastNameText.Error = "Last name is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(emailEditText.Text))
-            {
-                emailEditText.Error = "Email is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(birthdayEditText.Text))
-            {
-                birthdayEditText.Error = "Birthday is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(genderEditText.Text))
-            {
-                genderEditText.Error = "Gender is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(heightEditText.Text) || !double.TryParse(heightEditText.Text, out _))
-            {
-                heightEditText.Error = "Valid height is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(weightEditText.Text) || !double.TryParse(weightEditText.Text, out _))
-            {
-                weightEditText.Error = "Valid weight is required";
-                isValid = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(illnessEditText.Text))
-            {
-                illnessEditText.Error = "Illness information is required";
-                isValid = false;
-            }
-
-            return isValid;
+            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            return true;
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -234,6 +593,7 @@ namespace App1
             return true;
         }
         // ============ built-in template functions for drawer (code ends here) =======================
+
 
 
     }

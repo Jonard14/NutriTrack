@@ -11,10 +11,11 @@ using System.Text;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
+using Android.Content.PM;
 
 namespace App1
 {
-    [Activity(Label = "codeverification")]
+    [Activity(Label = "codeverification", ScreenOrientation = ScreenOrientation.Portrait)]
     public class codeverification : Activity
     {
         Button submitcode;
