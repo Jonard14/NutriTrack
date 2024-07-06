@@ -23,3 +23,4 @@ jonard14games@gmail.com		j14games
 ------- FOR ADMIN LOGIN -------
 ---email---			---password---
 jonard@admin.com		jonard14
+nutritrack@mcl.edu.ph		nutritrack

@@ -40,7 +40,8 @@ INSERT INTO login (email, password, acct_type) VALUES
 ('testname2@mcl.com', HASHBYTES('SHA2_256','Testing2'), 'user'),
 ('weltyang@starrail.hoyo', HASHBYTES('SHA2_256','blackhole'), 'user'),
 
-('jonard@admin.com', HASHBYTES('SHA2_256','jonard14'), 'admin');
+('jonard@admin.com', HASHBYTES('SHA2_256','jonard14'), 'admin'),
+('nutritrack@mcl.edu.ph', HASHBYTES('SHA2_256','nutritrack'), 'admin');
 
 -- --------------------------------------------------------
 
