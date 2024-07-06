@@ -333,8 +333,8 @@ namespace App1
         //Validation
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || !(Regex.IsMatch(firstname.Text, @"^[\p{L} ]+$")) ||
-                lastname.Text == "" || !(Regex.IsMatch(lastname.Text, @"^[\p{L} ]+$")) ||
+            if (email.Text == "" || firstname.Text == "" || !(Regex.IsMatch(firstname.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")) ||
+                lastname.Text == "" || !(Regex.IsMatch(lastname.Text, @"^[A-Za-zÀ-ÖØ-öø-ÿ]+([-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$")) ||
                 height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0" ||
                 password.Text == "" || (password.Text).Length < 8 || repassword.Text == "" || password.Text != repassword.Text)
             {
