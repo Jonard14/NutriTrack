@@ -321,7 +321,7 @@ namespace App1
                 //Toast.MakeText(this, success, ToastLength.Long).Show(); // Test/Debug
 
 
-                Toast.MakeText(this, "Successfully create account!", ToastLength.Long).Show();
+                Toast.MakeText(this, $"Successfully create account!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(Login));
                 StartActivity(i);
 
@@ -333,8 +333,8 @@ namespace App1
         //Validation
         public bool Validation()
         {
-            if (email.Text == "" || firstname.Text == "" || !(Regex.IsMatch(firstname.Text, @"^[\p{L}]+$")) ||
-                lastname.Text == "" || !(Regex.IsMatch(lastname.Text, @"^[\p{L}]+$")) ||
+            if (email.Text == "" || firstname.Text == "" || !(Regex.IsMatch(firstname.Text, @"^[\p{L} ]+$")) ||
+                lastname.Text == "" || !(Regex.IsMatch(lastname.Text, @"^[\p{L} ]+$")) ||
                 height.Text == "" || height.Text == "0" || weight.Text == "" || weight.Text == "0" ||
                 password.Text == "" || (password.Text).Length < 8 || repassword.Text == "" || password.Text != repassword.Text)
             {
