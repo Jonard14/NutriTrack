@@ -52,7 +52,8 @@
         
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <LinearLayout 
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -77,7 +78,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/lesssug"/>
 
@@ -97,7 +98,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="A diet focused on reducing the intake of sugary foods and beverages to improve overall health and prevent conditions  like diabetes and obesity."
                         android:textSize="10dp"
@@ -125,7 +126,7 @@
                 <ImageView
                      android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/highprot"/>
 
@@ -145,7 +146,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="A diet that emphasizes consuming higher amounts of protein-rich foods, such as meat, fish, eggs, and legumes, to support muscle growth and repair."
                         android:textSize="10dp"
@@ -173,7 +174,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/lesssod"/>
 
@@ -222,7 +223,7 @@
                     android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:scaleType="centerCrop"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:src="@drawable/lowcarb"/>
 
                 <LinearLayout
@@ -241,7 +242,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="A diet that limits carbohydrate intake, often replacing them with higher amounts of protein and fat, to aid in weight loss and improve metabolic health."
                         android:textSize="10dp"
@@ -270,7 +271,7 @@
                     android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:scaleType="centerCrop"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:src="@drawable/lowfat"/>
 
                 <LinearLayout
@@ -289,7 +290,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="A diet that restricts fat consumption, particularly saturated and trans fats, to promote heart health and support weight management."
                         android:textSize="10dp"
@@ -317,7 +318,7 @@
                 <ImageView
                    android:layout_width="100dp"
                     android:layout_height="70dp"
-                    android:layout_margin="7dp"
+                    android:layout_margin="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/lesschol"/>
 
@@ -337,7 +338,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:text="A diet that eliminates cholesterol-rich foods, such as animal products, to reduce blood cholesterol levels and lower the risk of cardiovascular disease."
                         android:textSize="10dp"

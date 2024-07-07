@@ -86,8 +86,8 @@ namespace App1
             SaveCalorie = FindViewById<Button>(Resource.Id.btn_saveCalorie);
             SaveCalorie.Click += saveCalorieClick;
 
-            ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
-            ResetSugar.Click += resetSugarCalorie;
+            //ResetSugar = FindViewById<Button>(Resource.Id.btnn_resetSugar);
+            //ResetSugar.Click += resetSugarCalorie;
 
             estim.Click += estimClick;
 
@@ -119,6 +119,8 @@ namespace App1
             cholesterol += Login.MyGlobals.GlobalCholesterol;
             carbohydrates += Login.MyGlobals.GlobalCarbohyrates;
             sodium += Login.MyGlobals.GlobalSodium;
+            // Save global data
+            TempDataService.SaveGlobalData();
 
             if (VerifyEmail())
             {
@@ -172,6 +174,7 @@ namespace App1
                                                                float.Parse(Tsodium.Text) + "'" + ");", "user_db");
                 //Console.WriteLine(success);
                 Console.WriteLine(success2);
+                resetSugarCalorie();
 
                 Toast.MakeText(this, "Successfuly saved Progress!", ToastLength.Long).Show();
             }
@@ -212,7 +215,7 @@ namespace App1
 
         }
 
-        public void resetSugarCalorie(object sender, EventArgs e)
+        public void resetSugarCalorie()
         {
             numOfCal.Text = "0" + "/" + recommendCalorie.ToString();
             pieChart.Progress = 0;
@@ -240,12 +243,14 @@ namespace App1
             cholesterol += Login.MyGlobals.GlobalCholesterol;
             carbohydrates += Login.MyGlobals.GlobalCarbohyrates;
             sodium += Login.MyGlobals.GlobalSodium;
+            // Save global data
+            TempDataService.SaveGlobalData();
 
         }
 
         public bool NullValue()
         {
-            if (currentCalorieNum == 0 && float.Parse(SugarCount.Text) == 0 && float.Parse(Tprotein.Text) == 0 && float.Parse(Tfats.Text) == 0 && float.Parse(Tcholesterol.Text) == 0 && float.Parse(Tcarbohydrates.Text) == 0 && float.Parse(Tsodium.Text) == 0)
+            if (Login.MyGlobals.GlobalCalorie == 0 && Login.MyGlobals.GlobalSugar == 0 && Login.MyGlobals.GlobalProtein == 0 && Login.MyGlobals.GlobalFat == 0 && Login.MyGlobals.GlobalCholesterol == 0 && Login.MyGlobals.GlobalCarbohyrates == 0 && Login.MyGlobals.GlobalSodium == 0)
             {
                 return false;
             }
@@ -381,6 +386,11 @@ namespace App1
 
             if (page == typeof(MainActivity))
             {
+                // Remove the token
+                AuthService.RemoveAuthToken();
+
+                // Clear global data
+                TempDataService.ClearGlobalData();
                 FinishAffinity();
                 Intent i = new Intent(this, page);
                 StartActivity(i);

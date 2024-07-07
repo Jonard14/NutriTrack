@@ -29,6 +29,18 @@ namespace App1
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.content_main);
 
+
+            // Your existing logic
+            string token = AuthService.GetAuthToken();
+            if (token != null)
+            {
+                // Load global data
+                TempDataService.LoadGlobalData();
+                // Redirect to HomePage screen
+                Intent intent = new Intent(this, typeof(HomePage));
+                StartActivity(intent);
+                Finish();
+            }
             /*
             // Drawer Layout
             AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);

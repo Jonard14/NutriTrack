@@ -156,6 +156,11 @@ namespace App1
 
             if (page == typeof(MainActivity))
             {
+                // Remove the token
+                AuthService.RemoveAuthToken();
+
+                // Clear global data
+                TempDataService.ClearGlobalData();
                 FinishAffinity();
                 Intent i = new Intent(this, page);
                 StartActivity(i);

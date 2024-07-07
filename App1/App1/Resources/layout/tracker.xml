@@ -385,18 +385,18 @@
                 android:layout_gravity="center">
                
             <Button
-                android:text="Save Progress"
+                android:text="Save Today's Progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_saveCalorie"
                 android:backgroundTint="#114232"/>
 
-            <Button
+            <!--<Button
                 android:text="Reset Values"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnn_resetSugar"
-                android:backgroundTint="#114232"/>
+                android:backgroundTint="#114232"/>-->
             </LinearLayout>
         </LinearLayout>
         </LinearLayout>

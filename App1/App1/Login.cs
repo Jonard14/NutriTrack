@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.Graphics;
 using Android.Hardware.Lights;
 using Android.OS;
+using AndroidX.AppCompat.App;
 using Android.Runtime;
 using Android.Text;
 using Android.Views;
@@ -11,8 +12,12 @@ using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using static Android.Provider.DocumentsContract;
 
 namespace App1
@@ -92,14 +97,25 @@ namespace App1
         }
 
         //Login of acct
-        public void loginClick(object sender, EventArgs e)
+        public async void loginClick(object sender, EventArgs e)
         {
             /* Debug/Testing
             Intent i = new Intent(this, typeof(HomePage));
             StartActivity(i);
+            await AuthenticateUserAsync(email.Text, password.Text);
             */
+
             if (VerifyLogin())
             {
+                string token = email.Text;
+                if (token != null)
+                {
+                    AuthService.SaveAuthToken(token);
+                }
+                
+                // Save the token
+
+                Finish();
                 Toast.MakeText(this, "Login successful!", ToastLength.Long).Show();
                 Intent i = new Intent(this, typeof(HomePage));
                 i.PutExtra("email", email.Text);
@@ -111,7 +127,10 @@ namespace App1
                 MyGlobals.GlobalCholesterol = 0;
                 MyGlobals.GlobalCarbohyrates = 0;
                 MyGlobals.GlobalSodium = 0;
+                // Save global data
+                TempDataService.SaveGlobalData();
                 StartActivity(i);
+                Finish();
             }
             else
             {
@@ -120,6 +139,45 @@ namespace App1
                 password.Error = "Email or Password are incorrect!";
             }
         }
+        /*public async Task<string> AuthenticateUserAsync(string email, string password)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var credentials = new { email, password };
+                    var json = JsonConvert.SerializeObject(credentials);
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    // Replace 'https://your-app-service.azurewebsites.net/api/login' with your actual backend URL
+                    HttpResponseMessage response = await client.PostAsync("https://your-app-service.azurewebsites.net/api/login", content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseBody);
+                        return tokenResponse.Token;
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        return null; // Invalid credentials
+                    }
+                    else
+                    {
+                        throw new Exception($"Failed to authenticate: {response.StatusCode}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during authentication: {ex.Message}");
+                return null;
+            }
+        }
+        private class TokenResponse
+        {
+            public string Token { get; set; }
+        }*/
+
 
         public void RegisterLink(object sender, EventArgs e)
         {
@@ -150,6 +208,7 @@ namespace App1
             }
             return false;
         }
+        
         public static class MyGlobals
         {
             public static string Globalemail { get; set; }

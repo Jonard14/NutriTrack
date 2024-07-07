@@ -7,6 +7,7 @@ public class MonoPackageManager_Resources {
 		"MailKit.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
 		"MimeKit.dll",
+		"Newtonsoft.Json.dll",
 		"System.Data.OleDb.dll",
 		"System.Formats.Asn1.dll",
 		"System.IO.Pipelines.dll",
