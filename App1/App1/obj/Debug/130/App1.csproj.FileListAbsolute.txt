@@ -1113,3 +1113,4 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\st
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\android\assets\Newtonsoft.Json.dll

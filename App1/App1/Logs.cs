@@ -34,11 +34,13 @@ namespace App1
 
         DrawerNavigation selectedNav = new DrawerNavigation();
 
-        string email = Login.MyGlobals.Globalemail, selected_bmonth;
+        string email = Login.MyGlobals.Globalemail, selected_bmonth, selected_byear;
 
         int selMonth = 01;
 
-        Spinner bmonth;
+        Spinner bmonth, byear;
+        private ArrayAdapter _adapter_year;
+        private ArrayList array_year;
 
         private ListView lv;
         private ArrayList history;
@@ -75,7 +77,12 @@ namespace App1
             selected_bmonth = bmonth.SelectedItem.ToString();
             bmonth.ItemSelected += bmonth_ItemSelected;
 
-           
+            byear = FindViewById<Spinner>(Resource.Id.spinner_birthyear);
+            load_years();
+            //selected_byear = byear.SelectedItem.ToString();
+            byear.ItemSelected += Byear_ItemSelected;
+
+
 
         }
         public void bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -85,11 +92,32 @@ namespace App1
             updateLog();
         }
 
+        private void Byear_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            selected_byear = e.Parent.GetItemAtPosition(e.Position).ToString();
+            retrieveTrackerLog();
+            updateLog();
+        }
+
 
         private void updateLog()
         {
             _adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, history);
             lv.Adapter = _adapter;
+        }
+
+        // Generates Drop down list of birth year from 2000 to the present year
+        private void load_years()
+        {
+            array_year = new ArrayList();
+
+            for (int i = 2000; i <= DateTime.Now.Year; i++)
+                array_year.Add(i.ToString());
+
+            _adapter_year = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, array_year);
+            byear.Adapter = _adapter_year;
+
+            byear.SetSelection(_adapter_year.GetPosition(DateTime.Now.Year.ToString()));
         }
 
         private void retrieveTrackerLog()
@@ -107,11 +135,14 @@ namespace App1
                     var u1 = root[i];
                     DateTime logDateTime = DateTime.ParseExact(u1.GetProperty("time_log").ToString(), "MM/dd/yyyy h:mm:ss tt", null);
                     string month = logDateTime.Month.ToString();
+                    string year = logDateTime.Year.ToString();
                     string conMon = convertMonth(month);
 
-                    if (email == u1.GetProperty("email").ToString() && conMon == selected_bmonth)
+                    if (email == u1.GetProperty("email").ToString() && conMon == selected_bmonth && year == selected_byear)
                     {
-                        history.Add(u1.GetProperty("time_log").ToString() +
+                        string date_formatted = DateFormat_Log(u1.GetProperty("time_log").ToString());
+
+                        history.Add(date_formatted +
                                     "\nCalorie Count: " + (float)System.Math.Round(float.Parse(u1.GetProperty("calorie_count").ToString()), 2) + " kcal" +
                                     "\nSugar Count: " + (float)System.Math.Round(float.Parse(u1.GetProperty("sugar_count").ToString()), 2) + " g" +
                                     "\nProtein Count: " + (float)System.Math.Round(float.Parse(u1.GetProperty("protein_count").ToString()), 2) + " g" +
@@ -134,7 +165,7 @@ namespace App1
             }
             Console.WriteLine(root);
         }
-        public string convertMonth(string data_bmonth)
+        private string convertMonth(string data_bmonth)
         {
             switch (data_bmonth)
             {
@@ -154,6 +185,26 @@ namespace App1
             return data_bmonth;
         }
 
+        private string DateFormat_Log(string date)
+        {
+            string[] date_split= date.Split('/');
+            switch (date_split[0])
+            {
+                case "01": date = "January"; break;
+                case "02": date = "February"; break;
+                case "03": date = "March"; break;
+                case "04": date = "April"; break;
+                case "05": date = "May"; break;
+                case "06": date = "June"; break;
+                case "07": date = "July"; break;
+                case "08": date = "August"; break;
+                case "09": date = "September"; break;
+                case "10": date = "October"; break;
+                case "11": date = "November"; break;
+                case "12": date = "December"; break;
+            }
+            return date + " " + date_split[1] + ", " + date_split[2];
+        }
 
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()
