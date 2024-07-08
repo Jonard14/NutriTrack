@@ -555,6 +555,14 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\android\jni
 C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\android\jni_remap.x86_64.o
 C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\app_shared_libraries\x86_64\libxamarin-app.so
+C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\android\assets\Newtonsoft.Json.dll
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\App1.dll
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\App1.pdb
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack.apk
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack.aab
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.aab
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.apk
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.apk.idsig
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\MonoAndroid,Version=v13.0.AssemblyAttributes.cs
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\build.props
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\adb.props
@@ -596,13 +604,6 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\R.txt
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\R.cs.flag
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\App1.csproj.CoreCompileInputs.cache
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\App1.dll
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\App1.pdb
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack.apk
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack.aab
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.aab
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.apk
-C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\bin\Debug\com.mmcl.NutriTrack-Signed.apk.idsig
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\App1.dll
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\App1.pdb
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\bin\com.mmcl.NutriTrack.apk
@@ -1113,4 +1114,3 @@ C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\st
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\android\assets\Newtonsoft.Json.dll

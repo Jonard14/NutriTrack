@@ -222,51 +222,73 @@
             android:layout_marginTop="12dp"
             android:id="@+id/linearLayout2">
 
+            <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:id="@+id/linearLayout2">
+
             <TextView
-                android:text="Height\n(meters):"
+                android:text="Height:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/txtV_Height"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:paddingLeft="10px"
-                android:gravity="right"
-                android:layout_marginLeft="10dp"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp"/>
+             <Spinner
+                android:padding="1dp"
+                android:entries="@array/heightMetrics"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_height"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold" />
+            </LinearLayout>
             <EditText
-                android:inputType="numberDecimal"
                 android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="0"
+                android:hint="0.00"
                 android:id="@+id/edtTxt_Height"
                 android:background="@drawable/register_inputbox_design"
-                android:layout_marginLeft="17dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:textStyle="bold"
                 android:textSize="15dp"/>
-
+                
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp">
 
             <TextView
-                android:text="Weight\n(kg):"
+                android:text="Weight:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/txtV_Weight"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:paddingLeft="20px"
-                android:layout_marginLeft="25dp"
-                android:gravity="right"
                 android:textSize="15dp"/>
+             <Spinner
+                android:padding="1dp"
+                android:entries="@array/weightMetrics"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_weight"
+                android:background="@drawable/register_inputbox_design"
+                android:textStyle="bold" />
+             </LinearLayout>
             <EditText
                 android:inputType="numberDecimal"
                 android:layout_width="250px"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="0"
+                android:hint="0"
                 android:id="@+id/edtTxt_Weight"
                 android:background="@drawable/register_inputbox_design"
                 android:layout_marginLeft="19dp"

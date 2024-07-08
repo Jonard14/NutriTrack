@@ -14,7 +14,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
-using System.Text.RegularExpressions;
+    using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -33,9 +33,11 @@ namespace App1
         JsonElement root;
         string searchemail, searchtype;
 
+        string conHeight, conWeight;
+
         // Birthday
-        private Spinner bmonth, bday, byear;
-        private string set_bday, selected_bmonth, selected_bday, selected_byear, birthday_format;
+        private Spinner bmonth, bday, byear, wght,hght;
+        private string set_bday, selected_bmonth, selected_bday, selected_byear, birthday_format, selected_wt, selected_ht;
         private ArrayAdapter _adapter_day, _adapter_year;
         private ArrayList array_day, array_year;
 
@@ -67,6 +69,14 @@ namespace App1
             selected_byear = byear.SelectedItem.ToString();
             byear.ItemSelected += Byear_ItemSelected;
 
+            wght = FindViewById<Spinner>(Resource.Id.spinner_weight);
+            wght.ItemSelected += Wght_ItemSelected;
+
+            hght = FindViewById<Spinner>(Resource.Id.spinner_height);
+            hght.ItemSelected += Hght_ItemSelected;
+
+
+
             email = FindViewById<EditText>(Resource.Id.edtTxt_Email);
             email.TextChanged += Input_TextChanged;
             firstname = FindViewById<EditText>(Resource.Id.edtTxt_FirstName);
@@ -83,8 +93,6 @@ namespace App1
             weight = FindViewById<EditText>(Resource.Id.edtTxt_Weight);
             weight.TextChanged += Input_TextChanged;
             bmi = FindViewById<EditText>(Resource.Id.edtTxt_BMI);
-            height.TextChanged += GetBMI;
-            weight.TextChanged += GetBMI;
 
             //illness = FindViewById<Spinner>(Resource.Id.spinner_illness);
             selected_gender = gender.SelectedItem.ToString();
@@ -104,6 +112,22 @@ namespace App1
             register.Click += registerClick;
         }
 
+
+        private void Wght_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            
+            ConvertAndCalculateBMI();
+        }
+        private void Hght_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            if ((hght.SelectedItem).ToString() == "cm")
+                height.Hint = "000";
+            else if ((hght.SelectedItem).ToString() == "ft")
+                height.Hint = "0'0";
+            else height.Hint = "0.00";
+            ConvertAndCalculateBMI();
+        }
+
         // Return Home
         public void homeClick(object sender, EventArgs e)
         {
@@ -116,6 +140,7 @@ namespace App1
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             DynamicValidation();
+            ConvertAndCalculateBMI();
         }
         private void DynamicValidation()
         {
@@ -135,12 +160,12 @@ namespace App1
                 lastname.Error = "Name must only contain letters!";
 
             if (height.Text == "")
-                height.Error = "Please enter your Weight!";
+                height.Error = "Please enter your Height!";
             else if (height.Text == "0")
                 height.Error = "Height cannot have 0 value!";
 
             if (weight.Text == "")
-                weight.Error = "Please enter your Height!";
+                weight.Error = "Please enter your Weight!";
             else if (weight.Text == "0")
                 weight.Error = "Weight cannot have 0 value!";
 
@@ -278,17 +303,65 @@ namespace App1
             else if (selected_gender == "Female") { valueGender = "F"; }
         }
 
-        // Calculate BMI from the user inputs height and weight
-        private void GetBMI(object sender, EventArgs e)
+        // Converts and calculates BMI
+        private void ConvertAndCalculateBMI()
         {
-            try
+            if (height.Text == "" || weight.Text == "")
+                return;
+
+            double heightValue = 0;
+            double weightValue = 0;
+
+            if (double.TryParse(weight.Text, out weightValue))
             {
-                bmivalue = Convert.ToDecimal(weight.Text) / Convert.ToDecimal(Math.Pow(Convert.ToDouble(height.Text), 2));
-                bmivalue = Math.Round(bmivalue, 2);
-                bmi.Text = Convert.ToString(bmivalue);
+                // Handle weight conversion
+                if (wght.SelectedItem.ToString() == "lbs")
+                {
+                    weightValue /= 2.20462; // 1 lb = 0.453592 kg
+                }
+
+                // Handle height conversion
+                string heightText = height.Text.Trim();
+                if (heightText.Contains("'"))
+                {
+                    var heightParts = heightText.Split('\'');
+                    if (heightParts.Length == 2 && double.TryParse(heightParts[0], out double feet) && double.TryParse(heightParts[1], out double inches))
+                    {
+                        heightValue = (feet * 0.3048) + (inches * 0.0254); // Convert feet to meters and inches to meters
+                    }
+                    else
+                    {
+                        height.Error = "Invalid height format!";
+                        return;
+                    }
+                }
+                else if (double.TryParse(heightText, out heightValue))
+                {
+                    if (hght.SelectedItem.ToString() == "cm")
+                    {
+                        heightValue /= 100; // Convert centimeters to meters
+                    }
+                    // else, it is already in meters, so no conversion needed
+                }
+                else
+                {
+                    height.Error = "Invalid height format!";
+                    return;
+                }
+
+                // Calculate BMI
+                bmivalue = (decimal)(weightValue / (heightValue * heightValue));
+                bmi.Text = bmivalue.ToString("0.00");
             }
-            catch { bmi.Text = "0"; }
-        }
+            else
+            {
+                weight.Error = "Invalid weight value!";
+            }
+       
+            conHeight = heightValue.ToString();
+            conWeight = weightValue.ToString();
+            }
+
 
         // Register Account
         public void registerClick(object sender, EventArgs e)
@@ -303,7 +376,7 @@ namespace App1
                 */
                 success2 = db.InsertDataAzure("INSERT INTO user_data (email, first_name, last_name, birthday, gender, height, weight, bmi) " +
                     "VALUES ('" + email.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', " +
-                    "'" + birthday_format + "', '" + valueGender + "', '" + height.Text + "', '" + weight.Text + "', '" + bmi.Text + "')",
+                    "'" + birthday_format + "', '" + valueGender + "', '" + conHeight + "', '" + conWeight + "', '" + bmi.Text + "')",
                     "user_db");
 
                 success3 = db.InsertDataAzure("UPDATE user_data SET " +
