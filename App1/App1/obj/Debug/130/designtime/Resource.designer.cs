@@ -10252,11 +10252,11 @@ namespace App1
 			// aapt resource value: 0x7F0900E4
 			public const int edtTxt_pass = 2131296484;
 			
-			// aapt resource value: 0x7F0900E5
-			public const int edtTxt_password = 2131296485;
-			
 			// aapt resource value: 0x7F0900DA
 			public const int edtTxt_Password = 2131296474;
+			
+			// aapt resource value: 0x7F0900E5
+			public const int edtTxt_password = 2131296485;
 			
 			// aapt resource value: 0x7F0900DB
 			public const int edtTxt_Protein = 2131296475;
@@ -11558,76 +11558,79 @@ namespace App1
 			public const int Txt_Gender = 2131296272;
 			
 			// aapt resource value: 0x7F090285
-			public const int @unchecked = 2131296901;
+			public const int uname = 2131296901;
 			
 			// aapt resource value: 0x7F090286
-			public const int uniform = 2131296902;
+			public const int @unchecked = 2131296902;
 			
 			// aapt resource value: 0x7F090287
-			public const int unlabeled = 2131296903;
+			public const int uniform = 2131296903;
 			
 			// aapt resource value: 0x7F090288
-			public const int up = 2131296904;
+			public const int unlabeled = 2131296904;
 			
 			// aapt resource value: 0x7F090289
-			public const int update_button = 2131296905;
+			public const int up = 2131296905;
 			
 			// aapt resource value: 0x7F09028A
-			public const int useLogo = 2131296906;
+			public const int update_button = 2131296906;
 			
 			// aapt resource value: 0x7F09028B
-			public const int vertical_only = 2131296907;
+			public const int useLogo = 2131296907;
 			
 			// aapt resource value: 0x7F09028C
-			public const int view_offset_helper = 2131296908;
+			public const int vertical_only = 2131296908;
 			
 			// aapt resource value: 0x7F09028D
-			public const int view_transition = 2131296909;
+			public const int view_offset_helper = 2131296909;
 			
 			// aapt resource value: 0x7F09028E
-			public const int view_tree_lifecycle_owner = 2131296910;
+			public const int view_transition = 2131296910;
 			
 			// aapt resource value: 0x7F09028F
-			public const int view_tree_on_back_pressed_dispatcher_owner = 2131296911;
+			public const int view_tree_lifecycle_owner = 2131296911;
 			
 			// aapt resource value: 0x7F090290
-			public const int view_tree_saved_state_registry_owner = 2131296912;
+			public const int view_tree_on_back_pressed_dispatcher_owner = 2131296912;
 			
 			// aapt resource value: 0x7F090291
-			public const int view_tree_view_model_store_owner = 2131296913;
+			public const int view_tree_saved_state_registry_owner = 2131296913;
 			
 			// aapt resource value: 0x7F090292
-			public const int visible = 2131296914;
+			public const int view_tree_view_model_store_owner = 2131296914;
 			
 			// aapt resource value: 0x7F090293
-			public const int visible_removing_fragment_view_tag = 2131296915;
+			public const int visible = 2131296915;
 			
 			// aapt resource value: 0x7F090294
-			public const int west = 2131296916;
-			
-			// aapt resource value: 0x7F090297
-			public const int withinBounds = 2131296919;
+			public const int visible_removing_fragment_view_tag = 2131296916;
 			
 			// aapt resource value: 0x7F090295
-			public const int withText = 2131296917;
-			
-			// aapt resource value: 0x7F090296
-			public const int with_icon = 2131296918;
+			public const int west = 2131296917;
 			
 			// aapt resource value: 0x7F090298
-			public const int wrap = 2131296920;
+			public const int withinBounds = 2131296920;
+			
+			// aapt resource value: 0x7F090296
+			public const int withText = 2131296918;
+			
+			// aapt resource value: 0x7F090297
+			public const int with_icon = 2131296919;
 			
 			// aapt resource value: 0x7F090299
-			public const int wrap_content = 2131296921;
+			public const int wrap = 2131296921;
 			
 			// aapt resource value: 0x7F09029A
-			public const int wrap_content_constrained = 2131296922;
+			public const int wrap_content = 2131296922;
 			
 			// aapt resource value: 0x7F09029B
-			public const int x_left = 2131296923;
+			public const int wrap_content_constrained = 2131296923;
 			
 			// aapt resource value: 0x7F09029C
-			public const int x_right = 2131296924;
+			public const int x_left = 2131296924;
+			
+			// aapt resource value: 0x7F09029D
+			public const int x_right = 2131296925;
 			
 			static Id()
 			{

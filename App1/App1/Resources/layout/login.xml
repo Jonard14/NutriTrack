@@ -42,6 +42,7 @@
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
+        android:layout_margin="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/linearLayout2"

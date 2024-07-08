@@ -26,6 +26,7 @@ using static Java.Text.Normalizer;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
+using System.Reflection.Emit;
 
 namespace App1
 {
@@ -38,6 +39,7 @@ namespace App1
         JsonElement root;
 
         private SearchView sv;
+        private TextView name;
         private ListView lv;
         private ArrayList foods;
         private ArrayAdapter _adapter;
@@ -68,6 +70,7 @@ namespace App1
             lv = FindViewById<ListView>(Resource.Id.listview1);
             sv = FindViewById<SearchView>(Resource.Id.searchfood);
 
+            name = FindViewById<TextView>(Resource.Id.uname);
             addData();
 
 
@@ -103,6 +106,17 @@ namespace App1
             {
                 var u1 = root[i];
                 foods.Add(u1.GetProperty("food_name").ToString());
+            }
+            root = db.RetrieveDataAzure("SELECT * from user_data;", null, "user_db");
+            for (int i = 0; i < root.GetArrayLength(); i++)
+            {
+                var u1 = root[i];
+                if (u1.GetProperty("email").ToString() == Login.MyGlobals.Globalemail) 
+                { 
+                    name.Text = "Welcome, "+ u1.GetProperty("first_name").ToString() + "!";
+                }
+
+                
             }
         }
 

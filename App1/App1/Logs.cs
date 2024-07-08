@@ -74,17 +74,29 @@ namespace App1
             lv = FindViewById<ListView>(Resource.Id.listview1);
 
             bmonth = FindViewById<Spinner>(Resource.Id.spinner_birthmonth);
-            selected_bmonth = bmonth.SelectedItem.ToString();
-            bmonth.ItemSelected += bmonth_ItemSelected;
+            intialMonthAndYear();
+
+            
 
             byear = FindViewById<Spinner>(Resource.Id.spinner_birthyear);
-            load_years();
+
+
             //selected_byear = byear.SelectedItem.ToString();
+            load_years();
+            bmonth.ItemSelected += bmonth_ItemSelected;
             byear.ItemSelected += Byear_ItemSelected;
-
-
+            Toast.MakeText(this, $"{convertMonth(DateTime.Now.Month.ToString())}, {DateTime.Now.Year}", ToastLength.Long).Show();
 
         }
+        public void intialMonthAndYear()
+        {
+            selected_bmonth = convertMonth(DateTime.Now.Month.ToString());
+            selected_byear = (DateTime.Now.Year).ToString();
+            bmonth.SetSelection(DateTime.Now.Month-1);
+            retrieveTrackerLog();
+            updateLog();
+        }
+
         public void bmonth_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             selected_bmonth = bmonth.SelectedItem.ToString();
@@ -98,7 +110,7 @@ namespace App1
             retrieveTrackerLog();
             updateLog();
         }
-
+        
 
         private void updateLog()
         {

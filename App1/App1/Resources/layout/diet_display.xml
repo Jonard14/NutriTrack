@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@drawable/nutritrack">
+    android:background="@drawable/bg2">
 
     <!-- Toolbar
         <com.google.android.material.appbar.AppBarLayout
@@ -25,13 +25,7 @@
 
     </com.google.android.material.appbar.AppBarLayout> -->
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg2">
-        <Button
+    <Button
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:gravity="center"
@@ -40,6 +34,14 @@
         android:id="@+id/btn1"
         android:backgroundTint="#114232"
         android:background="@drawable/ic_arrow_back_black_24"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+      
 
         <!-- Layout Starts Here -->
         <SearchView

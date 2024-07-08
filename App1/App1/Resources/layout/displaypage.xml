@@ -177,12 +177,12 @@
 
     <TextView
             android:id="@+id/textView"
-            android:text="*Based on"
+            android:text="*Nutrition information is based on data from the USDA National Nutrient Database."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:paddingLeft="10dp"
-            android:textSize="16dp"/>
+            android:paddingLeft="5dp"
+            android:textSize="10dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"

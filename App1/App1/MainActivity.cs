@@ -28,14 +28,14 @@ namespace App1
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.content_main);
-
+            // Load global data
+            TempDataService.LoadGlobalData();
 
             // Your existing logic
             string token = AuthService.GetAuthToken();
             if (token != null)
             {
-                // Load global data
-                TempDataService.LoadGlobalData();
+               
                 // Redirect to HomePage screen
                 Intent intent = new Intent(this, typeof(HomePage));
                 StartActivity(intent);

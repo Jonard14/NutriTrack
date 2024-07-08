@@ -208,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout8">
                 <TextView
-                    android:text="Total Sugar Consumed (g)"
+                    android:text="Total Sugar Consumed (%)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout10">
                 <TextView
-                        android:text="Total Protein (g)"
+                        android:text="Total Protein (%)"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -266,7 +266,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linear1">
             <TextView
-                    android:text="Total Fat (g)"
+                    android:text="Total Fat (%)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -295,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linear2">
             <TextView
-                    android:text="Total Carbohydrates (g)"
+                    android:text="Total Carbohydrates (%)"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

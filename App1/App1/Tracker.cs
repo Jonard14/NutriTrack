@@ -124,16 +124,25 @@ namespace App1
 
             if (VerifyEmail())
             {
-                PrevCalorie.Text = CalorieNum.ToString();
-                SugarCount.Text = total_sugar.ToString();
-                //CurrentCalorie.Text = currentCalorieNum.ToString();
-                //TotalCalorieNum.Text = TotalCalorie.ToString();
-                Tprotein.Text = protein.ToString();
-                Tcholesterol.Text = cholesterol.ToString();
-                Tfats.Text = fat.ToString();
-                Tcarbohydrates.Text = carbohydrates.ToString();
-                Tsodium.Text = sodium.ToString();
+                PrevCalorie.Text = Math.Round(CalorieNum, 0).ToString();
 
+                if(currentCalorieNum != 0)
+                {
+                    SugarCount.Text = Math.Round(((total_sugar * 4) / currentCalorieNum) * 100, 0).ToString() + "%";
+                    Tprotein.Text = Math.Round(((protein * 4) / currentCalorieNum) * 100, 0).ToString() + "%";
+                    Tfats.Text = Math.Round(((fat * 9) / currentCalorieNum) * 100, 0).ToString() + "%";
+                    Tcarbohydrates.Text = Math.Round(((carbohydrates * 4) / currentCalorieNum) * 100, 0).ToString() + "%";
+                }
+                else
+                {
+                    SugarCount.Text = "0%";
+                    Tprotein.Text = "0%";
+                    Tcarbohydrates.Text = "0%";                  
+                    Tfats.Text = "0%";  
+                }
+
+                Tcholesterol.Text = Math.Round(cholesterol, 0).ToString() + "mg";
+                Tsodium.Text = Math.Round(sodium, 0).ToString() + "mg";        
             }
             else
             {
@@ -168,10 +177,10 @@ namespace App1
                 //history.Add(tracker_log_time + "\nCalorie Count: " + CurrentCalorie.Text + "\nSugar Count: " + SugarCount.Text);
                 //string success = db.InsertData("insert_trackerlog.php?email=" + email + "&time_log=" + tracker_log_time + "&calorie_count=" + currentCalorieNum + "&sugar_count=" + SugarCount.Text + "&protein_count=" + Tprotein.Text + "&fats_count=" + Tfats.Text + "&cholesterol_count=" + Tcholesterol.Text + "&carbohydrates_count=" + Tcarbohydrates.Text + "&sodium_count=" + Tsodium.Text);
 
-                string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" + "'" + email + "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + currentCalorieNum + "'" + "," +
-                                                               "'" + float.Parse(SugarCount.Text) + "'" + "," + "'" + float.Parse(Tprotein.Text) + "'" + "," + "'" + float.Parse(Tfats.Text) + "'" + "," +
-                                                               "'" + float.Parse(Tcholesterol.Text) + "'" + "," + "'" + float.Parse(Tcarbohydrates.Text) + "'" + "," + "'" +
-                                                               float.Parse(Tsodium.Text) + "'" + ");", "user_db");
+                string success2 = db.InsertDataAzure("INSERT INTO tracker_log VALUES (" + "'" + email + "'" + "," + "'" + tracker_log_time + "'" + "," + "'" + Login.MyGlobals.GlobalCalorie + "'" + "," +
+                                                               "'" + Login.MyGlobals.GlobalSugar + "'" + "," + "'" + Login.MyGlobals.GlobalProtein + "'" + "," + "'" + Login.MyGlobals.GlobalFat + "'" + "," +
+                                                               "'" + Login.MyGlobals.GlobalCholesterol + "'" + "," + "'" + Login.MyGlobals.GlobalCarbohyrates + "'" + "," + "'" +
+                                                               Login.MyGlobals.GlobalSodium + "'" + ");", "user_db");
                 //Console.WriteLine(success);
                 Console.WriteLine(success2);
                 resetSugarCalorie();
@@ -217,7 +226,7 @@ namespace App1
 
         public void resetSugarCalorie()
         {
-            numOfCal.Text = "0" + "/" + recommendCalorie.ToString();
+            numOfCal.Text = "0" + "/" + Math.Round(recommendCalorie, 0).ToString();
             pieChart.Progress = 0;
 
             SugarCount.Text = "0";
@@ -318,7 +327,7 @@ namespace App1
                 //recommendNum.Text = recommendCalorie.ToString();
             }
             //Update chart
-            numOfCal.Text = currentCalorieNum.ToString() + "/" + recommendCalorie.ToString();
+            numOfCal.Text = Math.Round(currentCalorieNum,0).ToString() + "/" + Math.Round(recommendCalorie,0).ToString();
             d = currentCalorieNum / (float)recommendCalorie;
             prog = d * 100;
             pieChart.Progress = (int)prog;
