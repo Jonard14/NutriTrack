@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\app1\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-thesis\\app1\\app1\\suggestfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\suggestfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-thesis\\app1\\app1\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-thesis\\app1\\app1\\resources\\layout\\logs.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\app1\\resources\\layout\\logs.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\resources\\layout\\logs.xml||{A4B51DF8-501B-45AD-A022-1A0D18A2B7B0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|c:\\users\\norys\\onedrive\\documents\\github\\cs134-thesis\\app1\\app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2498C986-E922-4FA7-AD69-9AEF4F171E3D}|App1\\App1.csproj|solutionrelative:app1\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -60,11 +64,37 @@
         },
         {
           "DockedHeight": 19,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuggestFood.cs",
+              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\SuggestFood.cs",
+              "RelativeDocumentMoniker": "App1\\SuggestFood.cs",
+              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\SuggestFood.cs",
+              "RelativeToolTip": "App1\\SuggestFood.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAwwLkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T12:35:41.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logs.cs",
+              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Logs.cs",
+              "RelativeDocumentMoniker": "App1\\Logs.cs",
+              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Logs.cs",
+              "RelativeToolTip": "App1\\Logs.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAgwFcAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T09:16:13.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -72,19 +102,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "logs.xml",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\logs.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\logs.xml",
               "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\logs.xml",
               "RelativeToolTip": "App1\\Resources\\layout\\logs.xml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-07-08T10:26:17.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T10:26:17.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProfilePage.cs",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\ProfilePage.cs",
               "RelativeDocumentMoniker": "App1\\ProfilePage.cs",
@@ -92,12 +121,11 @@
               "RelativeToolTip": "App1\\ProfilePage.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAQwCUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T10:01:57.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T10:01:57.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "diet_display.xml",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\diet_display.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\diet_display.xml",
@@ -108,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "login.xml",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\login.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\login.xml",
@@ -119,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HomePage.cs",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\HomePage.cs",
               "RelativeDocumentMoniker": "App1\\HomePage.cs",
@@ -131,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "homepage.xml",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\homepage.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\homepage.xml",
@@ -142,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Tracker.cs",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Tracker.cs",
               "RelativeDocumentMoniker": "App1\\Tracker.cs",
@@ -150,12 +178,11 @@
               "RelativeToolTip": "App1\\Tracker.cs",
               "ViewState": "AQIAAKEAAAAAAAAAAAAIwLsAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T08:08:53.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T08:08:53.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "tracker.xml",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Resources\\layout\\tracker.xml",
               "RelativeDocumentMoniker": "App1\\Resources\\layout\\tracker.xml",
@@ -166,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MainActivity.cs",
               "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\MainActivity.cs",
               "RelativeDocumentMoniker": "App1\\MainActivity.cs",
@@ -175,19 +202,6 @@
               "ViewState": "AQIAABAAAAAAAAAAAAAswCUAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T10:19:28.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Logs.cs",
-              "DocumentMoniker": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Logs.cs",
-              "RelativeDocumentMoniker": "App1\\Logs.cs",
-              "ToolTip": "C:\\Users\\norys\\OneDrive\\Documents\\GitHub\\CS134-Thesis\\App1\\App1\\Logs.cs",
-              "RelativeToolTip": "App1\\Logs.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAgwF4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T09:16:13.11Z",
-              "EditorCaption": ""
             }
           ]
         }

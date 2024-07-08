@@ -169,6 +169,8 @@ namespace App1
                 {
                     diets.Add("Less Sugar");
                     diets.Add("Zero Cholesterol");
+                    diets.Add("High Protein");
+                    diets.Add("Low Carb");
                 }
                 else if (illness.Contains("Cancer"))
                 {
