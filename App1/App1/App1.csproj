@@ -78,10 +78,13 @@
     <Compile Include="DietDisplay.cs" />
     <Compile Include="DisplayPage.cs" />
     <Compile Include="DrawerNavigation.cs" />
+    <Compile Include="FoodAdded.cs" />
+    <Compile Include="NutritionFragment.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Logs.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PagerAdapter.cs" />
     <Compile Include="ProfilePage.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -373,6 +376,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\codeverify.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_nutrition.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_food_added.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\list_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\buttons2.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

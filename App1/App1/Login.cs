@@ -19,6 +19,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using static Android.Provider.DocumentsContract;
+using System.Collections;
 
 namespace App1
 {
@@ -219,7 +220,7 @@ namespace App1
             public static float GlobalCholesterol { get; set; }
             public static float GlobalCarbohyrates { get; set; }
             public static float GlobalSodium { get; set; }
-
+            public static ArrayList GlobalFoodList = new ArrayList();
 
 
 

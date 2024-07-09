@@ -22,6 +22,15 @@ app1.DietDisplay;crc64a7a6b04b89628087.DietDisplay
 App1.DisplayPage, App1;crc64a7a6b04b89628087.DisplayPage
 App1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
 app1.DisplayPage;crc64a7a6b04b89628087.DisplayPage
+App1.FoodAdded, App1;crc64a7a6b04b89628087.FoodAdded
+App1.FoodAdded;crc64a7a6b04b89628087.FoodAdded
+app1.FoodAdded;crc64a7a6b04b89628087.FoodAdded
+App1.FoodAdded+CustomAdapter, App1;crc64a7a6b04b89628087.FoodAdded_CustomAdapter
+App1.FoodAdded.CustomAdapter;crc64a7a6b04b89628087.FoodAdded_CustomAdapter
+app1.FoodAdded_CustomAdapter;crc64a7a6b04b89628087.FoodAdded_CustomAdapter
+App1.NutritionFragment, App1;crc64a7a6b04b89628087.NutritionFragment
+App1.NutritionFragment;crc64a7a6b04b89628087.NutritionFragment
+app1.NutritionFragment;crc64a7a6b04b89628087.NutritionFragment
 App1.HomePage, App1;crc64a7a6b04b89628087.HomePage
 App1.HomePage;crc64a7a6b04b89628087.HomePage
 app1.HomePage;crc64a7a6b04b89628087.HomePage
@@ -34,6 +43,9 @@ app1.Logs;crc64a7a6b04b89628087.Logs
 App1.MainActivity, App1;crc64a7a6b04b89628087.MainActivity
 App1.MainActivity;crc64a7a6b04b89628087.MainActivity
 app1.MainActivity;crc64a7a6b04b89628087.MainActivity
+App1.PagerAdapter, App1;crc64a7a6b04b89628087.PagerAdapter
+App1.PagerAdapter;crc64a7a6b04b89628087.PagerAdapter
+app1.PagerAdapter;crc64a7a6b04b89628087.PagerAdapter
 App1.ProfilePage, App1;crc64a7a6b04b89628087.ProfilePage
 App1.ProfilePage;crc64a7a6b04b89628087.ProfilePage
 app1.ProfilePage;crc64a7a6b04b89628087.ProfilePage

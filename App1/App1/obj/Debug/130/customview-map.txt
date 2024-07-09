@@ -10,8 +10,8 @@ androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\suggest.xml
 androidx.appcompat.widget.Toolbar;obj\Debug\130\res\layout\tracker.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\profile_page.xml
 androidx.cardview.widget.CardView;obj\Debug\130\res\layout\suggest.xml
+androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\fragment_nutrition.xml
 androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\profile_page.xml
-androidx.constraintlayout.widget.ConstraintLayout;obj\Debug\130\res\layout\tracker.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\130\res\layout\app_bar_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\activity_main.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\admin_addfood_drawer.xml
@@ -21,6 +21,7 @@ androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\logs_drawer.x
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\profile_page_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\suggest_drawer.xml
 androidx.drawerlayout.widget.DrawerLayout;obj\Debug\130\res\layout\tracker_drawer.xml
+androidx.viewpager.widget.ViewPager;obj\Debug\130\res\layout\tracker.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\130\res\layout\admin_addfood.xml
@@ -31,6 +32,8 @@ Button;obj\Debug\130\res\layout\codeverify.xml
 Button;obj\Debug\130\res\layout\content_main.xml
 Button;obj\Debug\130\res\layout\diet_display.xml
 Button;obj\Debug\130\res\layout\displaypage.xml
+Button;obj\Debug\130\res\layout\fragment_nutrition.xml
+Button;obj\Debug\130\res\layout\list_item.xml
 Button;obj\Debug\130\res\layout\login.xml
 Button;obj\Debug\130\res\layout\profile_page.xml
 Button;obj\Debug\130\res\layout\register.xml
@@ -59,6 +62,7 @@ com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\p
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\suggest_drawer.xml
 com.google.android.material.navigation.NavigationView;obj\Debug\130\res\layout\tracker_drawer.xml
 corners;obj\Debug\130\res\drawable\buttons.xml
+corners;obj\Debug\130\res\drawable\buttons2.xml
 corners;obj\Debug\130\res\drawable\layout_bg.xml
 corners;obj\Debug\130\res\drawable\layout_bg2.xml
 corners;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
@@ -103,6 +107,7 @@ item;obj\Debug\130\res\menu\menu_main.xml
 item;obj\Debug\130\res\values\drawables.xml
 item;obj\Debug\130\res\values\strings.xml
 item;obj\Debug\130\res\values\styles.xml
+LinearLayout;obj\Debug\130\res\drawable\buttons2.xml
 LinearLayout;obj\Debug\130\res\layout\admin_addfood.xml
 LinearLayout;obj\Debug\130\res\layout\admin_displayfood.xml
 LinearLayout;obj\Debug\130\res\layout\admin_editdelfoodlist.xml
@@ -112,7 +117,10 @@ LinearLayout;obj\Debug\130\res\layout\codeverify.xml
 LinearLayout;obj\Debug\130\res\layout\content_main.xml
 LinearLayout;obj\Debug\130\res\layout\diet_display.xml
 LinearLayout;obj\Debug\130\res\layout\displaypage.xml
+LinearLayout;obj\Debug\130\res\layout\fragment_food_added.xml
+LinearLayout;obj\Debug\130\res\layout\fragment_nutrition.xml
 LinearLayout;obj\Debug\130\res\layout\homepage.xml
+LinearLayout;obj\Debug\130\res\layout\list_item.xml
 LinearLayout;obj\Debug\130\res\layout\login.xml
 LinearLayout;obj\Debug\130\res\layout\logs.xml
 LinearLayout;obj\Debug\130\res\layout\nav_header_main.xml
@@ -123,12 +131,14 @@ LinearLayout;obj\Debug\130\res\layout\tracker.xml
 LinearLayout;obj\Debug\130\res\layout\verifyemail.xml
 ListView;obj\Debug\130\res\layout\admin_editdelfoodlist.xml
 ListView;obj\Debug\130\res\layout\diet_display.xml
+ListView;obj\Debug\130\res\layout\fragment_food_added.xml
 ListView;obj\Debug\130\res\layout\homepage.xml
 ListView;obj\Debug\130\res\layout\logs.xml
 menu;obj\Debug\130\res\menu\activity_main_drawer.xml
 menu;obj\Debug\130\res\menu\admin_drawer.xml
 menu;obj\Debug\130\res\menu\menu_main.xml
 padding;obj\Debug\130\res\drawable\buttons.xml
+padding;obj\Debug\130\res\drawable\buttons2.xml
 padding;obj\Debug\130\res\drawable\layout_bg.xml
 padding;obj\Debug\130\res\drawable\layout_bg2.xml
 padding;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
@@ -143,7 +153,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 paths;C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-ProgressBar;obj\Debug\130\res\layout\tracker.xml
+ProgressBar;obj\Debug\130\res\layout\fragment_nutrition.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
 resources;obj\Debug\130\res\values\drawables.xml
@@ -154,14 +164,15 @@ rotate;obj\Debug\130\res\drawable\stats_full.xml
 rotate;obj\Debug\130\res\drawable\stats_progress.xml
 ScrollView;obj\Debug\130\res\layout\admin_addfood.xml
 ScrollView;obj\Debug\130\res\layout\admin_displayfood.xml
+ScrollView;obj\Debug\130\res\layout\fragment_nutrition.xml
 ScrollView;obj\Debug\130\res\layout\profile_page.xml
 ScrollView;obj\Debug\130\res\layout\register.xml
 ScrollView;obj\Debug\130\res\layout\suggest.xml
-ScrollView;obj\Debug\130\res\layout\tracker.xml
 SearchView;obj\Debug\130\res\layout\admin_editdelfoodlist.xml
 SearchView;obj\Debug\130\res\layout\diet_display.xml
 SearchView;obj\Debug\130\res\layout\homepage.xml
 shape;obj\Debug\130\res\drawable\buttons.xml
+shape;obj\Debug\130\res\drawable\buttons2.xml
 shape;obj\Debug\130\res\drawable\layout_bg.xml
 shape;obj\Debug\130\res\drawable\layout_bg2.xml
 shape;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
@@ -173,7 +184,9 @@ shape;obj\Debug\130\res\drawable\stat_nut_progress.xml
 shape;obj\Debug\130\res\drawable\stats_full.xml
 shape;obj\Debug\130\res\drawable\stats_nut_full.xml
 shape;obj\Debug\130\res\drawable\stats_progress.xml
+size;obj\Debug\130\res\drawable\buttons2.xml
 solid;obj\Debug\130\res\drawable\buttons.xml
+solid;obj\Debug\130\res\drawable\buttons2.xml
 solid;obj\Debug\130\res\drawable\layout_bg.xml
 solid;obj\Debug\130\res\drawable\layout_bg2.xml
 solid;obj\Debug\130\res\drawable\login_inputbox_bottom.xml
@@ -200,13 +213,14 @@ TextView;obj\Debug\130\res\layout\codeverify.xml
 TextView;obj\Debug\130\res\layout\content_main.xml
 TextView;obj\Debug\130\res\layout\diet_display.xml
 TextView;obj\Debug\130\res\layout\displaypage.xml
+TextView;obj\Debug\130\res\layout\fragment_nutrition.xml
 TextView;obj\Debug\130\res\layout\homepage.xml
+TextView;obj\Debug\130\res\layout\list_item.xml
 TextView;obj\Debug\130\res\layout\login.xml
 TextView;obj\Debug\130\res\layout\nav_header_main.xml
 TextView;obj\Debug\130\res\layout\profile_page.xml
 TextView;obj\Debug\130\res\layout\register.xml
 TextView;obj\Debug\130\res\layout\suggest.xml
-TextView;obj\Debug\130\res\layout\tracker.xml
 TextView;obj\Debug\130\res\layout\verifyemail.xml
 vector;obj\Debug\130\res\drawable\ic_profile_placeholder.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_camera.xml
@@ -216,5 +230,5 @@ vector;obj\Debug\130\res\drawable-v21\ic_menu_send.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 vector;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 View;obj\Debug\130\res\layout\displaypage.xml
+View;obj\Debug\130\res\layout\fragment_nutrition.xml
 View;obj\Debug\130\res\layout\profile_page.xml
-View;obj\Debug\130\res\layout\tracker.xml
