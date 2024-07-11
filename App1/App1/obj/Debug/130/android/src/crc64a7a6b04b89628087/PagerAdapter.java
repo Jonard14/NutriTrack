@@ -2,7 +2,7 @@ package crc64a7a6b04b89628087;
 
 
 public class PagerAdapter
-	extends androidx.fragment.app.FragmentPagerAdapter
+	extends androidx.fragment.app.FragmentStatePagerAdapter
 	implements
 		mono.android.IGCUserPeer
 {
@@ -12,6 +12,7 @@ public class PagerAdapter
 		__md_methods = 
 			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItem:(I)Landroidx/fragment/app/Fragment;:GetGetItem_IHandler\n" +
+			"n_getItemPosition:(Ljava/lang/Object;)I:GetGetItemPosition_Ljava_lang_Object_Handler\n" +
 			"";
 		mono.android.Runtime.register ("App1.PagerAdapter, App1", PagerAdapter.class, __md_methods);
 	}
@@ -49,6 +50,14 @@ public class PagerAdapter
 	}
 
 	private native androidx.fragment.app.Fragment n_getItem (int p0);
+
+
+	public int getItemPosition (java.lang.Object p0)
+	{
+		return n_getItemPosition (p0);
+	}
+
+	private native int n_getItemPosition (java.lang.Object p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

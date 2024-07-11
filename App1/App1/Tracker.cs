@@ -63,14 +63,24 @@ namespace App1
             buttonFoodAdded = FindViewById<Button>(Resource.Id.button_food_added);
 
             SetupViewPager(viewPager);
+            
 
-            buttonNutrition.Click += (sender, e) => viewPager.SetCurrentItem(0, true);
-            buttonFoodAdded.Click += (sender, e) => viewPager.SetCurrentItem(1, true);
+            buttonNutrition.Click += (sender, e) =>
+            {
+                viewPager.SetCurrentItem(0, true);
+                adapter.NotifyDataSetChanged();
+            };
+            buttonFoodAdded.Click += (sender, e) =>
+            {
+                viewPager.SetCurrentItem(1, true);
+                adapter.NotifyDataSetChanged();
+            };
 
             viewPager.PageSelected += (sender, e) => {
                 buttonNutrition.Enabled = e.Position != 0;
                 buttonFoodAdded.Enabled = e.Position != 1;
             };
+            
 
         }
         private void SetupViewPager(ViewPager viewPager)
@@ -78,6 +88,8 @@ namespace App1
             adapter = new PagerAdapter(SupportFragmentManager);
             viewPager.Adapter = adapter;
         }
+
+
 
         // ============ built-in template functions for drawer (code starts here) =======================
         public override void OnBackPressed()

@@ -42,7 +42,7 @@ namespace App1
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            TempDataService.LoadGlobalData();
+        
             // Inflate the layout for this fragment
             View view = inflater.Inflate(Resource.Layout.fragment_nutrition, container, false);
 
@@ -192,7 +192,7 @@ namespace App1
             sodium += Login.MyGlobals.GlobalSodium;
             // Save global data
             TempDataService.SaveGlobalData();
-            TempDataService.LoadGlobalData();
+           
 
         }
 

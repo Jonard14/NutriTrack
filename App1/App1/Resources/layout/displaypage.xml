@@ -30,6 +30,7 @@
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
+                android:paddingBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -39,18 +40,17 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textColor="#000000"
-        android:textSize="25dp"/>
+        android:textSize="24dp"/>
 
        <TextView
         android:text="Food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:gravity="center_vertical"
         android:id="@+id/fName"
-        android:textSize="20dp"/>
+        android:paddingBottom="10dp"
+        android:textSize="15dp"/>
     </LinearLayout>
-
       <LinearLayout
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"

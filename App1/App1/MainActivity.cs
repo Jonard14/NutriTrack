@@ -29,13 +29,13 @@ namespace App1
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.content_main);
             // Load global data
-            TempDataService.LoadGlobalData();
+            
 
             // Your existing logic
             string token = AuthService.GetAuthToken();
             if (token != null)
             {
-               
+                
                 // Redirect to HomePage screen
                 Intent intent = new Intent(this, typeof(HomePage));
                 StartActivity(intent);
@@ -61,7 +61,7 @@ namespace App1
             // Code starts here
             btn_Login = FindViewById<Button>(Resource.Id.btn_signup);
             btn_Login.Click += Login;
-
+            TempDataService.LoadGlobalData();
             register = FindViewById<TextView>(Resource.Id.txtV_RegLink);
             register.PaintFlags = PaintFlags.UnderlineText;
             register.Click += RegLink;

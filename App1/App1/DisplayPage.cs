@@ -204,9 +204,11 @@ namespace App1
             Login.MyGlobals.GlobalCholesterol = (float)Math.Round(Login.MyGlobals.GlobalCholesterol + cholesterol_compute, 2);
             Login.MyGlobals.GlobalCarbohyrates = (float)Math.Round(Login.MyGlobals.GlobalCarbohyrates + carbohydrate_compute, 2);
             Login.MyGlobals.GlobalSodium = (float)Math.Round(Login.MyGlobals.GlobalSodium + sodium_compute, 2);
-            Login.MyGlobals.GlobalFoodList.Add($"{food_name}, {calorie_compute}, {sugar_compute}, {total_fat_compute}, {protein_compute}, {cholesterol_compute}, {carbohydrate_compute}, {sodium_compute}");
-            TempDataService.SaveGlobalData();
+            // Use a consistent format with placeholders for each value
+            string foodDetails = $"{food_name}@{calorie_compute}@{sugar_compute}@{total_fat_compute}@{protein_compute}@{cholesterol_compute}@{carbohydrate_compute}@{sodium_compute}";
+            Login.MyGlobals.GlobalFoodList.Add(foodDetails);
 
+            TempDataService.SaveGlobalData();
             Update();
             Toast.MakeText(this, "Food Added", ToastLength.Long).Show();
 

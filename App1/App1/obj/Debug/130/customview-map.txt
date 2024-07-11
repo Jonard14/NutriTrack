@@ -90,6 +90,7 @@ foreground;obj\Debug\130\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;obj\Debug\130\res\drawable\side_nav_bar.xml
 group;obj\Debug\130\res\menu\activity_main_drawer.xml
 group;obj\Debug\130\res\menu\admin_drawer.xml
+ImageButton;obj\Debug\130\res\layout\list_item.xml
 ImageView;obj\Debug\130\res\layout\nav_header_main.xml
 ImageView;obj\Debug\130\res\layout\suggest.xml
 include;obj\Debug\130\res\layout\activity_main.xml
@@ -154,6 +155,7 @@ path;obj\Debug\130\res\drawable-v21\ic_menu_share.xml
 path;obj\Debug\130\res\drawable-v21\ic_menu_slideshow.xml
 paths;C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;obj\Debug\130\res\layout\fragment_nutrition.xml
+RelativeLayout;obj\Debug\130\res\layout\tracker.xml
 resources;obj\Debug\130\res\values\colors.xml
 resources;obj\Debug\130\res\values\dimens.xml
 resources;obj\Debug\130\res\values\drawables.xml

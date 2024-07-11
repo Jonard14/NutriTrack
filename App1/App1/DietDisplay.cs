@@ -94,53 +94,7 @@ namespace App1
 
         }
 
-        /*private void addIll()
-        {
-            illness = new ArrayList();
-            diets = new ArrayList();
-            dietsFilts = new ArrayList();
-
-            // Get food data from DB
-            root = db.RetrieveData("search_user_illness.php?");
-            for (int i = 0; i < root.GetArrayLength(); i++)
-            {
-
-                var u1 = root[i];
-                if (email == u1.GetProperty("email").ToString())
-                {
-                    illness.Add(u1.GetProperty("types").ToString());
-                }
-            }
-
-            //Recommended Diets
-            if (illness.Contains("Heart Disease"))
-            {
-                diets.Add("Less Sugar");
-                diets.Add("Zero Cholesterol");
-                diets.Add("Less Sodium");
-            }
-            else if (illness.Contains("Diabetes"))
-            {
-                diets.Add("Less Sugar");
-                diets.Add("Zero Cholesterol");
-            }
-            else if (illness.Contains("Cancer"))
-            {
-                diets.Add("Zero Cholesterol");
-                diets.Add("Less Sodium");
-            }
-
-            else
-            {
-                diets.Add("Low Carb");
-                diets.Add("High Protein");
-                diets.Add("Low-Fat Content");
-            }
-
-            string recom = String.Join(",", diets);
-            //food.Text = "Suggested diets for you: " + recom;// + illness.ToString();
-
-        }*/
+        
         private void sv_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             _adapter2.Filter.InvokeFilter(e.NewText);
@@ -199,7 +153,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Sodium")
                 {
-                    if (sodium <= 5)
+                    if (sodium <= 35)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Less Sodium";
@@ -207,7 +161,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Carbohydrates")
                 {
-                    if (carbohydrate <= 10)
+                    if (carbohydrate<= 10)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low-Carb";
@@ -215,7 +169,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Fat")
                 {
-                    if (fat <= 3)
+                    if (((fat/ calorie_energy)*100) <= 30)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low-Fat Content";

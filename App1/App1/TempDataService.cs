@@ -62,6 +62,10 @@ namespace App1
             Preferences.Remove(nameof(Login.MyGlobals.GlobalCholesterol));
             Preferences.Remove(nameof(Login.MyGlobals.GlobalCarbohyrates));
             Preferences.Remove(nameof(Login.MyGlobals.GlobalSodium));
+
+            Login.MyGlobals.GlobalFoodList.Clear();
+            Preferences.Remove(nameof(Login.MyGlobals.GlobalFoodList));
+            Preferences.Set(nameof(Login.MyGlobals.GlobalFoodList), string.Empty);
         }
     }
 }
