@@ -297,9 +297,9 @@ namespace App1
             birthdate_split = data_birthday.Split('-'); // YYYY-MM-DD
 
             if (Int32.Parse(birthdate_split[1]) < DateTime.Now.Month ||
-                (Int32.Parse(birthdate_split[1]) == DateTime.Now.Month && Int32.Parse(birthdate_split[2]) < DateTime.Now.Day))
-                return (DateTime.Now.Year - Int32.Parse(birthdate_split[0])) - 1;
-            return DateTime.Now.Year - Int32.Parse(birthdate_split[0]);
+               (Int32.Parse(birthdate_split[1]) == DateTime.Now.Month && Int32.Parse(birthdate_split[2]) < DateTime.Now.Day))
+                return (DateTime.Now.Year - Int32.Parse(birthdate_split[0]));
+            return (DateTime.Now.Year - Int32.Parse(birthdate_split[0])) - 1;
         }
 
         // Update Profile Details

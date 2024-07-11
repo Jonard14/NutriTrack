@@ -4,9 +4,9 @@
     <SelectedDevice>pixel_5_-_api_30</SelectedDevice>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <ActiveDebugProfile>Pixel 5 - API 30 %28Android 11.0 - API 30%29</ActiveDebugProfile>
-    <SelectedDevice>Android Emulator</SelectedDevice>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <ActiveDebugProfile>Android Emulator</ActiveDebugProfile>
+    <SelectedDevice>Samsung SM-S908E</SelectedDevice>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
+    <ActiveDebugProfile>Samsung SM-S908E %28Android 13.0 - API 33%29</ActiveDebugProfile>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>pixel_3a</AndroidDesignerPreferredDevice>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
