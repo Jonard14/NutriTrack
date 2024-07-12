@@ -51,22 +51,7 @@ namespace App1
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.diet_display);
 
-            /*
-            // Drawer Layout
-            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
 
-            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            //fab.Click += FabOnClick;
-            
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
-            drawer.AddDrawerListener(toggle);
-            toggle.SyncState();
-
-            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            navigationView.SetNavigationItemSelectedListener(this);
-            */
 
             // Create your application here
             btn1 = FindViewById<Button>(Resource.Id.btn1);
@@ -77,11 +62,8 @@ namespace App1
             selectedDiet = Intent.GetStringExtra("SelectedDiet");
 
             sv.QueryTextChange += sv_QueryTextChange;
-            //food = FindViewById<TextView>(Resource.Id.foods);
-            //lv = FindViewById<ListView>(Resource.Id.listview1);
             lv2 = FindViewById<ListView>(Resource.Id.listview2);
 
-            //addIll();
             addFood();
 
             _adapter2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, foods);
@@ -121,10 +103,10 @@ namespace App1
 
             // Get food data from DB
             //root = db.RetrieveData("search_fooddata.php?");
-            root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
-            for (int i = 0; i < root.GetArrayLength(); i++)
+            //root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
+            for (int i = 0; i < MainActivity.GlobalData.rootFood.GetArrayLength(); i++)
             {
-                var u1 = root[i];
+                var u1 = MainActivity.GlobalData.rootFood[i];
 
                 calorie_energy = float.Parse(u1.GetProperty("calorie_energy").ToString()) * portions;
                 protein = float.Parse(u1.GetProperty("protein").ToString()) * portions;
@@ -136,7 +118,7 @@ namespace App1
 
                 if (selectedDiet == "Sugar")
                 {
-                    if (((sugar / calorie_energy) * 100) <= 5)
+                    if (((sugar / calorie_energy) * 100) <= 5 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low sugar";
@@ -145,7 +127,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Protein")
                 {
-                    if (protein >= 20)
+                    if (protein >= 20 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "High Protein";
@@ -153,7 +135,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Sodium")
                 {
-                    if (sodium <= 35)
+                    if (sodium <= 35 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Less Sodium";
@@ -161,7 +143,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Carbohydrates")
                 {
-                    if (carbohydrate<= 10)
+                    if (carbohydrate <= 10 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low-Carb";
@@ -169,7 +151,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Fat")
                 {
-                    if (((fat/ calorie_energy)*100) <= 30)
+                    if (((fat / calorie_energy) * 100) <= 30 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Low-Fat Content";
@@ -177,7 +159,7 @@ namespace App1
                 }
                 else if (selectedDiet == "Cholesterol")
                 {
-                    if (cholesterol <= 2)
+                    if (cholesterol <= 2 && calorie_energy <= 225)
                     {
                         foods.Add(u1.GetProperty("food_name").ToString());
                         dietType.Text = "Zero Cholesterol";
@@ -186,57 +168,5 @@ namespace App1
 
             }
         }
-        /*
-        // ============ built-in template functions for drawer (code starts here) =======================
-        public override void OnBackPressed()
-        {
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if (drawer.IsDrawerOpen(GravityCompat.Start))
-            {
-                drawer.CloseDrawer(GravityCompat.Start);
-            }
-            else
-            {
-                base.OnBackPressed();
-            }
-        }
-
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View)sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
-
-        public bool OnNavigationItemSelected(IMenuItem item)
-        {
-            Type page = selectedNav.SelectedNavigation(item);
-
-            Intent i = new Intent(this, page);
-            StartActivity(i);
-
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            drawer.CloseDrawer(GravityCompat.Start);
-            return true;
-        }
-        // ============ built-in template functions for drawer (code ends here) =======================
-        */
     }
 }

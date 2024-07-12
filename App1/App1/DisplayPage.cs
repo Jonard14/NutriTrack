@@ -133,10 +133,10 @@ namespace App1
         private void retrieveData(string selectedFood)
         {
             //root = db.RetrieveData("search_fooddata.php?");
-            root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
-            for (int i = 0; i < root.GetArrayLength(); i++)
+            //root = db.RetrieveDataAzure("SELECT food_data.food_id, food_data.food_name, nutrients.calorie_energy, nutrients.protein, nutrients.total_fat, nutrients.carbohydrate, nutrients.sugar, nutrients.sodium, nutrients.cholesterol FROM food_data INNER JOIN nutrients ON food_data.food_id = nutrients.food_id ORDER BY food_data.food_name ASC; ",null, "food_db");
+            for (int i = 0; i < MainActivity.GlobalData.rootFood.GetArrayLength(); i++)
             {
-                var u1 = root[i];
+                var u1 = MainActivity.GlobalData.rootFood[i];
                 //food_id = u1.GetProperty("food_id").ToString();
                 //food_name = u1.GetProperty("food_name").ToString();
                 string tmpfood_name = u1.GetProperty("food_name").ToString();
