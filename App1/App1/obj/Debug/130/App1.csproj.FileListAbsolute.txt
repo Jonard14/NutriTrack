@@ -1116,3 +1116,9 @@ C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\stamp\_Gene
 C:\Users\Acer\Documents\GitHub\CS134-Thesis2\App1\App1\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\layout\activity_loading.xml
 C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\android\src\crc64a7a6b04b89628087\MainActivity_LoadDataAsyncTask.java
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\home.png
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\logs.png
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\profile.png
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\logout.png
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\suggest.png
+C:\Users\norys\OneDrive\Documents\GitHub\CS134-Thesis\App1\App1\obj\Debug\130\res\drawable-v21\tracker.png

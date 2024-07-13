@@ -168,6 +168,13 @@ namespace App1
         {
             Type page = selectedNav.SelectedNavigation(item);
 
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            if (page == this.GetType())
+            {
+                drawer.CloseDrawer(GravityCompat.Start);
+                // Do nothing if the selected item corresponds to the current page
+                return false;
+            }
             if (page == typeof(MainActivity))
             {
                 // Remove the token
@@ -180,12 +187,13 @@ namespace App1
                 StartActivity(i);
                
             }
+   
             else
             {            
                 Intent i = new Intent(this, page);
                 StartActivity(i);
 
-                DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+              
                 drawer.CloseDrawer(GravityCompat.Start);
             }
             
