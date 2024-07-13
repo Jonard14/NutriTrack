@@ -21,17 +21,18 @@ namespace App1
 
     public class DrawerNavigation
     {
-        // User Account Side
         public Type SelectedNavigation(IMenuItem item)
         {
             //selected_drawer = item.TitleFormatted.ToString(); // stores title of category in string var
 
             switch (item.ItemId)
             {
-                case Resource.Id.home_btn:
-                    return typeof(HomePage);
                 case Resource.Id.logout_btn:
                     return typeof(MainActivity);
+
+                // User Account Side
+                case Resource.Id.home_btn:
+                    return typeof(HomePage);
                 case Resource.Id.tracker_btn:
                     return typeof(Tracker);
                 case Resource.Id.suggest_btn:
@@ -40,25 +41,24 @@ namespace App1
                     return typeof(ProfilePage);
                 case Resource.Id.logs_btn:
                     return typeof(Logs);
-            }
 
-            return null;
-        }
-
-        // Admin Account Side
-        public Type SelectedNavigation_Admin(IMenuItem item)
-        {
-            switch (item.ItemId)
-            {
-                case Resource.Id.logout_btn:
-                    return typeof(MainActivity);
+                // Admin Account Side
+                /* Note: This will not display to User side because
+                 it was set the drawers from all "_drawer.xml" to call
+                only "activity_main_drawer.xml" to display those items above.
+                Then, for the admin side are the same but called to
+                "admin_drawer.xml" to display only the items below
+                */
                 case Resource.Id.addfood_btn:
                     return typeof(Admin_AddFood);
                 case Resource.Id.edtdelfood_btn:
                     return typeof(Admin_EditDelFoodList);
             }
 
-            return null;
+            return typeof(MainActivity);
+            /*Changed from null by kicked out to Entry Page jas for 
+              failsafe cause the app will crash instead if set to null
+             */
         }
     }
 }
