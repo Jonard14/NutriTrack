@@ -12,9 +12,9 @@ The app can be downloaded from the [release](https://github.com/Jonard14/CS134-T
 To install the app, download the zip file from the [release](https://github.com/Jonard14/CS134-Thesis/tree/developoment-cs134-1p/Releases) page, then unzip the APK from the downladed zip file. Simply install the APK into any mobile device you desire and the installation is complete!
 
 # The Team!
-- Jonard
-- Leonard
-- Gerico
-- Gabriel
-- Vincent
-- Emman
+- [Francisco, Jonard Cyrus](https://github.com/Jonard14)
+- [Nueva España, Vincent Luis](https://github.com/vincent1229)
+- [Tiangsing, Leonard Reshley](https://github.com/lrtiangsing1)
+- [Torrecampo, Emman](https://github.com/CoderEmman)
+- [Tolayba, Gerico](https://github.com/buffeddude69)
+- [Villamor, Gabriel Edward Owel](https://github.com/Villamor-MCL)
